@@ -24,4 +24,9 @@ public class ActivityApkMoysredstvaMain extends AppCompatActivity {
         Intent intent = new Intent(ActivityApkMoysredstvaMain.this, ActivityApkMoySredstvaForHoz.class);
         startActivity(intent);
     }
+
+    public void onClickVoda(View view) {
+        Intent intent = new Intent(ActivityApkMoysredstvaMain.this, ActivityApkMoySredstvaVoda.class);
+        startActivity(intent);
+    }
 }

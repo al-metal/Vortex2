@@ -10,4 +10,86 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vortex.vortex.APK.ActivityApkMoySredstvaVoda">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <RadioButton
+                    android:text="мг - экв/л"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/rbDh"
+                    android:layout_toEndOf="@+id/rbDh"
+                    android:id="@+id/rbMgL"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:text="°DH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/rbDjeskost"
+                    android:layout_toEndOf="@+id/rbDjeskost"
+                    android:id="@+id/rbDh"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:text="°Ж"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/rbDjeskost"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etVoda"
+                android:layout_below="@+id/radioGroup"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Жесткость" />
+
+            <TextView
+                android:text="°Ж"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDh" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
 </RelativeLayout>
