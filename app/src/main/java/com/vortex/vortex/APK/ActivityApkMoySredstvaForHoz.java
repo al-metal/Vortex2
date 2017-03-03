@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.vortex.vortex.R;
 
+import java.math.BigDecimal;
+
 public class ActivityApkMoySredstvaForHoz extends AppCompatActivity {
 
     double plotnost = 1.22;
@@ -107,5 +109,15 @@ public class ActivityApkMoySredstvaForHoz extends AppCompatActivity {
         respriceKislot = reskolichKislotKg * priceKislot;
         respriceObsh = respriceSheloch + respriceKislot;
 
+        tvKolichSredstvKg.setText(String.valueOf(roundUp(reskolichSredstvKg, 2)));
+        tvKolichShelochKg.setText(String.valueOf(roundUp(reskolichShelochKg, 2)));
+        tvKolichKislotKg.setText(String.valueOf(roundUp(reskolichKislotKg, 2)));
+        tvPriceKislot.setText(String.valueOf(roundUp(respriceKislot, 2)));
+        tvPriceSheloch.setText(String.valueOf(roundUp(respriceSheloch, 2)));
+        tvPriceObsh.setText(String.valueOf(roundUp(respriceObsh, 2)));
+    }
+
+    public BigDecimal roundUp(double value, int digits){
+        return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 }
