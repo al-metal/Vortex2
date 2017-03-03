@@ -7,5 +7,5 @@
 /build
 /captures
 .externalNativeBuild
-*/res/*
-app/src/main/res/*
+*/res/drawable*
+app/src/main/res/drawable*
