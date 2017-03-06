@@ -10,12 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vortex.vortex.APK.ActivityApkMoySredstvaVoda">
 
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:shrinkColumns="1">
 
         <TableRow
             android:layout_width="match_parent"
@@ -81,14 +83,15 @@
 
             <TextView
                 android:text="°Ж"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvDh" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            >
 
             <TextView
                 android:text="Выбранная жесткость воды: "
@@ -98,12 +101,13 @@
 
             <TextView
                 android:text="0"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:width="80dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvVoda" />
 
             <TextView
-                android:text="Dh"
+                android:text="°Ж"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvDh2" />
@@ -111,7 +115,20 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Вода:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVodaStr" />
+        </TableRow>
+
     </TableLayout>
 
 </RelativeLayout>
