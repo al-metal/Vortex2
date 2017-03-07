@@ -20,7 +20,7 @@
         <activity android:name=".APK.ApkMoySredstvaSravnenieActivity" />
         <activity android:name=".APK.ActivityApkMoysredstvaMain" />
         <activity android:name=".APK.ActivityApkMoySredstvaForHoz" />
-        <activity android:name=".APK.ActivityApkMoySredstvaVoda"></activity>
+        <activity android:name=".APK.ActivityApkMoySredstvaVoda" />
     </application>
 
 </manifest>
