@@ -9,3 +9,4 @@
 .externalNativeBuild
 */res/drawable*
 app/src/main/res/drawable*
+app/app-release.apk

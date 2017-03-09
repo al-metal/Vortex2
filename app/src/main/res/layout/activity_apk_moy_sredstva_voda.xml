@@ -114,25 +114,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
-            android:stretchColumns="*">
+            android:stretchColumns="*"
+            android:shrinkColumns="0,1"
+            android:background="#000">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:text="Щелочные средства"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/textView18"
-                    android:background="@color/colorAccent" />
-
-                <TextView
-                    android:text="Кислотные средства"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dip"
+                    android:background="@color/colorAccent"
+                    android:text="Щелочные средства"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/textView19"
-                    android:background="@color/colorPrimary"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dip"
+                    android:background="@color/colorPrimary"
+                    android:text="Кислотные средства"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -141,14 +147,16 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvSheloch1"
+                    android:layout_margin="1dip"
                     android:background="@color/colorAccent"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvKislot1"
+                    android:layout_margin="1dip"
                     android:background="@color/colorPrimary" />
             </TableRow>
 
@@ -158,14 +166,16 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvSheloch2"
+                    android:layout_margin="1dip"
                     android:background="@color/colorAccent" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvKislot2"
+                    android:layout_margin="1dip"
                     android:background="@color/colorPrimary"/>
             </TableRow>
 
@@ -175,14 +185,16 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvSheloch3"
+                    android:layout_margin="1dip"
                     android:background="@color/colorAccent" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvKislot3"
+                    android:layout_margin="1dip"
                     android:background="@color/colorPrimary" />
             </TableRow>
 
@@ -192,14 +204,16 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvSheloch4"
+                    android:layout_margin="1dip"
                     android:background="@color/colorAccent"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:id="@+id/tvKislot4"
+                    android:layout_margin="1dip"
                     android:background="@color/colorPrimary" />
             </TableRow>
 
