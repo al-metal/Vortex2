@@ -1,7 +1,9 @@
-package com.vortex.vortex;
+package com.vortex.vortex.GigienaVymeni;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.vortex.vortex.R;
 
 public class ActivityAPKGigienaVymeniExpressMethod extends AppCompatActivity {
 
