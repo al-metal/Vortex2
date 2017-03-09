@@ -22,23 +22,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/moika"
-                android:id="@+id/imageButton4"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:onClick="onClick" />
 
             <ImageButton
+                android:id="@+id/imageButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/gigenavimeni"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickMoySredstva"
+                app:srcCompat="@drawable/moika" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/imageButton7"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="14dp"
-                android:id="@+id/imageButton6" />
+                android:onClick="onClickGigienaVymeni"
+                app:srcCompat="@drawable/gigenavimeni" />
 
             <ImageButton
                 android:layout_width="wrap_content"
