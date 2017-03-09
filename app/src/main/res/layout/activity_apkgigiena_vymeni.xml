@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context="com.vortex.vortex.ActivityAPKGigienaVymeni">
 
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/btnAPKGigienaDoDoenia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickAPKGigienaDoDoenia"
+            android:text="Гигиена вымени до доения" />
+
+        <Button
+            android:id="@+id/btnAPKGigienaPosleDoenia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickAPKGigienaPosleDoenia"
+            android:text="Гигиена вымени после доения" />
+
+        <Button
+            android:id="@+id/btnAPKGigienaExpressMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickAPKGigienaExpressMethod"
+            android:text="Экспресс-метод диагностики субклинического мастита у КРС" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

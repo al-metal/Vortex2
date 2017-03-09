@@ -21,7 +21,10 @@
         <activity android:name=".APK.ActivityApkMoysredstvaMain" />
         <activity android:name=".APK.ActivityApkMoySredstvaForHoz" />
         <activity android:name=".APK.ActivityApkMoySredstvaVoda" />
-        <activity android:name=".ActivityAPKGigienaVymeni"></activity>
+        <activity android:name=".ActivityAPKGigienaVymeni" />
+        <activity android:name=".ActivityAPKGigienaVymeniDoDoenia" />
+        <activity android:name=".ActivityAPKGigienaVymeniPosleDoenia" />
+        <activity android:name=".ActivityAPKGigienaVymeniExpressMethod"></activity>
     </application>
 
 </manifest>
