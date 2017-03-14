@@ -46,6 +46,7 @@ public class ApkMoySredstvaSravnenieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apk_moy_sredstva_sravnenie);
+        setTitle("Сравнение средств");
 
         resPlotnostVotrex = getIntent().getExtras().getDouble("resPlotnost");
         resStoimKgVotrex = getIntent().getExtras().getDouble("resStoimKg");
