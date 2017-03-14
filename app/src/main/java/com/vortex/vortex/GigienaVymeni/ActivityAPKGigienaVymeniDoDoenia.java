@@ -1,5 +1,6 @@
 package com.vortex.vortex.GigienaVymeni;
 
+import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.vortex.vortex.APK.ApkMoySredstvaActivity;
+import com.vortex.vortex.APK.ApkMoySredstvaSravnenieActivity;
 import com.vortex.vortex.R;
 
 import java.math.BigDecimal;
@@ -32,6 +36,10 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
     TextView tvSoimostKg;
     TextView tvKolichGigien;
     TextView tvStoimPromyvki;
+
+    double stoimKg;
+    double kolichGigien;
+    double stoimObrabotki;
 
 
     @Override
@@ -124,21 +132,40 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
     }
 
     public void onClickRaschet(View view) {
-
+if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
+        || etDay.getText().length() == 0 || etKolichObrabotok.getText().length() == 0 || dblRashodGolova == 0
+        ){
+    Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+    return;
+        }
         double price = Double.parseDouble(etPrice.getText().toString());
         double ves = Double.parseDouble(etVes.getText().toString());
         double kolichGolov = Double.parseDouble(etKolichGolov.getText().toString());
         double period = Double.parseDouble(etDay.getText().toString());
         double kolichObrabotok = Double.parseDouble(etKolichObrabotok.getText().toString());
 
-        double stoimKg = price / ves;
-        double kolichGigien = dblRashodGolova*kolichGolov*period*kolichObrabotok;
-        double stoimObrabotki = dblRashodGolova * stoimKg;
+        stoimKg = price / ves;
+        kolichGigien = dblRashodGolova*kolichGolov*period*kolichObrabotok;
+        stoimObrabotki = dblRashodGolova * stoimKg;
 
         tvSoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
         tvKolichGigien.setText(String.valueOf(roundUp(kolichGigien, 2)));
         tvStoimPromyvki.setText(String.valueOf(roundUp(stoimObrabotki, 2)));
 
+
+    }
+
+    public void onClickSravnenie(View view) {
+        if(stoimKg ==0 || kolichGigien ==0 || stoimObrabotki ==0){
+            Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(ActivityAPKGigienaVymeniDoDoenia.this, ActivityAPKGigienaVymeniDoDoeniaSravnenie.class);
+        intent.putExtra("stoimKg", stoimKg);
+        intent.putExtra("kolichGigien", kolichGigien);
+        intent.putExtra("stoimObrabotki", stoimObrabotki);
+        intent.putExtra("dblRashodGolova", dblRashodGolova);
+        startActivity(intent);
 
     }
 }

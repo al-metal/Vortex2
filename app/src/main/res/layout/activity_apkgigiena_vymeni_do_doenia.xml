@@ -151,11 +151,18 @@
             </TableLayout>
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnRaschet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickRaschet"
                 android:text="Рассчитать" />
+
+            <Button
+                android:id="@+id/btnSravnenie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSravnenie"
+                android:text="Сравнить с другим средством" />
 
         </LinearLayout>
     </ScrollView>
