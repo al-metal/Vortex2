@@ -26,7 +26,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="number"
                 android:ems="10"
                 android:id="@+id/etName"
                 android:hint="Название средства" />

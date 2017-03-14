@@ -88,20 +88,20 @@
                 android:hint="Количество дней" />
 
             <EditText
+                android:id="@+id/etPriceSheloch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:ems="10"
-                android:id="@+id/etPriceSheloch"
-                android:hint="Стоимость щелочного средства" />
+                android:hint="Стоимость щелочного средства за кг"
+                android:inputType="number" />
 
             <EditText
+                android:id="@+id/edPriceKislot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edPriceKislot"
-                android:hint="Стоимость кислотного средства" />
+                android:hint="Стоимость кислотного средства за кг"
+                android:inputType="number" />
 
             <TableLayout
                 android:layout_width="fill_parent"
