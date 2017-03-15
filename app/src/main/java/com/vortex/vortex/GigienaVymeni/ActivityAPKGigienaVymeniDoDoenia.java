@@ -166,6 +166,5 @@ if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichG
         intent.putExtra("stoimObrabotki", stoimObrabotki);
         intent.putExtra("dblRashodGolova", dblRashodGolova);
         startActivity(intent);
-
     }
 }

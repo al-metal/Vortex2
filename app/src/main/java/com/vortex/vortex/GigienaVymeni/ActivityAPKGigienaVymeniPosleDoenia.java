@@ -1,5 +1,6 @@
 package com.vortex.vortex.GigienaVymeni;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +17,7 @@ import java.math.BigDecimal;
 
 public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
 
-    String[] data = {"5.6", "2.8", "2.8", "3.2", "3.2", "5.6"};
+    String[] data = {"Эковит", "Алгавит 25", "Алгавит 50", "Лактовит", "Эловит", "Клиовит"};
     double dblRashodGolova = 0;
 
     Spinner spinner4;
@@ -114,5 +115,15 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
     }
 
     public void onClickSravnenie(View view) {
+        if(stoimKg ==0 || kolichGigien ==0 || stoimObrabotki ==0){
+            Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia.this, ActivityAPKGigienaVymeniPosleDoeniaSravnenie.class);
+        intent.putExtra("stoimKg", stoimKg);
+        intent.putExtra("kolichGigien", kolichGigien);
+        intent.putExtra("stoimObrabotki", stoimObrabotki);
+        intent.putExtra("dblRashodGolova", dblRashodGolova);
+        startActivity(intent);
     }
 }
