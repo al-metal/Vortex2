@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vortex.vortex.R;
 
@@ -29,6 +30,9 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
     TextView tvKolichGigien;
     TextView tvStoimObrabotki;
 
+    double stoimKg;
+    double kolichGigien;
+    double stoimObrabotki;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +90,27 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
+                || etPeriodObrabotki.getText().length() == 0 || etKolichVDen.getText().length() == 0 || dblRashodGolova == 0
+                ) {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double price = Double.parseDouble(etPrice.getText().toString());
+        double ves = Double.parseDouble(etVes.getText().toString());
+        double kolichGolov = Double.parseDouble(etKolichGolov.getText().toString());
+        double period = Double.parseDouble(etPeriodObrabotki.getText().toString());
+        double kolichObrabotok = Double.parseDouble(etKolichVDen.getText().toString());
+
+
+        stoimKg = price / ves;
+        kolichGigien = (period * kolichObrabotok) * kolichGolov * (dblRashodGolova / 1000);
+        stoimObrabotki = stoimKg * (dblRashodGolova / 1000);
+
+        tvStoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
+        tvKolichGigien.setText(String.valueOf(roundUp(kolichGigien, 2)));
+        tvStoimObrabotki.setText(String.valueOf(roundUp(stoimObrabotki, 2)));
     }
 
     public void onClickSravnenie(View view) {
