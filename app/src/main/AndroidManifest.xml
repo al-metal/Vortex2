@@ -26,7 +26,8 @@
         <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia" />
         <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod" />
         <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie"></activity>
+        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie" />
+        <activity android:name=".ActivityAPKGigienaVymeniExpressMethodSravnenie"></activity>
     </application>
 
 </manifest>
