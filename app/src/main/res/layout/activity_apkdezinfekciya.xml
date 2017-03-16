@@ -4,36 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".APK.GigienaVymeni.ActivityAPKGigienaVymeni">
+    tools:context="com.vortex.vortex.ActivityAPKDezinfekciya">
 
     <LinearLayout
         android:layout_width="368dp"
-        android:layout_height="wrap_content"
+        android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
 
         <Button
-            android:id="@+id/btnAPKGigienaDoDoenia"
+            android:id="@+id/btnForbicidProfilakt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onClickAPKGigienaDoDoenia"
-            android:text="Гигиена вымени до доения" />
+            android:onClick="onClickProfilakt"
+            android:text="Форбицид профилактическая дезинфекция" />
 
         <Button
-            android:id="@+id/btnAPKGigienaPosleDoenia"
+            android:id="@+id/btnForbicidDezinfekc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClickAPKGigienaPosleDoenia"
-            android:text="Гигиена вымени после доения" />
+            android:text="Форбицид вынужденная дезинфекция" />
 
         <Button
-            android:id="@+id/btnAPKGigienaExpressMethod"
+            android:id="@+id/btnTuman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClickAPKGigienaExpressMethod"
-            android:text="Экспресс-метод диагностики субклинического мастита у КРС" />
+            android:text="Использование тумана" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

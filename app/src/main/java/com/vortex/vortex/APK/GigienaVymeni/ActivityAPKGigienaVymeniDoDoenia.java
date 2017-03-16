@@ -1,7 +1,6 @@
-package com.vortex.vortex.GigienaVymeni;
+package com.vortex.vortex.APK.GigienaVymeni;
 
 import android.content.Intent;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +11,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.ApkMoySredstvaActivity;
-import com.vortex.vortex.APK.ApkMoySredstvaSravnenieActivity;
 import com.vortex.vortex.R;
 
 import java.math.BigDecimal;

@@ -21,13 +21,16 @@
         <activity android:name=".APK.ActivityApkMoysredstvaMain" />
         <activity android:name=".APK.ActivityApkMoySredstvaForHoz" />
         <activity android:name=".APK.ActivityApkMoySredstvaVoda" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeni" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie" />
-        <activity android:name=".GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie" />
-        <activity android:name=".ActivityAPKGigienaVymeniExpressMethodSravnenie"></activity>
+        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeni" />
+        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia" />
+        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia" />
+        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod" />
+        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie" />
+        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie" />
+        <activity android:name=".ActivityAPKGigienaVymeniExpressMethodSravnenie" />
+        <activity android:name=".ActivityAPKDezinfekciya" />
+        <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicid" />
+        <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie"></activity>
     </application>
 
 </manifest>

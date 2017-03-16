@@ -1,4 +1,4 @@
-package com.vortex.vortex.GigienaVymeni;
+package com.vortex.vortex.APK.GigienaVymeni;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
