@@ -55,12 +55,13 @@
                 android:hint="Концентрация использования" />
 
             <EditText
+                android:id="@+id/etVanna"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:ems="10"
-                android:id="@+id/etVanna"
-                android:hint="Объем ванны" />
+                android:fontFamily="sans-serif"
+                android:hint="Объем ванны"
+                android:inputType="number" />
             <TableLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">

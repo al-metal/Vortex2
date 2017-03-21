@@ -21,4 +21,9 @@ public class ActivityAPKDezinfekciya extends AppCompatActivity {
         Intent intent = new Intent(ActivityAPKDezinfekciya.this, ActivityAPKDezinfekciyaProfilaktikaForbicid.class);
         startActivity(intent);
     }
+
+    public void onCLickVynujden(View view) {
+        Intent intent = new Intent(ActivityAPKDezinfekciya.this, ActivityAPKDezinfekciyaVynujdennayaForbicid.class);
+        startActivity(intent);
+    }
 }

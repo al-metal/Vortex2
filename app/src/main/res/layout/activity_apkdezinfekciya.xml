@@ -24,6 +24,7 @@
             android:id="@+id/btnForbicidDezinfekc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onCLickVynujden"
             android:text="Форбицид вынужденная дезинфекция" />
 
         <Button

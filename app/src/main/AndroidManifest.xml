@@ -30,7 +30,9 @@
         <activity android:name=".ActivityAPKGigienaVymeniExpressMethodSravnenie" />
         <activity android:name=".ActivityAPKDezinfekciya" />
         <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicid" />
-        <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie"></activity>
+        <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie" />
+        <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicid" />
+        <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie"></activity>
     </application>
 
 </manifest>
