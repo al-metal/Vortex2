@@ -31,6 +31,31 @@
             android:id="@+id/btnTuman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickTuman"
             android:text="Использование тумана" />
+
+        <Button
+            android:id="@+id/btnTumanFire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTumanFire"
+            android:text="Использование метода горячего тумана"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnTumanIce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTumanIce"
+            android:text="Использование метода холодного тумана"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnTumanIceAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTumanIceAnimal"
+            android:text="Использование метода холодного тумана в присутствии животных"
+            android:visibility="invisible" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

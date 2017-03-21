@@ -32,7 +32,10 @@
         <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicid" />
         <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie" />
         <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicid" />
-        <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie"></activity>
+        <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie" />
+        <activity android:name=".ActivityAPKDezinfekciyaTumanFire" />
+        <activity android:name=".ActivityAPKDezinfekciyaTumanIce" />
+        <activity android:name=".ActivityAPKDezinfekciyaTumanIceAnimal"></activity>
     </application>
 
 </manifest>
