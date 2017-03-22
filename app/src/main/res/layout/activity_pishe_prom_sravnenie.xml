@@ -4,58 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vortex.vortex.APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie">
+    tools:context="com.vortex.vortex.ActivityPishePromSravnenie">
 
     <ScrollView
         android:layout_width="368dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <TextView
-                    android:id="@+id/textView39"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Вид поверхности: " />
-
-                <TextView
-                    android:id="@+id/textView41"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="любая" />
-            </TableRow>
+            android:orientation="vertical">
 
             <EditText
-                android:id="@+id/etPloshad"
+                android:id="@+id/editText11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Площадь обработки , м²"
-                android:inputType="number" />
+                android:hint="Название средства"
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/etKoncentraciya"
+                android:id="@+id/etPlotnost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Концентрация использования, %"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/etRashod"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Расход , л на 1 м ²"
+                android:hint="Плотность"
                 android:inputType="number" />
 
             <EditText
@@ -63,15 +38,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Цена, руб"
+                android:hint="Стоимость кг, руб"
                 android:inputType="number" />
 
             <EditText
-                android:id="@+id/etVes"
+                android:id="@+id/etKoncentratRastvor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Вес, кг"
+                android:hint="Концентрация рабочего раствора, %"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etObjemRastvor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Объем моющего раствора, л"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etOperacSutki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Кол-во рабочих дней в месяце"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Кол-во операций промывки в сутки"
                 android:inputType="number" />
 
             <TableLayout
@@ -88,39 +87,39 @@
                         android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Компания Вортекс"
                         android:layout_span="5"
+                        android:text="Компания Вортекс"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/textView16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_span="5"
                         android:text="Для сравнения"
-                        android:textAlignment="center"
-                        android:layout_span="5"/>
+                        android:textAlignment="center" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/textView20"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Стоимость 1 кг, руб"
                         android:layout_span="10"
-                        android:textAlignment="center"/>
+                        android:text="Цена за литр, руб"
+                        android:textAlignment="center" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/tvStoimostKgVortex"
+                        android:id="@+id/tvPriceLitrVortex"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="5"
@@ -128,41 +127,7 @@
                         android:textAlignment="center" />
 
                     <TextView
-                        android:id="@+id/tvStoimostKg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="5"
-                        android:text="0"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="10"
-                        android:text="Количество на обработку, кг"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:id="@+id/tvKolichestvoVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="5"
-                        android:text="0"
-                        android:textAlignment="center" />
-
-                    <TextView
-                        android:id="@+id/tvKolichestvo"
+                        android:id="@+id/tvPriceLitr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="5"
@@ -172,23 +137,23 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="10"
-                        android:text="Стоимость обработки, руб"
+                        android:text="Стоимость моющего раствора, руб"
                         android:textAlignment="center" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/tvStoimostObrabotkiVortex"
+                        android:id="@+id/tvStoimostRastvoraVortex"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="5"
@@ -196,7 +161,112 @@
                         android:textAlignment="center" />
 
                     <TextView
-                        android:id="@+id/tvStoimostObrabotki"
+                        android:id="@+id/tvStoimostRastvora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:text="0"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="10"
+                        android:text="Расход моющего средства на 1 мойку, л"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvRashodSrdstvaMoykaVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvRashodSrdstvaMoyka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="10"
+                        android:text="Расход моющего средства в месяц, л"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvRashodSredstvaMesVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvRashodSredstvaMes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView311"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="10"
+                        android:text="Расходы на покупку средств в месяц, руб"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvPriceSredstvaVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvPriceSredstva"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="5"

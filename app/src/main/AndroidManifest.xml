@@ -27,15 +27,17 @@
         <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod" />
         <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie" />
         <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie" />
-        <activity android:name=".ActivityAPKGigienaVymeniExpressMethodSravnenie" />
-        <activity android:name=".ActivityAPKDezinfekciya" />
-        <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicid" />
-        <activity android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie" />
-        <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicid" />
-        <activity android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie" />
-        <activity android:name=".ActivityAPKDezinfekciyaTumanFire" />
-        <activity android:name=".ActivityAPKDezinfekciyaTumanIce" />
-        <activity android:name=".ActivityAPKDezinfekciyaTumanIceAnimal"></activity>
+        <activity android:name=".APK.ActivityAPKGigienaVymeniExpressMethodSravnenie" />
+        <activity android:name=".APK.ActivityAPKDezinfekciya" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaProfilaktikaForbicid" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaVynujdennayaForbicid" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaTumanFire" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIce" />
+        <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIceAnimal" />
+        <activity android:name=".ActivityPisheProm" />
+        <activity android:name=".ActivityPishePromSravnenie"></activity>
     </application>
 
 </manifest>

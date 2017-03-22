@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.ActivityAPKGigienaVymeniExpressMethodSravnenie;
+import com.vortex.vortex.APK.ActivityAPKGigienaVymeniExpressMethodSravnenie;
 import com.vortex.vortex.R;
 
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package com.vortex.vortex;
+package com.vortex.vortex.APK;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.vortex.vortex.APK.ActivityApkMoysredstvaMain;
-import com.vortex.vortex.APK.ApkActivity;
+import com.vortex.vortex.R;
 
 public class ActivityAPKDezinfekciya extends AppCompatActivity {
 Button btnTumanFire;
