@@ -15,7 +15,9 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
     double StoimostRastvora = 0;
     double RashodSrdstvaMoyka = 0;
     double RashodSredstvaMes = 0;
+    double PriceSredstvaVortex = 0;
     double PriceSredstva = 0;
+    double vygoda = 0;
 
     TextView tvPriceLitrVortex;
     TextView tvStoimostRastvoraVortex;
@@ -27,6 +29,7 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
     TextView tvRashodSrdstvaMoyka;
     TextView tvRashodSredstvaMes;
     TextView tvPriceSredstva;
+    TextView tvVygoda;
 
     EditText etPlotnost;
     EditText etPrice;
@@ -46,18 +49,19 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
         tvRashodSrdstvaMoykaVortex = (TextView) findViewById(R.id.tvRashodSrdstvaMoykaVortex);
         tvRashodSredstvaMesVortex = (TextView) findViewById(R.id.tvRashodSredstvaMesVortex);
         tvPriceSredstvaVortex = (TextView) findViewById(R.id.tvPriceSredstvaVortex);
+        tvVygoda = (TextView) findViewById(R.id.tvVygoda);
 
         PriceLitr = getIntent().getExtras().getDouble("PriceLitr");
         StoimostRastvora = getIntent().getExtras().getDouble("StoimostRastvora");
         RashodSrdstvaMoyka = getIntent().getExtras().getDouble("RashodSrdstvaMoyka");
         RashodSredstvaMes = getIntent().getExtras().getDouble("RashodSredstvaMes");
-        PriceSredstva = getIntent().getExtras().getDouble("PriceSredstva");
+        PriceSredstvaVortex = getIntent().getExtras().getDouble("PriceSredstva");
 
         tvPriceLitrVortex.setText(String.valueOf(roundUp(PriceLitr, 2)));
         tvStoimostRastvoraVortex.setText(String.valueOf(roundUp(StoimostRastvora, 2)));
         tvRashodSrdstvaMoykaVortex.setText(String.valueOf(roundUp(RashodSrdstvaMoyka, 2)));
         tvRashodSredstvaMesVortex.setText(String.valueOf(roundUp(RashodSredstvaMes, 2)));
-        tvPriceSredstvaVortex.setText(String.valueOf(roundUp(PriceSredstva, 2)));
+        tvPriceSredstvaVortex.setText(String.valueOf(roundUp(PriceSredstvaVortex, 2)));
 
         etPlotnost = (EditText) findViewById(R.id.etPlotnost);
         etPrice = (EditText) findViewById(R.id.etPrice);
@@ -65,7 +69,7 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
         etObjemRastvor = (EditText) findViewById(R.id.etObjemRastvor);
         etOperacSutki = (EditText) findViewById(R.id.etOperacSutki);
         etDay = (EditText) findViewById(R.id.etDay);
-        
+
         tvPriceLitr = (TextView) findViewById(R.id.tvPriceLitr);
         tvStoimostRastvora = (TextView) findViewById(R.id.tvStoimostRastvora);
         tvRashodSrdstvaMoyka = (TextView) findViewById(R.id.tvRashodSrdstvaMoyka);
@@ -104,5 +108,8 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
         tvRashodSrdstvaMoyka.setText(String.valueOf(roundUp(RashodSrdstvaMoyka, 2)));
         tvRashodSredstvaMes.setText(String.valueOf(roundUp(RashodSredstvaMes, 2)));
         tvPriceSredstva.setText(String.valueOf(roundUp(PriceSredstva, 2)));
+
+        vygoda = PriceSredstva - PriceSredstvaVortex;
+        tvVygoda.setText(String.valueOf(roundUp(vygoda, 2)));
     }
 }

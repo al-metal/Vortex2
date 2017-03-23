@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Плотность"
-                android:inputType="number" />
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/etPrice"
@@ -174,7 +174,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView31"
+                        android:id="@+id/textView312"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="10"
@@ -274,6 +274,33 @@
                         android:textAlignment="center" />
 
                 </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView311"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="10"
+                        android:text="Экономическая эффективность применения средств ТМ Вортекс,руб в месяц"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvVygoda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="10"
+                        android:text="0"
+                        android:textAlignment="center" />
+                </TableRow>
+
             </TableLayout>
 
             <Button
