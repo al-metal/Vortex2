@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ActivityPisheProm.class);
         startActivity(intent);
     }
+
+    public void onClickAuto(View view) {
+        Intent intent = new Intent(MainActivity.this, ActivityAuto.class);
+        startActivity(intent);
+    }
 }

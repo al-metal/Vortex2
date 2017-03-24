@@ -37,7 +37,9 @@
         <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIce" />
         <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIceAnimal" />
         <activity android:name=".ActivityPisheProm" />
-        <activity android:name=".ActivityPishePromSravnenie"></activity>
+        <activity android:name=".ActivityPishePromSravnenie" />
+        <activity android:name=".ActivityAuto" />
+        <activity android:name=".ActivityAutoSravnenie"></activity>
     </application>
 
 </manifest>
