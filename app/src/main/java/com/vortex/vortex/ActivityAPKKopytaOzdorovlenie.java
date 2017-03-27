@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 
@@ -52,6 +53,12 @@ public class ActivityAPKKopytaOzdorovlenie extends AppCompatActivity {
     }
 
     public void onClickRaschet(View view) {
+        if (etStado.getText().length() == 0 || etDesimix1.getText().length() == 0 || etKuporos1.getText().length() == 0
+                || etDesimix2.getText().length() == 0 || etKuporos2.getText().length() == 0 ) {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         double stado = Double.parseDouble(etStado.getText().toString());
         double dblDesimix1 = Double.parseDouble(etDesimix1.getText().toString());
         double dblKuporos1 = Double.parseDouble(etKuporos1.getText().toString());
