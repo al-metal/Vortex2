@@ -45,15 +45,15 @@
                         android:id="@+id/textView107"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Объем ванны: "
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="Объем ванны, л: " />
 
                     <TextView
                         android:id="@+id/textView106"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="200" />
                 </TableRow>
 
                 <TableRow
@@ -68,13 +68,13 @@
                         android:layout_span="3"/>
 
                     <EditText
-                        android:id="@+id/editText12"
+                        android:id="@+id/etStado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="3"
                         android:ems="10"
                         android:hint="шт."
-                        android:inputType="numberDecimal"
-                        android:layout_span="3"/>
+                        android:inputType="numberDecimal" />
 
                 </TableRow>
 
@@ -104,13 +104,13 @@
                         android:layout_span="3"/>
 
                     <EditText
-                        android:id="@+id/editText13"
+                        android:id="@+id/etDesimix1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="3"
                         android:ems="10"
                         android:hint="%"
-                        android:inputType="numberDecimal"
-                        android:layout_span="3"/>
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
@@ -125,13 +125,13 @@
                         android:layout_span="3"/>
 
                     <EditText
-                        android:id="@+id/editText14"
+                        android:id="@+id/etKuporos1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="3"
                         android:ems="10"
                         android:hint="%"
-                        android:inputType="numberDecimal"
-                        android:layout_span="3"/>
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
@@ -146,11 +146,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView113"
+                        android:id="@+id/tvTrebuemVann"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -165,11 +165,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView115"
+                        android:id="@+id/tvTrebuemDesimix1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -184,11 +184,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView117"
+                        android:id="@+id/tvTrebuemKuporos1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -217,13 +217,13 @@
                         android:layout_span="3"/>
 
                     <EditText
-                        android:id="@+id/editText15"
+                        android:id="@+id/etDesimix2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="3"
                         android:ems="10"
                         android:hint="%"
-                        android:inputType="numberDecimal"
-                        android:layout_span="3"/>
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
@@ -238,13 +238,13 @@
                         android:layout_span="3"/>
 
                     <EditText
-                        android:id="@+id/editText16"
+                        android:id="@+id/etKuporos2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="3"
                         android:ems="10"
                         android:hint="%"
-                        android:inputType="numberDecimal"
-                        android:layout_span="3"/>
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
@@ -259,11 +259,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView122"
+                        android:id="@+id/tvTrebuemVann2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -278,11 +278,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView124"
+                        android:id="@+id/tvTrebuemDesimix2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -297,11 +297,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView126"
+                        android:id="@+id/tvTrebuemKuporos2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -329,11 +329,11 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView128"
+                        android:id="@+id/tvVsegoDesimix"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <TableRow
@@ -348,17 +348,18 @@
                         android:layout_span="3"/>
 
                     <TextView
-                        android:id="@+id/textView130"
+                        android:id="@+id/tvVsegoKuporos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
+                        android:layout_span="3"
+                        android:text="0" />
                 </TableRow>
 
                 <Button
                     android:id="@+id/button24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onClickRaschet"
                     android:text="Рассчитать" />
             </TableLayout>
         </LinearLayout>
