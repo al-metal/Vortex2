@@ -19,7 +19,9 @@
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -29,7 +31,9 @@
                         android:id="@+id/textView101"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="6"
                         android:text="Профилактика 1 раз 2 раза в неделю"
+                        android:textAlignment="center"
                         android:textStyle="bold" />
                 </TableRow>
 
@@ -41,13 +45,15 @@
                         android:id="@+id/textView102"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Объем ванны, л: " />
+                        android:text="Объем ванны, л: "
+                        android:layout_span="4"/>
 
                     <TextView
                         android:id="@+id/textView103"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200" />
+                        android:text="200"
+                        android:layout_span="2"/>
                 </TableRow>
 
                 <TableRow
@@ -58,12 +64,14 @@
                         android:id="@+id/textView104"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Количество дойного стада: " />
+                        android:text="Количество дойного стада: "
+                        android:layout_span="4"/>
 
                     <EditText
-                        android:id="@+id/editText19"
+                        android:id="@+id/etStado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:ems="10"
                         android:hint="шт"
                         android:inputType="numberDecimal" />
@@ -77,12 +85,14 @@
                         android:id="@+id/textView132"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Продолжительность обработки: " />
+                        android:text="Продолжительность обработки: "
+                        android:layout_span="4"/>
 
                     <EditText
-                        android:id="@+id/editText20"
+                        android:id="@+id/etProdolDen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:ems="10"
                         android:hint="дн"
                         android:inputType="numberSigned" />
@@ -96,12 +106,14 @@
                         android:id="@+id/textView133"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Процент использования: " />
+                        android:text="Процент использования: "
+                        android:layout_span="4"/>
 
                     <EditText
-                        android:id="@+id/editText21"
+                        android:id="@+id/etPercent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:ems="10"
                         android:hint="%"
                         android:inputType="numberSigned" />
@@ -115,15 +127,15 @@
                         android:id="@+id/textView134"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Количество обработок за период: " />
+                        android:text="Количество обработок за период: "
+                        android:layout_span="4"/>
 
-                    <EditText
-                        android:id="@+id/editText22"
+                    <TextView
+                        android:id="@+id/tvKolichObrabotok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="шт"
-                        android:inputType="numberSigned" />
+                        android:text="0" />
+
                 </TableRow>
 
                 <TableRow
@@ -134,12 +146,14 @@
                         android:id="@+id/textView135"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Количество ванн, шт: " />
+                        android:text="Количество ванн, шт: "
+                        android:layout_span="4"/>
 
                     <TextView
-                        android:id="@+id/textView136"
+                        android:id="@+id/tvKolichVann"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:text="0" />
                 </TableRow>
 
@@ -152,12 +166,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Количество требуемого Дезитаб, кг: "
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_span="4"/>
 
                     <TextView
-                        android:id="@+id/textView138"
+                        android:id="@+id/tvTrebuemDesitab"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:text="0"
                         android:textStyle="bold" />
                 </TableRow>
@@ -170,12 +186,14 @@
                         android:id="@+id/textView139"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость канистры: " />
+                        android:text="Стоимость канистры: "
+                        android:layout_span="4"/>
 
                     <EditText
-                        android:id="@+id/editText23"
+                        android:id="@+id/etPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:ems="10"
                         android:hint="руб"
                         android:inputType="numberSigned" />
@@ -189,12 +207,14 @@
                         android:id="@+id/textView140"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Весовка: " />
+                        android:text="Весовка: "
+                        android:layout_span="4"/>
 
                     <EditText
-                        android:id="@+id/editText24"
+                        android:id="@+id/etVes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:ems="10"
                         android:hint="кг"
                         android:inputType="numberSigned" />
@@ -208,12 +228,14 @@
                         android:id="@+id/textView141"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость 1 кг, руб: " />
+                        android:text="Стоимость 1 кг, руб: "
+                        android:layout_span="4"/>
 
                     <TextView
-                        android:id="@+id/textView142"
+                        android:id="@+id/tvPriceKg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:text="0" />
                 </TableRow>
 
@@ -225,12 +247,14 @@
                         android:id="@+id/textView143"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Общая стоимость обработки, руб: " />
+                        android:text="Общая стоимость обработки, руб: "
+                        android:layout_span="4"/>
 
                     <TextView
-                        android:id="@+id/textView144"
+                        android:id="@+id/tvVsegoPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:text="0" />
                 </TableRow>
 
@@ -243,12 +267,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Стоимость обработки 1 коровы в день, руб: "
+                        android:layout_span="4"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView146"
+                        android:id="@+id/tvKorovaDen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:text="0"
                         android:textStyle="bold" />
                 </TableRow>
@@ -264,12 +290,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Стоимость обработки 1 коровы  за период, руб: "
+                        android:layout_span="4"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView148"
+                        android:id="@+id/tvKorovVsego"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_span="2"
                         android:text="0"
                         android:textStyle="bold" />
                 </TableRow>
@@ -278,6 +306,7 @@
                     android:id="@+id/button26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onClickRaschet"
                     android:text="Рассчитать" />
             </TableLayout>
         </LinearLayout>
