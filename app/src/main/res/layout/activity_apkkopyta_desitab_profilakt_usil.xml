@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vortex.vortex.ActivityAPKKopytaDesitabProfilaktUsil">
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView149"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Усиленная профилактика 5 дней в неделю 2 раза в день" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView150"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Объем ванны, л: " />
+
+                    <TextView
+                        android:id="@+id/textView152"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView153"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Количество дойного стада: " />
+
+                    <EditText
+                        android:id="@+id/editText25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="шт"
+                        android:inputType="numberSigned" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView154"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Продолжительность обработки: " />
+
+                    <EditText
+                        android:id="@+id/editText26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="дн"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView155"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Процент использования: " />
+
+                    <EditText
+                        android:id="@+id/editText27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="%"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView156"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Количество обработок за период: " />
+
+                    <EditText
+                        android:id="@+id/editText28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="шт"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView157"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Количество ванн, шт: " />
+
+                    <TextView
+                        android:id="@+id/textView158"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView159"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Количество требуемого Дезитаб, кг: "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView160"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView161"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоимость канистры: " />
+
+                    <EditText
+                        android:id="@+id/editText29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="руб"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView162"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Весовка: " />
+
+                    <EditText
+                        android:id="@+id/editText30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="кг"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView163"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоимость 1 кг, руб: " />
+
+                    <TextView
+                        android:id="@+id/textView164"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView165"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Общая стоимость обработки, руб: " />
+
+                    <TextView
+                        android:id="@+id/textView166"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView167"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоимость обработки 1 коровы в день, руб: "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView168"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+
+                    <TextView
+                        android:id="@+id/textView169"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоимость обработки 1 коровы  за период, руб: "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView170"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <Button
+                    android:id="@+id/button27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Рассчитать" />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

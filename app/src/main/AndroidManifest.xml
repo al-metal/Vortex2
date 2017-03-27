@@ -39,7 +39,13 @@
         <activity android:name=".ActivityPisheProm" />
         <activity android:name=".ActivityPishePromSravnenie" />
         <activity android:name=".ActivityAuto" />
-        <activity android:name=".ActivityAutoSravnenie"></activity>
+        <activity android:name=".ActivityAutoSravnenie" />
+        <activity android:name=".ActivityAPKKopyta" />
+        <activity android:name=".ActivityAPKKopytaOzdorovlenie" />
+        <activity android:name=".ActivityAPKKopytaProfilaktika" />
+        <activity android:name=".ActivityAPKKopytaMedKuporos" />
+        <activity android:name=".ActivityAPKKopytaDesitabProfilakt" />
+        <activity android:name=".ActivityAPKKopytaDesitabProfilaktUsil"></activity>
     </application>
 
 </manifest>
