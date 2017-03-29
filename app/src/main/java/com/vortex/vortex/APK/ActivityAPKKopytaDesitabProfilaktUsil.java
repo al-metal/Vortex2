@@ -1,4 +1,4 @@
-package com.vortex.vortex;
+package com.vortex.vortex.APK;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,9 +7,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.vortex.vortex.R;
+
 import java.math.BigDecimal;
 
-public class ActivityAPKKopytaDesitabProfilakt extends AppCompatActivity {
+public class ActivityAPKKopytaDesitabProfilaktUsil extends AppCompatActivity {
 
     double vanna = 200;
 
@@ -30,8 +32,8 @@ public class ActivityAPKKopytaDesitabProfilakt extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apkkopyta_desitab_profilakt);
-        setTitle("DESITUB Профилактика");
+        setContentView(R.layout.activity_apkkopyta_desitab_profilakt_usil);
+        setTitle("DESITUB Усиленная профилактика");
 
         etStado = (EditText) findViewById(R.id.etStado);
         etProdolDen = (EditText) findViewById(R.id.etProdolDen);
@@ -63,7 +65,7 @@ public class ActivityAPKKopytaDesitabProfilakt extends AppCompatActivity {
         double ves = Double.parseDouble(etVes.getText().toString());
 
         double percentDesitab = (vanna * percent) / 100;
-        double kolichObrabotok = (prodolDen / 7) * 2;
+        double kolichObrabotok = (prodolDen / 7) * 10;
         double kolichVann = (kolichObrabotok * stado) / 200;
         double trebuemDesitab = percentDesitab*kolichVann;
         double priceKg = price / ves;

@@ -1,4 +1,4 @@
-package com.vortex.vortex;
+package com.vortex.vortex.APK;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.vortex.vortex.R;
 
 import java.math.BigDecimal;
 

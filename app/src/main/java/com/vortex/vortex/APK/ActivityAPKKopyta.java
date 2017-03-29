@@ -1,12 +1,11 @@
-package com.vortex.vortex;
+package com.vortex.vortex.APK;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.vortex.vortex.APK.ActivityAPKDezinfekciya;
-import com.vortex.vortex.APK.ActivityAPKDezinfekciyaTumanIceAnimal;
+import com.vortex.vortex.R;
 
 public class ActivityAPKKopyta extends AppCompatActivity {
 
