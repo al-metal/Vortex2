@@ -23,46 +23,64 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:onClick="onClickMoySredstva"
-                app:srcCompat="@drawable/moika" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
 
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageButton7"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:onClick="onClickGigienaVymeni"
-                app:srcCompat="@drawable/gigenavimeni" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/imageButton4"
-                android:layout_alignStart="@+id/imageButton4"
-                android:layout_below="@+id/imageButton4"
-                android:layout_marginTop="13dp"
-                android:onClick="onClickKopyta"
-                app:srcCompat="@drawable/kopita" />
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="onClickMoySredstva"
+                        app:srcCompat="@drawable/moika" />
 
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/imageButton4"
-                android:layout_alignStart="@+id/imageButton4"
-                android:layout_below="@+id/imageButton4"
-                android:layout_marginTop="13dp"
-                android:onClick="onClickDezinfekciya"
-                app:srcCompat="@drawable/forbizid" />
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageButton7"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"
+                        android:onClick="onClickGigienaVymeni"
+                        app:srcCompat="@drawable/gigenavimeni" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/imageButton4"
+                        android:layout_alignStart="@+id/imageButton4"
+                        android:layout_below="@+id/imageButton4"
+                        android:layout_marginTop="13dp"
+                        android:onClick="onClickKopyta"
+                        app:srcCompat="@drawable/kopita" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/imageButton4"
+                        android:layout_alignStart="@+id/imageButton4"
+                        android:layout_below="@+id/imageButton4"
+                        android:layout_marginTop="13dp"
+                        android:onClick="onClickDezinfekciya"
+                        app:srcCompat="@drawable/forbizid" />
+                </TableRow>
+
+            </TableLayout>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

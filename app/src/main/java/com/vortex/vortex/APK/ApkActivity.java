@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeni;
-import com.vortex.vortex.ActivityAPKKopyta;
 import com.vortex.vortex.R;
 
 public class ApkActivity extends AppCompatActivity {

@@ -25,36 +25,51 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/apk"
-                android:layout_marginTop="21dp"
-                android:id="@+id/imageButton"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:onClick="onClick" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageButton"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="37dp"
-                android:onClick="onClickAuto"
-                app:srcCompat="@drawable/avto" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/imageButton2"
-                android:layout_alignStart="@+id/imageButton2"
-                android:layout_below="@+id/imageButton2"
-                android:layout_marginTop="25dp"
-                android:onClick="onClickPisheProm"
-                app:srcCompat="@drawable/eda" />
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/imageButton"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="onClickAuto"
+                        app:srcCompat="@drawable/avto" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="onClick"
+                        app:srcCompat="@drawable/apk" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/imageButton2"
+                        android:layout_alignStart="@+id/imageButton2"
+                        android:layout_below="@+id/imageButton2"
+                        android:onClick="onClickPisheProm"
+                        app:srcCompat="@drawable/eda" />
+                </TableRow>
+
+            </TableLayout>
         </LinearLayout>
 
     </ScrollView>
