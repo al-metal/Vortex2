@@ -13,6 +13,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
+            android:id="@+id/llmain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -153,9 +154,8 @@
                 android:id="@+id/table"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:stretchColumns="*"
-                android:shrinkColumns="*">
-            </TableLayout>
+                android:shrinkColumns="*"
+                android:stretchColumns="*"></TableLayout>
 
         </LinearLayout>
     </ScrollView>

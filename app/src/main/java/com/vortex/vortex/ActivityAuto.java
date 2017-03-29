@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TableLayout;
@@ -23,6 +24,8 @@ import com.vortex.vortex.APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravneni
 import java.math.BigDecimal;
 
 public class ActivityAuto extends AppCompatActivity {
+
+    LinearLayout llmain;
 
     String[] data = {"Пеногенератор 50 литров", "Пенокомплект", "Дозатрон"};
 
@@ -155,6 +158,8 @@ public class ActivityAuto extends AppCompatActivity {
 
         strVoda = null;
 
+        llmain = (LinearLayout) findViewById(R.id.llmain);
+
         etVoda = (EditText) findViewById(R.id.etVoda);
         tvDh = (TextView) findViewById(R.id.tvDh);
         tvVoda = (TextView) findViewById(R.id.tvVoda);
@@ -188,8 +193,6 @@ public class ActivityAuto extends AppCompatActivity {
                     tvVoda.setText("0");
                 }
             }
-
-
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -281,7 +284,6 @@ public class ActivityAuto extends AppCompatActivity {
 
             }
         });
-
     }
 
     public void onRadioButtonClicked(View view) {
@@ -329,21 +331,49 @@ public class ActivityAuto extends AppCompatActivity {
         {
             tvVodaStr.setText("мягкая");
             strVoda= "ligth";
+            if(spin == "peno50"){
+                arr = peno50ligth;
+            }
+            else if(spin == "penokomplekt"){
+                arr = penokomplektligth;
+            }
+            else if(spin == "dozatron"){
+                arr = dozatronligth;
+            }
         }
         else if (3.5 <= vod && vod < 7)
         {
             tvVodaStr.setText("умеренной жесткости");
             strVoda= "default";
+            if(spin == "peno50"){
+                arr = peno50default;
+            }
+            else if(spin == "penokomplekt"){
+                arr = penokomplektdefault;
+            }
+            else if(spin == "dozatron"){
+                arr = dozatrondefault;
+            }
         }
         else if (7 <= vod)
         {
             tvVodaStr.setText("жесткая");
             strVoda= "hard";
+            if(spin == "peno50"){
+                arr = peno50hard;
+            }
+            else if(spin == "penokomplekt"){
+                arr = penokomplekthard;
+            }
+            else if(spin == "dozatron"){
+                arr = dozatronhard;
+            }
         }
         else
         {
             tvVodaStr.setText("");
         }
+
     }
 
     public BigDecimal roundUp(double value, int digits){
@@ -352,7 +382,10 @@ public class ActivityAuto extends AppCompatActivity {
 
     public void onClick(View view) {
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
-        tableLayout.removeAllViews();
+        tableLayout.removeAllViewsInLayout();
+
+        //ReturnArr();
+
         int count = arr.length;
         for(int i = 0; count > i; i++){
             if(spin == "dozatron")
@@ -364,9 +397,41 @@ public class ActivityAuto extends AppCompatActivity {
         ReturnVoda(tvVoda);
     }
 
+    private void ReturnArr() {
+
+        if(sredstvo == "peno50ligth"){
+            arr = peno50ligth;
+        }
+        else if(sredstvo == "peno50default"){
+            arr = peno50default;
+        }
+        else if(sredstvo == "peno50hard"){
+            arr = peno50hard;
+        }
+        else if(sredstvo == "penokomplektligth"){
+            arr = penokomplektligth;
+        }
+        else if(sredstvo == "penokomplektdefault"){
+            arr = penokomplektdefault;
+        }
+        else if(sredstvo == "penokomplekthard"){
+            arr = penokomplekthard;
+        }
+        else if(sredstvo == "dozatronligth"){
+            arr = dozatronligth;
+        }
+        else if(sredstvo == "dozatrondefault"){
+            arr = dozatrondefault;
+        }
+        else if(sredstvo == "dozatronhard"){
+            arr = dozatronhard;
+        }
+    }
+
     private void addRow(String a, String b, String c) {
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
+
         LayoutInflater inflater = LayoutInflater.from(this);
         TableRow tr = (TableRow) inflater.inflate(R.layout.table_row, null);
     TextView tv = (TextView) tr.findViewById(R.id.col1);
