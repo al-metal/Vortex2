@@ -14,62 +14,80 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:stretchColumns="*"
-                android:shrinkColumns="*">
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <ImageButton
                         android:id="@+id/imageButton2"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/imageButton"
-                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="2"
+                        android:background="@null"
                         android:onClick="onClickAuto"
-                        app:srcCompat="@drawable/avto" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/complex" />
 
                     <ImageButton
                         android:id="@+id/imageButton"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="2"
+                        android:background="@null"
                         android:onClick="onClick"
-                        app:srcCompat="@drawable/apk" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/vortex" />
+
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <ImageButton
                         android:id="@+id/imageButton3"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignLeft="@+id/imageButton2"
-                        android:layout_alignStart="@+id/imageButton2"
-                        android:layout_below="@+id/imageButton2"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="2"
+                        android:background="@null"
                         android:onClick="onClickPisheProm"
-                        app:srcCompat="@drawable/eda" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/cleanbox" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="2"
+                        android:background="@null"
+                        android:onClick="onClickKlining"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/tank" />
                 </TableRow>
 
             </TableLayout>
+
         </LinearLayout>
 
     </ScrollView>
