@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,12 +18,18 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
     double dblObjem = 35000;
     double dblRazbavlenie = 900;
     double dblStoimostMoyki = 12;
+    double dblKolichestvoZapravok;
+    double dblStoimostZapravki;
+    double dblStoimostmoykiResult;
+    double dblPrice2Kanistr;
+    double dblKolichestvoKanistr;
 
     String strOborudovanie = "PenoGen";
     String strObjem6 = "6 кг = 35 л";
     String strObjem64 = "64 кг = 376 л";
     String strRazbavleniePenoGen = "900";
     String strRazbavleniePenoKomp = "180";
+    String strKolichestvoKanistr = "Цена за 2 канистры: ";
 
     RadioGroup RadioGroupUstroystvo;
     RadioGroup RadioGroupVes;
@@ -32,9 +39,9 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
     TextView tvKolichZapravok;
     TextView tvStoimostZapravki;
     TextView tvStoimostMoyki;
+    TextView tvKolichestvoKanistr;
 
     EditText etPrice2Kanistr;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +57,7 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
         tvKolichZapravok = (TextView) findViewById(R.id.tvKolichZapravok);
         tvStoimostZapravki = (TextView) findViewById(R.id.tvStoimostZapravki);
         tvStoimostMoyki = (TextView) findViewById(R.id.tvStoimostMoyki);
+        tvKolichestvoKanistr = (TextView) findViewById(R.id.tvKolichestvoKanistr);
 
         etPrice2Kanistr = (EditText) findViewById(R.id.etPrice2Kanistr);
 
@@ -92,10 +100,14 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
                     case R.id.rbVes6:
                         dblVes = 6;
                         dblObjem = 35000;
+                        dblKolichestvoKanistr = 2;
+                        strKolichestvoKanistr = "Цена за 2 канистры: ";
                         break;
                     case R.id.rbVes64:
                         dblVes = 64;
                         dblObjem = 376000;
+                        dblKolichestvoKanistr = 20;
+                        strKolichestvoKanistr = "Цена за 20 канистр: ";
                         break;
                     default:
                         break;
@@ -107,24 +119,24 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
     }
 
     private void ReturnTextViev() {
-        if(dblVes == 0)
+        if (dblVes == 0)
             return;
 
-        if(strOborudovanie == "PenoGen"){
+        if (strOborudovanie == "PenoGen") {
             tvRazbavlenie.setText(strRazbavleniePenoGen);
-            if(dblVes == 6){
+            if (dblVes == 6) {
                 tvObjem.setText(strObjem6);
                 dblVes = 35000;
-            }else if(dblVes == 64){
+            } else if (dblVes == 64) {
                 tvObjem.setText(strObjem64);
                 dblVes = 376000;
             }
-        }else if(strOborudovanie == "PenoKomp"){
+        } else if (strOborudovanie == "PenoKomp") {
             tvRazbavlenie.setText(strRazbavleniePenoKomp);
-            if(dblVes == 6){
+            if (dblVes == 6) {
                 tvObjem.setText(strObjem6);
                 dblVes = 35000;
-            }else if(dblVes == 64){
+            } else if (dblVes == 64) {
                 tvObjem.setText(strObjem64);
                 dblVes = 376000;
             }
@@ -132,19 +144,40 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
     }
 
     public void onClickRaschet(View view) {
+        if (etPrice2Kanistr.getText().length() == 0) {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-        double dblPrice2Kanistr = Double.parseDouble(etPrice2Kanistr.getText().toString());
+        dblPrice2Kanistr = Double.parseDouble(etPrice2Kanistr.getText().toString());
 
-        double dblKolichestvoZapravok = dblObjem / dblRazbavlenie;
-        double dblStoimostZapravki = dblPrice2Kanistr / dblKolichestvoZapravok;
-        double dblStoimostmoykiResult = dblStoimostZapravki / dblStoimostMoyki;
+        dblKolichestvoZapravok = dblObjem / dblRazbavlenie;
+        dblStoimostZapravki = dblPrice2Kanistr / dblKolichestvoZapravok;
+        dblStoimostmoykiResult = dblStoimostZapravki / dblStoimostMoyki;
 
         tvKolichZapravok.setText(String.valueOf(roundUp(dblKolichestvoZapravok, 2)));
         tvStoimostZapravki.setText(String.valueOf(roundUp(dblStoimostZapravki, 2)));
         tvStoimostMoyki.setText(String.valueOf(roundUp(dblStoimostmoykiResult, 2)));
     }
 
-    public BigDecimal roundUp(double value, int digits){
-        return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    public BigDecimal roundUp(double value, int digits) {
+        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    }
+
+    public void onClickSravnenie(View view) {
+        if (etPrice2Kanistr.getText().length() == 0 || dblKolichestvoZapravok == 0 || dblKolichestvoZapravok == 0 || dblKolichestvoZapravok == 0) {
+            Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(ActivityAutoSuperKoncentrat.this, ActivityAutoSuperKoncentratSravnenie.class);
+        intent.putExtra("dblPrice", dblPrice2Kanistr);
+        intent.putExtra("Objem", tvObjem.getText());
+        intent.putExtra("dblRazbavlenie", dblRazbavlenie);
+        intent.putExtra("dblKolichestvoZapravok", dblKolichestvoZapravok);
+        intent.putExtra("dblStoimostZapravki", dblStoimostZapravki);
+        intent.putExtra("dblStoimostMoyki", dblStoimostmoykiResult);
+        intent.putExtra("dblKooficent", dblStoimostMoyki);
+        intent.putExtra("dblKolichestvoKanistr", dblKolichestvoKanistr);
+        startActivity(intent);
     }
 }

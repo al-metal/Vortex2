@@ -112,11 +112,11 @@
                     android:layout_height="match_parent" >
 
                     <TextView
-                        android:id="@+id/textView85"
+                        android:id="@+id/tvKolichestvoKanistr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Цена за 2 канистры: "
-                        android:layout_span="2"/>
+                        android:layout_span="2"
+                        android:text="Цена за 2 канистры: " />
 
                     <EditText
                         android:id="@+id/etPrice2Kanistr"
@@ -124,7 +124,8 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:ems="10"
-                        android:hint="руб" />
+                        android:hint="руб"
+                        android:inputType="numberDecimal" />
 
                 </TableRow>
 
@@ -193,8 +194,8 @@
                         android:id="@+id/textView122"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость заправки ПГ: "
-                        android:layout_span="2"/>
+                        android:layout_span="2"
+                        android:text="Стоимость заправки: " />
 
                     <TextView
                         android:id="@+id/tvStoimostZapravki"
@@ -235,6 +236,7 @@
                     android:id="@+id/button28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onClickSravnenie"
                     android:text="Сравнить с другим средством" />
             </TableLayout>
         </LinearLayout>

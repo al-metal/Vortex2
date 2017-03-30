@@ -47,7 +47,8 @@
         <activity android:name=".APK.ActivityAPKKopytaDesitabProfilakt" />
         <activity android:name=".APK.ActivityAPKKopytaDesitabProfilaktUsil" />
         <activity android:name=".ActivityAutoSuperKoncentrat" />
-        <activity android:name=".ActivityAutoVybor"></activity>
+        <activity android:name=".ActivityAutoVybor" />
+        <activity android:name=".ActivityAutoSuperKoncentratSravnenie"></activity>
     </application>
 
 </manifest>
