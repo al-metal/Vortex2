@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickAuto(View view) {
-        Intent intent = new Intent(MainActivity.this, ActivityAuto.class);
+        Intent intent = new Intent(MainActivity.this, ActivityAutoVybor.class);
         startActivity(intent);
     }
 

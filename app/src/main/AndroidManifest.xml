@@ -45,7 +45,9 @@
         <activity android:name=".APK.ActivityAPKKopytaProfilaktika" />
         <activity android:name=".APK.ActivityAPKKopytaMedKuporos" />
         <activity android:name=".APK.ActivityAPKKopytaDesitabProfilakt" />
-        <activity android:name=".APK.ActivityAPKKopytaDesitabProfilaktUsil"></activity>
+        <activity android:name=".APK.ActivityAPKKopytaDesitabProfilaktUsil" />
+        <activity android:name=".ActivityAutoSuperKoncentrat" />
+        <activity android:name=".ActivityAutoVybor"></activity>
     </application>
 
 </manifest>
