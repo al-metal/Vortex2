@@ -42,7 +42,7 @@
                         android:background="@null"
                         android:onClick="onClick"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/vortex" />
+                        app:srcCompat="@drawable/mainlayoutVortex" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
@@ -53,7 +53,7 @@
                         android:background="@null"
                         android:onClick="onClickPisheProm"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/tank" />
+                        app:srcCompat="@drawable/mainLayoutTank" />
 
                 </TableRow>
 
@@ -70,7 +70,7 @@
                         android:background="@null"
                         android:onClick="onClickAuto"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/complex" />
+                        app:srcCompat="@drawable/mainLayoutComplex" />
 
                     <ImageButton
                         android:id="@+id/imageButton8"
@@ -81,7 +81,7 @@
                         android:background="@null"
                         android:onClick="onClickKlining"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/cleanbox" />
+                        app:srcCompat="@drawable/mainLayoutCleanbox" />
                 </TableRow>
 
             </TableLayout>
