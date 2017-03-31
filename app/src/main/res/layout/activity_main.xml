@@ -14,11 +14,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,6 +34,34 @@
                     android:layout_height="wrap_content">
 
                     <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="2"
+                        android:background="@null"
+                        android:onClick="onClick"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/vortex" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="2"
+                        android:background="@null"
+                        android:onClick="onClickPisheProm"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/tank" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
                         android:id="@+id/imageButton2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -47,34 +73,6 @@
                         app:srcCompat="@mipmap/complex" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_span="2"
-                        android:background="@null"
-                        android:onClick="onClick"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/vortex" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_span="2"
-                        android:background="@null"
-                        android:onClick="onClickPisheProm"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/cleanbox" />
-
-                    <ImageButton
                         android:id="@+id/imageButton8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -83,7 +81,7 @@
                         android:background="@null"
                         android:onClick="onClickKlining"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/tank" />
+                        app:srcCompat="@mipmap/cleanbox" />
                 </TableRow>
 
             </TableLayout>

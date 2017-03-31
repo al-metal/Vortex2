@@ -38,7 +38,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="3"
-                        android:text="Вортекс"
+                        android:text="Ваше средство"
                         android:textAlignment="center"
                         android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="3"
-                        android:text="Ваше средство"
+                        android:text="Вортекс"
                         android:textAlignment="center"
                         android:textStyle="bold" />
                 </TableRow>
