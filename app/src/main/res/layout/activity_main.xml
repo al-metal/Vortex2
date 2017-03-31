@@ -30,8 +30,8 @@
                 android:stretchColumns="*">
 
                 <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageButton
                         android:id="@+id/imageButton"
@@ -42,7 +42,7 @@
                         android:background="@null"
                         android:onClick="onClick"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/mainlayoutVortex" />
+                        app:srcCompat="@drawable/mainlayoutvortex" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
@@ -53,7 +53,7 @@
                         android:background="@null"
                         android:onClick="onClickPisheProm"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/mainLayoutTank" />
+                        app:srcCompat="@drawable/mainlayouttank" />
 
                 </TableRow>
 
@@ -70,7 +70,7 @@
                         android:background="@null"
                         android:onClick="onClickAuto"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/mainLayoutComplex" />
+                        app:srcCompat="@drawable/mainlayoutcomplex" />
 
                     <ImageButton
                         android:id="@+id/imageButton8"
@@ -81,7 +81,7 @@
                         android:background="@null"
                         android:onClick="onClickKlining"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/mainLayoutCleanbox" />
+                        app:srcCompat="@drawable/mainlayoutcleanbox" />
                 </TableRow>
 
             </TableLayout>
