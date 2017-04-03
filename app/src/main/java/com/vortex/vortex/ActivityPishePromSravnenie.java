@@ -1,9 +1,12 @@
 package com.vortex.vortex;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +21,7 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
     double PriceSredstvaVortex = 0;
     double PriceSredstva = 0;
     double vygoda = 0;
+    String SredstvoVortex;
 
     TextView tvPriceLitrVortex;
     TextView tvStoimostRastvoraVortex;
@@ -30,6 +34,8 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
     TextView tvRashodSredstvaMes;
     TextView tvPriceSredstva;
     TextView tvVygoda;
+    TextView tvSredstvo;
+    TextView tvSredstvoVortex;
 
     EditText etPlotnost;
     EditText etPrice;
@@ -37,6 +43,10 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
     EditText etObjemRastvor;
     EditText etOperacSutki;
     EditText etDay;
+    EditText etSredstvo;
+
+    TableLayout tableRaschet;
+    Button btnRaschet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +60,17 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
         tvRashodSredstvaMesVortex = (TextView) findViewById(R.id.tvRashodSredstvaMesVortex);
         tvPriceSredstvaVortex = (TextView) findViewById(R.id.tvPriceSredstvaVortex);
         tvVygoda = (TextView) findViewById(R.id.tvVygoda);
+        tvSredstvo = (TextView) findViewById(R.id.tvSredstvo);
+        tvSredstvoVortex = (TextView) findViewById(R.id.tvSredstvoVortex);
+        tableRaschet = (TableLayout) findViewById(R.id.tableRaschet);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         PriceLitr = getIntent().getExtras().getDouble("PriceLitr");
         StoimostRastvora = getIntent().getExtras().getDouble("StoimostRastvora");
         RashodSrdstvaMoyka = getIntent().getExtras().getDouble("RashodSrdstvaMoyka");
         RashodSredstvaMes = getIntent().getExtras().getDouble("RashodSredstvaMes");
         PriceSredstvaVortex = getIntent().getExtras().getDouble("PriceSredstva");
+        SredstvoVortex = getIntent().getExtras().getString("Sredstvo");
 
         tvPriceLitrVortex.setText(String.valueOf(roundUp(PriceLitr, 2)));
         tvStoimostRastvoraVortex.setText(String.valueOf(roundUp(StoimostRastvora, 2)));
@@ -69,6 +84,7 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
         etObjemRastvor = (EditText) findViewById(R.id.etObjemRastvor);
         etOperacSutki = (EditText) findViewById(R.id.etOperacSutki);
         etDay = (EditText) findViewById(R.id.etDay);
+        etSredstvo = (EditText) findViewById(R.id.etSredstvo);
 
         tvPriceLitr = (TextView) findViewById(R.id.tvPriceLitr);
         tvStoimostRastvora = (TextView) findViewById(R.id.tvStoimostRastvora);
@@ -78,13 +94,14 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
 
 
     }
+
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClick(View view) {
-        if (etPlotnost.getText().length() == 0 ||etPrice.getText().length() == 0 || etKoncentratRastvor.getText().length() == 0 || etObjemRastvor.getText().length() == 0
-                || etOperacSutki.getText().length() == 0 || etDay.getText().length() == 0 ) {
+        if (etPlotnost.getText().length() == 0 || etPrice.getText().length() == 0 || etKoncentratRastvor.getText().length() == 0 || etObjemRastvor.getText().length() == 0
+                || etOperacSutki.getText().length() == 0 || etDay.getText().length() == 0 || etSredstvo.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -96,12 +113,14 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
         double dblOperacSutki = Double.parseDouble(etOperacSutki.getText().toString());
         double dblDay = Double.parseDouble(etDay.getText().toString());
 
+        tvSredstvoVortex.setText(SredstvoVortex);
+        tvSredstvo.setText(etSredstvo.getText());
 
-        PriceLitr = dblPrice*dblplotnost;
+        PriceLitr = dblPrice * dblplotnost;
         StoimostRastvora = dblKoncentratRastvor * dblObjemRastvor * PriceLitr / 100;
         RashodSrdstvaMoyka = dblKoncentratRastvor * dblObjemRastvor / 100;
         RashodSredstvaMes = RashodSrdstvaMoyka * dblOperacSutki * dblDay;
-        PriceSredstva = PriceLitr*RashodSredstvaMes;
+        PriceSredstva = PriceLitr * RashodSredstvaMes;
 
         tvPriceLitr.setText(String.valueOf(roundUp(PriceLitr, 2)));
         tvStoimostRastvora.setText(String.valueOf(roundUp(StoimostRastvora, 2)));
@@ -111,5 +130,9 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
 
         vygoda = PriceSredstva - PriceSredstvaVortex;
         tvVygoda.setText(String.valueOf(roundUp(vygoda, 2)));
+
+        tableRaschet.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
 }

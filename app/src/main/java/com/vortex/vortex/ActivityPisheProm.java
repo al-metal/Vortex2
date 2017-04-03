@@ -1,13 +1,18 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,9 +22,10 @@ import com.vortex.vortex.APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravneni
 import java.math.BigDecimal;
 
 public class ActivityPisheProm extends AppCompatActivity {
-    String[] data = {"BIOTEC", "BIOTEC C", "BIOTEC Super", "BIOTEC М", "KSILAN", "KSILAN K", "KSILAN Super", "KSILAN М", "Tank CB 46",
+    String[] data = {"Выберите средство", "BIOTEC", "BIOTEC C", "BIOTEC Super", "BIOTEC М", "KSILAN", "KSILAN K", "KSILAN Super", "KSILAN М", "Tank CB 46",
             "Tank CA27", "Tank FA18", "Tank FB17", "TANK FBD 0803/1", "TANK FB 36", "TANK FBD 0402/1", "TANK LBD 0107/1", "TANK LBD 1002/2",
             "TANK FBD 0902/2", "TANKCAD 1415/3", "TANK FN"};
+    String sredstvo;
     double dblplotnost;
     double PriceLitr;
     double StoimostRastvora;
@@ -40,12 +46,22 @@ public class ActivityPisheProm extends AppCompatActivity {
     TextView tvRashodSredstvaMes;
     TextView tvPriceSredstva;
 
+    boolean selectedSpiner = false;
+
+    TableLayout tableRaschet;
+    Button btnSravnenie;
+    Button btnRaschet;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pishe_prom);
         setTitle("Средства для предприятий пищевой промышленности");
+
+        tableRaschet = (TableLayout) findViewById(R.id.tableRaschet);
+        btnSravnenie = (Button) findViewById(R.id.btnSravnenie);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         etPrice = (EditText) findViewById(R.id.etPrice);
         etKoncentratRastvor = (EditText) findViewById(R.id.etKoncentratRastvor);
@@ -74,61 +90,66 @@ public class ActivityPisheProm extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
                 // Set adapter flag that something has been chosen
 
-                if(pos == 0){
+                if (pos == 0) {
+                    selectedSpiner = false;
+                    return;
+                } else if (pos == 1) {
                     dblplotnost = 1.252;
-                }else if(pos == 1){
+                } else if (pos == 2) {
                     dblplotnost = 1.226;
-                }else if(pos == 2){
+                } else if (pos == 3) {
                     dblplotnost = 1.230;
-                }else if(pos == 3){
+                } else if (pos == 4) {
                     dblplotnost = 1.198;
-                }else if(pos == 4){
+                } else if (pos == 5) {
                     dblplotnost = 1.22;
-                }else if(pos == 5){
+                } else if (pos == 6) {
                     dblplotnost = 1.2;
-                }else if(pos == 6){
+                } else if (pos == 7) {
                     dblplotnost = 1.28;
-                }else if(pos == 7){
+                } else if (pos == 8) {
                     dblplotnost = 1.167;
-                }else if(pos == 8){
+                } else if (pos == 9) {
                     dblplotnost = 1.457;
-                }else if(pos == 9){
+                } else if (pos == 10) {
                     dblplotnost = 1.221;
-                }else if(pos == 10){
+                } else if (pos == 11) {
                     dblplotnost = 1.157;
-                }else if(pos == 11){
+                } else if (pos == 12) {
                     dblplotnost = 1.194;
-                }else if(pos == 12){
+                } else if (pos == 13) {
                     dblplotnost = 1.170;
-                }else if(pos == 13){
+                } else if (pos == 14) {
                     dblplotnost = 1.391;
-                }else if(pos == 14){
+                } else if (pos == 15) {
                     dblplotnost = 1.173;
-                }else if(pos == 15){
+                } else if (pos == 16) {
                     dblplotnost = 1.145;
-                }else if(pos == 16){
+                } else if (pos == 17) {
                     dblplotnost = 1.122;
-                }else if(pos == 17){
+                } else if (pos == 18) {
                     dblplotnost = 1.104;
-                }else if(pos == 18){
+                } else if (pos == 19) {
                     dblplotnost = 1.16;
-                }else if(pos == 19){
+                } else if (pos == 20) {
                     dblplotnost = 1.025;
                 }
+                sredstvo = data[pos];
+                selectedSpiner = true;
                 tvPlotnost.setText(String.valueOf(dblplotnost));
             }
         });
-
     }
 
     public void onClickRaschet(View view) {
         if (etPrice.getText().length() == 0 || etKoncentratRastvor.getText().length() == 0 || etObjemRastvor.getText().length() == 0
-                || etOperacSutki.getText().length() == 0 || etDay.getText().length() == 0 ) {
+                || etOperacSutki.getText().length() == 0 || etDay.getText().length() == 0 || !selectedSpiner) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -140,17 +161,22 @@ public class ActivityPisheProm extends AppCompatActivity {
         double dblDay = Double.parseDouble(etDay.getText().toString());
 
 
-        PriceLitr = dblPrice*dblplotnost;
+        PriceLitr = dblPrice * dblplotnost;
         StoimostRastvora = dblKoncentratRastvor * dblObjemRastvor * PriceLitr / 100;
         RashodSrdstvaMoyka = dblKoncentratRastvor * dblObjemRastvor / 100;
         RashodSredstvaMes = RashodSrdstvaMoyka * dblOperacSutki * dblDay;
-        PriceSredstva = PriceLitr*RashodSredstvaMes;
+        PriceSredstva = PriceLitr * RashodSredstvaMes;
 
         tvPriceLitr.setText(String.valueOf(roundUp(PriceLitr, 2)));
         tvStoimostRastvora.setText(String.valueOf(roundUp(StoimostRastvora, 2)));
         tvRashodSrdstvaMoyka.setText(String.valueOf(roundUp(RashodSrdstvaMoyka, 2)));
         tvRashodSredstvaMes.setText(String.valueOf(roundUp(RashodSredstvaMes, 2)));
         tvPriceSredstva.setText(String.valueOf(roundUp(PriceSredstva, 2)));
+
+        tableRaschet.setVisibility(View.VISIBLE);
+        btnSravnenie.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
 
     public BigDecimal roundUp(double value, int digits) {
@@ -169,6 +195,7 @@ public class ActivityPisheProm extends AppCompatActivity {
         intent.putExtra("RashodSrdstvaMoyka", RashodSrdstvaMoyka);
         intent.putExtra("RashodSredstvaMes", RashodSredstvaMes);
         intent.putExtra("PriceSredstva", PriceSredstva);
+        intent.putExtra("Sredstvo", sredstvo);
         startActivity(intent);
     }
 }

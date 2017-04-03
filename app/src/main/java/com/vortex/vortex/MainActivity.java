@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Калькулятор Vortex");
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f15b40")));
     }
 
     public void onClick(View view) {
@@ -43,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickKlining(View view) {
-        Toast.makeText(getBaseContext(), "Данный раздел находиться в разработке", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
     }
 }
