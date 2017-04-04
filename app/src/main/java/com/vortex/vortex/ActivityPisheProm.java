@@ -1,12 +1,13 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,13 +17,10 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.ActivityAPKDezinfekciyaProfilaktikaForbicid;
-import com.vortex.vortex.APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie;
-
 import java.math.BigDecimal;
 
 public class ActivityPisheProm extends AppCompatActivity {
-    String[] data = {"Выберите средство", "BIOTEC", "BIOTEC C", "BIOTEC Super", "BIOTEC М", "KSILAN", "KSILAN K", "KSILAN Super", "KSILAN М", "Tank CB 46",
+    String[] data = {"ВЫБРАТЬ СРЕДСТВО", "BIOTEC", "BIOTEC C", "BIOTEC Super", "BIOTEC М", "KSILAN", "KSILAN K", "KSILAN Super", "KSILAN М", "Tank CB 46",
             "Tank CA27", "Tank FA18", "Tank FB17", "TANK FBD 0803/1", "TANK FB 36", "TANK FBD 0402/1", "TANK LBD 0107/1", "TANK LBD 1002/2",
             "TANK FBD 0902/2", "TANKCAD 1415/3", "TANK FN"};
     String sredstvo;
@@ -78,13 +76,11 @@ public class ActivityPisheProm extends AppCompatActivity {
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner7);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+
 
         spinner.setAdapter(adapter);
-
-        // заголовок
-        spinner.setPrompt("Выберите средство Вортекс");
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -154,12 +150,16 @@ public class ActivityPisheProm extends AppCompatActivity {
             return;
         }
 
+        //Скрытие клавиатуры по нажатию кнопки
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+
         double dblPrice = Double.parseDouble(etPrice.getText().toString());
         double dblKoncentratRastvor = Double.parseDouble(etKoncentratRastvor.getText().toString());
         double dblObjemRastvor = Double.parseDouble(etObjemRastvor.getText().toString());
         double dblOperacSutki = Double.parseDouble(etOperacSutki.getText().toString());
         double dblDay = Double.parseDouble(etDay.getText().toString());
-
 
         PriceLitr = dblPrice * dblplotnost;
         StoimostRastvora = dblKoncentratRastvor * dblObjemRastvor * PriceLitr / 100;
