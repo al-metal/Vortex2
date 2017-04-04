@@ -54,7 +54,7 @@ public class ActivityPishePromSravnenie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pishe_prom_sravnenie);
-        setTitle("Сравнение средств");
+        setTitle("Сравнить с другим средством");
 
         tvPriceLitrVortex = (TextView) findViewById(R.id.tvPriceLitrVortex);
         tvStoimostRastvoraVortex = (TextView) findViewById(R.id.tvStoimostRastvoraVortex);

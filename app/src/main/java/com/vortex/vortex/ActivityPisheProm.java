@@ -55,7 +55,7 @@ public class ActivityPisheProm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pishe_prom);
-        setTitle("Средства для предприятий пищевой промышленности");
+        setTitle("TM TANK");
 
         tableRaschet = (TableLayout) findViewById(R.id.tableRaschet);
         btnSravnenie = (Button) findViewById(R.id.btnSravnenie);
