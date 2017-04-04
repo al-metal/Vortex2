@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -27,7 +29,7 @@ public class ActivityAuto extends AppCompatActivity {
 
     LinearLayout llmain;
 
-    String[] data = {"Пеногенератор 50 литров", "Пенокомплект", "Дозатрон"};
+    String[] data = {"ВЫБРАТЬ УСТРОЙСТВО", "ПЕНОГЕНЕРАТОР, 50 Л", "ПЕНОКОМПЛЕКТ", "ДОЗАТРОН"};
 
     String[][] arr = {};
 
@@ -145,11 +147,16 @@ public class ActivityAuto extends AppCompatActivity {
     private RadioButton rbDjeskost;
     private RadioButton rbDh;
     private RadioButton rbMgL;
+    private Button btnRaschet;
 
     private double voda;
     String spin;
     String sredstvo;
     String strVoda;
+    String strVyborJVody;
+    String strJoskost = "0";
+
+    boolean selectedSpiner = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,26 +176,37 @@ public class ActivityAuto extends AppCompatActivity {
         rbDjeskost = (RadioButton) findViewById(R.id.rbDjeskost);
         rbMgL = (RadioButton) findViewById(R.id.rbMgL);
         rbDh = (RadioButton) findViewById(R.id.rbDh);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         ((EditText) findViewById(R.id.etVoda)).addTextChangedListener(new TextWatcher() {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                strVyborJVody = null;
+                strJoskost = "0";
+
                 if (etVoda.getText().length() != 0) {
                     voda = Double.parseDouble(etVoda.getText().toString());
                     if (rbDjeskost.isChecked() == true) {
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     } else if (rbDh.isChecked() == true) {
                         voda = voda * 0.36;
-                        tvVoda.setText(String.valueOf(roundUp(voda, 2)));
-                        ReturnVoda(tvVoda);
+                        strJoskost = String.valueOf(roundUp(voda, 2));
+                        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
+                        ReturnVoda(strJoskost);
                     } else if (rbMgL.isChecked() == true) {
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     }
+                    strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+                    tvVoda.setText(strVyborJVody);
+                    selectedSpiner = true;
                 } else {
-                    tvVoda.setText("0");
+                    tvVoda.setText("выбранная жесткость воды °Ж");
                 }
             }
 
@@ -205,13 +223,10 @@ public class ActivityAuto extends AppCompatActivity {
 
         final Spinner spinner = (Spinner) findViewById(R.id.spinner8);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
-
-        // заголовок
-        spinner.setPrompt("Выберите устройство");
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -221,8 +236,13 @@ public class ActivityAuto extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
-                double vod = Double.parseDouble(tvVoda.getText().toString());
+                if (strJoskost == null)
+                    return;
+                double vod = Double.parseDouble(strJoskost);
                 if (pos == 0) {
+                    selectedSpiner = false;
+                    return;
+                } else if (pos == 1) {
                     spin = "peno50";
                     if (0 <= vod && vod < 3.5) {
                         arr = peno50ligth;
@@ -234,7 +254,7 @@ public class ActivityAuto extends AppCompatActivity {
                         arr = peno50hard;
                         sredstvo = "peno50hard";
                     }
-                } else if (pos == 1) {
+                } else if (pos == 2) {
                     spin = "penokomplekt";
                     if (0 <= vod && vod < 3.5) {
                         arr = penokomplektligth;
@@ -246,7 +266,7 @@ public class ActivityAuto extends AppCompatActivity {
                         arr = penokomplekthard;
                         sredstvo = "penokomplekthard";
                     }
-                } else if (pos == 2) {
+                } else if (pos == 3) {
                     spin = "dozatron";
                     if (0 <= vod && vod < 3.5) {
                         arr = dozatronligth;
@@ -259,7 +279,7 @@ public class ActivityAuto extends AppCompatActivity {
                         sredstvo = "dozatronhard";
                     }
                 }
-
+                selectedSpiner = true;
             }
         });
     }
@@ -268,45 +288,57 @@ public class ActivityAuto extends AppCompatActivity {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
+        strVyborJVody = null;
+        strJoskost = "0";
+
         if (etVoda.getText().length() != 0)
             voda = Double.parseDouble(etVoda.getText().toString());
         // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.rbDjeskost:
                 if (checked) {
-                    tvDh.setText("°Ж");
+                    //tvDh.setText("°Ж");
                     if (etVoda.getText().length() != 0) {
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     }
                 }
                 break;
             case R.id.rbDh:
                 if (checked) {
-                    tvDh.setText("°DH");
+                    //tvDh.setText("°DH");
                     if (etVoda.getText().length() != 0) {
                         voda = voda * 0.36;
-                        tvVoda.setText(String.valueOf(roundUp(voda, 2)));
-                        ReturnVoda(tvVoda);
+                        strJoskost = String.valueOf(roundUp(voda, 2));
+                        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
+                        ReturnVoda(strJoskost);
                     }
                 }
                 break;
             case R.id.rbMgL:
                 if (checked) {
-                    tvDh.setText("мг - экв/л");
+                    //tvDh.setText("мг - экв/л");
                     if (etVoda.getText().length() != 0) {
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     }
                 }
                 break;
         }
+        if (strJoskost == null)
+            strVyborJVody = "выбранная жесткость воды °Ж";
+        else
+            strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+        tvVoda.setText(strVyborJVody);
+        selectedSpiner = true;
     }
 
-    private void ReturnVoda(TextView tvVoda) {
-        double vod = Double.parseDouble(tvVoda.getText().toString());
+    private void ReturnVoda(String tvVoda) {
+        double vod = Double.parseDouble(tvVoda);
         if (0 <= vod && vod < 3.5) {
-            tvVodaStr.setText("мягкая");
+            tvVodaStr.setText("вода мягкая");
             strVoda = "ligth";
             if (spin == "peno50") {
                 arr = peno50ligth;
@@ -316,7 +348,7 @@ public class ActivityAuto extends AppCompatActivity {
                 arr = dozatronligth;
             }
         } else if (3.5 <= vod && vod < 7) {
-            tvVodaStr.setText("умеренной жесткости");
+            tvVodaStr.setText("вода умеренной жесткости");
             strVoda = "default";
             if (spin == "peno50") {
                 arr = peno50default;
@@ -326,7 +358,7 @@ public class ActivityAuto extends AppCompatActivity {
                 arr = dozatrondefault;
             }
         } else if (7 <= vod) {
-            tvVodaStr.setText("жесткая");
+            tvVodaStr.setText("вода жесткая");
             strVoda = "hard";
             if (spin == "peno50") {
                 arr = peno50hard;
@@ -338,7 +370,6 @@ public class ActivityAuto extends AppCompatActivity {
         } else {
             tvVodaStr.setText("");
         }
-
     }
 
     public BigDecimal roundUp(double value, int digits) {
@@ -346,6 +377,12 @@ public class ActivityAuto extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+
+        if (!selectedSpiner || etVoda.getText().length() == 0) {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         tableLayout.removeAllViewsInLayout();
 
@@ -358,8 +395,10 @@ public class ActivityAuto extends AppCompatActivity {
             else
                 addRow(arr[i][0], arr[i][1], arr[i][2]);
         }
-        tvVoda.setText(String.valueOf(roundUp(voda, 2)));
-        ReturnVoda(tvVoda);
+        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
+        ReturnVoda(strJoskost);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
 
     private void ReturnArr() {

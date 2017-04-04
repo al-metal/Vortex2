@@ -281,7 +281,7 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_sravnenie);
-        setTitle("Сравнение средств");
+        setTitle("Сравнить средства");
 
         tvChastVortex= (TextView) findViewById(R.id.tvChastVortex);
         tvPeno25Vortex= (TextView) findViewById(R.id.tvPeno25Vortex);

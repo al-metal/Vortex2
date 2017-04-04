@@ -232,7 +232,7 @@
                         android:layout_span="2"
                         android:paddingLeft="5dp"
                         android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
+                        android:textColor="@color/colorGray"
                         android:textSize="11sp" />
 
                     <TextView
@@ -242,7 +242,7 @@
                         android:layout_span="2"
                         android:paddingLeft="5dp"
                         android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
+                        android:textColor="@color/colorGray"
                         android:textSize="11sp" />
 
                 </TableRow>
