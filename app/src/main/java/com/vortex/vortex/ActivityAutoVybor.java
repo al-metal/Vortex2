@@ -11,6 +11,7 @@ public class ActivityAutoVybor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_vybor);
+        setTitle("TM COMPLEX");
     }
 
     public void onClickAuto(View view) {

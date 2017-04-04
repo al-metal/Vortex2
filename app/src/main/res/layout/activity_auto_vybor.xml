@@ -7,29 +7,72 @@
     tools:context="com.vortex.vortex.ActivityAutoVybor">
 
     <ScrollView
-        android:layout_width="344dp"
+        android:layout_width="360dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnAvtohim"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="2"
+                        android:background="@null"
+                        android:onClick="onClickAuto"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/avtohim" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnSuperK"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="2"
+                        android:background="@null"
+                        android:onClick="onClickSuperK"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/superkoncentrat" />
+                </TableRow>
+            </TableLayout>
 
             <Button
                 android:id="@+id/button31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="onClickAuto"
-                android:text="Автохимия" />
+                android:onClick="onClickAuto123"
+                android:text="Автохимия"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="onClickSuperK"
-                android:text="Супер концентрат" />
+                android:onClick="onClickSuperK123"
+                android:text="Супер концентрат"
+                android:visibility="invisible" />
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
