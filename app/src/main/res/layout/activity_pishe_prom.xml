@@ -30,12 +30,12 @@
 
                     <Spinner
                         android:id="@+id/spinner7"
+                        style="@style/SpinnerTheme"
                         android:layout_width="match_parent"
                         android:layout_height="37dp"
                         android:layout_span="6"
                         android:background="@color/colorSpiner"
-                        android:paddingLeft="10dp"
-                        android:spinnerMode="dropdown"/>
+                        android:spinnerMode="dialog" />
                 </TableRow>
 
                 <TableRow
@@ -205,9 +205,9 @@
                         android:id="@+id/tvPlotnost"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:layout_span="2"
                         android:text="0"
-                        android:layout_marginLeft="4dp"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -230,9 +230,9 @@
                         android:id="@+id/tvPriceLitr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:layout_span="2"
                         android:text="0"
-                        android:layout_marginLeft="4dp"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -255,8 +255,8 @@
                         android:id="@+id/tvStoimostRastvora"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_span="2"
                         android:layout_marginLeft="4dp"
+                        android:layout_span="2"
                         android:text="0"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
@@ -280,9 +280,9 @@
                         android:id="@+id/tvRashodSrdstvaMoyka"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:layout_span="2"
                         android:text="0"
-                        android:layout_marginLeft="4dp"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -305,9 +305,9 @@
                         android:id="@+id/tvRashodSredstvaMes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:layout_span="2"
                         android:text="0"
-                        android:layout_marginLeft="4dp"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -330,20 +330,21 @@
                         android:id="@+id/tvPriceSredstva"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:layout_span="2"
                         android:text="0"
-                        android:layout_marginLeft="4dp"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
             </TableLayout>
 
             <Button
-                android:layout_marginTop="17dp"
                 android:id="@+id/btnSravnenie"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
+                android:layout_marginTop="17dp"
                 android:background="@color/colorRed"
+                android:fontFamily="sans-serif"
                 android:onClick="onClickSravnenie"
                 android:text="Сравнить с другим средством"
                 android:textColor="@android:color/background_light"

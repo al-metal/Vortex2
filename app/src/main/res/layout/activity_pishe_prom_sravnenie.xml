@@ -54,8 +54,8 @@
                     <TextView
                         android:id="@+id/textView153"
                         android:layout_width="match_parent"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="Плотность" />
 
@@ -76,9 +76,9 @@
 
                     <TextView
                         android:id="@+id/textView156"
-                        android:layout_marginLeft="17dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="Стоимость за 1 кг" />
 
@@ -100,8 +100,8 @@
                     <TextView
                         android:id="@+id/textView157"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="Концентрация раствора" />
 
@@ -124,8 +124,8 @@
                         android:id="@+id/textView160"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
+                        android:layout_span="4"
                         android:text="Объем моющего раствора" />
 
                     <EditText
@@ -147,8 +147,8 @@
                         android:id="@+id/textView161"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
+                        android:layout_span="4"
                         android:text="Количество промывок в сутки" />
 
                     <EditText
@@ -169,8 +169,8 @@
                     <TextView
                         android:id="@+id/textView162"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="Рабочие дни в месяце" />
 
@@ -219,9 +219,9 @@
 
                     <TextView
                         android:id="@+id/textView163"
-                        android:layout_marginLeft="17dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:textSize="11sp" />
 
@@ -230,7 +230,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -239,7 +239,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -253,8 +253,8 @@
                     <TextView
                         android:id="@+id/textView164"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:text="Цена за 1 кг"
                         android:textSize="11sp" />
@@ -265,7 +265,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -275,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -287,9 +287,9 @@
 
                     <TextView
                         android:id="@+id/textView165"
-                        android:layout_marginLeft="17dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:text="Стоимость раствора"
                         android:textSize="11sp" />
@@ -300,7 +300,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -310,7 +310,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -323,8 +323,8 @@
                     <TextView
                         android:id="@+id/textView166"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:text="Расход средства за 1 мойку, л"
                         android:textSize="11sp" />
@@ -335,7 +335,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -345,7 +345,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -359,8 +359,8 @@
                     <TextView
                         android:id="@+id/textView167"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:text="Расход средства в месяц, л"
                         android:textSize="11sp" />
@@ -371,7 +371,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -381,7 +381,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -395,8 +395,8 @@
                     <TextView
                         android:id="@+id/textView168"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:text="Расход на покупку в месяц"
                         android:textSize="11sp" />
@@ -407,7 +407,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -417,7 +417,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -431,8 +431,8 @@
                     <TextView
                         android:id="@+id/textView169"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="3"
                         android:text="Экономическая эффективность применения средств ТМ Вортекс,руб в месяц"
                         android:textAlignment="textStart"
@@ -444,7 +444,7 @@
                         android:layout_height="wrap_content"
                         android:layout_span="2"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
 
@@ -453,6 +453,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:textAlignment="textStart"
                         android:textSize="11sp" />
 
                 </TableRow>
