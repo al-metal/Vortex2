@@ -188,7 +188,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                    android:layout_marginTop="23dp">
 
                     <Button
                         android:id="@+id/btnRaschet"
@@ -230,6 +230,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
@@ -239,6 +240,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
@@ -264,6 +266,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -274,6 +277,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -299,6 +303,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -309,6 +314,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -334,6 +340,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -344,6 +351,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -370,6 +378,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -380,6 +389,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -406,6 +416,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -416,6 +427,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -434,7 +446,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Экономическая эффективность применения средств ТМ Вортекс,руб в месяц"
+                        android:text="Эффективность применения средств\nTM VORTEX за 1 мес."
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -443,6 +455,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:text="0"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
@@ -453,6 +466,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:paddingLeft="5dp"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
