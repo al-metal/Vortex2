@@ -36,8 +36,12 @@
         <activity android:name=".APK.ActivityAPKDezinfekciyaTumanFire" />
         <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIce" />
         <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIceAnimal" />
-        <activity android:name=".ActivityPisheProm" />
-        <activity android:name=".ActivityPishePromSravnenie" />
+        <activity
+            android:name=".ActivityPisheProm"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityPishePromSravnenie"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".ActivityAuto" />
         <activity android:name=".ActivityAutoSravnenie" />
         <activity android:name=".APK.ActivityAPKKopyta" />
