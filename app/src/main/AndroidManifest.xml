@@ -15,44 +15,108 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".APK.ApkActivity" />
-        <activity android:name=".APK.ApkMoySredstvaActivity" />
-        <activity android:name=".APK.ApkMoySredstvaSravnenieActivity" />
-        <activity android:name=".APK.ActivityApkMoysredstvaMain" />
-        <activity android:name=".APK.ActivityApkMoySredstvaForHoz" />
-        <activity android:name=".APK.ActivityApkMoySredstvaVoda" />
-        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeni" />
-        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia" />
-        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia" />
-        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod" />
-        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie" />
-        <activity android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie" />
-        <activity android:name=".APK.ActivityAPKGigienaVymeniExpressMethodSravnenie" />
-        <activity android:name=".APK.ActivityAPKDezinfekciya" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaProfilaktikaForbicid" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaVynujdennayaForbicid" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaTumanFire" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIce" />
-        <activity android:name=".APK.ActivityAPKDezinfekciyaTumanIceAnimal" />
+        <activity
+            android:name=".APK.ApkActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ApkMoySredstvaActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ApkMoySredstvaSravnenieActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityApkMoysredstvaMain"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityApkMoySredstvaForHoz"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityApkMoySredstvaVoda"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeni"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKGigienaVymeniExpressMethodSravnenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciya"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaProfilaktikaForbicid"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaVynujdennayaForbicid"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaTumanFire"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaTumanIce"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKDezinfekciyaTumanIceAnimal"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityPisheProm"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityPishePromSravnenie"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ActivityAuto" />
-        <activity android:name=".ActivityAutoSravnenie" />
-        <activity android:name=".APK.ActivityAPKKopyta" />
-        <activity android:name=".APK.ActivityAPKKopytaOzdorovlenie" />
-        <activity android:name=".APK.ActivityAPKKopytaProfilaktika" />
-        <activity android:name=".APK.ActivityAPKKopytaMedKuporos" />
-        <activity android:name=".APK.ActivityAPKKopytaDesitabProfilakt" />
-        <activity android:name=".APK.ActivityAPKKopytaDesitabProfilaktUsil" />
-        <activity android:name=".ActivityAutoSuperKoncentrat" />
-        <activity android:name=".ActivityAutoVybor" />
-        <activity android:name=".ActivityAutoSuperKoncentratSravnenie"></activity>
+        <activity
+            android:name=".ActivityAuto"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityAutoSravnenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKKopyta"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKKopytaOzdorovlenie"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKKopytaProfilaktika"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKKopytaMedKuporos"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKKopytaDesitabProfilakt"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".APK.ActivityAPKKopytaDesitabProfilaktUsil"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityAutoSuperKoncentrat"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityAutoVybor"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivityAutoSuperKoncentratSravnenie"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>
