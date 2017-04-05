@@ -1,6 +1,28 @@
 <TableRow xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@+id/col1" android:text="" android:layout_span="3" android:layout_marginLeft="17dp" android:layout_marginTop="18dp" />
-    <TextView android:id="@+id/col2" android:text="" android:layout_span="2" android:layout_marginTop="18dp" android:textColor="@color/colorBlack"/>
-    <TextView android:id="@+id/col3" android:text="" android:layout_span="2" android:layout_marginTop="18dp" android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/col1"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_span="3"
+        android:text=""
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/col2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/col3"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
 
 </TableRow>

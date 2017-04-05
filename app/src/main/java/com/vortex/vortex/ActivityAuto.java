@@ -2,6 +2,7 @@ package com.vortex.vortex;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -34,7 +35,8 @@ public class ActivityAuto extends AppCompatActivity {
     String[][] arr = {};
 
     //region Array
-    String[][] peno50ligth = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"}, {"Unior", "1:60", "850"},
+    String[][] peno50ligth = {{"", "Разбавление", "Количество, мл"},
+            {"Unior", "1:60", "850"},
             {"Tiro, Tiro Tone", "1:80", "625"},
             {"Master, Master Tone", "1:100", "500"},
             {"Profy", "1:120", "425"},
@@ -45,7 +47,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Solo", "1:70", "725"},
             {"DIY", "1:120", "425"}};
 
-    String[][] peno50default = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
+    String[][] peno50default = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:40", "1200"},
             {"Tiro, Tiro Tone", "1:60", "800"},
             {"Novice", "1:80", "600"},
@@ -60,7 +62,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Solo", "1:55", "900"},
             {"DIY", "1:100", "500"}};
 
-    String[][] peno50hard = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
+    String[][] peno50hard = {{"", "Разбавление", "Количество, мл"},
             {"Novice", "1:50", "1000"},
             {"Tutor ", "1:60", "800"},
             {"Profy", "1:60", "800"},
@@ -69,7 +71,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Magnat", "1:60", "800"},
             {"DIY", "1:60", "800"}};
 
-    String[][] penokomplektligth = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
+    String[][] penokomplektligth = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:4", "200"},
             {"Tiro, Tiro Tone", "1:6", "150"},
             {"Master, Master Tone", "1:7", "110"},
@@ -81,7 +83,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Solo", "1:5", "170"},
             {"DIY", "1:10", "90"}};
 
-    String[][] penokomplektdefault = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
+    String[][] penokomplektdefault = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:2", "300"},
             {"Tiro, Tiro Tone", "1:4", "200"},
             {"Novice", "1:6", "145"},
@@ -96,7 +98,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Solo", "1:4", "200"},
             {"DIY", "1:8", "110"}};
 
-    String[][] penokomplekthard = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
+    String[][] penokomplekthard = {{"", "Разбавление", "Количество, мл"},
             {"Novice", "1:4", "200"},
             {"Tutor ", "1:6", "145"},
             {"Profy", "1:6", "145"},
@@ -105,7 +107,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Magnat", "1:6", "145"},
             {"DIY", "1:3", "250"}};
 
-    String[][] dozatronligth = {{"Продукт", "Показатель концентрации %"},
+    String[][] dozatronligth = {{"", "Концентрация, %"},
             {"Unior", "2"},
             {"Tiro, Tiro Tone", "1.5"},
             {"Master, Master Tone", "1"},
@@ -116,7 +118,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Solo", "1.5"},
             {"DIY", "1"}};
 
-    String[][] dozatrondefault = {{"Продукт", "Показатель концентрации %"},
+    String[][] dozatrondefault = {{"", "Концентрация, %"},
             {"Unior", "3"},
             {"Tiro, Tiro Tone", "2"},
             {"Novice", "1.5"},
@@ -130,7 +132,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Solo", "2"},
             {"DIY", "1"}};
 
-    String[][] dozatronhard = {{"Продукт", "Показатель концентрации %"},
+    String[][] dozatronhard = {{"", "Концентрация, %"},
             {"Novice", "2"},
             {"Tutor ", "2"},
             {"Profy", "2"},
@@ -159,6 +161,8 @@ public class ActivityAuto extends AppCompatActivity {
     boolean selectedSpiner = false;
     boolean bollSpinner = false;
 
+    TableLayout table;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -166,6 +170,8 @@ public class ActivityAuto extends AppCompatActivity {
         setTitle("Автохимия");
 
         strVoda = null;
+
+        table = (TableLayout) findViewById(R.id.table);
 
         llmain = (LinearLayout) findViewById(R.id.llmain);
 
@@ -178,6 +184,9 @@ public class ActivityAuto extends AppCompatActivity {
         rbMgL = (RadioButton) findViewById(R.id.rbMgL);
         rbDh = (RadioButton) findViewById(R.id.rbDh);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
+
+        strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+        tvVoda.setText(strVyborJVody);
 
         ((EditText) findViewById(R.id.etVoda)).addTextChangedListener(new TextWatcher() {
 
@@ -329,10 +338,7 @@ public class ActivityAuto extends AppCompatActivity {
                 }
                 break;
         }
-        if (strJoskost == null)
-            strVyborJVody = "выбранная жесткость воды °Ж";
-        else
-            strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+        strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
         tvVoda.setText(strVyborJVody);
         selectedSpiner = true;
     }
@@ -384,6 +390,8 @@ public class ActivityAuto extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        table.setVisibility(View.VISIBLE);
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         tableLayout.removeAllViewsInLayout();
