@@ -33,7 +33,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_columnSpan="3"
-                        android:layout_marginLeft="17dp"
+                        android:layout_marginLeft="8dp"
                         android:layout_span="7"
                         android:orientation="horizontal">
 
@@ -52,6 +52,7 @@
                             android:id="@+id/rbDh"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="-5dp"
                             android:layout_toEndOf="@+id/rbDjeskost"
                             android:layout_toRightOf="@+id/rbDjeskost"
                             android:layout_weight="1"
@@ -80,7 +81,7 @@
                         android:id="@+id/etVoda"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_span="3"
                         android:ems="10"
@@ -92,9 +93,9 @@
                         android:id="@+id/tvVoda"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="15dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
                         android:layout_span="4"
                         android:width="80dp"
                         android:text="выбранная жесткость воды °Ж"
@@ -162,15 +163,17 @@
                         android:id="@+id/table"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
                         android:layout_span="7"
                         android:shrinkColumns="*"
-                        android:stretchColumns="*"></TableLayout>
+                        android:stretchColumns="*"
+                        android:visibility="gone"></TableLayout>
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp">
+                    android:layout_marginTop="7dp">
 
                     <Button
                         android:id="@+id/button16"
