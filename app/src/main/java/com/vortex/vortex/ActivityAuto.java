@@ -157,6 +157,7 @@ public class ActivityAuto extends AppCompatActivity {
     String strJoskost = "0";
 
     boolean selectedSpiner = false;
+    boolean bollSpinner = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -279,6 +280,7 @@ public class ActivityAuto extends AppCompatActivity {
                         sredstvo = "dozatronhard";
                     }
                 }
+                bollSpinner = true;
                 selectedSpiner = true;
             }
         });
@@ -378,7 +380,7 @@ public class ActivityAuto extends AppCompatActivity {
 
     public void onClick(View view) {
 
-        if (!selectedSpiner || etVoda.getText().length() == 0) {
+        if (!selectedSpiner || etVoda.getText().length() == 0 || !bollSpinner) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
