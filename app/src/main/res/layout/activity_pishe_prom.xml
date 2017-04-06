@@ -48,7 +48,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость"
+                        android:text="Стоимость (руб/кг)"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -73,7 +73,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация"
+                        android:text="Концентрация, %"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем средства"
+                        android:text="Объем раствора (л)"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -120,10 +120,10 @@
                     <TextView
                         android:id="@+id/textView138"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Промывка в сутки"
+                        android:text="Количество промывок в сутки"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -145,10 +145,10 @@
                     <TextView
                         android:id="@+id/textView142"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Рабочие дни в месяце"
+                        android:text="Количество рабочих дней в мес."
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -189,7 +189,7 @@
                 android:layout_height="match_parent"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                android:visibility="invisible">
+                android:visibility="gone">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -204,7 +204,7 @@
                         android:layout_span="4"
                         android:fontFamily=""
                         android:paddingRight="10dp"
-                        android:text="Плотность"
+                        android:text="Плотность (кг/л)"
                         android:textSize="11sp" />
 
                     <TextView
@@ -230,7 +230,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Цена за 1 л"
+                        android:text="Цена за 1 л (руб)"
                         android:textSize="11sp" />
 
                     <TextView
@@ -256,7 +256,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Стоимость моющего раствора"
+                        android:text="Стоимость моющего раствора (руб)"
                         android:textSize="11sp" />
 
                     <TextView
@@ -282,7 +282,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Расход средства за 1 мойку, л"
+                        android:text="Расход средства за 1 мойку (л)"
                         android:textSize="11sp" />
 
                     <TextView
@@ -308,7 +308,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Расход средства в месяц, л"
+                        android:text="Расход средства в месяц (л)"
                         android:textSize="11sp" />
 
                     <TextView
@@ -334,7 +334,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Расход на покупку средства в месяц"
+                        android:text="Расход на покупку средства в месяц (руб)"
                         android:textSize="11sp" />
 
                     <TextView
