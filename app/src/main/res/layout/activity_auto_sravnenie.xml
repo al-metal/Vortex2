@@ -70,7 +70,7 @@
                     android:layout_marginTop="23dp">
 
                     <TextView
-                        android:id="@+id/textView79"
+                        android:id="@+id/textView791"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
@@ -89,7 +89,7 @@
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/textView58"
+                        android:id="@+id/textView582"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
@@ -409,7 +409,7 @@
                     android:layout_marginTop="23dp">
 
                     <TextView
-                        android:id="@+id/textView79"
+                        android:id="@+id/textView792"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="4"
@@ -427,7 +427,7 @@
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/textView58"
+                        android:id="@+id/textView5822"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
@@ -550,7 +550,7 @@
                         android:layout_marginTop="23dp">
 
                         <TextView
-                            android:id="@+id/textView79"
+                            android:id="@+id/textView793"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
@@ -569,7 +569,7 @@
                             android:textSize="11sp" />
 
                         <TextView
-                            android:id="@+id/textView58"
+                            android:id="@+id/textView583"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
