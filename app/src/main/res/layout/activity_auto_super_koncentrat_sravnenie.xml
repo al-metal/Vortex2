@@ -7,60 +7,63 @@
     tools:context="com.vortex.vortex.ActivityAutoSuperKoncentratSravnenie">
 
     <ScrollView
-        android:layout_width="344dp"
+        android:layout_width="360dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:stretchColumns="*"
-                android:shrinkColumns="*">
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="35dp">
 
                     <TextView
                         android:id="@+id/textView85"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="Стоимость канистры бесконтакта:" />
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость канистры\nбесконтактного автошампуня" />
 
                     <EditText
                         android:id="@+id/etPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
+                        android:layout_span="2"
                         android:ems="10"
-                        android:hint="руб"
                         android:inputType="numberDecimal" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView113"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="Объем: " />
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Объем" />
 
                     <EditText
                         android:id="@+id/etObjem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
+                        android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
 
@@ -68,266 +71,370 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView117"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="Разбавление: " />
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Разбавление" />
 
                     <EditText
                         android:id="@+id/etRazbavlenie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
+                        android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp">
 
-                    <TextView
-                        android:id="@+id/textView152"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2" />
-
-                    <TextView
-                        android:id="@+id/textView98"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Компания Вортекс" />
-
-                    <TextView
-                        android:id="@+id/textView87"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Для сравнения" />
-
+                    <Button
+                        android:id="@+id/btnRaschet"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_span="6"
+                        android:background="@color/colorRed"
+                        android:fontFamily="sans-serif"
+                        android:onClick="onClickRaschet"
+                        android:text="Рассчитать"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
                 </TableRow>
 
-                <TableRow
+                <TableLayout
+                    android:id="@+id/tableL"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:visibility="gone">
 
-                    <TextView
-                        android:id="@+id/textView158"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Цена за 2 канистры:" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/tvCena2KanistrVortex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
 
-                    <TextView
-                        android:id="@+id/tvCena2Kanistr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
-                </TableRow>
+                        <TextView
+                            android:id="@+id/textView152"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="3"
+                            android:textSize="11sp" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView98"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="КОНЦЕНТРАТ"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView1581"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Объем: " />
+                        <TextView
+                            android:id="@+id/textView87"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="СРЕДСТВО  "
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/tvObjemVortex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/tvObjem"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
-                </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/textView158"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="Цена за 2 канистры"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView159"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Разбавление: " />
+                        <TextView
+                            android:id="@+id/tvCena2KanistrVortex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/tvRazbavlenieVortex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
+                        <TextView
+                            android:id="@+id/tvCena2Kanistr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/tvRazbavlenie"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
-                </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/textView1581"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="Объем"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView154"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Количество заправок: " />
+                        <TextView
+                            android:id="@+id/tvObjemVortex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/tvKolichestvoZapravokVortex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
+                        <TextView
+                            android:id="@+id/tvObjem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/tvKolichestvoZapravok"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
 
-                </TableRow>
+                        <TextView
+                            android:id="@+id/textView159"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="Разбавление"
+                            android:textSize="11sp" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/tvRazbavlenieVortex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView124"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="Стоимость заправки: " />
+                        <TextView
+                            android:id="@+id/tvRazbavlenie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/tvStoimostZapravokVortex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
 
-                    <TextView
-                        android:id="@+id/tvStoimostZapravok"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
-                </TableRow>
+                        <TextView
+                            android:id="@+id/textView154"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="Количество заправок"
+                            android:textSize="11sp" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/tvKolichestvoZapravokVortex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView155"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="стоимость мойки 1 авто (из расчета 50л ПГ - 15 авто)" />
+                        <TextView
+                            android:id="@+id/tvKolichestvoZapravok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/tvStoimostMoykiVortex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/tvStoimostMoyki"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0" />
-                </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/textView124"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="Стоимость заправки"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView146"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Выгода от использования: "
-                        android:textStyle="bold"
-                        android:layout_span="6"/>
-                </TableRow>
+                        <TextView
+                            android:id="@+id/tvStoimostZapravokVortex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/tvStoimostZapravok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/textView149"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="От общей стоимости: "
-                        android:layout_span="3"/>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
 
-                    <TextView
-                        android:id="@+id/textView148"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_span="3"/>
-                </TableRow>
+                        <TextView
+                            android:id="@+id/textView155"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто)"
+                            android:textSize="11sp" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/tvStoimostMoykiVortex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/textView151"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="По стоимости 1 мойки: "
-                        android:layout_span="3"/>
+                        <TextView
+                            android:id="@+id/tvStoimostMoyki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
 
-                    <TextView
-                        android:id="@+id/textView150"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="0" />
-                </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
+
+                        <TextView
+                            android:id="@+id/textView146"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="3"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/textView146"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="ВЫГОДА"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
+
+                        <TextView
+                            android:id="@+id/textView149"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="От общей стоимости"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvObshStoim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp">
+
+                        <TextView
+                            android:id="@+id/textView151"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="3"
+                            android:text="По стоимости 1 мойки"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvPoStoim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                </TableLayout>
+
 
             </TableLayout>
 
-            <Button
-                android:id="@+id/button29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickRaschet"
-                android:text="Рассчитать" />
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

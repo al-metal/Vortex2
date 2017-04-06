@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_apk_moysredstva_main"
     android:layout_width="match_parent"
@@ -10,51 +11,80 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vortex.vortex.APK.ActivityApkMoysredstvaMain">
 
-    <TextView
-        android:text="Выберите нужное:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:id="@+id/textView"
-        android:textSize="24sp" />
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="495dp"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
 
-    <Button
-        android:text="Подбор средства под жесткость воды"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="onClickVoda" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:text="Расчет моющих средств для хозяйств"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="onClickRaschetMoySredstvForHoz" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
 
-    <Button
-        android:text="Расчет стоимости рабочего раствора"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginTop="24dp"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="onClickRaschetStoimostiRabRastvor" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:onClick="onClickVoda"
+                    app:srcCompat="@mipmap/apkdjestkost"
+                    android:scaleType="fitCenter"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="18dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton10"
+
+                    android:onClick="onClickRaschetStoimostiRabRastvor"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/apkstoimostrabrast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="18dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton11"
+
+                    android:onClick="onClickRaschetMoySredstvForHoz"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/apkraschethozyastv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"/>
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,13 +38,15 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
     private TextView tvKislot4;
 
     private double voda;
+    String strVyborJVody;
+    TableLayout tableL;
+    String strJoskost = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apk_moy_sredstva_voda);
         setTitle("Подбор средства под жесткость воды");
-        tvDh = (TextView) findViewById(R.id.tvDh);
         tvVoda = (TextView) findViewById(R.id.tvVoda);
         tvVodaStr = (TextView) findViewById(R.id.tvVodaStr);
         etVoda = (EditText) findViewById(R.id.etVoda);
@@ -60,32 +63,51 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         tvSheloch4 = (TextView) findViewById(R.id.tvSheloch4);
         tvKislot4 = (TextView) findViewById(R.id.tvKislot4);
 
+        tableL = (TableLayout) findViewById(R.id.tableL);
+
+        strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+        tvVoda.setText(strVyborJVody);
+
         ((EditText) findViewById(R.id.etVoda)).addTextChangedListener(new TextWatcher() {
+
+
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                strVyborJVody = null;
+                strJoskost = "0";
+
                 if(etVoda.getText().length() != 0){
                     voda = Double.parseDouble(etVoda.getText().toString());
                     if(rbDjeskost.isChecked() == true){
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+
+                        strJoskost = etVoda.getText().toString();
+                        ReturnVoda(strJoskost);
+                        //tvVoda.setText(etVoda.getText().toString());
+                        //ReturnVoda(tvVoda);
                     }
                     else if(rbDh.isChecked() == true){
-                        voda =  voda*0.36;
-                        tvVoda.setText(String.valueOf(roundUp(voda, 2)));
-                        ReturnVoda(tvVoda);
+                        voda = voda * 0.36;
+                        strJoskost = String.valueOf(roundUp(voda, 2));
+                        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
+                        ReturnVoda(strJoskost);
                     }
                     else if(rbMgL.isChecked() == true){
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     }
+
+                    strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+                    tvVoda.setText(strVyborJVody);
+
                 }
                 else {
-                    tvVoda.setText("0");
+                    strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+                    tvVoda.setText(strVyborJVody);
                 }
             }
-
-
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -97,30 +119,29 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
                 // текст уже изменили
             }
         });
-
     }
 
-    private void ReturnVoda(TextView tvVoda) {
-        double vod = Double.parseDouble(tvVoda.getText().toString());
+    private void ReturnVoda(String tvVoda) {
+        double vod = Double.parseDouble(tvVoda);
         if (0 <= vod && vod < 1.5)
         {
-            tvVodaStr.setText("очень мягкая");
+            tvVodaStr.setText("вода очень мягкая");
         }
         else if (1.5 <= vod && vod < 3)
         {
-            tvVodaStr.setText("мягкая");
+            tvVodaStr.setText("вода мягкая");
         }
         else if (3 <= vod && vod < 6)
         {
-            tvVodaStr.setText("умеренной жесткости");
+            tvVodaStr.setText("вода умеренной жесткости");
         }
         else if (6 <= vod && vod <= 12)
         {
-            tvVodaStr.setText("жесткая");
+            tvVodaStr.setText("вода жесткая");
         }
         else if (vod > 12)
         {
-            tvVodaStr.setText("очень жесткая");
+            tvVodaStr.setText("вода очень жесткая");
         }
         else
         {
@@ -132,6 +153,8 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
+        strVyborJVody = null;
+        strJoskost = "0";
 
         if(etVoda.getText().length() != 0)
         voda = Double.parseDouble(etVoda.getText().toString());
@@ -139,42 +162,46 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.rbDjeskost:
                 if (checked){
-                    tvDh.setText("°Ж");
+                    //tvDh.setText("°Ж");
                     if(etVoda.getText().length() != 0){
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     }
                 }
                     break;
             case R.id.rbDh:
                 if (checked){
-                    tvDh.setText("°DH");
+                    //tvDh.setText("°DH");
                     if(etVoda.getText().length() != 0){
-                        voda =  voda*0.36;
-                        tvVoda.setText(String.valueOf(roundUp(voda, 2)));
-                        ReturnVoda(tvVoda);
+                        voda = voda * 0.36;
+                        strJoskost = String.valueOf(roundUp(voda, 2));
+                        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
+                        ReturnVoda(strJoskost);
                     }
                 }
                     break;
             case R.id.rbMgL:
                 if (checked){
-                    tvDh.setText("мг - экв/л");
+                    //tvDh.setText("мг - экв/л");
                     if(etVoda.getText().length() != 0){
-                        tvVoda.setText(etVoda.getText().toString());
-                        ReturnVoda(tvVoda);
+                        strJoskost = etVoda.getText().toString();
+                        //tvVoda.setText(etVoda.getText().toString());
+                        ReturnVoda(strJoskost);
                     }
                 }
                     break;
         }
+        strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
+        tvVoda.setText(strVyborJVody);
     }
-
 
     public BigDecimal roundUp(double value, int digits){
         return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickRaschetRekomendSredstv(View view) {
-        double voda = Double.parseDouble(tvVoda.getText().toString());
+        double voda = Double.parseDouble(strJoskost);
         String biotekC = "";
         String ksilanK = "";
         String biotek = "";
@@ -183,6 +210,8 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         String ksilanM = "";
         String biotekSuper = "";
         String ksilanSuper = "";
+
+        tableL.setVisibility(View.VISIBLE);
 
         if (voda <= 1)
         {

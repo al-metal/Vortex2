@@ -1,12 +1,15 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +25,7 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
     double dblStoimostZapravki;
     double dblStoimostmoykiResult;
     double dblPrice2Kanistr;
-    double dblKolichestvoKanistr;
+    double dblKolichestvoKanistr = 2;
 
     String strOborudovanie = "PenoGen";
     String strObjem6 = "6 кг = 35 л";
@@ -41,13 +44,19 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
     TextView tvStoimostMoyki;
     TextView tvKolichestvoKanistr;
 
+    TableLayout tableL;
+
     EditText etPrice2Kanistr;
+    Button btnRaschet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_super_koncentrat);
         setTitle("Суперконцентрат");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         RadioGroupUstroystvo = (RadioGroup) findViewById(R.id.RadioGroupUstroystvo);
         RadioGroupVes = (RadioGroup) findViewById(R.id.RadioGroupVes);
@@ -148,6 +157,10 @@ public class ActivityAutoSuperKoncentrat extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
         dblPrice2Kanistr = Double.parseDouble(etPrice2Kanistr.getText().toString());
 

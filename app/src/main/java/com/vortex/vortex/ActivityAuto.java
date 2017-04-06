@@ -142,7 +142,6 @@ public class ActivityAuto extends AppCompatActivity {
 //endregion
 
     private EditText etVoda;
-    private TextView tvDh;
     private TextView tvVoda;
     private TextView tvVodaStr;
 
@@ -176,7 +175,6 @@ public class ActivityAuto extends AppCompatActivity {
         llmain = (LinearLayout) findViewById(R.id.llmain);
 
         etVoda = (EditText) findViewById(R.id.etVoda);
-        tvDh = (TextView) findViewById(R.id.tvDh);
         tvVoda = (TextView) findViewById(R.id.tvVoda);
         tvVodaStr = (TextView) findViewById(R.id.tvVodaStr);
 

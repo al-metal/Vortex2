@@ -12,11 +12,11 @@
     tools:context="com.vortex.vortex.APK.ApkActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_width="360dp"
+        android:layout_height="495dp"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,8 +39,15 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
+                        android:background="@null"
                         android:onClick="onClickMoySredstva"
-                        app:srcCompat="@drawable/moika" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/apkraschet" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
                     <ImageButton
                         android:id="@+id/imageButton6"
@@ -49,8 +56,10 @@
                         android:layout_below="@+id/imageButton7"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="14dp"
+                        android:background="@null"
                         android:onClick="onClickGigienaVymeni"
-                        app:srcCompat="@drawable/gigenavimeni" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/apkvymya" />
                 </TableRow>
 
                 <TableRow
@@ -65,8 +74,15 @@
                         android:layout_alignStart="@+id/imageButton4"
                         android:layout_below="@+id/imageButton4"
                         android:layout_marginTop="13dp"
+                        android:background="@null"
                         android:onClick="onClickKopyta"
-                        app:srcCompat="@drawable/kopita" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/apkkopyta" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
                     <ImageButton
                         android:id="@+id/imageButton7"
@@ -76,8 +92,10 @@
                         android:layout_alignStart="@+id/imageButton4"
                         android:layout_below="@+id/imageButton4"
                         android:layout_marginTop="13dp"
+                        android:background="@null"
                         android:onClick="onClickDezinfekciya"
-                        app:srcCompat="@drawable/forbizid" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/apkprofilaktika" />
                 </TableRow>
 
             </TableLayout>

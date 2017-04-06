@@ -1,9 +1,12 @@
 package com.vortex.vortex;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,16 +36,23 @@ public class ActivityAutoSuperKoncentratSravnenie extends AppCompatActivity {
     TextView tvKolichestvoZapravok;
     TextView tvStoimostZapravok;
     TextView tvStoimostMoyki;
+    TextView tvObshStoim;
+    TextView tvPoStoim;
 
     EditText etPrice;
     EditText etObjem;
     EditText etRazbavlenie;
+    Button btnRaschet;
+    TableLayout tableL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_super_koncentrat_sravnenie);
-        setTitle("Сравнение средств");
+        setTitle("Сравнить с другим средством");
+
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        tableL = (TableLayout) findViewById(R.id.tableL);
 
         dblPriceVortex = getIntent().getExtras().getDouble("dblPrice");
         strObjemVortex = getIntent().getExtras().getString("Objem");
@@ -53,19 +63,21 @@ public class ActivityAutoSuperKoncentratSravnenie extends AppCompatActivity {
         dblKooficient = getIntent().getExtras().getDouble("dblKooficent");
         dblKolichestvoKanistr = getIntent().getExtras().getDouble("dblKolichestvoKanistr");
 
-        tvCena2KanistrVortex = (TextView)findViewById(R.id.tvCena2KanistrVortex);
-        tvObjemVortex = (TextView)findViewById(R.id.tvObjemVortex);
-        tvRazbavlenieVortex = (TextView)findViewById(R.id.tvRazbavlenieVortex);
-        tvKolichestvoZapravokVortex = (TextView)findViewById(R.id.tvKolichestvoZapravokVortex);
-        tvStoimostZapravokVortex = (TextView)findViewById(R.id.tvStoimostZapravokVortex);
-        tvStoimostMoykiVortex = (TextView)findViewById(R.id.tvStoimostMoykiVortex);
+        tvCena2KanistrVortex = (TextView) findViewById(R.id.tvCena2KanistrVortex);
+        tvObjemVortex = (TextView) findViewById(R.id.tvObjemVortex);
+        tvRazbavlenieVortex = (TextView) findViewById(R.id.tvRazbavlenieVortex);
+        tvKolichestvoZapravokVortex = (TextView) findViewById(R.id.tvKolichestvoZapravokVortex);
+        tvStoimostZapravokVortex = (TextView) findViewById(R.id.tvStoimostZapravokVortex);
+        tvStoimostMoykiVortex = (TextView) findViewById(R.id.tvStoimostMoykiVortex);
+        tvObshStoim = (TextView) findViewById(R.id.tvObshStoim);
+        tvPoStoim = (TextView) findViewById(R.id.tvPoStoim);
 
-        tvCena2Kanistr = (TextView)findViewById(R.id.tvCena2Kanistr);
-        tvObjem = (TextView)findViewById(R.id.tvObjem);
-        tvRazbavlenie = (TextView)findViewById(R.id.tvRazbavlenie);
-        tvKolichestvoZapravok = (TextView)findViewById(R.id.tvKolichestvoZapravok);
-        tvStoimostZapravok = (TextView)findViewById(R.id.tvStoimostZapravok);
-        tvStoimostMoyki = (TextView)findViewById(R.id.tvStoimostMoyki);
+        tvCena2Kanistr = (TextView) findViewById(R.id.tvCena2Kanistr);
+        tvObjem = (TextView) findViewById(R.id.tvObjem);
+        tvRazbavlenie = (TextView) findViewById(R.id.tvRazbavlenie);
+        tvKolichestvoZapravok = (TextView) findViewById(R.id.tvKolichestvoZapravok);
+        tvStoimostZapravok = (TextView) findViewById(R.id.tvStoimostZapravok);
+        tvStoimostMoyki = (TextView) findViewById(R.id.tvStoimostMoyki);
 
         tvCena2KanistrVortex.setText(String.valueOf(roundUp(dblPriceVortex, 2)));
         tvObjemVortex.setText(String.valueOf(strObjemVortex));
@@ -74,9 +86,9 @@ public class ActivityAutoSuperKoncentratSravnenie extends AppCompatActivity {
         tvStoimostZapravokVortex.setText(String.valueOf(roundUp(dblStoimostZapravkiVortex, 2)));
         tvStoimostMoykiVortex.setText(String.valueOf(roundUp(dblStoimostMoykiVortex, 2)));
 
-        etPrice = (EditText)findViewById(R.id.etPrice);
-        etObjem = (EditText)findViewById(R.id.etObjem);
-        etRazbavlenie = (EditText)findViewById(R.id.etRazbavlenie);
+        etPrice = (EditText) findViewById(R.id.etPrice);
+        etObjem = (EditText) findViewById(R.id.etObjem);
+        etRazbavlenie = (EditText) findViewById(R.id.etRazbavlenie);
     }
 
     public BigDecimal roundUp(double value, int digits) {
@@ -88,6 +100,9 @@ public class ActivityAutoSuperKoncentratSravnenie extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
         double dblPriceKanistr = Double.parseDouble(etPrice.getText().toString());
         double dblObjem = Double.parseDouble(etObjem.getText().toString());
@@ -104,5 +119,12 @@ public class ActivityAutoSuperKoncentratSravnenie extends AppCompatActivity {
         tvKolichestvoZapravok.setText(String.valueOf(roundUp(dblKolichestvoZapravok, 2)));
         tvStoimostZapravok.setText(String.valueOf(roundUp(dblStoimostZapravki, 2)));
         tvStoimostMoyki.setText(String.valueOf(roundUp(dblStoimostMoyki, 2)));
+
+        double obshayaStoim = (dblPrice2Kanistr - dblPriceVortex) / dblPrice2Kanistr * 100;
+        double poStoimosti = (dblStoimostMoyki - dblStoimostMoykiVortex) / dblStoimostMoyki * 100;
+
+        tvObshStoim.setText(String.valueOf(roundUp(obshayaStoim, 2)));
+        tvPoStoim.setText(String.valueOf(roundUp(poStoimosti, 2)));
+
     }
 }

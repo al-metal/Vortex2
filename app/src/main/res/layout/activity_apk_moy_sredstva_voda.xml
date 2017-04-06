@@ -1,232 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_apk_moy_sredstva_voda"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vortex.vortex.APK.ActivityApkMoySredstvaVoda">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnCount="3"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="495dp"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_columnSpan="3">
-
-            <RadioButton
-                android:text="мг - экв/л"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_toRightOf="@+id/rbDh"
-                android:layout_toEndOf="@+id/rbDh"
-                android:id="@+id/rbMgL"
-                android:onClick="onRadioButtonClicked"/>
-
-            <RadioButton
-                android:text="°DH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_toRightOf="@+id/rbDjeskost"
-                android:layout_toEndOf="@+id/rbDjeskost"
-                android:id="@+id/rbDh"
-                android:onClick="onRadioButtonClicked"/>
-
-            <RadioButton
-                android:text="°Ж"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/rbDjeskost"
-                android:checked="true"
-                android:onClick="onRadioButtonClicked"/>
-        </RadioGroup>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etVoda"
-            android:hint="Жесткость"
-            android:layout_columnSpan="2"/>
-
-        <TextView
-            android:text=" °Ж"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvDh" />
-
-        <TextView
-            android:text="Выбранная жесткость воды: "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView23" />
-
-        <TextView
-            android:text="0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvVoda"
-            android:width="80dp"/>
-
-        <TextView
-            android:text=" °Ж"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvDh2" />
-
-        <TextView
-            android:text="Вода: "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView26" />
-
-        <TextView
-            android:text="Мягкая"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvVodaStr"
-            android:layout_columnSpan="2"/>
-
-        <TextView
-            android:text="Рекомендуемые средства"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView28"
-            android:layout_columnSpan="3"
-            android:textAlignment="center" />
+            android:orientation="vertical">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="3"
-            android:stretchColumns="*"
-            android:shrinkColumns="0,1"
-            android:background="#000">
-
-            <TableRow
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
 
-                <TextView
-                    android:id="@+id/textView18"
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_columnSpan="3"
+                        android:layout_marginLeft="8dp"
+                        android:layout_span="7"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbMgL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/rbDh"
+                            android:layout_toRightOf="@+id/rbDh"
+                            android:layout_weight="1"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="мг - экв/л"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbDh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-5dp"
+                            android:layout_toEndOf="@+id/rbDjeskost"
+                            android:layout_toRightOf="@+id/rbDjeskost"
+                            android:layout_weight="1"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="°DH"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbDjeskost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="°Ж"
+                            android:textSize="16sp" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+                    <EditText
+                        android:id="@+id/etVoda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_span="3"
+                        android:ems="10"
+                        android:textColor="@android:color/black"
+                        android:textSize="33sp"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/tvVoda"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_span="4"
+                        android:width="80dp"
+                        android:text="выбранная жесткость воды 0 °Ж"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3" />
+
+                    <TextView
+                        android:id="@+id/tvVodaStr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_span="4"
+                        android:text="вода очень мягкая"
+                        android:textColor="@color/colorGray" />
+
+                </TableRow>
+
+                <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorAccent"
-                    android:text="Щелочные средства"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="23dp">
 
-                <TextView
-                    android:id="@+id/textView19"
+                    <Button
+                        android:id="@+id/btnSredstva"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_span="7"
+                        android:background="@color/colorRed"
+                        android:fontFamily="sans-serif"
+                        android:onClick="onClickRaschetRekomendSredstv"
+                        android:text="Предложить средства"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableLayout
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/tableL"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorPrimary"
-                    android:text="Кислотные средства"
-                    android:textStyle="bold" />
-            </TableRow>
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:visibility="gone">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvSheloch1"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorAccent"/>
+                        <TextView
+                            android:id="@+id/textView128"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="ЩЕЛОЧНЫЕ" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvKislot1"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorPrimary" />
-            </TableRow>
+                        <TextView
+                            android:id="@+id/textView54"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="КИСЛОТНЫЕ" />
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="23dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvSheloch2"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorAccent" />
+                        <TextView
+                            android:id="@+id/tvSheloch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvKislot2"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorPrimary"/>
-            </TableRow>
+                        <TextView
+                            android:id="@+id/tvKislot1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="23dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvSheloch3"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorAccent" />
+                        <TextView
+                            android:id="@+id/tvSheloch2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvKislot3"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorPrimary" />
-            </TableRow>
+                        <TextView
+                            android:id="@+id/tvKislot2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
+                    </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="23dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvSheloch4"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorAccent"/>
+                        <TextView
+                            android:id="@+id/tvSheloch3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tvKislot4"
-                    android:layout_margin="1dp"
-                    android:background="@color/colorPrimary" />
-            </TableRow>
+                        <TextView
+                            android:id="@+id/tvKislot3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
+                    </TableRow>
 
-        </TableLayout>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="23dp">
 
-        <Button
-            android:text="Предложить средства"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnSredstva"
-            android:onClick="onClickRaschetRekomendSredstv"
-            android:layout_columnSpan="3"/>
+                        <TextView
+                            android:id="@+id/tvSheloch4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
 
-    </GridLayout>
+                        <TextView
+                            android:id="@+id/tvKislot4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:textColor="@android:color/black" />
+                    </TableRow>
 
-</RelativeLayout>
+                </TableLayout>
+
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

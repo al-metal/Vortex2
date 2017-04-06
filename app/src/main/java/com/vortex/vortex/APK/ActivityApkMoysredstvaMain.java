@@ -13,7 +13,7 @@ public class ActivityApkMoysredstvaMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apk_moysredstva_main);
-        setTitle("Выберите направление");
+        setTitle("Подбор средств и расчеты");
     }
     public void onClickRaschetStoimostiRabRastvor(View view){
         Intent intent = new Intent(ActivityApkMoysredstvaMain.this, ApkMoySredstvaActivity.class);

@@ -14,7 +14,7 @@ public class ApkActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apk);
-        setTitle("Направление АПК");
+        setTitle("TM VORTEX");
     }
 
     public void onClickMoySredstva(View view) {
