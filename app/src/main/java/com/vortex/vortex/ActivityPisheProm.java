@@ -50,7 +50,6 @@ public class ActivityPisheProm extends AppCompatActivity {
     Button btnSravnenie;
     Button btnRaschet;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +77,6 @@ public class ActivityPisheProm extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-
 
         spinner.setAdapter(adapter);
 

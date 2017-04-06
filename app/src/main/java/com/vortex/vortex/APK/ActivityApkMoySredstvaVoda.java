@@ -1,5 +1,7 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +22,6 @@ import java.math.BigDecimal;
 
 public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
 
-    private TextView tvDh;
     private TextView tvVoda;
     private EditText etVoda;
     private TextView tvVodaStr;
@@ -40,6 +41,7 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
     private double voda;
     String strVyborJVody;
     TableLayout tableL;
+    Button btnSredstva;
     String strJoskost = "0";
 
     @Override
@@ -53,6 +55,8 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         rbDjeskost = (RadioButton) findViewById(R.id.rbDjeskost);
         rbMgL = (RadioButton) findViewById(R.id.rbMgL);
         rbDh = (RadioButton) findViewById(R.id.rbDh);
+
+        btnSredstva = (Button) findViewById(R.id.btnSredstva);
 
         tvSheloch1 = (TextView) findViewById(R.id.tvSheloch1);
         tvKislot1 = (TextView) findViewById(R.id.tvKislot1);
@@ -70,40 +74,31 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
 
         ((EditText) findViewById(R.id.etVoda)).addTextChangedListener(new TextWatcher() {
 
-
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 strVyborJVody = null;
                 strJoskost = "0";
 
-                if(etVoda.getText().length() != 0){
+                if (etVoda.getText().length() != 0) {
                     voda = Double.parseDouble(etVoda.getText().toString());
-                    if(rbDjeskost.isChecked() == true){
+                    if (rbDjeskost.isChecked() == true) {
 
                         strJoskost = etVoda.getText().toString();
                         ReturnVoda(strJoskost);
-                        //tvVoda.setText(etVoda.getText().toString());
-                        //ReturnVoda(tvVoda);
-                    }
-                    else if(rbDh.isChecked() == true){
+                    } else if (rbDh.isChecked() == true) {
                         voda = voda * 0.36;
                         strJoskost = String.valueOf(roundUp(voda, 2));
-                        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
                         ReturnVoda(strJoskost);
-                    }
-                    else if(rbMgL.isChecked() == true){
+                    } else if (rbMgL.isChecked() == true) {
                         strJoskost = etVoda.getText().toString();
-                        //tvVoda.setText(etVoda.getText().toString());
                         ReturnVoda(strJoskost);
                     }
 
                     strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
                     tvVoda.setText(strVyborJVody);
 
-                }
-                else {
+                } else {
                     strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
                     tvVoda.setText(strVyborJVody);
                 }
@@ -123,28 +118,17 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
 
     private void ReturnVoda(String tvVoda) {
         double vod = Double.parseDouble(tvVoda);
-        if (0 <= vod && vod < 1.5)
-        {
+        if (0 <= vod && vod < 1.5) {
             tvVodaStr.setText("вода очень мягкая");
-        }
-        else if (1.5 <= vod && vod < 3)
-        {
+        } else if (1.5 <= vod && vod < 3) {
             tvVodaStr.setText("вода мягкая");
-        }
-        else if (3 <= vod && vod < 6)
-        {
+        } else if (3 <= vod && vod < 6) {
             tvVodaStr.setText("вода умеренной жесткости");
-        }
-        else if (6 <= vod && vod <= 12)
-        {
+        } else if (6 <= vod && vod <= 12) {
             tvVodaStr.setText("вода жесткая");
-        }
-        else if (vod > 12)
-        {
+        } else if (vod > 12) {
             tvVodaStr.setText("вода очень жесткая");
-        }
-        else
-        {
+        } else {
             tvVodaStr.setText("");
         }
 
@@ -156,52 +140,49 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         strVyborJVody = null;
         strJoskost = "0";
 
-        if(etVoda.getText().length() != 0)
-        voda = Double.parseDouble(etVoda.getText().toString());
+        if (etVoda.getText().length() != 0)
+            voda = Double.parseDouble(etVoda.getText().toString());
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.rbDjeskost:
-                if (checked){
-                    //tvDh.setText("°Ж");
-                    if(etVoda.getText().length() != 0){
+                if (checked) {
+                    if (etVoda.getText().length() != 0) {
                         strJoskost = etVoda.getText().toString();
-                        //tvVoda.setText(etVoda.getText().toString());
                         ReturnVoda(strJoskost);
                     }
                 }
-                    break;
+                break;
             case R.id.rbDh:
-                if (checked){
-                    //tvDh.setText("°DH");
-                    if(etVoda.getText().length() != 0){
+                if (checked) {
+                    if (etVoda.getText().length() != 0) {
                         voda = voda * 0.36;
                         strJoskost = String.valueOf(roundUp(voda, 2));
-                        //tvVoda.setText(String.valueOf(roundUp(voda, 2)));
                         ReturnVoda(strJoskost);
                     }
                 }
-                    break;
+                break;
             case R.id.rbMgL:
-                if (checked){
-                    //tvDh.setText("мг - экв/л");
-                    if(etVoda.getText().length() != 0){
+                if (checked) {
+                    if (etVoda.getText().length() != 0) {
                         strJoskost = etVoda.getText().toString();
-                        //tvVoda.setText(etVoda.getText().toString());
                         ReturnVoda(strJoskost);
                     }
                 }
-                    break;
+                break;
         }
         strVyborJVody = "выбранная жесткость воды " + strJoskost + " °Ж";
         tvVoda.setText(strVyborJVody);
     }
 
-    public BigDecimal roundUp(double value, int digits){
-        return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    public BigDecimal roundUp(double value, int digits) {
+        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickRaschetRekomendSredstv(View view) {
+        int gray = Color.parseColor("#7B7979");
+        btnSredstva.setBackgroundColor(gray);
         double voda = Double.parseDouble(strJoskost);
+
         String biotekC = "";
         String ksilanK = "";
         String biotek = "";
@@ -213,95 +194,60 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
 
         tableL.setVisibility(View.VISIBLE);
 
-        if (voda <= 1)
-        {
-            biotekM = "Biotec M, 0,4%";
-            ksilanM = "Ksilan M, 0,4%";
-        }
-        else if (voda <= 2)
-        {
-            biotekM = "Biotec M, 0,5%";
-            ksilanM = "Ksilan M, 0,5%";
-        }
-        else if (voda <= 3)
-        {
-            biotekM = "Biotec M, 0,7%";
-            ksilanM = "Ksilan M, 0,7%";
-        }
-        else if (voda <= 4)
-        {
-            biotekM = "Biotec M, 1%";
-            ksilanM = "Ksilan M, 1%";
-        }
-        else
-        {
-            biotekM = "Biotec M не используется";
-            ksilanM = "Ksilan M не используется";
+        if (voda <= 1) {
+            biotekM = "BIOTEC M, 0,4%";
+            ksilanM = "KSILAN M, 0,4%";
+        } else if (voda <= 2) {
+            biotekM = "BIOTEC M, 0,5%";
+            ksilanM = "KSILAN M, 0,5%";
+        } else if (voda <= 3) {
+            biotekM = "BIOTEC M, 0,7%";
+            ksilanM = "KSILAN M, 0,7%";
+        } else if (voda <= 4) {
+            biotekM = "BIOTEC M, 1%";
+            ksilanM = "KSILAN M, 1%";
+        } else {
+            biotekM = "BIOTEC M не используется";
+            ksilanM = "KSILAN M не используется";
         }
 
-
-
-
-        if (voda <= 5)
-        {
-            biotekC = "Biotec C, 0,3%";
-            ksilanK = "Ksilan K, 0,3%";
-        }
-        else if (voda <= 6.5)
-        {
-            biotekC = "Biotec C, 0,5%";
-            ksilanK = "Ksilan K, 0,5%";
-        }
-        else if (voda <= 8)
-        {
-            biotekC = "Biotec C, 1%";
-            ksilanK = "Ksilan K, 1%";
-        }
-        else
-        {
-            biotekC = "Biotec C не используется";
-            ksilanK = "Ksilan K не используется";
+        if (voda <= 5) {
+            biotekC = "BIOTEC C, 0,3%";
+            ksilanK = "KSILAN K, 0,3%";
+        } else if (voda <= 6.5) {
+            biotekC = "BIOTEC C, 0,5%";
+            ksilanK = "KSILAN K, 0,5%";
+        } else if (voda <= 8) {
+            biotekC = "BIOTEC C, 1%";
+            ksilanK = "KSILAN K, 1%";
+        } else {
+            biotekC = "BIOTEC C не используется";
+            ksilanK = "KSILAN K не используется";
         }
 
-
-
-        if (voda <= 5)
-        {
-            biotek = "Biotec, 0,3%";
-            ksilan = "Ksilan, 0,3%";
-        }
-        else if (voda <= 6.5)
-        {
-            biotek = "Biotec, 0,5%";
-            ksilan = "Ksilan, 0,5%";
-        }
-        else if (voda <= 8)
-        {
-            biotek = "Biotec, 0,7%";
-            ksilan = "Ksilan, 0,7%";
-        }
-        else
-        {
-            biotek = "Biotec не используется";
-            ksilan = "Ksilan не используется";
+        if (voda <= 5) {
+            biotek = "BIOTEC, 0,3%";
+            ksilan = "KSILAN, 0,3%";
+        } else if (voda <= 6.5) {
+            biotek = "BIOTEC, 0,5%";
+            ksilan = "KSILAN, 0,5%";
+        } else if (voda <= 8) {
+            biotek = "BIOTEC, 0,7%";
+            ksilan = "KSILAN, 0,7%";
+        } else {
+            biotek = "BIOTEC не используется";
+            ksilan = "KSILAN не используется";
         }
 
-
-
-        if (voda <= 10)
-        {
-            biotekSuper = "Biotec Super, 0,3%";
-            ksilanSuper = "Ksilan Super, 0,3%";
-        }
-        else if (voda <= 12)
-        {
-            biotekSuper = "Biotec Super, 0,4%";
-            ksilanSuper = "Ksilan Super, 0,4%";
-        }
-        else
-        {
-            biotekSuper = "Biotec Super не используется";
-            ksilanSuper = "Ksilan Super не используется";
+        if (voda <= 10) {
+            biotekSuper = "BIOTEC SUPER, 0,3%";
+            ksilanSuper = "KSILAN SUPER, 0,3%";
+        } else if (voda <= 12) {
+            biotekSuper = "BIOTEC SUPER, 0,4%";
+            ksilanSuper = "KSILAN SUPER, 0,4%";
+        } else {
+            biotekSuper = "BIOTEC SUPER не используется";
+            ksilanSuper = "KSILAN SUPER не используется";
         }
 
         tvSheloch1.setText(biotekM);

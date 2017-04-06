@@ -41,6 +41,7 @@
                         android:id="@+id/etPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
@@ -63,6 +64,7 @@
                         android:id="@+id/etObjem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
@@ -85,6 +87,7 @@
                         android:id="@+id/etRazbavlenie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
