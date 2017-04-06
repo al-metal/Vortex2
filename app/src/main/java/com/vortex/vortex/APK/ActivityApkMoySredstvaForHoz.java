@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,13 +35,18 @@ public class ActivityApkMoySredstvaForHoz extends AppCompatActivity {
     private TextView tvPriceSheloch;
     private TextView tvPriceObsh;
 
+    Button btnRaschet;
+    TableLayout tableL;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apk_moy_sredstva_for_hoz);
         setTitle("Расчет моющих средств для хозяйств");
-    }
 
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        tableL = (TableLayout) findViewById(R.id.tableL);
+    }
 
     public void onClickResult(View view) {
         edKolichKorov = (EditText) findViewById(R.id.edKolichKorov);
@@ -67,6 +75,9 @@ public class ActivityApkMoySredstvaForHoz extends AppCompatActivity {
             return;
         }
 
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
         double kolichKorov = Double.parseDouble(edKolichKorov.getText().toString());
         double kolichDoek = Double.parseDouble(etKolichDoek.getText().toString());
@@ -117,7 +128,7 @@ public class ActivityApkMoySredstvaForHoz extends AppCompatActivity {
         tvPriceObsh.setText(String.valueOf(roundUp(respriceObsh, 2)));
     }
 
-    public BigDecimal roundUp(double value, int digits){
-        return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    public BigDecimal roundUp(double value, int digits) {
+        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 }
