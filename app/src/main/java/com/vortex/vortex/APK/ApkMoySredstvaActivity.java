@@ -1,13 +1,16 @@
 package com.vortex.vortex.APK;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +20,7 @@ import java.math.BigDecimal;
 
 public class ApkMoySredstvaActivity extends AppCompatActivity {
 
-    String[] data = {"Biotec M", "Biotec C", "Biotec", "Biotec  Super", "Ksilan M", "Ksilan K", "Ksilan", "Ksilan Super"};
+    String[] data = {"ВЫБРАТЬ СРЕДСТВО", "BIOTEC M", "BIOTEC C", "BIOTEC", "BIOTEC  SUPER", "KSILAN M", "KSILAN K", "KSILAN", "KSILAN SUPER"};
     double plotnost = 0;
     private TextView tvPlotnost;
     private TextView tvStoimKg;
@@ -35,6 +38,11 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
     double resStoimPromiv;
     double resStoimSmesi;
 
+    TableLayout tableL;
+    Button btnResult;
+
+    String nameVortex;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,44 +50,48 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_apk_moy_sredstva);
         setTitle("Расчет стоимости рабочего раствора");
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnResult = (Button) findViewById(R.id.btnResult);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
-
-        // заголовок
-        spinner.setPrompt("Выберите средство Вортекс");
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
                 // Set adapter flag that something has been chosen
                 tvPlotnost = (TextView) findViewById(R.id.tvPlotnost);
-                if(pos == 0){
+                if (pos == 0) {
+                    return;
+                } else if (pos == 1) {
                     plotnost = 1.2;
-                }else if(pos == 1){
+                } else if (pos == 2) {
                     plotnost = 1.22;
-                }else if(pos == 2){
+                } else if (pos == 3) {
                     plotnost = 1.25;
-                }else if(pos == 3){
+                } else if (pos == 4) {
                     plotnost = 1.23;
-                }else if(pos == 4){
+                } else if (pos == 5) {
                     plotnost = 1.16;
-                }else if(pos == 5){
+                } else if (pos == 6) {
                     plotnost = 1.2;
-                }else if(pos == 6){
+                } else if (pos == 7) {
                     plotnost = 1.22;
-                }else if(pos == 7){
+                } else if (pos == 8) {
                     plotnost = 1.28;
                 }
 
                 tvPlotnost.setText(String.valueOf(plotnost));
+                nameVortex = spinner.getSelectedItem().toString();
             }
         });
     }
@@ -90,15 +102,19 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
         tvStoimPromiv = (TextView) findViewById(R.id.tvStoimPromiv);
         tvStoimLitrSmes = (TextView) findViewById(R.id.tvStoimLitrSmes);
 
-        etStoim = (EditText)findViewById(R.id.etStoim);
-        etKoncentrat = (EditText)findViewById(R.id.etKoncentrat);
-        etVanna = (EditText)findViewById(R.id.etVanna);
-        etVes = (EditText)findViewById(R.id.etVes);
+        etStoim = (EditText) findViewById(R.id.etStoim);
+        etKoncentrat = (EditText) findViewById(R.id.etKoncentrat);
+        etVanna = (EditText) findViewById(R.id.etVanna);
+        etVes = (EditText) findViewById(R.id.etVes);
 
-        if(etVes.getText().length() ==0 || etVanna.getText().length() ==0 || etKoncentrat.getText().length() ==0 || etStoim.getText().length() ==0){
+        if (etVes.getText().length() == 0 || etVanna.getText().length() == 0 || etKoncentrat.getText().length() == 0 || etStoim.getText().length() == 0 || plotnost == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        int gray = Color.parseColor("#7B7979");
+        btnResult.setBackgroundColor(gray);
+        tableL.setVisibility(View.VISIBLE);
 
         double stoimost = 0;
         double ves = 0;
@@ -115,9 +131,9 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
         vanna = Double.parseDouble(etVanna.getText().toString());
         ves = Double.parseDouble(etVes.getText().toString());
 
-        resStoimKg = stoimost/ves;
+        resStoimKg = stoimost / ves;
         resStoimL = resStoimKg * plotnost;
-        resStoimPromiv = (resStoimL*koncentrat*vanna)/100;
+        resStoimPromiv = (resStoimL * koncentrat * vanna) / 100;
         resStoimSmesi = resStoimPromiv / vanna;
 
         tvStoimKg.setText(String.valueOf(roundUp(resStoimKg, 2)));
@@ -127,12 +143,12 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
         tvStoimPromiv.setText(String.valueOf(roundUp(resStoimPromiv, 2)));
     }
 
-    public BigDecimal roundUp(double value, int digits){
-        return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    public BigDecimal roundUp(double value, int digits) {
+        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickBtnSravnenie(View view) {
-        if(resStoimKg ==0 || resStoimL ==0 || resStoimPromiv ==0 || resStoimSmesi ==0){
+        if (resStoimKg == 0 || resStoimL == 0 || resStoimPromiv == 0 || resStoimSmesi == 0) {
             Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -142,6 +158,7 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
         intent.putExtra("resStoimPromiv", resStoimPromiv);
         intent.putExtra("resStoimSmesi", resStoimSmesi);
         intent.putExtra("resPlotnost", plotnost);
+        intent.putExtra("nameVortex", nameVortex);
         startActivity(intent);
     }
 }

@@ -195,14 +195,14 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         tableL.setVisibility(View.VISIBLE);
 
         if (voda <= 1) {
-            biotekM = "BIOTEC M, 0,4%";
-            ksilanM = "KSILAN M, 0,4%";
+            biotekM = "BIOTEC M, 0.4%";
+            ksilanM = "KSILAN M, 0.4%";
         } else if (voda <= 2) {
-            biotekM = "BIOTEC M, 0,5%";
-            ksilanM = "KSILAN M, 0,5%";
+            biotekM = "BIOTEC M, 0.5%";
+            ksilanM = "KSILAN M, 0.5%";
         } else if (voda <= 3) {
-            biotekM = "BIOTEC M, 0,7%";
-            ksilanM = "KSILAN M, 0,7%";
+            biotekM = "BIOTEC M, 0.7%";
+            ksilanM = "KSILAN M, 0.7%";
         } else if (voda <= 4) {
             biotekM = "BIOTEC M, 1%";
             ksilanM = "KSILAN M, 1%";
@@ -212,11 +212,11 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         }
 
         if (voda <= 5) {
-            biotekC = "BIOTEC C, 0,3%";
-            ksilanK = "KSILAN K, 0,3%";
+            biotekC = "BIOTEC C, 0.3%";
+            ksilanK = "KSILAN K, 0.3%";
         } else if (voda <= 6.5) {
-            biotekC = "BIOTEC C, 0,5%";
-            ksilanK = "KSILAN K, 0,5%";
+            biotekC = "BIOTEC C, 0.5%";
+            ksilanK = "KSILAN K, 0.5%";
         } else if (voda <= 8) {
             biotekC = "BIOTEC C, 1%";
             ksilanK = "KSILAN K, 1%";
@@ -226,25 +226,25 @@ public class ActivityApkMoySredstvaVoda extends AppCompatActivity {
         }
 
         if (voda <= 5) {
-            biotek = "BIOTEC, 0,3%";
-            ksilan = "KSILAN, 0,3%";
+            biotek = "BIOTEC, 0.3%";
+            ksilan = "KSILAN, 0.3%";
         } else if (voda <= 6.5) {
-            biotek = "BIOTEC, 0,5%";
-            ksilan = "KSILAN, 0,5%";
+            biotek = "BIOTEC, 0.5%";
+            ksilan = "KSILAN, 0.5%";
         } else if (voda <= 8) {
-            biotek = "BIOTEC, 0,7%";
-            ksilan = "KSILAN, 0,7%";
+            biotek = "BIOTEC, 0.7%";
+            ksilan = "KSILAN, 0.7%";
         } else {
             biotek = "BIOTEC не используется";
             ksilan = "KSILAN не используется";
         }
 
         if (voda <= 10) {
-            biotekSuper = "BIOTEC SUPER, 0,3%";
-            ksilanSuper = "KSILAN SUPER, 0,3%";
+            biotekSuper = "BIOTEC SUPER, 0.3%";
+            ksilanSuper = "KSILAN SUPER, 0.3%";
         } else if (voda <= 12) {
-            biotekSuper = "BIOTEC SUPER, 0,4%";
-            ksilanSuper = "KSILAN SUPER, 0,4%";
+            biotekSuper = "BIOTEC SUPER, 0.4%";
+            ksilanSuper = "KSILAN SUPER, 0.4%";
         } else {
             biotekSuper = "BIOTEC SUPER не используется";
             ksilanSuper = "KSILAN SUPER не используется";

@@ -56,11 +56,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
                         android:inputType="numberDecimal"
                         android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        android:layout_span="2"
+                        android:textSize="14sp"
+                        android:ems="10"
+
+                         />
                 </TableRow>
 
                 <TableRow
