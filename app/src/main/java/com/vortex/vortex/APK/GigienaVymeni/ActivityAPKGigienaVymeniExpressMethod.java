@@ -1,14 +1,16 @@
 package com.vortex.vortex.APK.GigienaVymeni;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.ActivityAPKGigienaVymeniExpressMethodSravnenie;
 import com.vortex.vortex.R;
 
 import java.math.BigDecimal;
@@ -28,11 +30,19 @@ public class ActivityAPKGigienaVymeniExpressMethod extends AppCompatActivity {
     double dblStoimostVsego;
     double dblStoimostGolovy;
 
+    TableLayout tableL;
+    Button btnSravnenie;
+    Button btnRaschet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkgigiena_vymeni_express_method);
         setTitle("Экспресс-метод диагностики субклинического мастита у КРС");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnSravnenie = (Button) findViewById(R.id.btnSravnenie);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         etPrice = (EditText) findViewById(R.id.etPrice);
         etVes = (EditText) findViewById(R.id.etVes);
@@ -51,6 +61,11 @@ public class ActivityAPKGigienaVymeniExpressMethod extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        tableL.setVisibility(View.VISIBLE);
+        btnSravnenie.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
         double price = Double.parseDouble(etPrice.getText().toString());
         double ves = Double.parseDouble(etVes.getText().toString());

@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,12 +31,17 @@ public class ActivityAPKKopytaDesitabProfilaktUsil extends AppCompatActivity {
     TextView tvKorovaDen;
     TextView tvKorovVsego;
     TextView tvKolichObrabotok;
+    Button btnRaschet;
+    TableLayout tableL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkkopyta_desitab_profilakt_usil);
         setTitle("DESITUB Усиленная профилактика");
+
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        tableL = (TableLayout) findViewById(R.id.tableL);
 
         etStado = (EditText) findViewById(R.id.etStado);
         etProdolDen = (EditText) findViewById(R.id.etProdolDen);
@@ -58,6 +66,10 @@ public class ActivityAPKKopytaDesitabProfilaktUsil extends AppCompatActivity {
             return;
         }
 
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
+        tableL.setVisibility(View.VISIBLE);
+
         double stado = Double.parseDouble(etStado.getText().toString());
         double prodolDen = Double.parseDouble(etProdolDen.getText().toString());
         double percent = Double.parseDouble(etPercent.getText().toString());
@@ -67,7 +79,7 @@ public class ActivityAPKKopytaDesitabProfilaktUsil extends AppCompatActivity {
         double percentDesitab = (vanna * percent) / 100;
         double kolichObrabotok = (prodolDen / 7) * 10;
         double kolichVann = (kolichObrabotok * stado) / 200;
-        double trebuemDesitab = percentDesitab*kolichVann;
+        double trebuemDesitab = percentDesitab * kolichVann;
         double priceKg = price / ves;
         double vsegoPrice = trebuemDesitab * priceKg;
         double korovVsego = vsegoPrice / stado;
@@ -82,6 +94,7 @@ public class ActivityAPKKopytaDesitabProfilaktUsil extends AppCompatActivity {
         tvKorovVsego.setText(String.valueOf(roundUp(korovVsego, 0)));
 
     }
+
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }

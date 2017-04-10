@@ -1,9 +1,12 @@
-package com.vortex.vortex.APK;
+package com.vortex.vortex.APK.GigienaVymeni;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,15 +28,23 @@ public class ActivityAPKGigienaVymeniExpressMethodSravnenie extends AppCompatAct
     TextView tvKolichSredstva;
     TextView tvStoimostVsego;
     TextView tvStoimostGolovy;
+    TextView tvSravnenie;
     EditText etPrice;
     EditText etVes;
     EditText etKolichGolov;
+    EditText etSredstvo;
+
+    TableLayout tableL;
+    Button btnRaschet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkgigiena_vymeni_express_method_sravnenie);
-        setTitle("Сравнение средств");
+        setTitle("Сравнить с другим средством");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         tvStoimKgVortex = (TextView) findViewById(R.id.tvStoimKgVortex);
         tvKolichSredstvaVortex = (TextView) findViewById(R.id.tvKolichSredstvaVortex);
@@ -43,10 +54,12 @@ public class ActivityAPKGigienaVymeniExpressMethodSravnenie extends AppCompatAct
         tvKolichSredstva = (TextView) findViewById(R.id.tvKolichSredstva);
         tvStoimostVsego = (TextView) findViewById(R.id.tvStoimostVsego);
         tvStoimostGolovy = (TextView) findViewById(R.id.tvStoimostGolovy);
+        tvSravnenie = (TextView) findViewById(R.id.tvSravnenie);
 
         etPrice = (EditText) findViewById(R.id.etPrice);
         etVes = (EditText) findViewById(R.id.etVes);
         etKolichGolov = (EditText) findViewById(R.id.etKolichGolov);
+        etSredstvo = (EditText) findViewById(R.id.etSredstvo);
 
 
         stoimKgVotrex = getIntent().getExtras().getDouble("stoimKg");
@@ -65,7 +78,7 @@ public class ActivityAPKGigienaVymeniExpressMethodSravnenie extends AppCompatAct
     }
 
     public void onClick(View view) {
-        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0){
+        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0 || etSredstvo.getText().length() == 0){
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -82,5 +95,10 @@ public class ActivityAPKGigienaVymeniExpressMethodSravnenie extends AppCompatAct
         tvKolichSredstva.setText(String.valueOf(roundUp(dblKolichSredstva, 2)));
         tvStoimostVsego.setText(String.valueOf(roundUp(dblStoimostVsego, 2)));
         tvStoimostGolovy.setText(String.valueOf(roundUp(dblStoimostGolovy, 2)));
+        tvSravnenie.setText(etSredstvo.getText());
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
 }

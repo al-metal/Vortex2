@@ -60,9 +60,7 @@
                         android:textColor="@color/colorGray"
                         android:layout_span="2"
                         android:textSize="14sp"
-                        android:ems="10"
-
-                         />
+                        android:ems="10"/>
                 </TableRow>
 
                 <TableRow

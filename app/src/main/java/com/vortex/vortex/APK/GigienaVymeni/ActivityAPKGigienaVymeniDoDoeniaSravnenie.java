@@ -1,12 +1,15 @@
 package com.vortex.vortex.APK.GigienaVymeni;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,11 +29,14 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie extends AppCompatActivity
     TextView tvStoimostKg;
     TextView tvKolichGigien;
     TextView tvObrabotki;
+    TextView tvSredstvo;
+    TextView tvSredstvoVortex;
     EditText etPrice;
     EditText etVes;
     EditText etGolov;
     EditText etDay;
     EditText etObrabotok;
+    EditText etSredstvo;
 
     double stoimKgVotrex = 0;
     double kolichGigienVotrex = 0;
@@ -40,11 +46,19 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie extends AppCompatActivity
     double stoimKg;
     double kolichGigien;
     double stoimObrabotki;
+    String strSredstvoVortex;
+
+    TableLayout tableL;
+    Button btnRaschet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkgigiena_vymeni_do_doenia_sravnenie);
-        setTitle("Сравнение средств");
+        setTitle("Сравнить с другим средством");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         spinner3 = (Spinner) findViewById(R.id.spinner3);
         tvStoimostKgVortex = (TextView) findViewById(R.id.tvStoimostKgVortex);
@@ -54,23 +68,29 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie extends AppCompatActivity
         tvStoimostKg = (TextView) findViewById(R.id.tvStoimostKg);
         tvKolichGigien = (TextView) findViewById(R.id.tvKolichGigien);
         tvObrabotki = (TextView) findViewById(R.id.tvObrabotki);
+        tvSredstvo = (TextView) findViewById(R.id.tvSredstvo);
+        tvSredstvoVortex = (TextView) findViewById(R.id.tvSredstvoVortex);
         etPrice = (EditText) findViewById(R.id.etPrice);
         etVes = (EditText) findViewById(R.id.etVes);
         etGolov = (EditText) findViewById(R.id.etGolov);
         etDay = (EditText) findViewById(R.id.etDay);
         etObrabotok = (EditText) findViewById(R.id.etObrabotok);
+        etSredstvo = (EditText) findViewById(R.id.etSredstvo);
 
         stoimKgVotrex = getIntent().getExtras().getDouble("stoimKg");
         kolichGigienVotrex = getIntent().getExtras().getDouble("kolichGigien");
         stoimObrabotkiVotrex = getIntent().getExtras().getDouble("stoimObrabotki");
         dblRashodGolovaVotrex = getIntent().getExtras().getDouble("dblRashodGolova");
+        strSredstvoVortex = getIntent().getExtras().getString("sredstvo");
 
         tvStoimostKgVortex.setText(String.valueOf(roundUp(stoimKgVotrex, 2)));
         tvKolichGigienVortex.setText(String.valueOf(roundUp(kolichGigienVotrex, 2)));
         tvObrabotkiVortex.setText(String.valueOf(roundUp(stoimObrabotkiVotrex, 2)));
 
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data1);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        tvSredstvoVortex.setText(strSredstvoVortex);
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner, data1);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner3.setAdapter(adapter2);
 
@@ -110,13 +130,15 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie extends AppCompatActivity
     public void onClickRaschet(View view) {
         if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etGolov.getText().length() == 0
                 || etDay.getText().length() == 0 || etObrabotok.getText().length() == 0 || dblRashodGolova == 0
-                ){
+                 || etSredstvo.getText().length() == 0){
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             tvStoimostKg.setText("0");
             tvKolichGigien.setText("0");
             tvObrabotki.setText("0");
             return;
         }
+
+        tvSredstvo.setText(etSredstvo.getText());
 
         double price = Double.parseDouble(etPrice.getText().toString());
         double ves = Double.parseDouble(etVes.getText().toString());
@@ -131,5 +153,9 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie extends AppCompatActivity
         tvStoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
         tvKolichGigien.setText(String.valueOf(roundUp(kolichGigien, 2)));
         tvObrabotki.setText(String.valueOf(roundUp(stoimObrabotki, 2)));
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
 }

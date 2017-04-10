@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,11 +26,17 @@ public class ActivityAPKKopytaProfilaktika extends AppCompatActivity {
     TextView tvTrebuemVann;
     TextView tvVsegoDesimix;
 
+    Button btnRaschet;
+    TableLayout tableL;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkkopyta_profilaktika);
-        setTitle("Программа \"Профилактика\"");
+        setTitle("Программа «Профилактика»");
+
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        tableL = (TableLayout) findViewById(R.id.tableL);
 
         etStado = (EditText) findViewById(R.id.etStado);
         etPeriod = (EditText) findViewById(R.id.etPeriod);
@@ -46,6 +55,10 @@ public class ActivityAPKKopytaProfilaktika extends AppCompatActivity {
             return;
         }
 
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
+        tableL.setVisibility(View.VISIBLE);
+
         double stado = Double.parseDouble(etStado.getText().toString());
         double period = Double.parseDouble(etPeriod.getText().toString());
         double desimix = Double.parseDouble(etDesimix.getText().toString());
@@ -63,5 +76,13 @@ public class ActivityAPKKopytaProfilaktika extends AppCompatActivity {
 
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    }
+
+    public void onClickObrabotka(View view) {
+        Toast.makeText(getBaseContext(), "3 дня в неделю, 2 раза в день", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickVanna(View view) {
+        Toast.makeText(getBaseContext(), "Проходимость составляет 500 голов через 200 литров", Toast.LENGTH_SHORT).show();
     }
 }

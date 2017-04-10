@@ -52,7 +52,7 @@
             android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".APK.ActivityAPKGigienaVymeniExpressMethodSravnenie"
+            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethodSravnenie"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".APK.ActivityAPKDezinfekciya"

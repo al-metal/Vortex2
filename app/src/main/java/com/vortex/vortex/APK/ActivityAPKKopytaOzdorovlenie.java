@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +31,9 @@ public class ActivityAPKKopytaOzdorovlenie extends AppCompatActivity {
     EditText etDesimix2;
     EditText etKuporos2;
 
+    Button btnRaschet;
+    TableLayout tableL;
+
     double vanna = 200;
     double d5 = 36;
     double d13 = 42;
@@ -36,7 +42,10 @@ public class ActivityAPKKopytaOzdorovlenie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkkopyta_ozdorovlenie);
-        setTitle("Программа \"Оздоровление\"");
+        setTitle("Программа «Оздоровление»");
+
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        tableL = (TableLayout) findViewById(R.id.tableL);
 
         tvTrebuemVann = (TextView) findViewById(R.id.tvTrebuemVann);
         tvTrebuemVann2 = (TextView) findViewById(R.id.tvTrebuemVann2);
@@ -56,10 +65,14 @@ public class ActivityAPKKopytaOzdorovlenie extends AppCompatActivity {
 
     public void onClickRaschet(View view) {
         if (etStado.getText().length() == 0 || etDesimix1.getText().length() == 0 || etKuporos1.getText().length() == 0
-                || etDesimix2.getText().length() == 0 || etKuporos2.getText().length() == 0 ) {
+                || etDesimix2.getText().length() == 0 || etKuporos2.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
+        tableL.setVisibility(View.VISIBLE);
 
         double stado = Double.parseDouble(etStado.getText().toString());
         double dblDesimix1 = Double.parseDouble(etDesimix1.getText().toString());
@@ -79,8 +92,8 @@ public class ActivityAPKKopytaOzdorovlenie extends AppCompatActivity {
         double kolichestvoTrebuemmDesimix2 = percentDesimix2 * kolichestvoTrebuemmVann2;
         double kolichestvoTrebuemmKuporos2 = percentKuporos2 * kolichestvoTrebuemmVann2;
 
-        double itogDesimix = kolichestvoTrebuemmDesimix1+kolichestvoTrebuemmDesimix2;
-        double itogKuporos = kolichestvoTrebuemmKuporos1+kolichestvoTrebuemmKuporos2;
+        double itogDesimix = kolichestvoTrebuemmDesimix1 + kolichestvoTrebuemmDesimix2;
+        double itogKuporos = kolichestvoTrebuemmKuporos1 + kolichestvoTrebuemmKuporos2;
 
         tvTrebuemVann.setText(String.valueOf(roundUp(kolichestvoTrebuemmVann, 2)));
         tvTrebuemVann2.setText(String.valueOf(roundUp(kolichestvoTrebuemmVann2, 2)));
@@ -95,5 +108,17 @@ public class ActivityAPKKopytaOzdorovlenie extends AppCompatActivity {
 
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    }
+
+    public void onClickVanna(View view) {
+        Toast.makeText(getBaseContext(), "Проходимость составляет 500 голов через 200 литров", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onCLicketap2(View view) {
+        Toast.makeText(getBaseContext(), "первые 3 недели - использование 6 дней в неделю, 2 раза в день ", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onCLicketap1(View view) {
+        Toast.makeText(getBaseContext(), "следующие 7 недель - использование 3 дня в неделю, 2 раза в день ", Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,13 +1,16 @@
 package com.vortex.vortex.APK.GigienaVymeni;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,8 +20,8 @@ import java.math.BigDecimal;
 
 public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
 
-    String[] data = {"Приолит", "Виолит", "Фитолит", "Алгалит 50", "Алгалит"};
-    String[] data2 = {"10", "15", "20", "30", "40", "100"};
+    String[] data = {"ВЫБРАТЬ СРЕДСТВО", "PRIOLIT", "VIOLIT", "FITOLIT", "AGALIT 50", "AGALIT"};
+    String[] data2 = {"0", "10", "15", "20", "30", "40", "100"};
 
     Spinner spinner;
     Spinner spinner2;
@@ -37,13 +40,24 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
     double stoimKg;
     double kolichGigien;
     double stoimObrabotki;
+    boolean bollSpinner1;
+    boolean bollSpinner2;
 
+    TableLayout tableL;
+    Button btnSravnenie;
+    Button btnRaschet;
+
+    String strSredstvo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkgigiena_vymeni_do_doenia);
         setTitle("Гигиена вымени до доения");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnSravnenie = (Button) findViewById(R.id.btnSravnenie);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         spinner = (Spinner) findViewById(R.id.spinner);
         spinner2 = (Spinner) findViewById(R.id.spinner2);
@@ -58,12 +72,10 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
         tvKolichGigien = (TextView) findViewById(R.id.tvKolichGigien);
         tvStoimPromyvki = (TextView) findViewById(R.id.tvStoimPromyvki);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
-
-        spinner.setPrompt("Выберите средство Вортекс");
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -73,22 +85,26 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
-                if (pos == 4) {
-                    spinner2.setSelection(5);
+                if(pos == 0){
+                    bollSpinner1 = false;
+                    return;
+                }
+                if (pos == 5) {
+                    spinner2.setSelection(6);
                     spinner2.setClickable(false);
                 } else {
-                    spinner2.setSelection(0);
+                    spinner2.setSelection(1);
                     spinner2.setClickable(true);
                 }
+                bollSpinner1 = true;
+                strSredstvo = data[pos];
             }
         });
 
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data2);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner, data2);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner2.setAdapter(adapter2);
-
-        spinner2.setPrompt("% разведения в пенном стакане");
 
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -99,27 +115,34 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
 
-                if (spinner2.getSelectedItemId() == 5) {
-                    if (spinner.getSelectedItemId() == 4)
-                        spinner2.setSelection(5);
-                    else
-                        spinner2.setSelection(4);
+                if (spinner2.getSelectedItemId() == 6) {
+                    if(spinner.getSelectedItemId() != 0){
+                        if (spinner.getSelectedItemId() == 5)
+                            spinner2.setSelection(6);
+                        else
+                            spinner2.setSelection(5);
+                    }
                 }
-                if (spinner2.getSelectedItemId() == 0)
-                    dblRashodGolova = 0.00008 * 4;
+                if (spinner2.getSelectedItemId() == 0){
+                    bollSpinner2 = false;
+                    return;
+                }
                 else if (spinner2.getSelectedItemId() == 1)
-                    dblRashodGolova = 0.00012 * 4;
+                    dblRashodGolova = 0.00008 * 4;
                 else if (spinner2.getSelectedItemId() == 2)
-                    dblRashodGolova = 0.00016 * 4;
+                    dblRashodGolova = 0.00012 * 4;
                 else if (spinner2.getSelectedItemId() == 3)
-                    dblRashodGolova = 0.00024 * 4;
+                    dblRashodGolova = 0.00016 * 4;
                 else if (spinner2.getSelectedItemId() == 4)
-                    dblRashodGolova = 0.00032 * 4;
+                    dblRashodGolova = 0.00024 * 4;
                 else if (spinner2.getSelectedItemId() == 5)
+                    dblRashodGolova = 0.00032 * 4;
+                else if (spinner2.getSelectedItemId() == 6)
                     dblRashodGolova = 0.0008 * 4;
 
                 String s = String.valueOf(roundUp(dblRashodGolova, 5));
                 tvRashodGolova.setText(s);
+                bollSpinner2 = true;
             }
         });
     }
@@ -131,7 +154,7 @@ public class ActivityAPKGigienaVymeniDoDoenia extends AppCompatActivity {
     public void onClickRaschet(View view) {
 if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
         || etDay.getText().length() == 0 || etKolichObrabotok.getText().length() == 0 || dblRashodGolova == 0
-        ){
+         || !bollSpinner1 || !bollSpinner2){
     Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
     return;
         }
@@ -149,6 +172,10 @@ if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichG
         tvKolichGigien.setText(String.valueOf(roundUp(kolichGigien, 2)));
         tvStoimPromyvki.setText(String.valueOf(roundUp(stoimObrabotki, 2)));
 
+        tableL.setVisibility(View.VISIBLE);
+        btnSravnenie.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
     }
 
@@ -162,6 +189,7 @@ if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichG
         intent.putExtra("kolichGigien", kolichGigien);
         intent.putExtra("stoimObrabotki", stoimObrabotki);
         intent.putExtra("dblRashodGolova", dblRashodGolova);
+        intent.putExtra("sredstvo", strSredstvo);
         startActivity(intent);
     }
 }

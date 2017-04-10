@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,11 +27,17 @@ public class ActivityAPKKopytaMedKuporos extends AppCompatActivity {
     TextView tvPrice;
     TextView tvObrabotka;
 
+    Button btnRaschet;
+    TableLayout tableL;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkkopyta_med_kuporos);
         setTitle("Медный купорос");
+
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        tableL = (TableLayout) findViewById(R.id.tableL);
 
         etStado = (EditText) findViewById(R.id.etStado);
         etObrabotka = (EditText) findViewById(R.id.etObrabotka);
@@ -48,6 +57,10 @@ public class ActivityAPKKopytaMedKuporos extends AppCompatActivity {
             return;
         }
 
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
+        tableL.setVisibility(View.VISIBLE);
+
         double stado =  Double.parseDouble(etStado.getText().toString());
         double obrabotka =  Double.parseDouble(etObrabotka.getText().toString());
         double kuporos =  Double.parseDouble(etKuporos.getText().toString());
@@ -64,5 +77,9 @@ public class ActivityAPKKopytaMedKuporos extends AppCompatActivity {
     }
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    }
+
+    public void onClickVanna(View view) {
+        Toast.makeText(getBaseContext(), "Проходимость составляет 500 голов через 200 литров", Toast.LENGTH_SHORT).show();
     }
 }
