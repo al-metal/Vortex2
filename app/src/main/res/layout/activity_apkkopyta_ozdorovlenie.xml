@@ -126,7 +126,8 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:text="2" />
                 </TableRow>
 
                 <TableRow
@@ -148,7 +149,8 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:text="2" />
                 </TableRow>
 
                 <TableRow
@@ -196,7 +198,8 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:text="2" />
                 </TableRow>
 
                 <TableRow
@@ -218,7 +221,8 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:text="1" />
 
                 </TableRow>
 

@@ -176,9 +176,9 @@
                         android:id="@+id/textView52"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Объем помещения, м³: "
-                        android:textSize="11sp"
-                        android:layout_marginLeft="17dp"/>
+                        android:layout_marginLeft="17dp"
+                        android:text="Объем помещения, м³"
+                        android:textSize="11sp" />
 
                     <TextView
                         android:id="@+id/tvObjem"
@@ -199,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Экспозиция, ч: "
+                        android:text="Экспозиция, ч"
                         android:textSize="11sp" />
 
                     <TextView
@@ -221,7 +221,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Расход рабочего раствора, мл/м³: "
+                        android:text="Расход рабочего раствора, мл/м³"
                         android:textSize="11sp" />
 
                     <TextView
@@ -243,7 +243,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Расход концентрата на мл/м³: "
+                        android:text="Расход концентрата, мл/м³"
                         android:textSize="11sp" />
 
                     <TextView
@@ -265,7 +265,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Форбицида на обработку, кг: "
+                        android:text="Количество FORBICID, кг"
                         android:textSize="11sp" />
 
                     <TextView

@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,12 +29,18 @@ public class ActivityAPKDezinfekciyaTumanIceAnimal extends AppCompatActivity {
     TextView tvForbicida;
     TextView tvKoncentr;
 
+    TableLayout tableL;
+    Button btnRaschet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkdezinfekciya_tuman_ice_animal);
 
         setTitle("Использование метода холодного тумана в присутствии животных");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         etVysota = (EditText) findViewById(R.id.etVysota);
         etVysotaKon = (EditText) findViewById(R.id.etVysotaKon);
@@ -70,7 +79,12 @@ public class ActivityAPKDezinfekciyaTumanIceAnimal extends AppCompatActivity {
         tvObjem.setText(String.valueOf(roundUp(dblObjem, 2)));
         tvRashodKoncentrata.setText(String.valueOf(roundUp(dblKoncentr, 2)));
         tvForbicida.setText(String.valueOf(roundUp(dblForbizida, 2)));
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
+
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }

@@ -30,7 +30,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"MAGNAT", "1:110", "450"},
             {"DELICATE", "1:80", "625"},
             {"SOLO", "1:70", "725"},
-            {"DIY", "1:120", "425"}};
+            {"DIY", "1:120", "425"},
+            {"GURU", "1:120", "350"}};
 
     String[][] peno50defaultName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -46,7 +47,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"MAGNAT", "1:100", "500"},
             {"DELICATE", "1:60", "800"},
             {"SOLO", "1:55", "900"},
-            {"DIY", "1:100", "500"}};
+            {"DIY", "1:100", "500"},
+            {"GURU", "1:120", "400"}};
 
     String[][] peno50hardName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -56,7 +58,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"SENZA", "1:80", "600"},
             {"ACE", "1:80", "600"},
             {"MAGNAT", "1:60", "800"},
-            {"DIY", "1:60", "800"}};
+            {"DIY", "1:60", "800"},
+            {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligthName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -69,7 +72,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"MAGNAT", "1:9", "100"},
             {"DELICATE", "1:6", "150"},
             {"SOLO", "1:5", "170"},
-            {"DIY", "1:10", "90"}};
+            {"DIY", "1:10", "90"},
+            {"GURU", "1:10", "80"}};
 
     String[][] penokomplektdefaultName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -85,7 +89,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"MAGNAT", "1:8", "110"},
             {"DELICATE", "1:4", "200"},
             {"SOLO", "1:4", "200"},
-            {"DIY", "1:8", "110"}};
+            {"DIY", "1:8", "110"},
+            {"GURU", "1:12", "100"}};
 
     String[][] penokomplekthardName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -95,7 +100,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"SENZA", "1:7", "125"},
             {"ACE", "1:7", "125"},
             {"MAGNAT", "1:6", "145"},
-            {"DIY", "1:3", "250"}};
+            {"DIY", "1:3", "250"},
+            {"GURU", "1:10", "125"}};
 
     String[][] dozatronligthName = {{"Продукт", "Показатель концентрации %"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -146,7 +152,9 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
             {"MAGNAT", "1:110", "450"},
             {"DELICATE", "1:80", "625"},
             {"SOLO", "1:70", "725"},
-            {"DIY", "1:120", "425"}};
+            {"DIY", "1:120", "425"},
+            {"GURU", "1:120", "350"}};
+
     String[][] peno50default =
             {
                     {"UNIOR", "1:40", "1200"},
@@ -161,8 +169,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
                     {"MAGNAT", "1:100", "500"},
                     {"DELICATE", "1:60", "800"},
                     {"SOLO", "1:55", "900"},
-                    {"DIY", "1:100", "500"}
-            };
+                    {"DIY", "1:100", "500"},
+                    {"GURU", "1:120", "400"}};
     String[][] peno50hard =
             {
                     {"NOVICE", "1:50", "1000"},
@@ -171,8 +179,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
                     {"SENZA", "1:80", "600"},
                     {"ACE", "1:80", "600"},
                     {"MAGNAT", "1:60", "800"},
-                    {"DIY", "1:60", "800"}
-            };
+                    {"DIY", "1:60", "800"},
+                    {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligth =
             {
@@ -185,8 +193,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
                     {"MAGNAT", "1:9", "100"},
                     {"DELICATE", "1:6", "150"},
                     {"SOLO", "1:5", "170"},
-                    {"DIY", "1:10", "90"}
-            };
+                    {"DIY", "1:10", "90"},
+                    {"GURU", "1:10", "80"}};
     String[][] penokomplektdefault =
             {
                     {"UNIOR", "1:2", "300"},
@@ -201,8 +209,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
                     {"MAGNAT", "1:8", "110"},
                     {"DELICATE", "1:4", "200"},
                     {"SOLO", "1:4", "200"},
-                    {"DIY", "1:8", "110"}
-            };
+                    {"DIY", "1:8", "110"},
+                    {"GURU", "1:12", "100"}};
     String[][] ppenokomplekthard =
             {
                     {"NOVICE", "1:4", "200"},
@@ -211,8 +219,8 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
                     {"SENZA", "1:7", "125"},
                     {"ACE", "1:7", "125"},
                     {"MAGNAT", "1:6", "145"},
-                    {"DIY", "1:3", "250"}
-            };
+                    {"DIY", "1:3", "250"},
+                    {"GURU", "1:10", "125"}};
 
     String[][] dozatronligth =
             {
@@ -309,7 +317,7 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_sravnenie);
-        setTitle("Сравнить средства");
+        setTitle("Сравнить с другим средством");
 
         btnSravnenie = (Button) findViewById(R.id.btnSravnenie);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);

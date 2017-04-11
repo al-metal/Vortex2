@@ -277,7 +277,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость, руб/кг"
+                        android:text="Стоимость, кг"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -313,7 +313,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость, руб/л"
+                        android:text="Стоимость, л"
                         android:textSize="11sp" />
 
                     <TextView
@@ -348,7 +348,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость одной промывки, л"
+                        android:text="Одна промывка, л"
                         android:textSize="11sp" />
 
                     <TextView
@@ -385,7 +385,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость одного литра промывочной смеси, руб"
+                        android:text="Стоимость литра\nпромывочной смеси"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -416,6 +416,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </android.support.constraint.ConstraintLayout>

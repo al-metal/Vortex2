@@ -72,7 +72,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Ace", "1:80", "600"},
             {"Magnat", "1:60", "800"},
             {"DIY", "1:60", "800"},
-            {"GURU", "1:120", "450"}};
+            {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligth = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:4", "200"},
@@ -85,7 +85,7 @@ public class ActivityAuto extends AppCompatActivity {
             {"Delicate", "1:6", "150"},
             {"Solo", "1:5", "170"},
             {"DIY", "1:10", "90"},
-            {"GURU", "1:120", "80"}};
+            {"GURU", "1:10", "80"}};
 
     String[][] penokomplektdefault = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:2", "300"},
@@ -167,6 +167,7 @@ public class ActivityAuto extends AppCompatActivity {
     boolean bollSpinner = false;
 
     TableLayout table;
+    TableRow tableR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,6 +178,7 @@ public class ActivityAuto extends AppCompatActivity {
         strVoda = null;
 
         table = (TableLayout) findViewById(R.id.table);
+        tableR = (TableRow) findViewById(R.id.tableR);
 
         llmain = (LinearLayout) findViewById(R.id.llmain);
 
@@ -396,6 +398,7 @@ public class ActivityAuto extends AppCompatActivity {
         }
 
         table.setVisibility(View.VISIBLE);
+        tableR.setVisibility(View.VISIBLE);
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         tableLayout.removeAllViewsInLayout();

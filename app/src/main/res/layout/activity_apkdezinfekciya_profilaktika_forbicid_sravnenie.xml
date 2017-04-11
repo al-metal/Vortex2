@@ -237,7 +237,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость 1 кг, руб"
+                        android:text="Стоимость за 1 кг"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -276,7 +276,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество на обработку, кг"
+                        android:text="Количество, л"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -315,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость обработки, руб"
+                        android:text="Стоимость обработки"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

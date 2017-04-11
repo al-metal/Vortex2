@@ -67,8 +67,8 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
         tvStoimObrabotki = (TextView) findViewById(R.id.tvStoimObrabotki);
         tvStoimObrabotkiVsego = (TextView) findViewById(R.id.tvStoimObrabotkiVsego);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner4.setAdapter(adapter);
 

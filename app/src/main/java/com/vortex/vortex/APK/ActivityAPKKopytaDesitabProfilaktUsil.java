@@ -38,7 +38,7 @@ public class ActivityAPKKopytaDesitabProfilaktUsil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkkopyta_desitab_profilakt_usil);
-        setTitle("DESITUB Усиленная профилактика");
+        setTitle("DESITUB Усиленная «профилактика»");
 
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
         tableL = (TableLayout) findViewById(R.id.tableL);

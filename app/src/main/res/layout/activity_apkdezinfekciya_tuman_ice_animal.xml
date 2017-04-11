@@ -159,7 +159,7 @@
                 android:layout_height="match_parent"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -171,7 +171,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Объем помещения, м³: "
+                        android:text="Объем помещения, м³"
                         android:textSize="11sp" />
 
                     <TextView
@@ -193,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Экспозиция, ч: "
+                        android:text="Экспозиция, ч"
                         android:textSize="11sp" />
 
                     <TextView
@@ -215,7 +215,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Концентрация использования, %"
+                        android:text="Концентрация, %"
                         android:textSize="11sp" />
 
                     <TextView
@@ -237,7 +237,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Расход рабочего раствора, мл/м³: "
+                        android:text="Расход рабочего раствора, мл/м³"
                         android:textSize="11sp" />
 
                     <TextView
@@ -259,7 +259,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Расход концентрата на мл/м³: "
+                        android:text="Расход концентрата, мл/м³"
                         android:textSize="11sp" />
 
                     <TextView
@@ -281,7 +281,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Форбицида на обработку, кг: "
+                        android:text="Количество FORBICID, кг"
                         android:textSize="11sp" />
 
                     <TextView

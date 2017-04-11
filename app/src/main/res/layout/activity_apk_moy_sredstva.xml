@@ -167,7 +167,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Плотность средства:"
+                        android:text="Плотность средства"
                         android:textSize="11sp" />
 
                     <TextView
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Стоимость, р/кг"
+                        android:text="Стоимость, кг"
                         android:textSize="11sp" />
 
                     <TextView
@@ -215,7 +215,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Стоимость, р/л"
+                        android:text="Стоимость, л"
                         android:textSize="11sp" />
 
                     <TextView
@@ -239,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Стоимость одной промывки, л"
+                        android:text="Одна промывка, л"
                         android:textSize="11sp" />
 
                     <TextView
@@ -264,7 +264,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Стоимость одного литра промывочной смеси, руб"
+                        android:text="Стоимость литра\nпромывочной смеси"
                         android:textSize="11sp" />
 
                     <TextView

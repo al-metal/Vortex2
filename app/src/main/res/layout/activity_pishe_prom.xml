@@ -56,11 +56,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:ems="10"
                         android:inputType="numberDecimal"
                         android:textColor="@color/colorGray"
-                        android:layout_span="2"
-                        android:textSize="14sp"
-                        android:ems="10"/>
+                        android:textSize="14sp" />
                 </TableRow>
 
                 <TableRow
@@ -120,7 +120,7 @@
                     <TextView
                         android:id="@+id/textView138"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="Количество промывок в сутки"
@@ -145,7 +145,7 @@
                     <TextView
                         android:id="@+id/textView142"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="Количество рабочих дней в мес."

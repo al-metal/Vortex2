@@ -68,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество дойного стада: " />
+                        android:text="Количество дойного стада" />
 
                     <EditText
                         android:id="@+id/etStado"
@@ -77,7 +77,6 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:hint="шт"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
@@ -88,10 +87,10 @@
                     <TextView
                         android:id="@+id/textView91"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Продолжительность обработки: " />
+                        android:text="Продолжительность, дни" />
 
                     <EditText
                         android:id="@+id/etObrabotka"
@@ -100,7 +99,6 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:hint="дн"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
@@ -114,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Медный купорос: " />
+                        android:text="Медный купорос, %" />
 
                     <EditText
                         android:id="@+id/etKuporos"
@@ -123,7 +121,6 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:hint="%"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
@@ -134,10 +131,10 @@
                     <TextView
                         android:id="@+id/textView93"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество обработок в день: " />
+                        android:text="Количество обработок в день" />
 
                     <EditText
                         android:id="@+id/etObrabotokDen"
@@ -146,7 +143,6 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:hint="шт"
                         android:inputType="numberDecimal" />
 
                 </TableRow>
@@ -161,7 +157,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость 1 кг медного купороса: " />
+                        android:text="Стоимость за 1 кг" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -170,7 +166,6 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:hint="руб"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
@@ -200,7 +195,7 @@
                 android:layout_marginTop="20dp"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -209,10 +204,10 @@
                     <TextView
                         android:id="@+id/textView95"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество требуемого Медного купороса, кг: "
+                        android:text="Требуемое количество"
                         android:textSize="11sp" />
 
                     <TextView
@@ -232,11 +227,11 @@
 
                     <TextView
                         android:id="@+id/textView97"
-                        android:layout_marginLeft="17dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки за период, руб: "
+                        android:text="Стоимость обработки за период"
                         android:textSize="11sp" />
 
                     <TextView
@@ -257,10 +252,10 @@
                     <TextView
                         android:id="@+id/textView99"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки 1 головы за период, руб: "
+                        android:text="Стоимость обработки головы за период"
                         android:textSize="11sp" />
 
                     <TextView
