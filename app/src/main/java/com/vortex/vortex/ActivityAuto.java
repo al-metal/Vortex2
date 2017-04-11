@@ -45,7 +45,8 @@ public class ActivityAuto extends AppCompatActivity {
             {"Magnat", "1:110", "450"},
             {"Delicate", "1:80", "625"},
             {"Solo", "1:70", "725"},
-            {"DIY", "1:120", "425"}};
+            {"DIY", "1:120", "425"},
+            {"GURU", "1:120", "350"}};
 
     String[][] peno50default = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:40", "1200"},
@@ -60,7 +61,8 @@ public class ActivityAuto extends AppCompatActivity {
             {"Magnat", "1:100", "500"},
             {"Delicate", "1:60", "800"},
             {"Solo", "1:55", "900"},
-            {"DIY", "1:100", "500"}};
+            {"DIY", "1:100", "500"},
+            {"GURU", "1:120", "400"}};
 
     String[][] peno50hard = {{"", "Разбавление", "Количество, мл"},
             {"Novice", "1:50", "1000"},
@@ -69,7 +71,8 @@ public class ActivityAuto extends AppCompatActivity {
             {"Senza", "1:80", "600"},
             {"Ace", "1:80", "600"},
             {"Magnat", "1:60", "800"},
-            {"DIY", "1:60", "800"}};
+            {"DIY", "1:60", "800"},
+            {"GURU", "1:120", "450"}};
 
     String[][] penokomplektligth = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:4", "200"},
@@ -81,7 +84,8 @@ public class ActivityAuto extends AppCompatActivity {
             {"Magnat", "1:9", "100"},
             {"Delicate", "1:6", "150"},
             {"Solo", "1:5", "170"},
-            {"DIY", "1:10", "90"}};
+            {"DIY", "1:10", "90"},
+            {"GURU", "1:120", "80"}};
 
     String[][] penokomplektdefault = {{"", "Разбавление", "Количество, мл"},
             {"Unior", "1:2", "300"},
@@ -96,7 +100,8 @@ public class ActivityAuto extends AppCompatActivity {
             {"Magnat", "1:8", "110"},
             {"Delicate", "1:4", "200"},
             {"Solo", "1:4", "200"},
-            {"DIY", "1:8", "110"}};
+            {"DIY", "1:8", "110"},
+            {"GURU", "1:120", "100"}};
 
     String[][] penokomplekthard = {{"", "Разбавление", "Количество, мл"},
             {"Novice", "1:4", "200"},
@@ -105,7 +110,8 @@ public class ActivityAuto extends AppCompatActivity {
             {"Senza", "1:7", "125"},
             {"Ace", "1:7", "125"},
             {"Magnat", "1:6", "145"},
-            {"DIY", "1:3", "250"}};
+            {"DIY", "1:3", "250"},
+            {"GURU", "1:120", "125"}};
 
     String[][] dozatronligth = {{"", "Концентрация, %"},
             {"Unior", "2"},

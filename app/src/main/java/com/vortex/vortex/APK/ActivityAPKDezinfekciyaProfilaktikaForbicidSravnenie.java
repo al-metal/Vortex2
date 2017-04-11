@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,18 +29,26 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie extends AppCom
     TextView tvStoimostKg;
     TextView tvKolichestvo;
     TextView tvStoimostObrabotki;
+    TextView tvNameSredstvo;
 
     EditText etPloshad;
     EditText etKoncentraciya;
     EditText etRashod;
     EditText etPrice;
     EditText etVes;
+    EditText etName;
+
+    TableLayout tableL;
+    Button btnRaschet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkdezinfekciya_profilaktika_forbicid_sravnenie);
-        setTitle("Сравнение средств");
+        setTitle("Сравнить с другим средством");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         dblKoncentraciya = getIntent().getExtras().getDouble("Koncentraciya");
         dblRashod = getIntent().getExtras().getDouble("Rashod");
@@ -52,12 +63,14 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie extends AppCom
         tvStoimostKg = (TextView) findViewById(R.id.tvStoimostKg);
         tvKolichestvo = (TextView) findViewById(R.id.tvKolichestvo);
         tvStoimostObrabotki = (TextView) findViewById(R.id.tvStoimostObrabotki);
+        tvNameSredstvo = (TextView) findViewById(R.id.tvNameSredstvo);
 
         etPloshad = (EditText) findViewById(R.id.etPloshad);
         etKoncentraciya = (EditText) findViewById(R.id.etKoncentraciya);
         etRashod = (EditText) findViewById(R.id.etRashod);
         etPrice = (EditText) findViewById(R.id.etPrice);
         etVes = (EditText) findViewById(R.id.etVes);
+        etName = (EditText) findViewById(R.id.etName);
 
         tvStoimostKgVortex.setText(String.valueOf(roundUp(dblStoimostKg, 2)));
         tvKolichestvoVortex.setText(String.valueOf(roundUp(dblKolichForbicid, 2)));
@@ -71,7 +84,7 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie extends AppCom
     public void onClick(View view) {
 
         if (etPloshad.getText().length() == 0 || etPrice.getText().length() == 0 || etVes.getText().length() == 0
-                || etKoncentraciya.getText().length() == 0 || etRashod.getText().length() == 0) {
+                || etKoncentraciya.getText().length() == 0 || etRashod.getText().length() == 0 || etName.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -89,5 +102,10 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie extends AppCom
         tvStoimostKg.setText(String.valueOf(roundUp(dblStoimostKgSravnenie, 2)));
         tvKolichestvo.setText(String.valueOf(roundUp(dblKolichForbicidSravnenie, 2)));
         tvStoimostObrabotki.setText(String.valueOf(roundUp(dblStoimostObrabotkiSravnenie, 2)));
+        tvNameSredstvo.setText(etName.getText());
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
     }
 }

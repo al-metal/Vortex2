@@ -1,10 +1,13 @@
 package com.vortex.vortex.APK;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +35,17 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicid extends AppCompatActivi
     double dblRashod;
     double dblEkspoziciya;
 
+    TableLayout tableL;
+    Button btnRaschet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkdezinfekciya_vynujdennaya_forbicid);
         setTitle("Форбицид вынужденная дезинфекция");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         etS = (EditText) findViewById(R.id.etS);
         etPrice = (EditText) findViewById(R.id.etPrice);
@@ -56,6 +65,10 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicid extends AppCompatActivi
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
         double dblPloshad = Double.parseDouble(etS.getText().toString());
         double dblPrice = Double.parseDouble(etPrice.getText().toString());

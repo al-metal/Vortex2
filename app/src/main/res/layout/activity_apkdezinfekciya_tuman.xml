@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vortex.vortex.APK.ActivityAPKDezinfekciya">
+    tools:context="com.vortex.vortex.ActivityAPKDezinfekciyaTuman">
 
     <ScrollView
         android:layout_width="360dp"
@@ -31,13 +31,13 @@
                     android:layout_marginTop="18dp">
 
                     <ImageButton
-                        android:id="@+id/imageButton29"
+                        android:id="@+id/imageButton32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:onClick="onClickProfilakt"
+                        android:onClick="onClickTumanFire"
+                        app:srcCompat="@mipmap/tumanfire"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/forbicidprofil" />
+                        android:background="@null"/>
                 </TableRow>
 
                 <TableRow
@@ -46,13 +46,13 @@
                     android:layout_marginTop="18dp">
 
                     <ImageButton
-                        android:id="@+id/imageButton30"
+                        android:id="@+id/imageButton33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:onClick="onCLickVynujden"
+                        android:onClick="onClickTumanIce"
+                        app:srcCompat="@mipmap/tumanice"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/forbicidvynuj" />
+                        android:background="@null"/>
                 </TableRow>
 
                 <TableRow
@@ -61,13 +61,13 @@
                     android:layout_marginTop="18dp">
 
                     <ImageButton
-                        android:id="@+id/imageButton31"
+                        android:id="@+id/imageButton34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:onClick="onClickTuman"
+                        android:onClick="onClickTumanIceAnimal"
+                        app:srcCompat="@mipmap/tumananimal"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/tumanmenu" />
+                        android:background="@null"/>
                 </TableRow>
 
             </TableLayout>

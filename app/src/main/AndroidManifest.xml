@@ -117,6 +117,7 @@
         <activity
             android:name=".ActivityAutoSuperKoncentratSravnenie"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ActivityAPKDezinfekciyaTuman"></activity>
     </application>
 
 </manifest>

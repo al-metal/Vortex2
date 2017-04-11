@@ -1,9 +1,12 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,11 +28,17 @@ public class ActivityAPKDezinfekciyaTumanFire extends AppCompatActivity {
     TextView tvRashodKoncentrata;
     TextView tvForbicida;
 
+    TableLayout tableL;
+    Button btnRaschet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkdezinfekciya_tuman_fire);
         setTitle("Использование метода горячего тумана");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         etVysota = (EditText) findViewById(R.id.etVysota);
         etVysotaKon = (EditText) findViewById(R.id.etVysotaKon);
@@ -51,6 +60,10 @@ public class ActivityAPKDezinfekciyaTumanFire extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
 
         double dblVysota = Double.parseDouble(etVysota.getText().toString());
         double dblVysotaKon = Double.parseDouble(etVysotaKon.getText().toString());

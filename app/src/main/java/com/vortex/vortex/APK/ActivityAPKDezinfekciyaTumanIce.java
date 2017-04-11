@@ -1,12 +1,15 @@
 package com.vortex.vortex.APK;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,11 +33,17 @@ public class ActivityAPKDezinfekciyaTumanIce extends AppCompatActivity {
     TextView tvRashodKoncentrata;
     TextView tvForbicida;
 
+    TableLayout tableL;
+    Button btnRaschet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apkdezinfekciya_tuman_ice);
         setTitle("Использование метода холодного тумана");
+
+        tableL = (TableLayout) findViewById(R.id.tableL);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         etVysota = (EditText) findViewById(R.id.etVysota);
         etVysotaKon = (EditText) findViewById(R.id.etVysotaKon);
@@ -50,8 +59,8 @@ public class ActivityAPKDezinfekciyaTumanIce extends AppCompatActivity {
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner6);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
 
@@ -84,6 +93,11 @@ public class ActivityAPKDezinfekciyaTumanIce extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        tableL.setVisibility(View.VISIBLE);
+        int gray = Color.parseColor("#7B7979");
+        btnRaschet.setBackgroundColor(gray);
+
         double dblVysota = Double.parseDouble(etVysota.getText().toString());
         double dblVysotaKon = Double.parseDouble(etVysotaKon.getText().toString());
         double dblDlinna = Double.parseDouble(etDlinna.getText().toString());

@@ -199,7 +199,7 @@
                 android:layout_height="match_parent"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -258,6 +258,28 @@
 
                     <TextView
                         android:id="@+id/tvStoimObrabotki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/textView339"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоимость обработки поголовья, руб" />
+
+                    <TextView
+                        android:id="@+id/tvStoimObrabotkiVsego"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
