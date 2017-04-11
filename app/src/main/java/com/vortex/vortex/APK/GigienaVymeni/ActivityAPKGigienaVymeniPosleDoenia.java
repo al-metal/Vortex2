@@ -33,10 +33,12 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
     TextView tvStoimostKg;
     TextView tvKolichGigien;
     TextView tvStoimObrabotki;
+    TextView tvStoimObrabotkiVsego;
 
     double stoimKg;
     double kolichGigien;
     double stoimObrabotki;
+    double stoimObrabotkiVsego;
 
     TableLayout tableL;
     Button btnRaschet;
@@ -63,6 +65,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
         tvStoimostKg = (TextView) findViewById(R.id.tvStoimostKg);
         tvKolichGigien = (TextView) findViewById(R.id.tvKolichGigien);
         tvStoimObrabotki = (TextView) findViewById(R.id.tvStoimObrabotki);
+        tvStoimObrabotkiVsego = (TextView) findViewById(R.id.tvStoimObrabotkiVsego);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -124,10 +127,12 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
         stoimKg = price / ves;
         kolichGigien = (period * kolichObrabotok) * kolichGolov * (dblRashodGolova / 1000);
         stoimObrabotki = stoimKg * (dblRashodGolova / 1000);
+        stoimObrabotkiVsego = stoimKg * kolichGigien;
 
         tvStoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
         tvKolichGigien.setText(String.valueOf(roundUp(kolichGigien, 2)));
         tvStoimObrabotki.setText(String.valueOf(roundUp(stoimObrabotki, 2)));
+        tvStoimObrabotkiVsego.setText(String.valueOf(roundUp(stoimObrabotkiVsego, 2)));
 
         tableL.setVisibility(View.VISIBLE);
         int gray = Color.parseColor("#7B7979");
@@ -143,6 +148,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia extends AppCompatActivity {
         intent.putExtra("stoimKg", stoimKg);
         intent.putExtra("kolichGigien", kolichGigien);
         intent.putExtra("stoimObrabotki", stoimObrabotki);
+        intent.putExtra("stoimObrabotkiVsego", stoimObrabotkiVsego);
         intent.putExtra("dblRashodGolova", dblRashodGolova);
         intent.putExtra("sredstvo", strSredstvo);
         startActivity(intent);

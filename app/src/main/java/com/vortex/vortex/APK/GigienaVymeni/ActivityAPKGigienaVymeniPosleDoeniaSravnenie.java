@@ -19,10 +19,12 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie extends AppCompatActiv
     double stoimKgVotrex = 0;
     double kolichGigienVotrex = 0;
     double stoimObrabotkiVotrex = 0;
+    double stoimObrabotkiVsegoVotrex = 0;
     double dblRashodGolovaVotrex = 0;
     double stoimKg;
     double kolichGigien;
     double stoimObrabotki;
+    double stoimObrabotkiVsego;
 
     TextView tvStoimostKgVortex;
     TextView tvKolichGigienVortex;
@@ -32,6 +34,8 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie extends AppCompatActiv
     TextView tvObrabotki;
     TextView tvSredstvo;
     TextView tvSredstvoVortex;
+    TextView tvObrabotkiVsego;
+    TextView tvObrabotkiVsegoVortex;
     EditText etRashodGolova;
     EditText etPrice;
     EditText etVes;
@@ -57,6 +61,7 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie extends AppCompatActiv
         stoimKgVotrex = getIntent().getExtras().getDouble("stoimKg");
         kolichGigienVotrex = getIntent().getExtras().getDouble("kolichGigien");
         stoimObrabotkiVotrex = getIntent().getExtras().getDouble("stoimObrabotki");
+        stoimObrabotkiVsegoVotrex = getIntent().getExtras().getDouble("stoimVsegoObrabotki");
         dblRashodGolovaVotrex = getIntent().getExtras().getDouble("dblRashodGolova");
         strSredstvoVortex = getIntent().getExtras().getString("sredstvo");
 
@@ -68,10 +73,13 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie extends AppCompatActiv
         tvObrabotki = (TextView) findViewById(R.id.tvObrabotki);
         tvSredstvo = (TextView) findViewById(R.id.tvSredstvo);
         tvSredstvoVortex = (TextView) findViewById(R.id.tvSredstvoVortex);
+        tvObrabotkiVsegoVortex = (TextView) findViewById(R.id.tvObrabotkiVsegoVortex);
+        tvObrabotkiVsego = (TextView) findViewById(R.id.tvObrabotkiVsego);
 
         tvStoimostKgVortex.setText(String.valueOf(roundUp(stoimKgVotrex, 2)));
         tvKolichGigienVortex.setText(String.valueOf(roundUp(kolichGigienVotrex, 2)));
         tvObrabotkiVortex.setText(String.valueOf(roundUp(stoimObrabotkiVotrex, 2)));
+        tvObrabotkiVsegoVortex.setText(String.valueOf(roundUp(stoimObrabotkiVsegoVotrex, 2)));
 
         etRashodGolova = (EditText) findViewById(R.id.etRashodGolova);
         etPrice = (EditText) findViewById(R.id.etPrice);
@@ -112,10 +120,12 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie extends AppCompatActiv
         stoimKg = price / ves;
         kolichGigien = (period * kolichObrabotok) * kolichGolov * (rashodGolova / 1000);
         stoimObrabotki = stoimKg * (rashodGolova / 1000);
+        stoimObrabotkiVsego = stoimKg * kolichGigien;
 
         tvStoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
         tvKolichGigien.setText(String.valueOf(roundUp(kolichGigien, 2)));
         tvObrabotki.setText(String.valueOf(roundUp(stoimObrabotki, 2)));
+        tvObrabotkiVsego.setText(String.valueOf(roundUp(stoimObrabotkiVsego, 2)));
         tvSredstvo.setText(etSredstvo.getText());
     }
 }
