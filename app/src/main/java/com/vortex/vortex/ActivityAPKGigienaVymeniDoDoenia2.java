@@ -24,9 +24,6 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia;
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie;
-
 import java.math.BigDecimal;
 
 public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity

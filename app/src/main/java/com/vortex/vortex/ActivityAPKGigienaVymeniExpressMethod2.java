@@ -21,9 +21,6 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod;
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethodSravnenie;
-
 import java.math.BigDecimal;
 
 public class ActivityAPKGigienaVymeniExpressMethod2 extends AppCompatActivity

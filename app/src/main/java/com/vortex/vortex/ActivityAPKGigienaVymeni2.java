@@ -16,11 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeni;
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia;
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod;
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia;
-
 public class ActivityAPKGigienaVymeni2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
