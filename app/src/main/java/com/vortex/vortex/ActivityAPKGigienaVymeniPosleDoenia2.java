@@ -24,9 +24,6 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia;
-import com.vortex.vortex.APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie;
-
 import java.math.BigDecimal;
 
 public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
@@ -169,7 +166,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
             Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
             return;
         }
-        Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, ActivityAPKGigienaVymeniPosleDoeniaSravnenie.class);
+        Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.class);
         intent.putExtra("stoimKg", stoimKg);
         intent.putExtra("kolichGigien", kolichGigien);
         intent.putExtra("stoimObrabotki", stoimObrabotki);
