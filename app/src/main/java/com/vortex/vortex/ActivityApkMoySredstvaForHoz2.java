@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,7 @@ public class ActivityApkMoySredstvaForHoz2 extends AppCompatActivity
 
     Button btnRaschet;
     TableLayout tableL;
+    ScrollView scrollview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class ActivityApkMoySredstvaForHoz2 extends AppCompatActivity
 
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
         tableL = (TableLayout) findViewById(R.id.tableL);
+        scrollview = (ScrollView) findViewById(R.id.scrollview);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -104,6 +107,8 @@ public class ActivityApkMoySredstvaForHoz2 extends AppCompatActivity
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
                 InputMethodManager.HIDE_NOT_ALWAYS);
+
+        scrollview.fullScroll(View.FOCUS_DOWN);
 
         tableL.setVisibility(View.VISIBLE);
         int gray = Color.parseColor("#7B7979");

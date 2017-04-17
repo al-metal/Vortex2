@@ -76,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена" />
+                        android:text="Цена, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес" />
+                        android:text="Вес, кг" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество голов" />
+                        android:text="Количество голов, шт" />
 
                     <EditText
                         android:id="@+id/etKolichGolov"
@@ -142,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Период обработки" />
+                        android:text="Период обработки, дней" />
 
                     <EditText
                         android:id="@+id/etPeriodObrabotki"
@@ -212,7 +212,7 @@
                         android:id="@+id/textView22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость за 1 кг" />
+                        android:text="Стоимость за 1 кг, руб" />
 
                     <TextView
                         android:id="@+id/tvStoimostKg"
@@ -278,7 +278,7 @@
                         android:id="@+id/textView339"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость обработки поголовья" />
+                        android:text="Стоимость обработки поголовья, руб" />
 
                     <TextView
                         android:id="@+id/tvStoimObrabotkiVsego"

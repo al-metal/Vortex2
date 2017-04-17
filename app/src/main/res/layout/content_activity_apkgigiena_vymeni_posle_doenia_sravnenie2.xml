@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена" />
+                        android:text="Цена, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес" />
+                        android:text="Вес, кг" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -128,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество голов" />
+                        android:text="Количество голов, шт" />
 
                     <EditText
                         android:id="@+id/etKolichGolov"
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Период обработки" />
+                        android:text="Период обработки, дней" />
 
                     <EditText
                         android:id="@+id/etPeriod"
@@ -262,7 +262,7 @@
                         android:layout_span="4"
                         android:fontFamily=""
                         android:paddingRight="10dp"
-                        android:text="Стоимость за 1 кг"
+                        android:text="Стоимость за 1 кг, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -336,7 +336,7 @@
                         android:layout_span="4"
                         android:fontFamily=""
                         android:paddingRight="10dp"
-                        android:text="Стоимость одной обработки"
+                        android:text="Стоимость одной обработки, руб"
                         android:textSize="11sp" />
 
                     <TextView

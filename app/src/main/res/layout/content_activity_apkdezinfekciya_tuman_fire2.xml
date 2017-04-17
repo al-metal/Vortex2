@@ -37,7 +37,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Высота помещения" />
+                        android:text="Высота помещения, м" />
 
                     <EditText
                         android:id="@+id/etVysota"
@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Высота до конька" />
+                        android:text="Высота до конька, м" />
 
                     <EditText
                         android:id="@+id/etVysotaKon"
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Длина" />
+                        android:text="Длина, м" />
 
                     <EditText
                         android:id="@+id/etDlinna"
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Ширина" />
+                        android:text="Ширина, м" />
 
                     <EditText
                         android:id="@+id/etShirina"

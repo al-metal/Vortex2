@@ -150,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость канистры" />
+                        android:text="Стоимость канистры, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Весовка" />
+                        android:text="Весовка, кг" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -225,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество обработок за период "
+                        android:text="Количество обработок за период , шт"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -252,7 +252,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество ванн"
+                        android:text="Количество ванн, шт"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -278,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Требуется DESITUB"
+                        android:text="Требуется DESITUB, кг"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -304,7 +304,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость за 1 кг"
+                        android:text="Стоимость за 1 кг, руб"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -330,7 +330,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки, общая"
+                        android:text="Стоимость обработки, общая, руб"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -356,7 +356,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки коровы в день"
+                        android:text="Стоимость обработки коровы в день, руб"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -382,7 +382,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки коровы за период"
+                        android:text="Стоимость обработки коровы за период, руб"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

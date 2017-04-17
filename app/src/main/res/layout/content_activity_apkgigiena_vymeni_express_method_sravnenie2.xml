@@ -61,7 +61,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Цена упаковки" />
+                        android:text="Цена упаковки, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Вес упаковки" />
+                        android:text="Вес упаковки, кг" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Количество голов" />
+                        android:text="Количество голов, шт" />
 
                     <EditText
                         android:id="@+id/etKolichGolov"
@@ -222,7 +222,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Необходимое количество"
+                        android:text="Необходимое количество, кг"
                         android:textSize="11sp" />
 
                     <TextView
@@ -257,7 +257,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость обработки головы"
+                        android:text="Стоимость обработки головы, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -292,7 +292,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость обработки общая"
+                        android:text="Стоимость обработки общая, руб"
                         android:textSize="11sp" />
 
                     <TextView

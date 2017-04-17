@@ -50,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость (руб/кг)"
+                        android:text="Стоимость, руб/кг"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем раствора (л)"
+                        android:text="Объем раствора, л"
                         android:textColor="@color/colorGray" />
 
                     <EditText

@@ -149,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость канистры" />
+                        android:text="Стоимость канистры, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -173,7 +173,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Весовка" />
+                        android:text="Весовка, кг" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -226,7 +226,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
                         android:paddingRight="10dp"
-                        android:text="Количество обработок"
+                        android:text="Количество обработок, шт"
                         android:textSize="11sp" />
 
                     <TextView
@@ -305,7 +305,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
                         android:paddingRight="10dp"
-                        android:text="Стоимость за 1 кг"
+                        android:text="Стоимость за 1 кг, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -331,7 +331,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
                         android:paddingRight="10dp"
-                        android:text="Стоимость обработки, общая"
+                        android:text="Стоимость обработки, общая, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -357,7 +357,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
                         android:paddingRight="10dp"
-                        android:text="Стоимость обработки коровы в день"
+                        android:text="Стоимость обработки коровы в день, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -384,7 +384,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки коровы за период"
+                        android:text="Стоимость обработки коровы за период, руб"
                         android:textSize="11sp" />
 
                     <TextView

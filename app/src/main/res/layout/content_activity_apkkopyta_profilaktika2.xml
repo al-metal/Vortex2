@@ -176,7 +176,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество обработок"
+                        android:text="Количество обработок, шт"
                         android:textSize="11sp" />
 
                     <TextView
@@ -200,7 +200,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество требуемых ванн"
+                        android:text="Количество требуемых ванн, шт"
                         android:textSize="11sp" />
 
                     <TextView

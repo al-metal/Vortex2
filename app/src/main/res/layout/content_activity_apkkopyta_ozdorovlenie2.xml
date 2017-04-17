@@ -294,7 +294,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество требуемых ванн" />
+                        android:text="Количество требуемых ванн, шт" />
 
                     <TextView
                         android:id="@+id/tvTrebuemVann"
@@ -326,7 +326,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество DESIMIX" />
+                        android:text="Количество DESIMIX, кг" />
 
                     <TextView
                         android:id="@+id/tvTrebuemDesimix1"
@@ -358,7 +358,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество медного купороса" />
+                        android:text="Количество медного купороса, кг" />
 
                     <TextView
                         android:id="@+id/tvTrebuemKuporos1"

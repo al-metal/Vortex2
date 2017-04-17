@@ -17,167 +17,182 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeni"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoenia"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoenia"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethod"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniDoDoeniaSravnenie"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniPosleDoeniaSravnenie"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".APK.GigienaVymeni.ActivityAPKGigienaVymeniExpressMethodSravnenie"
-            android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name=".ActivityPisheProm2"
             android:label="@string/title_activity_pishe_prom2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityPishePromSravnenie2"
             android:label="@string/title_activity_pishe_prom_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAutoVybor2"
             android:label="@string/title_activity_auto_vybor2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ApkActivity2"
             android:label="@string/title_activity_apk2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAuto2"
             android:label="@string/title_activity_auto2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAutoSravnenie2"
             android:label="@string/title_activity_auto_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAutoSuperKoncentrat2"
             android:label="@string/title_activity_auto_super_koncentrat2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAutoSuperKoncentratSravnenie2"
             android:label="@string/title_activity_auto_super_koncentrat_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityApkMoysredstvaMain2"
             android:label="@string/title_activity_apk_moysredstva_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityApkMoySredstvaVoda2"
             android:label="@string/title_activity_apk_moy_sredstva_voda2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityApkMoySredstvaForHoz2"
             android:label="@string/title_activity_apk_moy_sredstva_for_hoz2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ApkMoySredstvaActivity2"
             android:label="@string/title_activity_apk_moy_sredstva2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ApkMoySredstvaSravnenieActivity2"
             android:label="@string/title_activity_apk_moy_sredstva_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeni2"
             android:label="@string/title_activity_apkgigiena_vymeni2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeniDoDoenia2"
             android:label="@string/title_activity_apkgigiena_vymeni_do_doenia2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeniDoDoeniaSravnenie2"
             android:label="@string/title_activity_apkgigiena_vymeni_do_doenia_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeniExpressMethod2"
             android:label="@string/title_activity_apkgigiena_vymeni_express_method2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeniExpressMethodSravnenie2"
             android:label="@string/title_activity_apkgigiena_vymeni_express_method_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeniPosleDoenia2"
             android:label="@string/title_activity_apkgigiena_vymeni_posle_doenia2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKGigienaVymeniPosleDoeniaSravnenie2"
             android:label="@string/title_activity_apkgigiena_vymeni_posle_doenia_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKKopyta2"
             android:label="@string/title_activity_apkkopyta2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKKopytaDesitabProfilakt2"
             android:label="@string/title_activity_apkkopyta_desitab_profilakt2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKKopytaDesitabProfilaktUsil2"
             android:label="@string/title_activity_apkkopyta_desitab_profilakt_usil2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKKopytaMedKuporos2"
             android:label="@string/title_activity_apkkopyta_med_kuporos2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKKopytaOzdorovlenie2"
             android:label="@string/title_activity_apkkopyta_ozdorovlenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKKopytaProfilaktika2"
             android:label="@string/title_activity_apkkopyta_profilaktika2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciya2"
             android:label="@string/title_activity_apkdezinfekciya2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicid2"
             android:label="@string/title_activity_apkdezinfekciya_profilaktika_forbicid2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2"
             android:label="@string/title_activity_apkdezinfekciya_profilaktika_forbicid_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicid2"
             android:label="@string/title_activity_apkdezinfekciya_vynujdennaya_forbicid2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie2"
             android:label="@string/title_activity_apkdezinfekciya_vynujdennaya_forbicid_sravnenie2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaTuman2"
             android:label="@string/title_activity_apkdezinfekciya_tuman2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaTumanFire2"
             android:label="@string/title_activity_apkdezinfekciya_tuman_fire2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaTumanIce2"
             android:label="@string/title_activity_apkdezinfekciya_tuman_ice2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ActivityAPKDezinfekciyaTumanIceAnimal2"
             android:label="@string/title_activity_apkdezinfekciya_tuman_ice_animal2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"></activity>
     </application>
 
 </manifest>

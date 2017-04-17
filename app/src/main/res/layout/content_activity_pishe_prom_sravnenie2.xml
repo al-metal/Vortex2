@@ -62,7 +62,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="15dp"
                         android:layout_span="4"
-                        android:text="Плотность (кг/л)" />
+                        android:text="Плотность, кг/л" />
 
                     <EditText
                         android:id="@+id/etPlotnost"
@@ -87,7 +87,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="15dp"
                         android:layout_span="4"
-                        android:text="Стоимость (руб/кг)" />
+                        android:text="Стоимость, руб/кг" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -137,7 +137,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="15dp"
                         android:layout_span="4"
-                        android:text="Объем моющего раствора (л)" />
+                        android:text="Объем моющего раствора, л" />
 
                     <EditText
                         android:id="@+id/etObjemRastvor"

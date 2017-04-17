@@ -9,6 +9,7 @@
     tools:showIn="@layout/app_bar_activity_apk_moy_sredstva_for_hoz2">
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="360dp"
         android:layout_height="495dp"
         android:padding="5dp"
@@ -23,225 +24,225 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="17dp"
                 android:shrinkColumns="*"
-                android:stretchColumns="*"
-                android:layout_marginTop="17dp">
+                android:stretchColumns="*">
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
-                        android:text="Количество дойных коров" />
+                        android:layout_span="4"
+                        android:text="Количество дойных коров, шт" />
 
                     <EditText
                         android:id="@+id/edKolichKorov"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
                         android:layout_marginRight="17dp"
+                        android:layout_span="3"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView18"
                         android:layout_width="wrap_content"
-                        android:layout_span="4"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
+                        android:layout_span="4"
                         android:text="Количество доек в день" />
 
                     <EditText
                         android:id="@+id/etKolichDoek"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
-                        android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView19"
                         android:layout_width="wrap_content"
-                        android:layout_span="4"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
-                        android:text="Концентрация щелочи" />
+                        android:layout_span="4"
+                        android:text="Концентрация щелочи,%" />
 
                     <EditText
                         android:id="@+id/etKoncentratSheloch"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
-                        android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView23"
                         android:layout_width="wrap_content"
-                        android:layout_span="4"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
-                        android:text="Концентрация кислоты" />
+                        android:layout_span="4"
+                        android:text="Концентрация кислоты,%" />
 
                     <EditText
                         android:id="@+id/etKoncentratKislot"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
-                        android:layout_marginRight="17dp"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView26"
                         android:layout_width="wrap_content"
-                        android:layout_span="4"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
+                        android:layout_span="4"
                         android:text="Количество щелочных моек" />
 
                     <EditText
                         android:id="@+id/etKolichShelochMoek"
                         android:layout_width="match_parent"
-                        android:layout_span="3"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
+                        android:layout_span="3"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView28"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
+                        android:layout_span="4"
                         android:text="Количество кислотных моек" />
 
                     <EditText
                         android:id="@+id/etKolichKislotMoek"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
                         android:layout_span="3"
-                        android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView148"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
-                        android:text="Объем промывочной ванны" />
+                        android:layout_span="4"
+                        android:text="Объем промывочной ванны, л" />
 
                     <EditText
                         android:id="@+id/etVanna"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_span="3"
                         android:layout_marginRight="17dp"
+                        android:layout_span="3"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView150"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
+                        android:layout_span="4"
                         android:text="Количество дней" />
 
                     <EditText
                         android:id="@+id/etDay"
                         android:layout_width="match_parent"
-                        android:layout_span="3"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
+                        android:layout_span="3"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView177"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_span="4"
                         android:layout_marginLeft="17dp"
-                        android:text="Стоимость за 1 кг щелочного средства" />
+                        android:layout_span="4"
+                        android:text="Стоимость за 1 кг щелочного средства, руб" />
 
                     <EditText
                         android:id="@+id/etPriceSheloch"
                         android:layout_width="match_parent"
-                        android:layout_span="3"
-                        android:layout_marginRight="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="3"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView178"
                         android:layout_width="wrap_content"
-                        android:layout_span="4"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
-                        android:text="Стоимость за 1 кг кислотного средства" />
+                        android:layout_span="4"
+                        android:text="Стоимость за 1 кг кислотного средства, руб" />
 
                     <EditText
                         android:id="@+id/edPriceKislot"
                         android:layout_width="match_parent"
-                        android:layout_marginRight="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="3"
                         android:ems="10"
                         android:inputType="numberDecimal" />
@@ -284,7 +285,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Средняя плотность средства"
+                        android:text="Средняя плотность средства, кг/л"
                         android:textSize="11sp" />
 
                     <TextView
@@ -378,7 +379,7 @@
                         android:layout_width="5dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Стоимость щелочного средства"
+                        android:text="Стоимость щелочного средства, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -401,7 +402,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Стоимость кислотного средства"
+                        android:text="Стоимость кислотного средства, руб"
                         android:textSize="11sp" />
 
                     <TextView
@@ -424,7 +425,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Общая стоимость средств"
+                        android:text="Общая стоимость средств, руб"
                         android:textSize="11sp" />
 
                     <TextView

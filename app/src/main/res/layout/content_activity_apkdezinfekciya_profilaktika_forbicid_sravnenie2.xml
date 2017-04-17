@@ -128,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена" />
+                        android:text="Цена, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес" />
+                        android:text="Вес, кг" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -239,7 +239,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг"
+                        android:text="Стоимость за 1 кг, руб"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -317,7 +317,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость обработки"
+                        android:text="Стоимость обработки, руб"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

@@ -62,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Плотность"
+                        android:text="Плотность, кг/л"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость"
+                        android:text="Стоимость, руб"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -112,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес"
+                        android:text="Вес, кг"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -137,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация"
+                        android:text="Концентрация, %"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -162,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем ванны"
+                        android:text="Объем ванны, л"
                         android:textColor="@color/colorGray" />
 
                     <EditText
