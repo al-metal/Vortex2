@@ -68,7 +68,6 @@ public class ActivityApkMoysredstvaMain2 extends AppCompatActivity
         return true;
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

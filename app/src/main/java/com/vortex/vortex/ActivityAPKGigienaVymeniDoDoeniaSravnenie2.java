@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -162,6 +164,11 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie2 extends AppCompatActivit
             return;
         }
 
+        //Скрытие клавиатуры по нажатию кнопки
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+
         tvSredstvo.setText(etSredstvo.getText());
 
         double price = Double.parseDouble(etPrice.getText().toString());
@@ -199,7 +206,6 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie2 extends AppCompatActivit
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

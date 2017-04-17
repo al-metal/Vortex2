@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -17,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -48,7 +50,7 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
     private double voda;
     String strVyborJVody;
     TableLayout tableL;
-    Button btnSredstva;
+    Button btnRaschet;
     String strJoskost = "0";
 
     @Override
@@ -64,7 +66,7 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
         rbMgL = (RadioButton) findViewById(R.id.rbMgL);
         rbDh = (RadioButton) findViewById(R.id.rbDh);
 
-        btnSredstva = (Button) findViewById(R.id.btnSredstva);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         tvSheloch1 = (TextView) findViewById(R.id.tvSheloch1);
         tvKislot1 = (TextView) findViewById(R.id.tvKislot1);
@@ -151,7 +153,6 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
         } else {
             tvVodaStr.setText("");
         }
-
     }
 
     public void onRadioButtonClicked(View view) {
@@ -200,8 +201,13 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
 
     public void onClickRaschetRekomendSredstv(View view) {
         int gray = Color.parseColor("#7B7979");
-        btnSredstva.setBackgroundColor(gray);
+        btnRaschet.setBackgroundColor(gray);
         double voda = Double.parseDouble(strJoskost);
+
+        //Скрытие клавиатуры по нажатию кнопки
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
 
         String biotekC = "";
         String ksilanK = "";
@@ -296,7 +302,6 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

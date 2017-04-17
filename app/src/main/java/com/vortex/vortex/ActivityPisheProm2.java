@@ -164,7 +164,6 @@ public class ActivityPisheProm2 extends AppCompatActivity
 
     }
 
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -181,7 +180,6 @@ public class ActivityPisheProm2 extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

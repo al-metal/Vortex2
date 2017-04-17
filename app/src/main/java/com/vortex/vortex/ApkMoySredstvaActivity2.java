@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -46,7 +48,7 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
     double resStoimSmesi;
 
     TableLayout tableL;
-    Button btnResult;
+    Button btnRaschet;
 
     String nameVortex;
 
@@ -58,7 +60,7 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
         setTitle("Расчет стоимости рабочего раствора");
 
         tableL = (TableLayout) findViewById(R.id.tableL);
-        btnResult = (Button) findViewById(R.id.btnResult);
+        btnRaschet = (Button) findViewById(R.id.btnRaschet);
 
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
@@ -132,7 +134,6 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
         return true;
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -179,8 +180,13 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
             return;
         }
 
+        //Скрытие клавиатуры по нажатию кнопки
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+
         int gray = Color.parseColor("#7B7979");
-        btnResult.setBackgroundColor(gray);
+        btnRaschet.setBackgroundColor(gray);
         tableL.setVisibility(View.VISIBLE);
 
         double stoimost = 0;

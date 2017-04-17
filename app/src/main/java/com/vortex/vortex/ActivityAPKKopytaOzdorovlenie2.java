@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
@@ -93,6 +95,11 @@ public class ActivityAPKKopytaOzdorovlenie2 extends AppCompatActivity
             return;
         }
 
+        //Скрытие клавиатуры по нажатию кнопки
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
         tableL.setVisibility(View.VISIBLE);
@@ -161,7 +168,6 @@ public class ActivityAPKKopytaOzdorovlenie2 extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
