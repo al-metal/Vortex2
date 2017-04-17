@@ -101,7 +101,7 @@
                         android:width="80dp"
                         android:text="выбранная жесткость воды 0 °Ж"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </TableRow>
 
                 <TableRow
