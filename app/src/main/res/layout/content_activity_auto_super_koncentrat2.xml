@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.vortex.vortex.ActivityAutoSuperKoncentrat2"
+    tools:showIn="@layout/app_bar_activity_auto_super_koncentrat2">
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="495dp"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGroupUstroystvo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:layout_span="4"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbPenoGen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Пеногенератор" />
+
+                        <RadioButton
+                            android:id="@+id/rbPenoKomp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Пенокомплект" />
+                    </RadioGroup>
+
+
+                    <RadioGroup
+                        android:id="@+id/RadioGroupVes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-7dp"
+                        android:layout_span="2"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbVes6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="6 кг" />
+
+                        <RadioButton
+                            android:id="@+id/rbVes64"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="64 кг" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/textView83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость канистры\nбесконтактного автошампуня" />
+
+                    <EditText
+                        android:id="@+id/editText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvKolichestvoKanistr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Цена за 2 канистры" />
+
+                    <EditText
+                        android:id="@+id/etPrice2Kanistr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="numberDecimal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btnRaschet"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_span="6"
+                        android:background="@color/colorRed"
+                        android:fontFamily="sans-serif"
+                        android:onClick="onClickRaschet"
+                        android:text="Рассчитать"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableLayout
+                    android:id="@+id/tableL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:visibility="gone">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:id="@+id/textView96"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="4"
+                            android:text="Объем"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvObjem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="6 кг = 35 л"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:id="@+id/textView100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="4"
+                            android:text="Разбавление"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvRazbavlenie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="900"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:id="@+id/textView115"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="4"
+                            android:text="Количество заправок"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvKolichZapravok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:id="@+id/textView122"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="4"
+                            android:text="Стоимость заправки"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvStoimostZapravki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:id="@+id/textView126"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="4"
+                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто)"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvStoimostMoyki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <Button
+                            android:id="@+id/button28"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_span="6"
+                            android:background="@color/colorRed"
+                            android:fontFamily="sans-serif"
+                            android:onClick="onClickSravnenie"
+                            android:text="Сравнить с другим средством"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="16sp" />
+                    </TableRow>
+                </TableLayout>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.vortex.vortex.ApkMoySredstvaSravnenieActivity2"
+    tools:showIn="@layout/app_bar_apk_moy_sredstva_sravnenie2">
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="495dp"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView183"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Название"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView186"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Плотность"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/etPlotnost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="4"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView184"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/etStoim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="4"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView185"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Вес"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/etVes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="4"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView187"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Концентрация"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/etKoncentrat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="4"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView188"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Объем ванны"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/etVanna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="4"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp">
+
+                    <Button
+                        android:id="@+id/btnAPKresSravnenie"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_span="8"
+                        android:background="@color/colorRed"
+                        android:fontFamily="sans-serif"
+                        android:onClick="onClickApkRes"
+                        android:text="Рассчитать"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="23dp"
+                android:shrinkColumns="*"
+                android:stretchColumns="*"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView189"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="4" />
+
+                    <TextView
+                        android:id="@+id/tvVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvSravnenie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:textSize="11sp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/tvApkMoySredstvaSravPlotnost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Плотность средства"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvPlotnostVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvPlotnostSravnenie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/tvApkMoySredstvaSravSoimostKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость, кг"
+                        android:textAlignment="textStart"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimKgVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimKgSravnenie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/tvApkMoySredstvaSravSoimostL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость, л"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimLVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimLSravnenie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/tvApkMoySredstvaSravStoimostPromiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Одна промывка, л"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimPromivVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimPromivSravnenie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/tvApkMoySredstvaSravLitrSmesi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость литра\nпромывочной смеси"
+                        android:textAlignment="textStart"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvLitrSmesiVortex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvLitrSmesiSravnenie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -224,7 +224,7 @@
                 android:layout_height="match_parent"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -272,7 +272,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="3"
-                        android:text="Цена (руб/кг)"
+                        android:text="Цена (руб/л)"
                         android:textSize="11sp" />
 
                     <TextView

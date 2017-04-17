@@ -20,7 +20,7 @@ public class ActivityAutoVybor extends AppCompatActivity {
     }
 
     public void onClickSuperK(View view) {
-        Intent intent = new Intent(ActivityAutoVybor.this, ActivityAutoSuperKoncentrat.class);
+        Intent intent = new Intent(ActivityAutoVybor.this, ActivityAutoSuperKoncentrat2.class);
         startActivity(intent);
     }
 }

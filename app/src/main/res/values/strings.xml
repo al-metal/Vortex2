@@ -6,4 +6,70 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_test_sliding_menu">testSlidingMenu</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_pishe_prom2">ActivityPisheProm2</string>
+    <string name="title_activity_pishe_prom_sravnenie2">ActivityPishePromSravnenie2</string>
+    <string name="title_activity_auto_vybor2">ActivityAutoVybor2</string>
+    <string name="title_activity_apk2">ApkActivity2</string>
+    <string name="title_activity_auto2">ActivityAuto2</string>
+    <string name="title_activity_auto_sravnenie2">ActivityAutoSravnenie2</string>
+    <string name="title_activity_auto_super_koncentrat2">ActivityAutoSuperKoncentrat2</string>
+    <string name="title_activity_auto_super_koncentrat_sravnenie2">
+        ActivityAutoSuperKoncentratSravnenie2
+    </string>
+    <string name="title_activity_apk_moysredstva_main2">ActivityApkMoysredstvaMain2</string>
+    <string name="title_activity_apk_moy_sredstva_voda2">ActivityApkMoySredstvaVoda2</string>
+    <string name="title_activity_apk_moy_sredstva_for_hoz2">ActivityApkMoySredstvaForHoz2</string>
+    <string name="title_activity_apk_moy_sredstva2">ApkMoySredstvaActivity2</string>
+    <string name="title_activity_apk_moy_sredstva_sravnenie2">ApkMoySredstvaSravnenieActivity2
+    </string>
+    <string name="title_activity_apkgigiena_vymeni2">ActivityAPKGigienaVymeni2</string>
+    <string name="title_activity_apkgigiena_vymeni_do_doenia2">ActivityAPKGigienaVymeniDoDoenia2
+    </string>
+    <string name="title_activity_apkgigiena_vymeni_do_doenia_sravnenie2">
+        ActivityAPKGigienaVymeniDoDoeniaSravnenie2
+    </string>
+    <string name="title_activity_apkgigiena_vymeni_express_method2">
+        ActivityAPKGigienaVymeniExpressMethod2
+    </string>
+    <string name="title_activity_apkgigiena_vymeni_express_method_sravnenie2">
+        ActivityAPKGigienaVymeniExpressMethodSravnenie2
+    </string>
+    <string name="title_activity_apkgigiena_vymeni_posle_doenia2">
+        ActivityAPKGigienaVymeniPosleDoenia2
+    </string>
+    <string name="title_activity_apkgigiena_vymeni_posle_doenia_sravnenie2">
+        ActivityAPKGigienaVymeniPosleDoeniaSravnenie2
+    </string>
+    <string name="title_activity_apkkopyta2">ActivityAPKKopyta2</string>
+    <string name="title_activity_apkkopyta_desitab_profilakt2">ActivityAPKKopytaDesitabProfilakt2
+    </string>
+    <string name="title_activity_apkkopyta_desitab_profilakt_usil2">
+        ActivityAPKKopytaDesitabProfilaktUsil2
+    </string>
+    <string name="title_activity_apkkopyta_med_kuporos2">ActivityAPKKopytaMedKuporos2</string>
+    <string name="title_activity_apkkopyta_ozdorovlenie2">ActivityAPKKopytaOzdorovlenie2</string>
+    <string name="title_activity_apkkopyta_profilaktika2">ActivityAPKKopytaProfilaktika2</string>
+    <string name="title_activity_apkdezinfekciya2">ActivityAPKDezinfekciya2</string>
+    <string name="title_activity_apkdezinfekciya_profilaktika_forbicid2">
+        ActivityAPKDezinfekciyaProfilaktikaForbicid2
+    </string>
+    <string name="title_activity_apkdezinfekciya_profilaktika_forbicid_sravnenie2">
+        ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2
+    </string>
+    <string name="title_activity_apkdezinfekciya_vynujdennaya_forbicid2">
+        ActivityAPKDezinfekciyaVynujdennayaForbicid2
+    </string>
+    <string name="title_activity_apkdezinfekciya_vynujdennaya_forbicid_sravnenie2">
+        ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie2
+    </string>
+    <string name="title_activity_apkdezinfekciya_tuman2">ActivityAPKDezinfekciyaTuman2</string>
+    <string name="title_activity_apkdezinfekciya_tuman_fire2">ActivityAPKDezinfekciyaTumanFire2
+    </string>
+    <string name="title_activity_apkdezinfekciya_tuman_ice2">ActivityAPKDezinfekciyaTumanIce2
+    </string>
+    <string name="title_activity_apkdezinfekciya_tuman_ice_animal2">
+        ActivityAPKDezinfekciyaTumanIceAnimal2
+    </string>
 </resources>

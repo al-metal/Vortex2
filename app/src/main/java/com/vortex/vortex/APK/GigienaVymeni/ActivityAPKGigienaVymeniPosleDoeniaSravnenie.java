@@ -61,7 +61,7 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie extends AppCompatActiv
         stoimKgVotrex = getIntent().getExtras().getDouble("stoimKg");
         kolichGigienVotrex = getIntent().getExtras().getDouble("kolichGigien");
         stoimObrabotkiVotrex = getIntent().getExtras().getDouble("stoimObrabotki");
-        stoimObrabotkiVsegoVotrex = getIntent().getExtras().getDouble("stoimVsegoObrabotki");
+        stoimObrabotkiVsegoVotrex = getIntent().getExtras().getDouble("stoimObrabotkiVsego");
         dblRashodGolovaVotrex = getIntent().getExtras().getDouble("dblRashodGolova");
         strSredstvoVortex = getIntent().getExtras().getString("sredstvo");
 

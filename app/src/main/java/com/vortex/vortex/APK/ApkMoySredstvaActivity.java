@@ -43,7 +43,6 @@ public class ApkMoySredstvaActivity extends AppCompatActivity {
 
     String nameVortex;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

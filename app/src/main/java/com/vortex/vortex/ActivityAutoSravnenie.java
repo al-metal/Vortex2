@@ -512,7 +512,6 @@ public class ActivityAutoSravnenie extends AppCompatActivity {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
-
     public void onClickRaschet(View view) {
 
         if (etMoyka.getText().length() == 0) {

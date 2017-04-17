@@ -10,9 +10,7 @@ import com.vortex.vortex.ActivityAPKDezinfekciyaTuman;
 import com.vortex.vortex.R;
 
 public class ActivityAPKDezinfekciya extends AppCompatActivity {
-Button btnTumanFire;
-Button btnTumanIce;
-Button btnTumanIceAnimal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

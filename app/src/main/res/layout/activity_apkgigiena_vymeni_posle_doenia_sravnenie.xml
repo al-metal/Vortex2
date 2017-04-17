@@ -57,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Расход на голову, кг" />
+                        android:text="Расход на голову, гр" />
 
                     <EditText
                         android:id="@+id/etRashodGolova"
