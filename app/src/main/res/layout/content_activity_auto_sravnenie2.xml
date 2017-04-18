@@ -47,7 +47,7 @@
                 android:layout_height="match_parent"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -538,321 +538,559 @@
 
                 </TableRow>
 
-                <TableLayout
-                    android:id="@+id/tbllt2"
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tbllt2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="*"
+                android:stretchColumns="*"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Стоимость экспресс-мойки"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/etMoyka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_span="8"
+                        android:text="ПЕНОКОМПЛЕКТ"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </TableRow>
+
+                <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:shrinkColumns="*"
-                    android:stretchColumns="*"
-                    android:visibility="gone">
+                    android:layout_marginTop="23dp">
 
-                    <TableRow
+                    <TextView
+                        android:id="@+id/textView793"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvVortex4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/textView583"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:fontFamily="sans-serif"
+                        android:text="СРЕДСТВО"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
+
+                    <TextView
+                        android:id="@+id/textView176"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Среднее количество чистых авто"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvChistAvtoPenokomplektVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvChistAvtoPenokomplektS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
+
+                    <TextView
+                        android:id="@+id/textView175"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Средняя стоимость 1 авто"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimostMoykiPenokomplektVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimostMoykiPenokomplektS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
+
+                    <TextView
+
+                        android:id="@+id/textView173"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Средний расход на мойку\n(1 авто, пенокомплект, мл)"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvRashodPenoKomplektVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvRashodPenoKomplektS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_span="8"
+                        android:text="ПЕНЕНОГЕНЕРАТОР 50 л."
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp">
+
+                    <TextView
+                        android:id="@+id/textView793"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvVortex5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/textView583"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:fontFamily="sans-serif"
+                        android:text="СРЕДСТВО"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
+
+                    <TextView
+                        android:id="@+id/textView174"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text=" Средний расход на мойку\n(1 авто, пеногенератор, мл)"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvRashodPenogeneratorVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvRashodPenogeneratorS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
+
+                    <TextView
+                        android:id="@+id/textView175"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Средняя стоимость 1 авто"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimostMoykiPenogeneratorVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvStoimostMoykiPenogeneratorS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
+
+                    <TextView
+                        android:id="@+id/textView176"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="4"
+                        android:text="Среднее количество чистых авто"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvChistAvtoPenogeneratorVortex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvChistAvtoPenogeneratorS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btnRaschet"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="23dp">
+                        android:layout_height="37dp"
+                        android:layout_marginTop="23dp"
+                        android:layout_span="8"
+                        android:background="@color/colorRed"
+                        android:fontFamily="sans-serif"
+                        android:onClick="onClickRaschet"
+                        android:text="Рассчитать"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
 
-                        <TextView
-                            android:id="@+id/textView793"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:layout_span="4"
-                            android:textSize="11sp" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/tvVortex4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="5dp"
-                            android:layout_span="2"
-                            android:fontFamily="sans-serif"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
+            </TableLayout>
 
-                        <TextView
-                            android:id="@+id/textView583"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginRight="17dp"
-                            android:layout_span="2"
-                            android:fontFamily="sans-serif"
-                            android:text="СРЕДСТВО"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
+            <TableLayout
+                android:id="@+id/tbllt3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="*"
+                android:stretchColumns="*"
+                android:visibility="gone">
 
-                    </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="17dp">
+                    <TextView
 
-                        <TextView
-                            android:id="@+id/textView174"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:layout_span="4"
-                            android:text=" Средний расход на мойку\n(1 авто, пеногенератор, мл)"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_span="8"
+                        android:text="ПЕНОКОМПЛЕКТ"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/tvRashodPenogeneratorVortex"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp">
 
-                        <TextView
-                            android:id="@+id/tvRashodPenogenerator"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="17dp"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="6"
+                        android:text="Вы сможете вымыть больше машин, шт"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
 
-                    </TableRow>
+                    <TextView
+                        android:id="@+id/tvMashinBolshePenokomplekt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="17dp">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
 
-                        <TextView
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="6"
+                        android:text="Ваша потерянная прибыль"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
 
-                            android:id="@+id/textView173"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:layout_span="4"
-                            android:text="Средний расход на мойку\n(1 авто, пенокомплект, мл)"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/tvPribylPenokomplekt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/tvRashodPenoKomplektVortex"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/tvRashodPenoKomplekt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="17dp"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
+                    <TextView
 
-                    </TableRow>
+                        android:id="@+id/textView251"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_span="8"
+                        android:text="ПЕНЕНОГЕНЕРАТОР 50 л."
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </TableRow>
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="17dp">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp">
 
-                        <TextView
-                            android:id="@+id/textView175"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:layout_span="4"
-                            android:text="Средняя стоимость 1 авто"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="6"
+                        android:text="Вы сможете вымыть больше машин, шт"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
 
-                        <TextView
-                            android:id="@+id/tvStoimostMoykiVortex"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/tvMashinBolshe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/tvStoimostMoyki"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="17dp"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp">
 
-                    </TableRow>
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="6"
+                        android:text="Ваша потерянная прибыль"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="17dp">
-
-                        <TextView
-                            android:id="@+id/textView176"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:layout_span="4"
-                            android:text="Среднее количество чистых авто"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:id="@+id/tvChistAvtoVortex"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:id="@+id/tvChistAvto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="17dp"
-                            android:layout_span="2"
-                            android:text="0"
-                            android:textAlignment="textStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/textView74"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:layout_span="4"
-                            android:text="Стоимость экспресс-мойки"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorGray"
-                            android:textSize="11sp" />
-
-                        <EditText
-                            android:id="@+id/etMoyka"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="-5dp"
-                            android:layout_marginRight="17dp"
-                            android:layout_span="2"
-                            android:ems="10"
-                            android:inputType="numberDecimal"
-                            android:textSize="11sp" />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <Button
-                            android:id="@+id/btnRaschet"
-                            android:layout_width="match_parent"
-                            android:layout_height="37dp"
-                            android:layout_marginTop="23dp"
-                            android:layout_span="8"
-                            android:background="@color/colorRed"
-                            android:fontFamily="sans-serif"
-                            android:onClick="onClickRaschet"
-                            android:text="Рассчитать"
-                            android:textColor="@android:color/background_light"
-                            android:textSize="16sp" />
-
-                    </TableRow>
-
-                    <TableLayout
-                        android:id="@+id/tbllt3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:shrinkColumns="*"
-                        android:stretchColumns="*"
-                        android:visibility="gone">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp">
-
-                            <TextView
-                                android:id="@+id/textView76"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="17dp"
-                                android:layout_span="6"
-                                android:text="Вы сможете вымыть больше машин, шт"
-                                android:textColor="@color/colorGray"
-                                android:textSize="11sp" />
-
-                            <TextView
-                                android:id="@+id/tvMashinBolshe"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="17dp"
-                                android:layout_span="2"
-                                android:text="0"
-                                android:textColor="@android:color/black"
-                                android:textSize="11sp" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="17dp">
-
-                            <TextView
-                                android:id="@+id/textView80"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="17dp"
-                                android:layout_span="6"
-                                android:text="Ваша потерянная прибыль"
-                                android:textColor="@color/colorGray"
-                                android:textSize="11sp" />
-
-                            <TextView
-                                android:id="@+id/tvPribyl"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="17dp"
-                                android:layout_span="2"
-                                android:text="0"
-                                android:textColor="@android:color/black"
-                                android:textSize="11sp" />
-                        </TableRow>
-
-                    </TableLayout>
-
-                </TableLayout>
-
+                    <TextView
+                        android:id="@+id/tvPribyl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_span="2"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="11sp" />
+                </TableRow>
 
             </TableLayout>
 

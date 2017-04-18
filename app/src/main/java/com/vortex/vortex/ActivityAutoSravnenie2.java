@@ -36,48 +36,48 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"UNIOR", "1:60", "850"},
             {"TIRO, TIRO TONE", "1:80", "625"},
             {"MASTER, MASTER TONE", "1:100", "500"},
-            {"PROFY", "1:120", "425"},
-            {"DOZEX", "1:100", "500"},
+            {"PROFY", "1:120", "350"},
+            {"DOZEX", "1:100", "450"},
             {"ACE", "1:140", "350"},
             {"MAGNAT", "1:110", "450"},
             {"DELICATE", "1:80", "625"},
-            {"SOLO", "1:70", "725"},
-            {"DIY", "1:120", "425"},
+            {"SOLO", "1:70", "700"},
+            {"DIY", "1:120", "350"},
             {"GURU", "1:120", "350"}};
 
     String[][] peno50defaultName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
-            {"UNIOR", "1:40", "1200"},
+            {"UNIOR", "1:40", "1000"},
             {"TIRO, TIRO TONE", "1:60", "800"},
-            {"NOVICE", "1:80", "600"},
+            {"NOVICE", "1:80", "800"},
             {"MASTER, MASTER TONE", "1:80", "600"},
             {"TUTOR ", "1:100", "500"},
-            {"PROFY", "1:100", "500"},
+            {"PROFY", "1:100", "400"},
             {"DOZEX", "1:90", "550"},
-            {"SENZA", "1:120", "400"},
-            {"ACE", "1:120", "400"},
+            {"SENZA", "1:120", "350"},
+            {"ACE", "1:120", "350"},
             {"MAGNAT", "1:100", "500"},
             {"DELICATE", "1:60", "800"},
-            {"SOLO", "1:55", "900"},
-            {"DIY", "1:100", "500"},
+            {"SOLO", "1:55", "800"},
+            {"DIY", "1:100", "400"},
             {"GURU", "1:120", "400"}};
 
     String[][] peno50hardName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
             {"NOVICE", "1:50", "1000"},
-            {"TUTOR ", "1:60", "800"},
-            {"PROFY", "1:60", "800"},
-            {"SENZA", "1:80", "600"},
-            {"ACE", "1:80", "600"},
-            {"MAGNAT", "1:60", "800"},
-            {"DIY", "1:60", "800"},
+            {"TUTOR ", "1:60", "600"},
+            {"PROFY", "1:60", "500"},
+            {"SENZA", "1:80", "400"},
+            {"ACE", "1:80", "400"},
+            {"MAGNAT", "1:60", "600"},
+            {"DIY", "1:60", "600"},
             {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligthName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
             {"UNIOR", "1:4", "200"},
             {"TIRO, TIRO TONE", "1:6", "150"},
-            {"MASTER, MASTER TONE", "1:7", "110"},
+            {"MASTER, MASTER TONE", "1:8", "110"},
             {"PROFY", "1:10", "90"},
             {"DOZEX", "1:9", "100"},
             {"ACE", "1:12", "80"},
@@ -91,13 +91,13 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
             {"UNIOR", "1:2", "300"},
             {"TIRO, TIRO TONE", "1:4", "200"},
-            {"NOVICE", "1:6", "145"},
+            {"NOVICE", "1:6", "150"},
             {"MASTER, MASTER TONE", "1:6", "145"},
             {"TUTOR ", "1:8", "110"},
             {"PROFY", "1:8", "110"},
             {"DOZEX", "1:7", "125"},
-            {"SENZA", "1:10", "90"},
-            {"ACE", "1:10", "90"},
+            {"SENZA", "1:12", "90"},
+            {"ACE", "1:15", "80"},
             {"MAGNAT", "1:8", "110"},
             {"DELICATE", "1:4", "200"},
             {"SOLO", "1:4", "200"},
@@ -108,17 +108,17 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
             {"NOVICE", "1:4", "200"},
             {"TUTOR ", "1:6", "145"},
-            {"PROFY", "1:6", "145"},
-            {"SENZA", "1:7", "125"},
+            {"PROFY", "1:6", "150"},
+            {"SENZA", "1:10", "125"},
             {"ACE", "1:7", "125"},
             {"MAGNAT", "1:6", "145"},
-            {"DIY", "1:3", "250"},
+            {"DIY", "1:6", "145"},
             {"GURU", "1:10", "125"}};
 
     String[][] dozatronligthName = {{"Продукт", "Показатель концентрации %"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
-            {"UNIOR", "2"},
-            {"TIRO, TIRO TONE", "1.5"},
+            {"UNIOR", "3"},
+            {"TIRO, TIRO TONE", "2"},
             {"MASTER, MASTER TONE", "1"},
             {"PROFY", "1"},
             {"DOZEX", "1"},
@@ -144,7 +144,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
 
     String[][] dozatronhardName = {{"Продукт", "Показатель концентрации %"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
-            {"NOVICE", "2"},
+            {"NOVICE", "3"},
             {"TUTOR ", "2"},
             {"PROFY", "2"},
             {"SENZA", "1.5"},
@@ -158,47 +158,47 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"UNIOR", "1:60", "850"},
             {"TIRO, TIRO TONE", "1:80", "625"},
             {"MASTER, MASTER TONE", "1:100", "500"},
-            {"PROFY", "1:120", "425"},
-            {"DOZEX", "1:100", "500"},
+            {"PROFY", "1:120", "350"},
+            {"DOZEX", "1:100", "450"},
             {"ACE", "1:140", "350"},
             {"MAGNAT", "1:110", "450"},
             {"DELICATE", "1:80", "625"},
-            {"SOLO", "1:70", "725"},
-            {"DIY", "1:120", "425"},
+            {"SOLO", "1:70", "700"},
+            {"DIY", "1:120", "350"},
             {"GURU", "1:120", "350"}};
 
     String[][] peno50default =
             {
-                    {"UNIOR", "1:40", "1200"},
+                    {"UNIOR", "1:40", "1000"},
                     {"TIRO, TIRO TONE", "1:60", "800"},
-                    {"NOVICE", "1:80", "600"},
+                    {"NOVICE", "1:80", "800"},
                     {"MASTER, MASTER TONE", "1:80", "600"},
                     {"TUTOR ", "1:100", "500"},
-                    {"PROFY", "1:100", "500"},
+                    {"PROFY", "1:100", "400"},
                     {"DOZEX", "1:90", "550"},
-                    {"SENZA", "1:120", "400"},
-                    {"ACE", "1:120", "400"},
+                    {"SENZA", "1:120", "350"},
+                    {"ACE", "1:120", "350"},
                     {"MAGNAT", "1:100", "500"},
                     {"DELICATE", "1:60", "800"},
-                    {"SOLO", "1:55", "900"},
-                    {"DIY", "1:100", "500"},
+                    {"SOLO", "1:55", "800"},
+                    {"DIY", "1:100", "400"},
                     {"GURU", "1:120", "400"}};
     String[][] peno50hard =
             {
                     {"NOVICE", "1:50", "1000"},
-                    {"TUTOR ", "1:60", "800"},
-                    {"PROFY", "1:60", "800"},
-                    {"SENZA", "1:80", "600"},
-                    {"ACE", "1:80", "600"},
-                    {"MAGNAT", "1:60", "800"},
-                    {"DIY", "1:60", "800"},
+                    {"TUTOR ", "1:60", "600"},
+                    {"PROFY", "1:60", "500"},
+                    {"SENZA", "1:80", "400"},
+                    {"ACE", "1:80", "400"},
+                    {"MAGNAT", "1:60", "600"},
+                    {"DIY", "1:60", "600"},
                     {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligth =
             {
                     {"UNIOR", "1:4", "200"},
                     {"TIRO, TIRO TONE", "1:6", "150"},
-                    {"MASTER, MASTER TONE", "1:7", "110"},
+                    {"MASTER, MASTER TONE", "1:8", "110"},
                     {"PROFY", "1:10", "90"},
                     {"DOZEX", "1:9", "100"},
                     {"ACE", "1:12", "80"},
@@ -211,13 +211,13 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {
                     {"UNIOR", "1:2", "300"},
                     {"TIRO, TIRO TONE", "1:4", "200"},
-                    {"NOVICE", "1:6", "145"},
+                    {"NOVICE", "1:6", "150"},
                     {"MASTER, MASTER TONE", "1:6", "145"},
                     {"TUTOR ", "1:8", "110"},
                     {"PROFY", "1:8", "110"},
                     {"DOZEX", "1:7", "125"},
-                    {"SENZA", "1:10", "90"},
-                    {"ACE", "1:10", "90"},
+                    {"SENZA", "1:12", "90"},
+                    {"ACE", "1:15", "80"},
                     {"MAGNAT", "1:8", "110"},
                     {"DELICATE", "1:4", "200"},
                     {"SOLO", "1:4", "200"},
@@ -227,17 +227,17 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {
                     {"NOVICE", "1:4", "200"},
                     {"TUTOR ", "1:6", "145"},
-                    {"PROFY", "1:6", "145"},
-                    {"SENZA", "1:7", "125"},
+                    {"PROFY", "1:6", "150"},
+                    {"SENZA", "1:10", "125"},
                     {"ACE", "1:7", "125"},
                     {"MAGNAT", "1:6", "145"},
-                    {"DIY", "1:3", "250"},
+                    {"DIY", "1:6", "145"},
                     {"GURU", "1:10", "125"}};
 
     String[][] dozatronligth =
             {
-                    {"UNIOR", "2"},
-                    {"TIRO, TIRO TONE", "1.5"},
+                    {"UNIOR", "3"},
+                    {"TIRO, TIRO TONE", "2"},
                     {"MASTER, MASTER TONE", "1"},
                     {"PROFY", "1"},
                     {"DOZEX", "1"},
@@ -259,17 +259,16 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"ACE", "1"},
                     {"DELICATE", "2"},
                     {"SOLO", "2"},
-                    {"DIY", "1"}
-            };
+                    {"DIY", "1"}};
     String[][] dozatronhard =
             {
-                    {"NOVICE", "2"},
+                    {"NOVICE", "3"},
                     {"TUTOR ", "2"},
                     {"PROFY", "2"},
                     {"SENZA", "1.5"},
                     {"ACE", "1.5"},
-                    {"DIY", "2"}
-            };
+                    {"DIY", "2"}};
+
     //endregion
 
     String dh;
@@ -297,7 +296,6 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
     TextView tvStoimostMoykiVortex;
     TextView tvChistAvtoVortex;
 
-    TextView tvPeno50;
     TextView tvPenokomlektLitr;
 
     TextView tvRashodPenogenerator;
@@ -310,10 +308,28 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
     TextView tvVortex2;
     TextView tvVortex3;
     TextView tvVortex4;
+    TextView tvVortex5;
+
+    TextView tvStoimostMoykiPenokomplektVortex;
+    TextView tvChistAvtoPenokomplektVortex;
+    TextView tvRashodPenoKomplektS;
+    TextView tvStoimostMoykiPenokomplektS;
+    TextView tvChistAvtoPenokomplektS;
+
+    TextView tvStoimostMoykiPenogeneratorVortex;
+    TextView tvChistAvtoPenogeneratorVortex;
+    TextView tvRashodPenogeneratorS;
+    TextView tvStoimostMoykiPenogeneratorS;
+    TextView tvChistAvtoPenogeneratorS;
+
+    TextView tvMashinBolshePenokomplekt;
+    TextView tvPribylPenokomplekt;
 
     EditText etPriceVortex;
     EditText etPrice;
     EditText etMoyka;
+    EditText etPenokomlektLitr;
+    EditText etPeno50;
 
     TableLayout tbllt3;
     TableLayout tbllt2;
@@ -321,9 +337,13 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
 
     double CHistAvtoS;
     double CHistAvto;
+    double CHistAvtoPenokomplekt;
+    double CHistAvtoCHistAvtoPenokomplektS;
 
     Button btnSravnenie;
     Button btnRaschet;
+
+    boolean spin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -339,6 +359,18 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
         tbllt2 = (TableLayout) findViewById(R.id.tbllt2);
         tbllt3 = (TableLayout) findViewById(R.id.tbllt3);
 
+        tvStoimostMoykiPenokomplektVortex = (TextView) findViewById(R.id.tvStoimostMoykiPenokomplektVortex);
+        tvChistAvtoPenokomplektVortex = (TextView) findViewById(R.id.tvChistAvtoPenokomplektVortex);
+        tvRashodPenoKomplektS = (TextView) findViewById(R.id.tvRashodPenoKomplektS);
+        tvStoimostMoykiPenokomplektS = (TextView) findViewById(R.id.tvStoimostMoykiPenokomplektS);
+        tvChistAvtoPenokomplektS = (TextView) findViewById(R.id.tvChistAvtoPenokomplektS);
+
+        tvStoimostMoykiPenogeneratorVortex = (TextView) findViewById(R.id.tvStoimostMoykiPenogeneratorVortex);
+        tvChistAvtoPenogeneratorVortex = (TextView) findViewById(R.id.tvChistAvtoPenogeneratorVortex);
+        tvRashodPenogeneratorS = (TextView) findViewById(R.id.tvRashodPenogeneratorS);
+        tvStoimostMoykiPenogeneratorS = (TextView) findViewById(R.id.tvStoimostMoykiPenogeneratorS);
+        tvChistAvtoPenogeneratorS = (TextView) findViewById(R.id.tvChistAvtoPenogeneratorS);
+
         tvChastVortex = (TextView) findViewById(R.id.tvChastVortex);
         tvPeno25Vortex = (TextView) findViewById(R.id.tvPeno25Vortex);
         tvPeno50Vortex = (TextView) findViewById(R.id.tvPeno50Vortex);
@@ -349,19 +381,23 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
         tvRashodPenogeneratorVortex = (TextView) findViewById(R.id.tvRashodPenogeneratorVortex);
         tvRashodPenoKomplektVortex = (TextView) findViewById(R.id.tvRashodPenoKomplektVortex);
         tvStoimostMoykiVortex = (TextView) findViewById(R.id.tvStoimostMoykiVortex);
-        tvChistAvtoVortex = (TextView) findViewById(R.id.tvChistAvtoVortex);
+        //tvChistAvtoVortex = (TextView) findViewById(R.id.tvChistAvtoVortex);
         tvVortex = (TextView) findViewById(R.id.tvVortex);
         tvVortex2 = (TextView) findViewById(R.id.tvVortex2);
         tvVortex3 = (TextView) findViewById(R.id.tvVortex3);
         tvVortex4 = (TextView) findViewById(R.id.tvVortex4);
+        tvVortex5 = (TextView) findViewById(R.id.tvVortex5);
 
-        tvRashodPenogenerator = (TextView) findViewById(R.id.tvRashodPenogenerator);
-        tvRashodPenoKomplekt = (TextView) findViewById(R.id.tvRashodPenoKomplekt);
+        tvMashinBolshePenokomplekt = (TextView) findViewById(R.id.tvMashinBolshePenokomplekt);
+        tvPribylPenokomplekt = (TextView) findViewById(R.id.tvPribylPenokomplekt);
+
+        //tvRashodPenogenerator = (TextView) findViewById(R.id.tvRashodPenogenerator);
+
         tvStoimostMoyki = (TextView) findViewById(R.id.tvStoimostMoyki);
-        tvChistAvto = (TextView) findViewById(R.id.tvChistAvto);
+        //tvChistAvto = (TextView) findViewById(R.id.tvChistAvto);
 
-        tvPeno50 = (EditText) findViewById(R.id.etPeno50);
-        tvPenokomlektLitr = (EditText) findViewById(R.id.etPenokomlektLitr);
+        etPeno50 = (EditText) findViewById(R.id.etPeno50);
+        etPenokomlektLitr = (EditText) findViewById(R.id.etPenokomlektLitr);
         tvMashinBolshe = (TextView) findViewById(R.id.tvMashinBolshe);
         tvPribyl = (TextView) findViewById(R.id.tvPribyl);
 
@@ -389,11 +425,13 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
                 if (pos == 0) {
+                    spin = false;
                     return;
                 }
 
                 ViewProductVortex(pos);
                 tbllt1.setVisibility(View.VISIBLE);
+                spin = true;
             }
 
             public void ViewProductVortex(int pos) {
@@ -403,6 +441,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                 tvVortex2.setText(nameProduct);
                 tvVortex3.setText(nameProduct);
                 tvVortex4.setText(nameProduct);
+                tvVortex5.setText(nameProduct);
 
                 if (dh.contains("ligth")) {
                     for (int i = 0; peno50ligth.length > i; i++) {
@@ -553,55 +592,112 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
 
-        double avtoClient = CHistAvtoS;
-        double avtoVortex = CHistAvto;
-        double stoimostMoykiPrice = Double.parseDouble(etMoyka.getText().toString());
+        if (tvRashodPenoKomplektS.getText() != "0") {
+            double avtoPenokomplektClient = CHistAvtoCHistAvtoPenokomplektS;
+            double avtoPenokomplektVortex = CHistAvtoPenokomplekt;
 
-        double mashinBolshe = avtoVortex - avtoClient;
-        double pribyl = stoimostMoykiPrice * mashinBolshe;
+            double stoimostMoykiPrice = Double.parseDouble(etMoyka.getText().toString());
 
-        tvMashinBolshe.setText(String.valueOf(roundUp(mashinBolshe, 0)));
-        tvPribyl.setText(String.valueOf(roundUp(pribyl, 2)));
+            double mashinBolshePenokomlekt = avtoPenokomplektVortex - avtoPenokomplektClient;
+            double pribylPenokomlekt = stoimostMoykiPrice * mashinBolshePenokomlekt;
+
+            tvMashinBolshePenokomplekt.setText(String.valueOf(roundUp(mashinBolshePenokomlekt, 0)));
+            tvPribylPenokomplekt.setText(String.valueOf(roundUp(pribylPenokomlekt, 2)));
+        }
+        if (tvRashodPenogeneratorS.getText() != "0") {
+            double avtoClient = CHistAvtoS;
+            double avtoVortex = CHistAvto;
+            double stoimostMoykiPrice = Double.parseDouble(etMoyka.getText().toString());
+
+            double mashinBolshe = avtoVortex - avtoClient;
+            double pribyl = stoimostMoykiPrice * mashinBolshe;
+
+            tvMashinBolshe.setText(String.valueOf(roundUp(mashinBolshe, 0)));
+            tvPribyl.setText(String.valueOf(roundUp(pribyl, 2)));
+        }
+        tbllt3.setVisibility(View.VISIBLE);
     }
 
     public void onClickSravnenie(View view) {
-        if (etPriceVortex.getText().length() == 0 || tvPenokomlektLitr.getText().length() == 0 || tvPeno50.getText().length() == 0 ||
-                etPrice.getText().length() == 0) {
-            Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+        if (!spin) {
+            Toast.makeText(getBaseContext(), "Выберите пожалуйста средство", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        if (etPriceVortex.getText().length() == 0 || etPrice.getText().length() == 0) {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста цена за канистру", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        boolean raschet1 = false;
+        boolean raschet2 = false;
+
+
+        //Скрытие клавиатуры по нажатию кнопки
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+
+        if (etPenokomlektLitr.getText().length() != 0) {
+            //расчет Vortex
+            double objem1Litr = Double.parseDouble(tvPenokomlektLitrVortex.getText().toString());
+            double priceVortex = Double.parseDouble(etPriceVortex.getText().toString());
+
+            double rashodPenokomplekt = objem1Litr / 3;
+            double stoimostMoykiPenokomplekt = 1 * priceVortex / 20000 * rashodPenokomplekt;
+            CHistAvtoPenokomplekt = 20000 / rashodPenokomplekt;
+
+            //Расчет своего средства
+            double objem1LitrS = Double.parseDouble(etPenokomlektLitr.getText().toString());
+            double price = Double.parseDouble(etPrice.getText().toString());
+
+            double rashodPenokomplektS = objem1LitrS / 3;
+            double stoimostMoykiS = 1 * price / 20000 * rashodPenokomplektS;
+            CHistAvtoCHistAvtoPenokomplektS = 20000 / rashodPenokomplektS;
+
+            tvRashodPenoKomplektVortex.setText(String.valueOf(roundUp(rashodPenokomplekt, 2)));
+            tvStoimostMoykiPenokomplektVortex.setText(String.valueOf(roundUp(stoimostMoykiPenokomplekt, 2)));
+            tvChistAvtoPenokomplektVortex.setText(String.valueOf(roundUp(CHistAvtoPenokomplekt, 2)));
+
+            tvRashodPenoKomplektS.setText(String.valueOf(roundUp(rashodPenokomplektS, 2)));
+            tvStoimostMoykiPenokomplektS.setText(String.valueOf(roundUp(stoimostMoykiS, 2)));
+            tvChistAvtoPenokomplektS.setText(String.valueOf(roundUp(CHistAvtoCHistAvtoPenokomplektS, 2)));
+
+            raschet1 = true;
+        }
+
+        if (etPeno50.getText().length() != 0) {
+
+            //расчет Vortex
+            double objemPeno50 = Double.parseDouble(tvPeno50Vortex.getText().toString());
+            double priceVortex = Double.parseDouble(etPriceVortex.getText().toString());
+
+            double rashodPenogenerator = objemPeno50 / 14;
+            double stoimostMoyki = 1 * priceVortex / 20000 * rashodPenogenerator;
+            CHistAvto = 20000 / rashodPenogenerator;
+
+            //Расчет своего средства
+            double objemPeno50S = Double.parseDouble(etPeno50.getText().toString());
+            double price = Double.parseDouble(etPrice.getText().toString());
+
+            double rashodPenogeneratorS = objemPeno50S / 14;
+            double stoimostMoykiS = 1 * price / 20000 * rashodPenogeneratorS;
+            CHistAvtoS = 20000 / rashodPenogeneratorS;
+
+            tvRashodPenogeneratorVortex.setText(String.valueOf(roundUp(rashodPenogenerator, 2)));
+            tvStoimostMoykiPenogeneratorVortex.setText(String.valueOf(roundUp(stoimostMoyki, 2)));
+            tvChistAvtoPenogeneratorVortex.setText(String.valueOf(roundUp(CHistAvto, 2)));
+
+            tvRashodPenogeneratorS.setText(String.valueOf(roundUp(rashodPenogeneratorS, 2)));
+            tvStoimostMoykiPenogeneratorS.setText(String.valueOf(roundUp(stoimostMoykiS, 2)));
+            tvChistAvtoPenogeneratorS.setText(String.valueOf(roundUp(CHistAvtoS, 2)));
+            raschet2 = true;
+        }
+
+        if (!raschet1 && !raschet2) {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста данные", Toast.LENGTH_SHORT).show();
+            return;
+        }
         tbllt2.setVisibility(View.VISIBLE);
-        int gray = Color.parseColor("#7B7979");
-        btnSravnenie.setBackgroundColor(gray);
-
-        double objem1Litr = Double.parseDouble(tvPenokomlektLitrVortex.getText().toString());
-        double objemPeno50 = Double.parseDouble(tvPeno50Vortex.getText().toString());
-        double priceVortex = Double.parseDouble(etPriceVortex.getText().toString());
-
-        double rashodPenokomplekt = objem1Litr / 3;
-        double rashodPenogenerator = objemPeno50 / 14;
-        double stoimostMoyki = 1 * priceVortex / 20000 * rashodPenogenerator;
-        CHistAvto = 20000 / rashodPenogenerator;
-
-        tvRashodPenogeneratorVortex.setText(String.valueOf(roundUp(rashodPenogenerator, 2)));
-        tvRashodPenoKomplektVortex.setText(String.valueOf(roundUp(rashodPenokomplekt, 2)));
-        tvStoimostMoykiVortex.setText(String.valueOf(roundUp(stoimostMoyki, 2)));
-        tvChistAvtoVortex.setText(String.valueOf(roundUp(CHistAvto, 2)));
-
-        double objem1LitrS = Double.parseDouble(tvPenokomlektLitr.getText().toString());
-        double objemPeno50S = Double.parseDouble(tvPeno50.getText().toString());
-        double price = Double.parseDouble(etPrice.getText().toString());
-
-        double rashodPenokomplektS = objem1LitrS / 3;
-        double rashodPenogeneratorS = objemPeno50S / 14;
-        double stoimostMoykiS = 1 * price / 20000 * rashodPenogeneratorS;
-        CHistAvtoS = 20000 / rashodPenogeneratorS;
-
-        tvRashodPenogenerator.setText(String.valueOf(roundUp(rashodPenogeneratorS, 2)));
-        tvRashodPenoKomplekt.setText(String.valueOf(roundUp(rashodPenokomplektS, 2)));
-        tvStoimostMoyki.setText(String.valueOf(roundUp(stoimostMoykiS, 2)));
-        tvChistAvto.setText(String.valueOf(roundUp(CHistAvtoS, 2)));
     }
 
     @Override
