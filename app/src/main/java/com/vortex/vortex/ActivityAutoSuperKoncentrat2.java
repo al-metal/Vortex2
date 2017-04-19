@@ -55,6 +55,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
     TextView tvStoimostZapravki;
     TextView tvStoimostMoyki;
     TextView tvKolichestvoKanistr;
+    TextView tvPrice2kanistr;
 
     TableLayout tableL;
 
@@ -80,6 +81,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
         tvStoimostZapravki = (TextView) findViewById(R.id.tvStoimostZapravki);
         tvStoimostMoyki = (TextView) findViewById(R.id.tvStoimostMoyki);
         tvKolichestvoKanistr = (TextView) findViewById(R.id.tvKolichestvoKanistr);
+        tvPrice2kanistr = (TextView) findViewById(R.id.tvPrice2kanistr);
 
         etPrice2Kanistr = (EditText) findViewById(R.id.etPrice2Kanistr);
 
@@ -193,6 +195,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
         btnRaschet.setBackgroundColor(gray);
 
         dblPrice2Kanistr = Double.parseDouble(etPrice2Kanistr.getText().toString());
+        dblPrice2Kanistr = dblPrice2Kanistr / dblKolichestvoKanistr;
 
         dblKolichestvoZapravok = dblObjem / dblRazbavlenie;
         dblStoimostZapravki = dblPrice2Kanistr / dblKolichestvoZapravok;
@@ -201,6 +204,9 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
         tvKolichZapravok.setText(String.valueOf(roundUp(dblKolichestvoZapravok, 2)));
         tvStoimostZapravki.setText(String.valueOf(roundUp(dblStoimostZapravki, 2)));
         tvStoimostMoyki.setText(String.valueOf(roundUp(dblStoimostmoykiResult, 2)));
+
+        tvKolichestvoKanistr.setText(strKolichestvoKanistr);
+        tvPrice2kanistr.setText(String.valueOf(roundUp(dblPrice2Kanistr, 2)));
     }
 
     public BigDecimal roundUp(double value, int digits) {
@@ -212,6 +218,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
             Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
             return;
         }
+        dblPrice2Kanistr = dblPrice2Kanistr * dblKolichestvoKanistr;
         Intent intent = new Intent(ActivityAutoSuperKoncentrat2.this, ActivityAutoSuperKoncentratSravnenie2.class);
         intent.putExtra("dblPrice", dblPrice2Kanistr);
         intent.putExtra("Objem", tvObjem.getText());
@@ -221,6 +228,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
         intent.putExtra("dblStoimostMoyki", dblStoimostmoykiResult);
         intent.putExtra("dblKooficent", dblStoimostMoyki);
         intent.putExtra("dblKolichestvoKanistr", dblKolichestvoKanistr);
+        intent.putExtra("dblObjem", dblObjem);
         startActivity(intent);
     }
 

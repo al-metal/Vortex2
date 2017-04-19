@@ -482,7 +482,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -774,7 +775,7 @@
                     android:layout_marginTop="23dp">
 
                     <TextView
-                        android:id="@+id/textView793"
+                        android:id="@+id/textView7913"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
@@ -793,7 +794,7 @@
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/textView583"
+                        android:id="@+id/textView5823"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
@@ -852,7 +853,7 @@
                     android:layout_marginTop="17dp">
 
                     <TextView
-                        android:id="@+id/textView175"
+                        android:id="@+id/textView1735"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
@@ -891,7 +892,7 @@
                     android:layout_marginTop="17dp">
 
                     <TextView
-                        android:id="@+id/textView176"
+                        android:id="@+id/textView1764"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
@@ -1046,7 +1047,7 @@
                     android:layout_marginTop="25dp">
 
                     <TextView
-                        android:id="@+id/textView76"
+                        android:id="@+id/textView756"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
@@ -1072,7 +1073,7 @@
                     android:layout_marginTop="17dp">
 
                     <TextView
-                        android:id="@+id/textView80"
+                        android:id="@+id/textView820"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"

@@ -91,41 +91,17 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость канистры\nбесконтактного автошампуня" />
-
-                    <EditText
-                        android:id="@+id/editText5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="-5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tvKolichestvoKanistr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="Цена за 2 канистры" />
+                        android:text="Стоимость суперконцентрата, руб" />
 
                     <EditText
                         android:id="@+id/etPrice2Kanistr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
                         android:layout_marginLeft="-5dp"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
-
                 </TableRow>
 
                 <TableRow
@@ -152,6 +128,30 @@
                     android:shrinkColumns="*"
                     android:stretchColumns="*"
                     android:visibility="gone">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp">
+
+                        <TextView
+                            android:id="@+id/tvKolichestvoKanistr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_span="4"
+                            android:text="Цена за 1 канистру, руб"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvPrice2kanistr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+
+                    </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
@@ -188,7 +188,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Разбавление"
+                            android:text="Разбавление, мл"
                             android:textSize="11sp" />
 
                         <TextView
@@ -236,7 +236,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Стоимость заправки"
+                            android:text="Стоимость заправки, руб"
                             android:textSize="11sp" />
 
                         <TextView
@@ -260,7 +260,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто)"
+                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто), руб"
                             android:textSize="11sp" />
 
                         <TextView

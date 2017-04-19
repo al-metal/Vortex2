@@ -36,25 +36,25 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
     double dblStoimostMoykiVortex;
     double dblKooficient;
     double dblKolichestvoKanistr;
+    double dblObjem;
 
     TextView tvCena2KanistrVortex;
-    TextView tvObjemVortex;
     TextView tvRazbavlenieVortex;
     TextView tvKolichestvoZapravokVortex;
     TextView tvStoimostZapravokVortex;
     TextView tvStoimostMoykiVortex;
 
     TextView tvCena2Kanistr;
-    TextView tvObjem;
     TextView tvRazbavlenie;
     TextView tvKolichestvoZapravok;
     TextView tvStoimostZapravok;
     TextView tvStoimostMoyki;
     TextView tvObshStoim;
     TextView tvPoStoim;
+    TextView tvObjemVortex;
+    TextView tvObjem;
 
     EditText etPrice;
-    EditText etObjem;
     EditText etRazbavlenie;
     Button btnRaschet;
     TableLayout tableL;
@@ -77,6 +77,8 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
         dblStoimostMoykiVortex = getIntent().getExtras().getDouble("dblStoimostMoyki");
         dblKooficient = getIntent().getExtras().getDouble("dblKooficent");
         dblKolichestvoKanistr = getIntent().getExtras().getDouble("dblKolichestvoKanistr");
+        dblObjem = getIntent().getExtras().getDouble("dblObjem");
+        dblObjem = dblObjem / 1000;
 
         tvCena2KanistrVortex = (TextView) findViewById(R.id.tvCena2KanistrVortex);
         tvObjemVortex = (TextView) findViewById(R.id.tvObjemVortex);
@@ -86,9 +88,9 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
         tvStoimostMoykiVortex = (TextView) findViewById(R.id.tvStoimostMoykiVortex);
         tvObshStoim = (TextView) findViewById(R.id.tvObshStoim);
         tvPoStoim = (TextView) findViewById(R.id.tvPoStoim);
+        tvObjem = (TextView) findViewById(R.id.tvObjem);
 
         tvCena2Kanistr = (TextView) findViewById(R.id.tvCena2Kanistr);
-        tvObjem = (TextView) findViewById(R.id.tvObjem);
         tvRazbavlenie = (TextView) findViewById(R.id.tvRazbavlenie);
         tvKolichestvoZapravok = (TextView) findViewById(R.id.tvKolichestvoZapravok);
         tvStoimostZapravok = (TextView) findViewById(R.id.tvStoimostZapravok);
@@ -102,7 +104,6 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
         tvStoimostMoykiVortex.setText(String.valueOf(roundUp(dblStoimostMoykiVortex, 2)));
 
         etPrice = (EditText) findViewById(R.id.etPrice);
-        etObjem = (EditText) findViewById(R.id.etObjem);
         etRazbavlenie = (EditText) findViewById(R.id.etRazbavlenie);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -133,7 +134,7 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
     }
 
     public void onClickRaschet(View view) {
-        if (etPrice.getText().length() == 0 || etObjem.getText().length() == 0 || etRazbavlenie.getText().length() == 0) {
+        if (etPrice.getText().length() == 0 || etRazbavlenie.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -148,13 +149,19 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
         btnRaschet.setBackgroundColor(gray);
 
         double dblPriceKanistr = Double.parseDouble(etPrice.getText().toString());
-        double dblObjem = Double.parseDouble(etObjem.getText().toString());
         double dblRazbavlenie = Double.parseDouble(etRazbavlenie.getText().toString());
 
         double dblPrice2Kanistr = dblPriceKanistr * dblKolichestvoKanistr;
         double dblKolichestvoZapravok = (dblObjem * 1000) / dblRazbavlenie;
         double dblStoimostZapravki = dblPrice2Kanistr / dblKolichestvoZapravok;
         double dblStoimostMoyki = dblStoimostZapravki / dblKooficient;
+
+        if(dblObjem == 35){
+            dblObjem = 40;
+        }
+        else {
+            dblObjem = 400;
+        }
 
         tvCena2Kanistr.setText(String.valueOf(roundUp(dblPrice2Kanistr, 2)));
         tvObjem.setText(String.valueOf(roundUp(dblObjem, 2)));

@@ -37,33 +37,10 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость канистры\nбесконтактного автошампуня" />
+                        android:text="Стоимость канистры\nдругого средства, руб" />
 
                     <EditText
                         android:id="@+id/etPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView113"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="Объем" />
-
-                    <EditText
-                        android:id="@+id/etObjem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
@@ -83,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Разбавление" />
+                        android:text="Разбавление, мл" />
 
                     <EditText
                         android:id="@+id/etRazbavlenie"
@@ -163,7 +140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Цена за 2 канистры"
+                            android:text="Общая стоимость, руб"
                             android:textSize="11sp" />
 
                         <TextView
@@ -233,7 +210,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Разбавление"
+                            android:text="Разбавление, мл"
                             android:textSize="11sp" />
 
                         <TextView
@@ -304,7 +281,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Стоимость заправки"
+                            android:text="Стоимость заправки, руб"
                             android:textSize="11sp" />
 
                         <TextView
@@ -339,7 +316,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто)"
+                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто), руб"
                             android:textSize="11sp" />
 
                         <TextView
@@ -396,7 +373,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="От общей стоимости"
+                            android:text="От общей стоимости, %"
                             android:textSize="11sp" />
 
                         <TextView
@@ -421,7 +398,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="По стоимости 1 мойки"
+                            android:text="По стоимости 1 мойки, %"
                             android:textSize="11sp" />
 
                         <TextView
