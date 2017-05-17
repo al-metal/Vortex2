@@ -318,7 +318,7 @@
                         android:background="@color/colorRed"
                         android:fontFamily="sans-serif"
                         android:onClick="onClickSravnenie"
-                        android:text="Сравнить с другим средством"
+                        android:text="@string/btnSrav"
                         android:textColor="@android:color/background_light"
                         android:textSize="16sp" />
                 </TableRow>

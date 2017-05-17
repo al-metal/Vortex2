@@ -73,4 +73,5 @@
         ActivityAPKDezinfekciyaTumanIceAnimal2
     </string>
     <string name="btnResult">рассчитать</string>
+    <string name="btnSrav">Сравнить с другим средством</string>
 </resources>
