@@ -105,7 +105,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
                 else if (spinner4.getSelectedItemId() == 4)
                     dblRashodGolova = 3.2;
                 else if (spinner4.getSelectedItemId() == 5)
-                    dblRashodGolova = 3.2;
+                    dblRashodGolova = 5.6;
                 else if (spinner4.getSelectedItemId() == 6)
                     dblRashodGolova = 5.6;
 
