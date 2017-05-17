@@ -122,7 +122,7 @@
                         android:background="@color/colorRed"
                         android:fontFamily="sans-serif"
                         android:onClick="onClickRaschet"
-                        android:text="Рассчитать"
+                        android:text="@string/btnResult"
                         android:textColor="@android:color/background_light"
                         android:textSize="16sp" />
                 </TableRow>
