@@ -46,7 +46,7 @@
                             android:layout_toRightOf="@+id/rbDh"
                             android:layout_weight="1"
                             android:onClick="onRadioButtonClicked"
-                            android:text="мг - экв/л"
+                            android:text="@string/rbMG_e_L"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -57,7 +57,7 @@
                             android:layout_toRightOf="@+id/rbDjeskost"
                             android:layout_weight="1"
                             android:onClick="onRadioButtonClicked"
-                            android:text="°DH"
+                            android:text="@string/rbDH"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -67,7 +67,7 @@
                             android:layout_weight="1"
                             android:checked="true"
                             android:onClick="onRadioButtonClicked"
-                            android:text="°Ж"
+                            android:text="@string/rbJ"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -138,7 +138,7 @@
                         android:background="@color/colorRed"
                         android:fontFamily="sans-serif"
                         android:onClick="onClickRaschetRekomendSredstv"
-                        android:text="Предложить средства"
+                        android:text="@string/btnPredlojitSredstva"
                         android:textColor="@android:color/background_light"
                         android:textSize="16sp" />
 
@@ -162,14 +162,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
-                            android:text="ЩЕЛОЧНЫЕ" />
+                            android:text="@string/tvShelochnie" />
 
                         <TextView
                             android:id="@+id/textView54"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
-                            android:text="КИСЛОТНЫЕ" />
+                            android:text="@string/tvKislotnie" />
                     </TableRow>
 
                     <TableRow

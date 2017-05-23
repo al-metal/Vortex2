@@ -37,7 +37,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="ОБЪЕМ ВАННЫ, Л"
+                        android:text="@string/tvObjemVanny"
                         android:textSize="17sp" />
 
                     <TextView
@@ -46,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="2dp"
                         android:layout_span="2"
-                        android:text="200"
+                        android:text="@string/tv200"
                         android:textSize="17sp" />
 
                     <ImageButton
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество дойного стада" />
+                        android:text="@string/tvKolichestvoDoynogoStada" />
 
                     <EditText
                         android:id="@+id/etStado"
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Продолжительность, дни" />
+                        android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etObrabotka"
@@ -114,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Медный купорос, %" />
+                        android:text="@string/tvMednyKuporos_Procent" />
 
                     <EditText
                         android:id="@+id/etKuporos"
@@ -136,7 +136,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество обработок в день, шт" />
+                        android:text="@string/tvKolichestvoObrabotokVDenSht" />
 
                     <EditText
                         android:id="@+id/etObrabotokDen"
@@ -159,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость за 1 кг, руб" />
+                        android:text="@string/tvStoimost1KGRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -209,7 +209,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Требуемое количество, шт"
+                        android:text="@string/tvTrebuemoeKolichestvoSht"
                         android:textSize="11sp" />
 
                     <TextView
@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки за период, руб"
+                        android:text="@string/tvStoimostObrabotkiZaPeriodRub"
                         android:textSize="11sp" />
 
                     <TextView
@@ -257,7 +257,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки головы за период, руб"
+                        android:text="@string/tvStoimostObrabotkiGolovyZaPeriodRub"
                         android:textSize="11sp" />
 
                     <TextView

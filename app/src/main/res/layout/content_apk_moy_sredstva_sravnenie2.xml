@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Название"
+                        android:text="@string/tvNazvanie"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -62,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Плотность, кг/л"
+                        android:text="@string/tvPlotnostKg_L"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость, руб"
+                        android:text="@string/tvStoimostRub"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -112,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес, кг"
+                        android:text="@string/tvVesKG"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -137,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация, %"
+                        android:text="@string/tvKoncentraciyaProcent"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -162,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем ванны, л"
+                        android:text="@string/tvObjemVannaL"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -244,7 +244,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Плотность средства"
+                        android:text="@string/tvPlotnostSredstvaKg_L"
                         android:textSize="11sp" />
 
                     <TextView
@@ -279,7 +279,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость, кг"
+                        android:text="@string/tvStoimostKg"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -315,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость, л"
+                        android:text="@string/tvStoimostL"
                         android:textSize="11sp" />
 
                     <TextView
@@ -350,7 +350,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Одна промывка, л"
+                        android:text="@string/tvOdnaPromyvkaL"
                         android:textSize="11sp" />
 
                     <TextView
@@ -387,7 +387,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость литра\nпромывочной смеси"
+                        android:text="@string/tvStoimostPromyvochnoysmesi"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

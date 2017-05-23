@@ -47,7 +47,7 @@
                             android:layout_toRightOf="@+id/rbDh"
                             android:layout_weight="1"
                             android:onClick="onRadioButtonClicked"
-                            android:text="мг - экв/л"
+                            android:text="@string/rbMG_e_L"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -59,7 +59,7 @@
                             android:layout_toRightOf="@+id/rbDjeskost"
                             android:layout_weight="1"
                             android:onClick="onRadioButtonClicked"
-                            android:text="°DH"
+                            android:text="@string/rbDH"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -69,7 +69,7 @@
                             android:layout_weight="1"
                             android:checked="true"
                             android:onClick="onRadioButtonClicked"
-                            android:text="°Ж"
+                            android:text="@string/rbJ"
                             android:textSize="16sp" />
                     </RadioGroup>
                 </TableRow>
@@ -100,7 +100,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_span="4"
                         android:width="80dp"
-                        android:text="выбранная жесткость воды °Ж"
+                        android:text="@string/tvVybrannayaDjestkostVody"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
                 </TableRow>
@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_span="4"
-                        android:text="вода мягкая"
+                        android:text="@string/tvVodaMyagkaya"
                         android:textColor="@color/colorGray" />
                 </TableRow>
 
@@ -152,7 +152,7 @@
                         android:background="@color/colorRed"
                         android:fontFamily="sans-serif"
                         android:onClick="onClick"
-                        android:text="Предложить средства"
+                        android:text="@string/btnPredlojitSredstva"
                         android:textColor="@android:color/background_light"
                         android:textSize="16sp" />
                 </TableRow>
@@ -187,7 +187,7 @@
                         android:background="@color/colorRed"
                         android:fontFamily="sans-serif"
                         android:onClick="onClickSravnenie"
-                        android:text="Сравнить средства"
+                        android:text="@string/btnSravnitSredstva"
                         android:textColor="@android:color/background_light"
                         android:textSize="16sp" />
                 </TableRow>

@@ -37,16 +37,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="ОБЪЕМ ВАННЫ, Л"
+                        android:text="@string/tvObjemVanny"
                         android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView71"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:layout_span="2"
-                        android:text="200"
+                        android:text="@string/tv200"
                         android:textSize="17sp" />
 
                     <ImageButton
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество дойного стада" />
+                        android:text="@string/tvKolichestvoDoynogoStada" />
 
                     <EditText
                         android:id="@+id/etStado"
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Продолжительность, дни" />
+                        android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etProdolDen"
@@ -126,7 +126,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="DESITUB, %" />
+                        android:text="@string/tvDesitub_procent" />
 
                     <EditText
                         android:id="@+id/etPercent"
@@ -150,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость канистры, руб" />
+                        android:text="@string/tvStoimostKanistryRub" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Весовка, кг" />
+                        android:text="@string/tvVesovkaKg" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -225,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество обработок за период , шт"
+                        android:text="@string/tvKolichestvoObrabotokZaPeriodSht"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -252,7 +252,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Количество ванн, шт"
+                        android:text="@string/tvKolichestvoVannSht"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -278,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Требуется DESITUB, кг"
+                        android:text="@string/tvTrebuetsyaDesitubKg"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -304,7 +304,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость за 1 кг, руб"
+                        android:text="@string/tvStoimost1KGRUB"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -330,7 +330,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки, общая, руб"
+                        android:text="@string/tvStoimostObrabotkiObshayaRub"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -356,7 +356,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки коровы в день, руб"
+                        android:text="@string/tvStoimostObrabotkiKorovyVDenRub"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -382,7 +382,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="5"
-                        android:text="Стоимость обработки коровы за период, руб"
+                        android:text="@string/tvStoimostObrabokiKorovyZaPeriodRub"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

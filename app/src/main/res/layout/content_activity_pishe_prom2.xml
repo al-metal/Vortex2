@@ -50,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость, руб/кг"
+                        android:text="@string/tvStoimostRub_Kg"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -75,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация, %"
+                        android:text="@string/tvKoncentraciyaProcent"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем раствора, л"
+                        android:text="@string/tvObjemRastvoraL"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество промывок в сутки"
+                        android:text="@string/tvKolichestvoPromyvokSutki"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -150,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество рабочих дней в мес."
+                        android:text="@string/tvKolichestvoRabochihDneyMes"
                         android:textColor="@color/colorGray" />
 
                     <EditText
@@ -206,7 +206,7 @@
                         android:layout_span="4"
                         android:fontFamily=""
                         android:paddingRight="10dp"
-                        android:text="Плотность (кг/л)"
+                        android:text="@string/tvPlotnostKg_L"
                         android:textSize="11sp" />
 
                     <TextView
@@ -232,7 +232,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Цена за 1 л (руб)"
+                        android:text="@string/tvCenaZa1LRub"
                         android:textSize="11sp" />
 
                     <TextView
@@ -258,7 +258,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Стоимость моющего раствора (руб)"
+                        android:text="@string/tvStoimostMoyushegoRastvoraRub"
                         android:textSize="11sp" />
 
                     <TextView
@@ -284,7 +284,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Расход средства за 1 мойку (л)"
+                        android:text="@string/tvRashodSredstvaZa1MoykuL"
                         android:textSize="11sp" />
 
                     <TextView
@@ -310,7 +310,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Расход средства в месяц (л)"
+                        android:text="@string/tvRashodSredstvaVMesyacL"
                         android:textSize="11sp" />
 
                     <TextView
@@ -336,7 +336,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:paddingRight="10dp"
-                        android:text="Расход на покупку средства в месяц (руб)"
+                        android:text="@string/tvRashodNaPokupkuSredstvaMesyacRub"
                         android:textSize="11sp" />
 
                     <TextView

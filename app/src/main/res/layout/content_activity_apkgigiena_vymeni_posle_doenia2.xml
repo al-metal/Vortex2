@@ -51,9 +51,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Расход на одну голову, гр: "
+                        android:text="@string/tvRashodNaOdnuGolovuGramm"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/tvRashodGolova"
@@ -76,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена, руб" />
+                        android:text="@string/tvCenaRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес, кг" />
+                        android:text="@string/tvVesKG" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество голов, шт" />
+                        android:text="@string/tvKOlichestvoGolovSHT" />
 
                     <EditText
                         android:id="@+id/etKolichGolov"
@@ -142,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Период обработки, дней" />
+                        android:text="@string/tvPeriodObrabotkiDni" />
 
                     <EditText
                         android:id="@+id/etPeriodObrabotki"
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество обработок в день" />
+                        android:text="@string/tvKolichestvoObrabotokDen" />
 
                     <EditText
                         android:id="@+id/etKolichVDen"
@@ -212,7 +212,7 @@
                         android:id="@+id/textView22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость за 1 кг, руб" />
+                        android:text="@string/tvStoimost1KGRUB" />
 
                     <TextView
                         android:id="@+id/tvStoimostKg"
@@ -234,7 +234,7 @@
                         android:id="@+id/textView30"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Количество гигиены, кг" />
+                        android:text="@string/tvKolichestvoGigieny" />
 
                     <TextView
                         android:id="@+id/tvKolichGigien"
@@ -256,7 +256,7 @@
                         android:id="@+id/textView33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость одной обработки" />
+                        android:text="@string/tvStoimostOdnoyObrabotki" />
 
                     <TextView
                         android:id="@+id/tvStoimObrabotki"
@@ -278,7 +278,7 @@
                         android:id="@+id/textView339"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Стоимость обработки поголовья, руб" />
+                        android:text="@string/tvStoimostObrabotkiPogolovyaRub" />
 
                     <TextView
                         android:id="@+id/tvStoimObrabotkiVsego"

@@ -38,7 +38,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество дойных коров, шт" />
+                        android:text="@string/lblKolichestvoKorov" />
 
                     <EditText
                         android:id="@+id/edKolichKorov"
@@ -60,7 +60,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество доек в день" />
+                        android:text="@string/lblKolichestvoDoekDen" />
 
                     <EditText
                         android:id="@+id/etKolichDoek"
@@ -82,7 +82,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация щелочи,%" />
+                        android:text="@string/lblKoncentraciyzShelochi" />
 
                     <EditText
                         android:id="@+id/etKoncentratSheloch"
@@ -104,7 +104,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация кислоты,%" />
+                        android:text="@string/lblKoncentraciyzKisloty" />
 
                     <EditText
                         android:id="@+id/etKoncentratKislot"
@@ -126,7 +126,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество щелочных моек" />
+                        android:text="@string/lblKolichestvoShelochMoek" />
 
                     <EditText
                         android:id="@+id/etKolichShelochMoek"
@@ -148,7 +148,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество кислотных моек" />
+                        android:text="@string/lblKolichestvoKislotMoek" />
 
                     <EditText
                         android:id="@+id/etKolichKislotMoek"
@@ -170,7 +170,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем промывочной ванны, л" />
+                        android:text="@string/lblObjemVanna" />
 
                     <EditText
                         android:id="@+id/etVanna"
@@ -192,7 +192,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество дней" />
+                        android:text="@string/lblKolichestvoDney" />
 
                     <EditText
                         android:id="@+id/etDay"
@@ -214,7 +214,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг щелочного средства, руб" />
+                        android:text="@string/lblStoimostSheloch1KG" />
 
                     <EditText
                         android:id="@+id/etPriceSheloch"
@@ -236,7 +236,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг кислотного средства, руб" />
+                        android:text="@string/lblStoimostKislot1KG" />
 
                     <EditText
                         android:id="@+id/edPriceKislot"
@@ -285,7 +285,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Средняя плотность средства, кг/л"
+                        android:text="@string/lblSrednPlotnostKG_L"
                         android:textSize="11sp" />
 
                     <TextView
@@ -309,7 +309,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Общее количество моющих средств, кг"
+                        android:text="@string/lblObsheeKolichestvoMoySredstvKG"
                         android:textSize="11sp" />
 
                     <TextView
@@ -333,7 +333,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Количество щелочного средства, кг"
+                        android:text="@string/lblKolichestvoShelochSredstvaKG"
                         android:textSize="11sp" />
 
                     <TextView
@@ -356,7 +356,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Количество кислотного средства, кг"
+                        android:text="@string/lblKolichestvoKislotSredstvaKG"
                         android:textSize="11sp" />
 
                     <TextView
@@ -379,7 +379,7 @@
                         android:layout_width="5dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Стоимость щелочного средства, руб"
+                        android:text="@string/lblStoimostShelochSredstvaRUB"
                         android:textSize="11sp" />
 
                     <TextView
@@ -402,7 +402,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Стоимость кислотного средства, руб"
+                        android:text="@string/lblStoimostKislotSredtstvaRUB"
                         android:textSize="11sp" />
 
                     <TextView
@@ -425,7 +425,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Общая стоимость средств, руб"
+                        android:text="@string/lblStoimostObsheeRUB"
                         android:textSize="11sp" />
 
                     <TextView

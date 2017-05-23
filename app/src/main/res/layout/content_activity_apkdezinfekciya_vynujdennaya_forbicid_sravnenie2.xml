@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Название" />
+                        android:text="@string/tvNazvanie" />
 
                     <EditText
                         android:id="@+id/etName"
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Площадь, м²" />
+                        android:text="@string/tvPloshad" />
 
                     <EditText
                         android:id="@+id/etPloshad"
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация, %" />
+                        android:text="@string/tvKoncentraciyaProcent" />
 
                     <EditText
                         android:id="@+id/etKoncentraciya"
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Расход, л/м²" />
+                        android:text="@string/tvRashodL_m2" />
 
                     <EditText
                         android:id="@+id/etRashod"
@@ -128,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена, руб" />
+                        android:text="@string/tvCenaRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес, кг" />
+                        android:text="@string/tvVesKG" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -211,7 +211,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_span="2"
-                        android:text="FORBICID"
+                        android:text="@string/tvForbicid"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
@@ -241,7 +241,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг, руб"
+                        android:text="@string/tvStoimost1KGRUB"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -280,7 +280,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество, л"
+                        android:text="@string/tvKolichestvoL"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -319,7 +319,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость обработки, руб"
+                        android:text="@string/tvStoimostObrabotkiRUB"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

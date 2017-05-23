@@ -44,14 +44,14 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:checked="true"
-                            android:text="Пеногенератор" />
+                            android:text="@string/tvPenogenerator" />
 
                         <RadioButton
                             android:id="@+id/rbPenoKomp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Пенокомплект" />
+                            android:text="@string/tvPenokomplekt" />
                     </RadioGroup>
 
 
@@ -69,14 +69,14 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:checked="true"
-                            android:text="6 кг" />
+                            android:text="@string/tv6Kg" />
 
                         <RadioButton
                             android:id="@+id/rbVes64"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="64 кг" />
+                            android:text="@string/tv64Kg" />
                     </RadioGroup>
                 </TableRow>
 
@@ -91,7 +91,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость суперконцентрата, руб" />
+                        android:text="@string/tvStoimostSuperkoncentrataRub" />
 
                     <EditText
                         android:id="@+id/etPrice2Kanistr"
@@ -140,7 +140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Цена за 1 канистру, руб"
+                            android:text="@string/tvCenaZaKanistruRub"
                             android:textSize="11sp" />
 
                         <TextView
@@ -164,7 +164,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Объем"
+                            android:text="@string/tvObjem"
                             android:textSize="11sp" />
 
                         <TextView
@@ -172,7 +172,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_span="2"
-                            android:text="6 кг = 35 л"
+                            android:text="@string/tv6Kg_35L"
                             android:textColor="@android:color/black"
                             android:textSize="11sp" />
                     </TableRow>
@@ -188,7 +188,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Разбавление, мл"
+                            android:text="@string/tvRazbavlenieMlL"
                             android:textSize="11sp" />
 
                         <TextView
@@ -196,7 +196,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_span="2"
-                            android:text="900"
+                            android:text="@string/tv900"
                             android:textColor="@android:color/black"
                             android:textSize="11sp" />
                     </TableRow>
@@ -212,7 +212,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Количество заправок"
+                            android:text="@string/tvKolichestvoZapravok"
                             android:textSize="11sp" />
 
                         <TextView
@@ -236,7 +236,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Стоимость заправки, руб"
+                            android:text="@string/tvStoimostZapravkiRub"
                             android:textSize="11sp" />
 
                         <TextView
@@ -260,7 +260,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="4"
-                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто), руб"
+                            android:text="@string/tvStoimostmoyki1avto50LPG15avto"
                             android:textSize="11sp" />
 
                         <TextView

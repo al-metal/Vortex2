@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация, %" />
+                        android:text="@string/tvKoncentraciyaProcent" />
 
                     <Spinner
                         android:id="@+id/spinner6"
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Высота помещения, м" />
+                        android:text="@string/tvVysotaPomesheniyaM" />
 
                     <EditText
                         android:id="@+id/etVysota"
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Высота до конька, м" />
+                        android:text="@string/tvVysotaDoKonkaM" />
 
                     <EditText
                         android:id="@+id/etVysotaKon"
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Длина, м" />
+                        android:text="@string/tvDlinnaM" />
 
                     <EditText
                         android:id="@+id/etDlinna"
@@ -128,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Ширина, м" />
+                        android:text="@string/tvShirinaM" />
 
                     <EditText
                         android:id="@+id/etShirina"
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Кратность обработки" />
+                        android:text="@string/tvKratnostObrabotki" />
 
                     <EditText
                         android:id="@+id/etKratnost"
@@ -200,7 +200,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Объем помещения, м³"
+                        android:text="@string/tvObjemPomesheniyaM3"
                         android:textSize="11sp" />
 
                     <TextView
@@ -222,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Экспозиция, ч"
+                        android:text="@string/tvEkspoziciyaCH"
                         android:textSize="11sp" />
 
                     <TextView
@@ -244,7 +244,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Расход рабочего раствора, мл/м³"
+                        android:text="@string/tvRashodRabochegoRastvoraML_M3"
                         android:textSize="11sp" />
 
                     <TextView
@@ -267,7 +267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Расход концентрата, мл/м³"
+                        android:text="@string/tvRashodKoncentrataML_M3"
                         android:textSize="11sp" />
 
                     <TextView
@@ -289,7 +289,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
-                        android:text="Количество FORBICID, кг"
+                        android:text="@string/tvKolichestvoForbicidKG"
                         android:textSize="11sp" />
 
                     <TextView

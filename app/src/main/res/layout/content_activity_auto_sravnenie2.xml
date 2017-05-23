@@ -60,7 +60,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="РАЗВЕДЕНИЕ НА ПЕНЕНОГЕНЕРАТОР"
+                        android:text="@string/tvRazvedenieNaPenogenerator"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -97,7 +97,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_span="2"
                         android:fontFamily="sans-serif"
-                        android:text="СРЕДСТВО"
+                        android:text="@string/tvSredstvo"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -114,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="В частях"
+                        android:text="@string/tvVchastyah"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -152,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем 25 л"
+                        android:text="@string/tvObjem25"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -190,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем 50 л"
+                        android:text="@string/tvObjem50"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -228,7 +228,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем 100 л"
+                        android:text="@string/tvObjem100"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -266,7 +266,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="РАЗВЕДЕНИЕ НА ПЕНОКОМПЛЕКТ"
+                        android:text="@string/tvRazvedenieNaPenokomplekt"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -303,7 +303,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_span="2"
                         android:fontFamily="sans-serif"
-                        android:text="СРЕДСТВО"
+                        android:text="@string/tvSredstvo"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -321,7 +321,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="В частях"
+                        android:text="@string/tvVchastyah"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -360,7 +360,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Объем 1 л"
+                        android:text="@string/tvObjem1L"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -399,7 +399,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="РАЗВЕДЕНИЕ НА ДОЗАТРОН"
+                        android:text="@string/tvRazvedenieNaDozatron"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -435,7 +435,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_span="2"
                         android:fontFamily="sans-serif"
-                        android:text="СРЕДСТВО"
+                        android:text="@string/tvSredstvo"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -451,7 +451,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация, %"
+                        android:text="@string/tvKoncentraciyaProcent"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -490,7 +490,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена, канистра"
+                        android:text="@string/tvCenaKanistra"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -533,7 +533,7 @@
                         android:background="@color/colorRed"
                         android:fontFamily="sans-serif"
                         android:onClick="onClickSravnenie"
-                        android:text="СРАВНИТЬ"
+                        android:text="@string/btnSravnit"
                         android:textColor="@android:color/background_light"
                         android:textSize="16sp" />
 
@@ -560,7 +560,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость экспресс-мойки"
+                        android:text="@string/tvStoimosEkspressMoyki"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -589,7 +589,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="ПЕНОКОМПЛЕКТ"
+                        android:text="@string/tvPenokomplekt"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -627,7 +627,7 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:fontFamily="sans-serif"
-                        android:text="СРЕДСТВО"
+                        android:text="@string/tvSredstvo"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -645,7 +645,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Среднее количество чистых авто"
+                        android:text="@string/tvSredneeKolichestvoChistihAvto"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -684,7 +684,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Средняя стоимость 1 авто"
+                        android:text="@string/tvSrednyayaStoimost1Avto"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -724,7 +724,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Средний расход на мойку\n(1 авто, пенокомплект, мл)"
+                        android:text="@string/tvSredniyRashodNaMoyku"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -763,7 +763,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="ПЕНЕНОГЕНЕРАТОР 50 л."
+                        android:text="@string/tvPenogenerator50L"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -801,7 +801,7 @@
                         android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:fontFamily="sans-serif"
-                        android:text="СРЕДСТВО"
+                        android:text="@string/tvSredstvo"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -819,7 +819,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text=" Средний расход на мойку\n(1 авто, пеногенератор, мл)"
+                        android:text="@string/tvSredniyRashodNaMoykuPenogenerator"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -858,7 +858,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Средняя стоимость 1 авто"
+                        android:text="@string/tvSrednyayaStoimost1Avto"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -897,7 +897,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Среднее количество чистых авто"
+                        android:text="@string/tvSredneeKolichestvoChistihAvto"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
@@ -965,7 +965,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="ПЕНОКОМПЛЕКТ"
+                        android:text="@string/tvPenokomplekt"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -982,7 +982,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="6"
-                        android:text="Вы сможете вымыть больше машин, шт"
+                        android:text="@string/tvVySmojeteVymitBolsheMashinSht"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
 
@@ -1008,7 +1008,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="6"
-                        android:text="Ваша потерянная прибыль"
+                        android:text="@string/tvVashaPoteryannayaPribil"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
 
@@ -1035,7 +1035,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="19dp"
                         android:layout_span="8"
-                        android:text="ПЕНЕНОГЕНЕРАТОР 50 л."
+                        android:text="@string/tvPenogenerator50L"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
@@ -1052,7 +1052,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="6"
-                        android:text="Вы сможете вымыть больше машин, шт"
+                        android:text="@string/tvVySmojeteVymitBolsheMashinSht"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
 
@@ -1078,7 +1078,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="6"
-                        android:text="Ваша потерянная прибыль"
+                        android:text="@string/tvVashaPoteryannayaPribil"
                         android:textColor="@color/colorGray"
                         android:textSize="11sp" />
 

@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Название средства" />
+                        android:text="@string/tvNazvanieSredstva" />
 
                     <EditText
                         android:id="@+id/etSredstvo"
@@ -58,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="РАЗВЕДЕНИЕ, %"
+                        android:text="@string/tvRazvedenie_procent"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Расход на голову, кг"
+                        android:text="@string/tvRashogNaGolovuKG"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -108,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена, руб" />
+                        android:text="@string/tvCenaRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -130,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес, кг" />
+                        android:text="@string/tvVesKG" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -152,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество голов, шт" />
+                        android:text="@string/tvKOlichestvoGolovSHT" />
 
                     <EditText
                         android:id="@+id/etGolov"
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Период обработки, дней" />
+                        android:text="@string/tvPeriodObrabotkiDni" />
 
                     <EditText
                         android:id="@+id/etDay"
@@ -196,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество обработок в день" />
+                        android:text="@string/tvKolichestvoObrabotokDen" />
 
                     <EditText
                         android:id="@+id/etObrabotok"
@@ -281,7 +281,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг, руб"
+                        android:text="@string/tvStoimost1KGRUB"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -318,7 +318,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество гигиены, кг"
+                        android:text="@string/tvKolichestvoGigieny"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 
@@ -355,7 +355,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость одной обработки, руб"
+                        android:text="@string/tvStoimostOdnoyObrabotkiRub"
                         android:textAlignment="textStart"
                         android:textSize="11sp" />
 

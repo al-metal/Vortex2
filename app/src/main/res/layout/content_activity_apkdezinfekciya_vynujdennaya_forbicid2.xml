@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Площадь, м²" />
+                        android:text="@string/tvPloshad" />
 
                     <EditText
                         android:id="@+id/etS"
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена, руб" />
+                        android:text="@string/tvCenaRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес, кг" />
+                        android:text="@string/tvVesKG" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вид обработки"
+                        android:text="@string/tvVidObrabotki"
                         android:textSize="11sp" />
 
                     <TextView
@@ -141,7 +141,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="4"
-                        android:text="Протирание, орошение, генерирование пены"
+                        android:text="@string/tvProtiranieOroshenie"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
                 </TableRow>
@@ -157,7 +157,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Концентрация, %"
+                        android:text="@string/tvKoncentraciyaProcent"
                         android:textSize="11sp" />
 
                     <TextView
@@ -181,7 +181,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Расход, л/м²"
+                        android:text="@string/tvRashodL_m2"
                         android:textSize="11sp" />
 
                     <TextView
@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Экспозиция, мин"
+                        android:text="@string/tvEkspoziciyaMin"
                         android:textSize="11sp" />
 
                     <TextView
@@ -229,7 +229,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг"
+                        android:text="@string/tvStoimost1KGRUB"
                         android:textSize="11sp" />
 
                     <TextView
@@ -253,7 +253,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество FORBICID, кг"
+                        android:text="@string/tvKolichestvoForbicidKG"
                         android:textSize="11sp" />
 
                     <TextView
@@ -277,7 +277,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость обработки "
+                        android:text="@string/tvStoimostObrabotkiRUB"
                         android:textSize="11sp" />
 
                     <TextView
@@ -301,7 +301,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="8"
-                        android:text="РАСТВОР ПОСЛЕ ДЕЗИНФЕКЦИИ ОБЯЗАТЕЛЬНО СМЫВАТЬ"
+                        android:text="@string/tvRastvorObyazatelnoSmyvat"
                         android:textColor="@color/colorRed"
                         android:textSize="11sp"
                         android:textStyle="bold" />

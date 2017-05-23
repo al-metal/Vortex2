@@ -37,7 +37,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость канистры\nдругого средства, руб" />
+                        android:text="@string/tvStoimostKanistryDrugogoSredstvaRub" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Разбавление, мл" />
+                        android:text="@string/tvRazbavlenieMlL" />
 
                     <EditText
                         android:id="@+id/etRazbavlenie"
@@ -116,7 +116,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_span="2"
-                            android:text="КОНЦЕНТРАТ"
+                            android:text="@string/tvKoncentrat"
                             android:textSize="11sp" />
 
                         <TextView
@@ -124,7 +124,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_span="2"
-                            android:text="СРЕДСТВО  "
+                            android:text="@string/tvSredstvo"
                             android:textSize="11sp" />
 
                     </TableRow>
@@ -140,7 +140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Общая стоимость, руб"
+                            android:text="@string/tvObshayaStoimostRub"
                             android:textSize="11sp" />
 
                         <TextView
@@ -175,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Объем"
+                            android:text="@string/tvObjem"
                             android:textSize="11sp" />
 
                         <TextView
@@ -210,7 +210,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Разбавление, мл"
+                            android:text="@string/tvRazbavlenieMlL"
                             android:textSize="11sp" />
 
                         <TextView
@@ -245,7 +245,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Количество заправок"
+                            android:text="@string/tvKolichestvoZapravok"
                             android:textSize="11sp" />
 
                         <TextView
@@ -281,7 +281,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Стоимость заправки, руб"
+                            android:text="@string/tvStoimostZapravkiRub"
                             android:textSize="11sp" />
 
                         <TextView
@@ -316,7 +316,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто), руб"
+                            android:text="@string/tvStoimostmoyki1avto50LPG15avto"
                             android:textSize="11sp" />
 
                         <TextView
@@ -358,7 +358,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_span="2"
-                            android:text="ВЫГОДА"
+                            android:text="@string/tvVygoda"
                             android:textSize="11sp" />
                     </TableRow>
 
@@ -373,7 +373,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="От общей стоимости, %"
+                            android:text="@string/tvOtObsheyStoimosti_procent"
                             android:textSize="11sp" />
 
                         <TextView
@@ -398,7 +398,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
                             android:layout_span="3"
-                            android:text="По стоимости 1 мойки, %"
+                            android:text="@string/tvPoStoimosti1Moyki_procent"
                             android:textSize="11sp" />
 
                         <TextView

@@ -52,7 +52,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="10dp"
                         android:layout_span="4"
-                        android:text="РАЗВЕДЕНИЕ, %"
+                        android:text="@string/tvRazvedenie_procent"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -74,10 +74,10 @@
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Расход на 1 голову, кг: "
+                        android:text="@string/tvRashogNaGolovuKG"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -103,7 +103,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Цена" />
+                        android:text="@string/tvCenaRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
@@ -122,10 +122,10 @@
                     <TextView
                         android:id="@+id/textView102"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Вес" />
+                        android:text="@string/tvVesKG" />
 
                     <EditText
                         android:id="@+id/etVes"
@@ -144,10 +144,10 @@
                     <TextView
                         android:id="@+id/textView103"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество голов" />
+                        android:text="@string/tvKolichestvoGolov" />
 
                     <EditText
                         android:id="@+id/etKolichGolov"
@@ -166,10 +166,10 @@
                     <TextView
                         android:id="@+id/textView108"
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="17dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Период обработки" />
+                        android:text="@string/tvPeriodObrabotki" />
 
                     <EditText
                         android:id="@+id/etDay"
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество обработок в день" />
+                        android:text="@string/tvKolichestvoObrabotokDen" />
 
                     <EditText
                         android:id="@+id/etKolichObrabotok"
@@ -241,7 +241,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость за 1 кг"
+                        android:text="@string/tvStoimost1KGRUB"
                         android:textSize="11sp" />
 
                     <TextView
@@ -266,7 +266,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Количество гигиены, кг"
+                        android:text="@string/tvKolichestvoGigieny"
                         android:textSize="11sp" />
 
                     <TextView
@@ -291,7 +291,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="Стоимость одной обработки"
+                        android:text="@string/tvStoimostOdnoyObrabotki"
                         android:textSize="11sp" />
 
                     <TextView
