@@ -72,6 +72,120 @@
     <string name="title_activity_apkdezinfekciya_tuman_ice_animal2">
         ActivityAPKDezinfekciyaTumanIceAnimal2
     </string>
+
+    <!-- Стоимость -->
+    <string name="lblStoimostSheloch1KG">Стоимость за 1 кг щелочного средства, руб</string>
+    <string name="lblStoimostKislot1KG">Стоимость за 1 кг кислотного средства, руб</string>
+    <string name="lblStoimostShelochSredstvaRUB">Стоимость щелочного средства, руб</string>
+    <string name="lblStoimostKislotSredtstvaRUB">Стоимость кислотного средства, руб</string>
+    <string name="lblStoimostObsheeRUB">Общая стоимость средств, руб</string>
+    <string name="tvStoimost1KGRUB">Стоимость за 1 кг, руб</string>
+    <string name="tvStoimostObrabotkiRUB">Стоимость обработки, руб</string>
+    <string name="tvStoimostOdnoyObrabotki">Стоимость одной обработки</string>
+    <string name="tvStoimostOdnoyObrabotkiRub">Стоимость одной обработки, руб</string>
+    <string name="tvStoimostObrabotkiGolovyRub">Стоимость обработки головы, руб</string>
+    <string name="tvStoimostObrabotkiObshayaRub">Стоимость обработки общая, руб</string>
+    <string name="tvStoimostObrabotkiPogolovyaRub">Стоимость обработки поголовья, руб</string>
+    <string name="tvStoimostKanistryRub">Стоимость канистры, руб</string>
+    <string name="tvStoimostObrabotkiKorovyVDenRub">Стоимость обработки коровы в день, руб</string>
+    <string name="tvStoimostObrabokiKorovyZaPeriodRub">Стоимость обработки коровы за период, руб</string>
+    <string name="tvStoimostObrabotkiZaPeriodRub">Стоимость обработки за период, руб</string>
+    <string name="tvStoimostObrabotkiGolovyZaPeriodRub">Стоимость обработки головы за период, руб</string>
+    <string name="tvCenaKanistra">Цена, канистра</string>
+    <string name="tvStoimosEkspressMoyki">Стоимость экспресс-мойки</string>
+    <string name="tvSrednyayaStoimost1Avto">Средняя стоимость 1 авто</string>
+    <string name="tvStoimostSuperkoncentrataRub">Стоимость суперконцентрата, руб</string>
+    <string name="tvCenaZaKanistruRub">Цена за 1 канистру, руб</string>
+    <string name="tvStoimostZapravkiRub">Стоимость заправки, руб</string>
+    <string name="tvStoimostmoyki1avto50LPG15avto">Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто), руб</string>
+    <string name="tvStoimostKanistryDrugogoSredstvaRub">Стоимость канистры\nдругого средства, руб</string>
+    <string name="tvObshayaStoimostRub">Общая стоимость, руб</string>
+    <string name="tvVygoda">ВЫГОДА</string>
+    <string name="tvCenaZa1LRub">Цена за 1 л (руб)</string>
+    <string name="tvStoimostMoyushegoRastvoraRub">Стоимость моющего раствора (руб)</string>
+    <string name="tvStoimostRastvoraRub">Стоимость раствора (руб)</string>
+    <string name="tvStoimost">Стоимость</string>
+    <string name="tvStoimost1Kg_rub">Стоимость 1кг, руб</string>
+    <string name="tvStoimost1L_Rub">Стоимость 1л, руб</string>
+    <string name="tvStoimost1PromyvkiRub">Стоимость 1 промывки, руб</string>
+    <string name="tvStoimostPromyvochnoysmesi">Стоимость л\nпромывочной смеси</string>
+    <string name="tvStoimostRub">Стоимость, руб</string>
+    <string name="tvStoimostKg">Стоимость, кг</string>
+    <string name="tvStoimostL">Стоимость, л</string>
+    <string name="tvStoimostRub_Kg">Стоимость, руб/кг</string>
+    <!-- Стоимость -->
+
+    <!-- Еденицы измерения -->
+
+    <string name="rbMG_e_L">мг - экв/л</string>
+    <string name="rbDH">°DH</string>
+    <string name="rbJ">°Ж</string>
+    <string name="tvPloshad">Площадь, м²</string>
+    <string name="tvCenaRUB">Цена, руб</string>
+    <string name="tvVesKG">Вес, кг</string>
+    <string name="tvKoncentraciyaProcent">Концентрация, %</string>
+    <string name="tvRashodL_m2">Расход, л/м²</string>
+    <string name="tvEkspoziciyaMin">Экспозиция, мин</string>
+    <string name="tvKolichestvoL">Количество, л</string>
+    <string name="tvVysotaPomesheniyaM">Высота помещения, м</string>
+    <string name="tvVysotaDoKonkaM">Высота до конька, м</string>
+    <string name="tvDlinnaM">Длина, м</string>
+    <string name="tvShirinaM">Ширина, м</string>
+    <string name="tvKratnostObrabotki">Кратность обработки</string>
+    <string name="tvObjemPomesheniyaM3">Объем помещения, м³</string>
+    <string name="tvEkspoziciyaCH">Экспозиция, ч</string>
+    <string name="tvRashodRabochegoRastvoraML_M3">Расход рабочего раствора, мл/м³</string>
+    <string name="tvRashodKoncentrataML_M3">Расход концентрата, мл/м³</string>
+    <string name="tvRazvedenie_procent">РАЗВЕДЕНИЕ, %</string>
+    <string name="tvRashogNaGolovuKG">Расход на 1 голову, кг: </string>
+    <string name="tvKolichestvoObrabotokDen">Количество обработок в день</string>
+    <string name="tvKolichestvoGigieny">Количество гигиены, кг</string>
+    <string name="tvKOlichestvoGolovSHT">Количество голов, шт</string>
+    <string name="tvPeriodObrabotkiDni">Период обработки, дней</string>
+    <string name="tvCenaUpakovkiRub">Цена упаковки, руб</string>
+    <string name="tvVesUpakovkiKG">Вес упаковки, кг</string>
+    <string name="tvKolichestvoGolovSht">Количество голов, шт</string>
+    <string name="tvNeobhodimoeKolichestvoKg">Необходимое количество, кг</string>
+    <string name="tvRashodNaOdnuGolovuGramm">Расход на одну голову, гр: </string>
+    <string name="tvObjemVanny">ОБЪЕМ ВАННЫ, Л</string>
+    <string name="tvProdoljitelnostDni">Продолжительность, дни</string>
+    <string name="tvDesitub_procent">DESITUB, %</string>
+    <string name="tvVesovkaKg">Весовка, кг</string>
+    <string name="tvKolichestvoObrabotokZaPeriodSht">Количество обработок за период , шт</string>
+    <string name="tvKolichestvoVannSht">Количество ванн, шт</string>
+    <string name="tvTrebuetsyaDesitubKg">Требуется DESITUB, кг</string>
+    <string name="tvKolichestvoObrabotokSht">Количество обработок, шт</string>
+    <string name="tvKolichestvoTrebuemogoDesitubKg">Количество требуемого DESITUB, кг</string>
+    <string name="tvMednyKuporos_Procent">Медный купорос, %</string>
+    <string name="tvKolichestvoObrabotokVDenSht">Количество обработок в день, шт</string>
+    <string name="tvTrebuemoeKolichestvoSht">Требуемое количество, шт</string>
+    <string name="tvDesimix_Procent">DESIMIX, %</string>
+    <string name="tvKolichestvoTrebuemyhVannSht">Количество требуемых ванн, шт</string>
+    <string name="tvKolichestvoDesimixKg">Количество DESIMIX, кг</string>
+    <string name="tvKolichestvoMednyKuporosKg">Количество медного купороса, кг</string>
+    <string name="tvDesemixKg">DESIMIX, кг</string>
+    <string name="tvMednyKuporosKg">Медный купорос, кг</string>
+    <string name="tvVybrannayaDjestkostVody">выбранная жесткость воды °Ж</string>
+    <string name="tvRazbavlenieMlL">Разбавление, мл</string>
+    <string name="tvOtObsheyStoimosti_procent">От общей стоимости, %</string>
+    <string name="tvPoStoimosti1Moyki_procent">По стоимости 1 мойки, %</string>
+    <string name="tvObjemRastvoraL">Объем раствора, л</string>
+    <string name="tvKolichestvoPromyvokSutki">Количество промывок в сутки</string>
+    <string name="tvKolichestvoRabochihDneyMes">Количество рабочих дней в мес.</string>
+    <string name="tvPlotnostKg_L">Плотность, кг/л</string>
+    <string name="tvRashodSredstvaZa1MoykuL">Расход средства за 1 мойку (л)</string>
+    <string name="tvRashodSredstvaVMesyacL">Расход средства в месяц (л)</string>
+    <string name="tvRashodNaPokupkuSredstvaMesyacRub">Расход на покупку средства в месяц (руб)</string>
+    <string name="tvKoncentraciyaRastvora_procent">Концентрация раствора, %</string>
+    <string name="tvObjemMoyushegoRastvoraL">Объем моющего раствора, л</string>
+    <string name="tvEfektivnostPrimeneniyaSredstvVortexRub">Эффективность применения средств\nTM VORTEX за 1 мес. (руб)</string>
+    <string name="tvObjemVannaL">Объем ванны, л</string>
+    <string name="tvPlotnostSredstvaKg_L">Плотность средства, кг/л</string>
+    <string name="tvOdnaPromyvkaL">Одна промывка, л</string>
+
+    <!-- Еденицы измерения -->
+
+
     <string name="btnResult">рассчитать</string>
     <string name="btnSrav">Сравнить с другим средством</string>
     <string name="btnPredlojitSredstva">Предложить средства</string>
@@ -85,94 +199,43 @@
     <string name="lblKolichestvoKislotMoek">Количество кислотных моек</string>
     <string name="lblObjemVanna">Объем промывочной ванны, л</string>
     <string name="lblKolichestvoDney">Количество дней</string>
-    <string name="lblStoimostSheloch1KG">Стоимость за 1 кг щелочного средства, руб</string>
-    <string name="lblStoimostKislot1KG">Стоимость за 1 кг кислотного средства, руб</string>
     <string name="lblSrednPlotnostKG_L">Средняя плотность средства, кг/л</string>
     <string name="lblObsheeKolichestvoMoySredstvKG">Общее количество моющих средств, кг</string>
     <string name="lblKolichestvoShelochSredstvaKG">Количество щелочного средства, кг</string>
     <string name="lblKolichestvoKislotSredstvaKG">Количество кислотного средства, кг</string>
-    <string name="lblStoimostShelochSredstvaRUB">Стоимость щелочного средства, руб</string>
-    <string name="lblStoimostKislotSredtstvaRUB">Стоимость кислотного средства, руб</string>
-    <string name="lblStoimostObsheeRUB">Общая стоимость средств, руб</string>
-    <string name="rbMG_e_L">мг - экв/л</string>
-    <string name="rbDH">°DH</string>
-    <string name="rbJ">°Ж</string>
+
     <string name="tvShelochnie">ЩЕЛОЧНЫЕ</string>
-    <string name="tvPloshad">Площадь, м²</string>
-    <string name="tvCenaRUB">Цена, руб</string>
-    <string name="tvVesKG">Вес, кг</string>
+
     <string name="tvVidObrabotki">Вид обработки</string>
     <string name="tvProtiranieOroshenie">Протирание, орошение, генерирование пены</string>
-    <string name="tvKoncentraciyaProcent">Концентрация, %</string>
-    <string name="tvRashodL_m2">Расход, л/м²</string>
-    <string name="tvEkspoziciyaMin">Экспозиция, мин</string>
-    <string name="tvStoimost1KGRUB">Стоимость за 1 кг, руб</string>
+
+
     <string name="tvKolichestvoForbicidKG">Количество FORBICID, кг</string>
-    <string name="tvStoimostObrabotkiRUB">Стоимость обработки, руб</string>
     <string name="tvRastvorObyazatelnoSmyvat">РАСТВОР ПОСЛЕ ДЕЗИНФЕКЦИИ ОБЯЗАТЕЛЬНО СМЫВАТЬ</string>
     <string name="tvNazvanie">Название</string>
     <string name="tvForbicid">FORBICID</string>
-    <string name="tvKolichestvoL">Количество, л</string>
-    <string name="tvVysotaPomesheniyaM">Высота помещения, м</string>
-    <string name="tvVysotaDoKonkaM">Высота до конька, м</string>
-    <string name="tvDlinnaM">Длина, м</string>
-    <string name="tvShirinaM">Ширина, м</string>
-    <string name="tvKratnostObrabotki">Кратность обработки</string>
-    <string name="tvObjemPomesheniyaM3">Объем помещения, м³</string>
-    <string name="tvEkspoziciyaCH">Экспозиция, ч</string>
-    <string name="tvRashodRabochegoRastvoraML_M3">Расход рабочего раствора, мл/м³</string>
-    <string name="tvRashodKoncentrataML_M3">Расход концентрата, мл/м³</string>
+
+
     <string name="tvNeVyderjivaetsya">Не выдерживается</string>
-    <string name="tvRazvedenie_procent">РАЗВЕДЕНИЕ, %</string>
-    <string name="tvRashogNaGolovuKG">Расход на 1 голову, кг: </string>
+
     <string name="tvKolichestvoGolov">Количество голов</string>
     <string name="tvPeriodObrabotki">Период обработки</string>
-    <string name="tvKolichestvoObrabotokDen">Количество обработок в день</string>
-    <string name="tvKolichestvoGigieny">Количество гигиены, кг</string>
-    <string name="tvStoimostOdnoyObrabotki">Стоимость одной обработки</string>
+
     <string name="tvNazvanieSredstva">Название средства</string>
-    <string name="tvKOlichestvoGolovSHT">Количество голов, шт</string>
-    <string name="tvPeriodObrabotkiDni">Период обработки, дней</string>
-    <string name="tvStoimostOdnoyObrabotkiRub">Стоимость одной обработки, руб</string>
+
     <string name="tvSomatest">SOMATEST</string>
-    <string name="tvCenaUpakovkiRub">Цена упаковки, руб</string>
-    <string name="tvVesUpakovkiKG">Вес упаковки, кг</string>
-    <string name="tvKolichestvoGolovSht">Количество голов, шт</string>
-    <string name="tvNeobhodimoeKolichestvoKg">Необходимое количество, кг</string>
-    <string name="tvStoimostObrabotkiGolovyRub">Стоимость обработки головы, руб</string>
-    <string name="tvStoimostObrabotkiObshayaRub">Стоимость обработки общая, руб</string>
-    <string name="tvRashodNaOdnuGolovuGramm">Расход на одну голову, гр: </string>
-    <string name="tvStoimostObrabotkiPogolovyaRub">Стоимость обработки поголовья, руб</string>
-    <string name="tvObjemVanny">ОБЪЕМ ВАННЫ, Л</string>
+
     <string name="tv200">200</string>
     <string name="tvKolichestvoDoynogoStada">Количество дойного стада</string>
-    <string name="tvProdoljitelnostDni">Продолжительность, дни</string>
-    <string name="tvDesitub_procent">DESITUB, %</string>
-    <string name="tvStoimostKanistryRub">Стоимость канистры, руб</string>
-    <string name="tvVesovkaKg">Весовка, кг</string>
-    <string name="tvKolichestvoObrabotokZaPeriodSht">Количество обработок за период , шт</string>
-    <string name="tvKolichestvoVannSht">Количество ванн, шт</string>
-    <string name="tvTrebuetsyaDesitubKg">Требуется DESITUB, кг</string>
-    <string name="tvStoimostObrabotkiKorovyVDenRub">Стоимость обработки коровы в день, руб</string>
-    <string name="tvStoimostObrabokiKorovyZaPeriodRub">Стоимость обработки коровы за период, руб</string>
-    <string name="tvKolichestvoObrabotokSht">Количество обработок, шт</string>
-    <string name="tvKolichestvoTrebuemogoDesitubKg">Количество требуемого DESITUB, кг</string>
-    <string name="tvMednyKuporos_Procent">Медный купорос, %</string>
-    <string name="tvKolichestvoObrabotokVDenSht">Количество обработок в день, шт</string>
-    <string name="tvTrebuemoeKolichestvoSht">Требуемое количество, шт</string>
-    <string name="tvStoimostObrabotkiZaPeriodRub">Стоимость обработки за период, руб</string>
-    <string name="tvStoimostObrabotkiGolovyZaPeriodRub">Стоимость обработки головы за период, руб</string>
+
+
     <string name="tvEtap1">ЭТАП 1</string>
-    <string name="tvDesimix_Procent">DESIMIX, %</string>
+
     <string name="tvEtap2">ЭТАП 2</string>
     <string name="tvMednyKuporos">Медный купорос: </string>
-    <string name="tvKolichestvoTrebuemyhVannSht">Количество требуемых ванн, шт</string>
-    <string name="tvKolichestvoDesimixKg">Количество DESIMIX, кг</string>
-    <string name="tvKolichestvoMednyKuporosKg">Количество медного купороса, кг</string>
+
     <string name="tvItogo">ИТОГО</string>
-    <string name="tvDesemixKg">DESIMIX, кг</string>
-    <string name="tvMednyKuporosKg">Медный купорос, кг</string>
-    <string name="tvVybrannayaDjestkostVody">выбранная жесткость воды °Ж</string>
+
     <string name="tvVodaMyagkaya">вода мягкая</string>
     <string name="tvRazvedenieNaPenogenerator">РАЗВЕДЕНИЕ НА ПЕНЕНОГЕНЕРАТОР</string>
     <string name="tvVchastyah">В частях</string>
@@ -183,11 +246,8 @@
     <string name="tvSredstvo">СРЕДСТВО</string>
     <string name="tvObjem1L">Объем 1 л</string>
     <string name="tvRazvedenieNaDozatron">РАЗВЕДЕНИЕ НА ДОЗАТРОН</string>
-    <string name="tvCenaKanistra">Цена, канистра</string>
-    <string name="tvStoimosEkspressMoyki">Стоимость экспресс-мойки</string>
     <string name="tvPenokomplekt">Пенокомплект</string>
     <string name="tvSredneeKolichestvoChistihAvto">Среднее количество чистых авто</string>
-    <string name="tvSrednyayaStoimost1Avto">Средняя стоимость 1 авто</string>
     <string name="tvSredniyRashodNaMoyku">Средний расход на мойку\n(1 авто, пенокомплект, мл)</string>
     <string name="tvPenogenerator50L">ПЕНЕНОГЕНЕРАТОР 50 л.</string>
     <string name="tvSredniyRashodNaMoykuPenogenerator"> Средний расход на мойку\n(1 авто, пеногенератор, мл)</string>
@@ -196,45 +256,15 @@
     <string name="tvPenogenerator">Пеногенератор</string>
     <string name="tv6Kg">6 кг</string>
     <string name="tv64Kg">64 кг</string>
-    <string name="tvStoimostSuperkoncentrataRub">Стоимость суперконцентрата, руб</string>
-    <string name="tvCenaZaKanistruRub">Цена за 1 канистру, руб</string>
     <string name="tvObjem">Объем</string>
     <string name="tv6Kg_35L">6 кг = 35 л</string>
-    <string name="tvRazbavlenieMlL">Разбавление, мл</string>
+
     <string name="tv900">900</string>
     <string name="tvKolichestvoZapravok">Количество заправок</string>
-    <string name="tvStoimostZapravkiRub">Стоимость заправки, руб</string>
-    <string name="tvStoimostmoyki1avto50LPG15avto">Стоимость мойки 1 авто\n(из расчета 50 л ПГ - 15 авто), руб</string>
-    <string name="tvStoimostKanistryDrugogoSredstvaRub">Стоимость канистры\nдругого средства, руб</string>
     <string name="tvKoncentrat">КОНЦЕНТРАТ</string>
-    <string name="tvObshayaStoimostRub">Общая стоимость, руб</string>
-    <string name="tvVygoda">ВЫГОДА</string>
-    <string name="tvOtObsheyStoimosti_procent">От общей стоимости, %</string>
-    <string name="tvPoStoimosti1Moyki_procent">По стоимости 1 мойки, %</string>
-    <string name="tvStoimostRub_Kg">Стоимость, руб/кг</string>
-    <string name="tvObjemRastvoraL">Объем раствора, л</string>
-    <string name="tvKolichestvoPromyvokSutki">Количество промывок в сутки</string>
-    <string name="tvKolichestvoRabochihDneyMes">Количество рабочих дней в мес.</string>
-    <string name="tvPlotnostKg_L">Плотность, кг/л</string>
-    <string name="tvCenaZa1LRub">Цена за 1 л (руб)</string>
-    <string name="tvStoimostMoyushegoRastvoraRub">Стоимость моющего раствора (руб)</string>
-    <string name="tvRashodSredstvaZa1MoykuL">Расход средства за 1 мойку (л)</string>
-    <string name="tvRashodSredstvaVMesyacL">Расход средства в месяц (л)</string>
-    <string name="tvRashodNaPokupkuSredstvaMesyacRub">Расход на покупку средства в месяц (руб)</string>
-    <string name="tvKoncentraciyaRastvora_procent">Концентрация раствора, %</string>
-    <string name="tvObjemMoyushegoRastvoraL">Объем моющего раствора, л</string>
-    <string name="tvStoimostRastvoraRub">Стоимость раствора (руб)</string>
-    <string name="tvEfektivnostPrimeneniyaSredstvVortexRub">Эффективность применения средств\nTM VORTEX за 1 мес. (руб)</string>
-    <string name="tvStoimost">Стоимость</string>
-    <string name="tvObjemVannaL">Объем ванны, л</string>
-    <string name="tvPlotnostSredstvaKg_L">Плотность средства, кг/л</string>
-    <string name="tvStoimost1Kg_rub">Стоимость 1кг, руб</string>
-    <string name="tvStoimost1L_Rub">Стоимость 1л, руб</string>
-    <string name="tvStoimost1PromyvkiRub">Стоимость 1 промывки, руб</string>
-    <string name="tvStoimostPromyvochnoysmesi">Стоимость л\nпромывочной смеси</string>
-    <string name="tvStoimostRub">Стоимость, руб</string>
-    <string name="tvStoimostKg">Стоимость, кг</string>
-    <string name="tvStoimostL">Стоимость, л</string>
-    <string name="tvOdnaPromyvkaL">Одна промывка, л</string>
+
     <string name="tvKislotnie">КИСЛОТНЫЕ</string>
+
+
+
 </resources>
