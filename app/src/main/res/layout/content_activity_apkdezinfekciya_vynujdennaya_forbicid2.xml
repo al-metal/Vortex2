@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
-                        android:text="@string/tvEkspoziciyaMin"
+                        android:text="@string/tvEkspoziciyaCH"
                         android:textSize="11sp" />
 
                     <TextView
