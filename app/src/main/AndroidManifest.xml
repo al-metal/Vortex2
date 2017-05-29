@@ -17,7 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ActivityPisheProm2"
             android:label="@string/title_activity_pishe_prom2"
@@ -192,7 +191,19 @@
             android:name=".ActivityAPKDezinfekciyaTumanIceAnimal2"
             android:label="@string/title_activity_apkdezinfekciya_tuman_ice_animal2"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan"></activity>
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity_klining"
+            android:label="@string/title_activity_klining"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity_klining_poverhnost"
+            android:label="@string/title_activity_klining_poverhnost"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity_klining_problema"
+            android:label="@string/title_activity_klining_problema"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

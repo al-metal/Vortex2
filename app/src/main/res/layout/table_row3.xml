@@ -1,0 +1,56 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/col1"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_span="3"
+        android:text=""
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/col2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/col3"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/col4"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/col5"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/col6"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/col7"
+        android:layout_marginTop="18dp"
+        android:layout_span="2"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="11sp" />
+
+</TableRow>

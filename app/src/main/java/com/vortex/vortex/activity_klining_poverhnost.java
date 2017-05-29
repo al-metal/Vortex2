@@ -1,8 +1,11 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,20 +14,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity
+public class activity_klining_poverhnost extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    int id;
+
+    String[] kuhnya = {"посуда, противни, сковороды", "посудомоечная машина", "холодильник", "вытяжка", "плита, гриль, духовка", "микроволновая печь", "столовые приборы",
+            "моечная ванна", "общая дезинфекция", "рабочие столы и поверхности", "мойка и чистка", "трубы", "устрание запахов", "гигиена рук"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_klining_poverhnost);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Калькулятор Vortex");
+        setTitle("Поверхности");
 
+        id = getIntent().getExtras().getInt("id");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -34,28 +48,6 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
-
-    public void onClick(View view) {
-
-        Intent intent = new Intent(Main2Activity.this, ApkActivity2.class);
-        startActivity(intent);
-    }
-
-    public void onClickPisheProm(View view) {
-        Intent intent = new Intent(Main2Activity.this, ActivityPisheProm2.class);
-        startActivity(intent);
-    }
-
-    public void onClickAuto(View view) {
-        Intent intent = new Intent(Main2Activity.this, ActivityAutoVybor2.class);
-        startActivity(intent);
-    }
-
-    public void onClickKlining(View view) {
-        Intent intent = new Intent(Main2Activity.this, activity_klining.class);
-        startActivity(intent);
-        //Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -82,13 +74,13 @@ public class Main2Activity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent intent = new Intent(Main2Activity.this, ApkActivity2.class);
+            Intent intent = new Intent(activity_klining_poverhnost.this, ApkActivity2.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(Main2Activity.this, ActivityPisheProm2.class);
+            Intent intent = new Intent(activity_klining_poverhnost.this, ActivityPisheProm2.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(Main2Activity.this, ActivityAutoVybor2.class);
+            Intent intent = new Intent(activity_klining_poverhnost.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
             Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
@@ -99,9 +91,8 @@ public class Main2Activity extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Uri uri = Uri.parse("http://www.pk-vortex.ru"); // missing 'http://' will cause crashed
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+    public void onClick1(View view) {
+        Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining_problema.class);
         startActivity(intent);
     }
 }

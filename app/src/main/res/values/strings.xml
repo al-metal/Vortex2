@@ -264,7 +264,9 @@
     <string name="tvKoncentrat">КОНЦЕНТРАТ</string>
 
     <string name="tvKislotnie">КИСЛОТНЫЕ</string>
-
+    <string name="title_activity_klining">activity_klining</string>
+    <string name="title_activity_klining_poverhnost">activity_klining_poverhnost</string>
+    <string name="title_activity_klining_problema">activity_klining_problema</string>
 
 
 </resources>
