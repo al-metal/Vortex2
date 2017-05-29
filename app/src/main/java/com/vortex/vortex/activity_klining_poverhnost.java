@@ -2,10 +2,6 @@ package com.vortex.vortex;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,18 +10,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class activity_klining_poverhnost extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     int id;
+
+    TableLayout tl;
+    LinearLayout llmain;
+    int length;
 
     String[] kuhnya = {"посуда, противни, сковороды", "посудомоечная машина", "холодильник", "вытяжка", "плита, гриль, духовка", "микроволновая печь", "столовые приборы",
             "моечная ванна", "общая дезинфекция", "рабочие столы и поверхности", "мойка и чистка", "трубы", "устрание запахов", "гигиена рук"};
@@ -39,6 +38,8 @@ public class activity_klining_poverhnost extends AppCompatActivity
         setTitle("Поверхности");
 
         id = getIntent().getExtras().getInt("id");
+        tl = (TableLayout) findViewById(R.id.tlMain);
+        llmain = (LinearLayout) findViewById(R.id.llmain);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,7 +49,43 @@ public class activity_klining_poverhnost extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TableLayout tl = new TableLayout(this);
+        llmain.addView(tl);
+
+        AddTextViews(id);
     }
+
+    private void AddTextViews(int id) {
+        if(id == 1){
+            CreateViews(kuhnya);
+        }
+        else if(id ==2 ){
+
+        }
+    }
+
+    private void CreateViews(String[] kuhnya) {
+        length = kuhnya.length;
+        for(int i = 0; length > i; i++){
+            TextView tv = new TextView(this);
+            tv.setText(kuhnya[i].toString());
+            tv.setId(i);
+            tv.setOnClickListener(oclBtnCancel);
+            llmain.addView(tv);
+        }
+    }
+
+    OnClickListener oclBtnCancel = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String ssss = String.valueOf(v.getId());
+            Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining_problema.class);
+            intent.putExtra("id", id);
+            intent.putExtra("id2", v.getId());
+            startActivity(intent);
+        }
+    };
 
     @Override
     public void onBackPressed() {

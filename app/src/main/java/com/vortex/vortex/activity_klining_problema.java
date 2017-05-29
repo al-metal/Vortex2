@@ -19,6 +19,9 @@ import android.widget.Toast;
 public class activity_klining_problema extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    int id;
+    int id2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,9 @@ public class activity_klining_problema extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle("Рекомендованые средства");
+
+        id = getIntent().getExtras().getInt("id");
+        id2 = getIntent().getExtras().getInt("id2");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -35,6 +41,8 @@ public class activity_klining_problema extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Toast.makeText(getBaseContext(), "Расчеты не выполнены" + id + "\n id2 = " + id2, Toast.LENGTH_SHORT).show();
     }
 
     @Override
