@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class activity_klining_poverhnost extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     int id;
 
@@ -57,17 +57,16 @@ public class activity_klining_poverhnost extends AppCompatActivity
     }
 
     private void AddTextViews(int id) {
-        if(id == 1){
+        if (id == 1) {
             CreateViews(kuhnya);
-        }
-        else if(id ==2 ){
+        } else if (id == 2) {
 
         }
     }
 
     private void CreateViews(String[] kuhnya) {
         length = kuhnya.length;
-        for(int i = 0; length > i; i++){
+        for (int i = 0; length > i; i++) {
             TextView tv = new TextView(this);
             tv.setText(kuhnya[i].toString());
             tv.setId(i);
