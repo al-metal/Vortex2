@@ -30,8 +30,25 @@ public class activity_klining_problema extends AppCompatActivity
             {"для отбеливания и дезинфекии", "Fumigel"}};
     String[][] kuhnyaPosudaMashina = {{"для мойки", "Blank"},
             {"для ополаскивания", "DeBlank"}};
-    String[][] kuhnyaHolodilnik = {{"внутри (при выкылюченном состоянии)", "Well", "Optima Gel", "Optima"},
+    String[][] kuhnyaHolodilnik = {{"внутри (при выключенном состоянии)", "Well", "Optima Gel", "Optima"},
             {"снаружи", "Optima", "Optima Gel", "Well"}};
+    String[][] kuhnyaVytyajka = {{"обезжиривание", "Daze"},
+            {"блеск", "Twist", "Well"}};
+    String[][] kuhnyaPlita = {{"", "Daze"}};
+    String[][] kuhnyaPech = {{"", "Daze"}};
+    String[][] kuhnyaPribory = {{"", "Marvel"}, {"Optima Gel"}};
+    String[][] kuhnyaVanna = {{"", "Fumigel"}};
+    String[][] kuhnyaDezinfekciya = {{"", "Fumigel"}};
+    String[][] kuhnyaRabStol = {{"", "Optima", "Optima Gel"}};
+    String[][] kuhnyaMoyka = {{"стены, двери", "Optima Gel", "Optima"},
+            {"напольные покрытия", "Comfort", "Comfort Extra"},
+            {"окна и зеркала", "Magic"},
+            {"отбеливание мопов и полотенец", "Fumigel"},
+            {"мусорные баки", "Optima", "Optima Gel"}};
+    String[][] kuhnyaTruby = {{"устранение засоров", "Draft"}};
+    String[][] kuhnyaZapah = {{"", "Block", "Fog"}};
+    String[][] kuhnyaRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"антисептик", "Joy Sept"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +73,40 @@ public class activity_klining_problema extends AppCompatActivity
 
 
         if (id == 1 && id2 == 0) {
-            Toast.makeText(getBaseContext(), "Расчеты не выполнены" + id + "\n id2 = " + id2, Toast.LENGTH_SHORT).show();
             ShowSredstva(kuhnyaPosuda);
+        }else if (id == 1 && id2 == 1) {
+            ShowSredstva(kuhnyaPosudaMashina);
+        }else if (id == 1 && id2 == 2) {
+            ShowSredstva(kuhnyaHolodilnik);
+        }else if (id == 1 && id2 == 3) {
+            ShowSredstva(kuhnyaVytyajka);
+        }else if (id == 1 && id2 == 4) {
+            ShowSredstva(kuhnyaPlita);
+        }else if (id == 1 && id2 == 5) {
+            ShowSredstva(kuhnyaPech);
+        }else if (id == 1 && id2 == 6) {
+            ShowSredstva(kuhnyaPribory);
+        }else if (id == 1 && id2 == 7) {
+            ShowSredstva(kuhnyaVanna);
+        }else if (id == 1 && id2 == 8) {
+            ShowSredstva(kuhnyaDezinfekciya);
+        }else if (id == 1 && id2 == 9) {
+            ShowSredstva(kuhnyaRabStol);
+        }else if (id == 1 && id2 == 10) {
+            ShowSredstva(kuhnyaMoyka);
+        }else if (id == 1 && id2 == 11) {
+            ShowSredstva(kuhnyaTruby);
+        }else if (id == 1 && id2 == 12) {
+            ShowSredstva(kuhnyaZapah);
+        }else if (id == 1 && id2 == 13) {
+            ShowSredstva(kuhnyaRuki);
         }
     }
 
-    private void ShowSredstva(String[][] kuhnyaPosuda) {
-        int count = kuhnyaPosuda.length;
+    private void ShowSredstva(String[][] array) {
+        int count = array.length;
         for (int i = 0; count > i; i++) {
-            int count2 = kuhnyaPosuda[i].length;
+            int count2 = array[i].length;
             for (int n = 0; count2 > n; n++) {
 
                 if (n == 0) {
@@ -72,7 +114,7 @@ public class activity_klining_problema extends AppCompatActivity
                     TableRow tr = new TableRow(this);
                     TextView tv = new TextView(this);
                     tv.setTypeface(null, Typeface.BOLD);
-                    tv.setText(kuhnyaPosuda[i][n]);
+                    tv.setText(array[i][n]);
                     tr.addView(tv);
                     tbMain.addView(tr);
 
@@ -82,7 +124,7 @@ public class activity_klining_problema extends AppCompatActivity
                     TextView tv = new TextView(this);
                     tv.setText("");
                     TextView tv2 = new TextView(this);
-                    tv2.setText(kuhnyaPosuda[i][n]);
+                    tv2.setText(array[i][n]);
                     tr.addView(tv);
                     tr.addView(tv2);
                     tbMain.addView(tr);
