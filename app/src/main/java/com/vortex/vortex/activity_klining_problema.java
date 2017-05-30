@@ -1,10 +1,9 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class activity_klining_problema extends AppCompatActivity
@@ -21,6 +23,15 @@ public class activity_klining_problema extends AppCompatActivity
 
     int id;
     int id2;
+    TableLayout tbMain;
+
+    String[][] kuhnyaPosuda = {{"для замачивания", "Marvel", "Optima Gel"},
+            {"против гари и копоти", "Daze"},
+            {"для отбеливания и дезинфекии", "Fumigel"}};
+    String[][] kuhnyaPosudaMashina = {{"для мойки", "Blank"},
+            {"для ополаскивания", "DeBlank"}};
+    String[][] kuhnyaHolodilnik = {{"внутри (при выкылюченном состоянии)", "Well", "Optima Gel", "Optima"},
+            {"снаружи", "Optima", "Optima Gel", "Well"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +43,7 @@ public class activity_klining_problema extends AppCompatActivity
 
         id = getIntent().getExtras().getInt("id");
         id2 = getIntent().getExtras().getInt("id2");
+        tbMain = (TableLayout) findViewById(R.id.tbMain);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,7 +54,43 @@ public class activity_klining_problema extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Toast.makeText(getBaseContext(), "Расчеты не выполнены" + id + "\n id2 = " + id2, Toast.LENGTH_SHORT).show();
+
+        if (id == 1 && id2 == 0) {
+            Toast.makeText(getBaseContext(), "Расчеты не выполнены" + id + "\n id2 = " + id2, Toast.LENGTH_SHORT).show();
+            ShowSredstva(kuhnyaPosuda);
+        }
+    }
+
+    private void ShowSredstva(String[][] kuhnyaPosuda) {
+        int count = kuhnyaPosuda.length;
+        for (int i = 0; count > i; i++) {
+            int count2 = kuhnyaPosuda[i].length;
+            for (int n = 0; count2 > n; n++) {
+
+                if (n == 0) {
+
+                    TableRow tr = new TableRow(this);
+                    TextView tv = new TextView(this);
+                    tv.setTypeface(null, Typeface.BOLD);
+                    tv.setText(kuhnyaPosuda[i][n]);
+                    tr.addView(tv);
+                    tbMain.addView(tr);
+
+                } else {
+
+                    TableRow tr = new TableRow(this);
+                    TextView tv = new TextView(this);
+                    tv.setText("");
+                    TextView tv2 = new TextView(this);
+                    tv2.setText(kuhnyaPosuda[i][n]);
+                    tr.addView(tv);
+                    tr.addView(tv2);
+                    tbMain.addView(tr);
+
+                }
+
+            }
+        }
     }
 
     @Override
