@@ -28,6 +28,13 @@ public class activity_klining_poverhnost extends AppCompatActivity
 
     String[] kuhnya = {"посуда, противни, сковороды", "посудомоечная машина", "холодильник", "вытяжка", "плита, гриль, духовка", "микроволновая печь", "столовые приборы",
             "моечная ванна", "общая дезинфекция", "рабочие столы и поверхности", "мойка и чистка", "трубы", "устрание запахов", "гигиена рук"};
+    String[] sanusel = {"унитаз, биде, писсуар, раковина", "ванна, душевая кабина", "окна, стекла, зеркала", "мойка и чистка", "трубы", "устранение запахов", "гигиена рук"};
+    String[] office = {"оргтехника", "мягкая мебель", "деревянная мебель", "окна, стекла, зеркала", "мойка и чистка", "общая дезинфекция"};
+    String[] obshiyKlining = {"оргтехника", "мягкая мебель", "деревянная мебель", "окна, стекла, зеркала", "мойка и чистка", "общая дезинфекция", "гигиена рук",
+            "устранение запахов"};
+    String[] remont = {"гигиена рук", "окна, стекла, зеркала", "мойка и чистка"};
+    String[] promKlining = {"Промышленный клининг"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +67,15 @@ public class activity_klining_poverhnost extends AppCompatActivity
         if (id == 1) {
             CreateViews(kuhnya);
         } else if (id == 2) {
-
+            CreateViews(sanusel);
+        }else if (id == 3) {
+            CreateViews(office);
+        }else if (id == 4) {
+            CreateViews(obshiyKlining);
+        }else if (id == 5) {
+            CreateViews(remont);
+        }else if (id == 6) {
+            CreateViews(promKlining);
         }
     }
 

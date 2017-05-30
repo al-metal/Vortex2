@@ -102,6 +102,35 @@ public class activity_klining extends AppCompatActivity
 
     public void onClickKuhnya(View view) {
         id = 1;
+        SetIdKlining(id);
+    }
+
+    public void onClickSanusel(View view) {
+        id = 2;
+        SetIdKlining(id);
+    }
+
+    public void onClickOffice(View view) {
+        id = 3;
+        SetIdKlining(id);
+    }
+
+    public void onClickObshKlining(View view) {
+        id = 4;
+        SetIdKlining(id);
+    }
+
+    public void onClickRemont(View view) {
+        id = 5;
+        SetIdKlining(id);
+    }
+
+    public void onClickPromKlining(View view) {
+        id = 6;
+        SetIdKlining(id);
+    }
+
+    private void SetIdKlining(int id) {
         Intent intent = new Intent(activity_klining.this, activity_klining_poverhnost.class);
         intent.putExtra("id", id);
         startActivity(intent);
