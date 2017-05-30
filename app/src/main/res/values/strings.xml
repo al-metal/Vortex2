@@ -268,5 +268,12 @@
     <string name="title_activity_klining_poverhnost">activity_klining_poverhnost</string>
     <string name="title_activity_klining_problema">activity_klining_problema</string>
 
+    <string name="tvKuhnya">Кухня</string>
+    <string name="tvSanusel">санузел</string>
+    <string name="tvOffice">уборка офисных и жилых помещений</string>
+    <string name="tvObshKlining">общий клининг</string>
+    <string name="tvRemont">Ремонт и послестрой</string>
+    <string name="tvPromKlining">Промышленны клининг</string>
+
 
 </resources>
