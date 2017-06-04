@@ -50,6 +50,16 @@ public class activity_klining_problema extends AppCompatActivity
     String[][] kuhnyaRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"антисептик", "Joy Sept"}};
 
+
+
+    String[][] sanuselUnitaz = {{"ржавчина", "Breeze", "Destroy"},
+            {"мочевой, водный камень", "Breeze", "Destroy"},
+            {"известковый налет", "Breeze", "Destroy"},
+            {"плесень, грибок", "Fumigel"},
+            {"ржавчина", "Breeze", "Destroy"},
+            {"ржавчина", "Breeze", "Destroy"},
+            {"ржавчина", "Breeze", "Destroy"},};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
