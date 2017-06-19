@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -82,9 +83,14 @@ public class activity_klining_poverhnost extends AppCompatActivity
     private void CreateViews(String[] kuhnya) {
         length = kuhnya.length;
         for (int i = 0; length > i; i++) {
+
             TextView tv = new TextView(this);
+            //tv = (TextView)getResources().getLayout(R.layout.textview_powerhnost);
             tv.setText(kuhnya[i].toString());
             tv.setId(i);
+
+            tv.setTextColor(Color.BLACK);
+            tv.setPadding(18,18,0,0);
             tv.setOnClickListener(oclBtnCancel);
             llmain.addView(tv);
         }

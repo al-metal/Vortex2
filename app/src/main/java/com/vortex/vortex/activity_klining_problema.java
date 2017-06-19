@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -58,7 +59,91 @@ public class activity_klining_problema extends AppCompatActivity
             {"плесень, грибок", "Fumigel"},
             {"ржавчина", "Breeze", "Destroy"},
             {"ржавчина", "Breeze", "Destroy"},
-            {"ржавчина", "Breeze", "Destroy"},};
+            {"ржавчина", "Breeze", "Destroy"}};
+
+    String[][] sanuselVanna = {{"потожировые и мыльные загрязнения", "Breeze", "Fumigel"},
+            {"известковый налет", "Breeze"},
+            {"ржавые подтеки", "Breeze"},
+            {"отбеливание и дезинфекция", "Fumigel"}};
+    String[][] sanuselOkna = {{"окна, стекла, зеркала", "Magic"}};
+    String[][] sanuselMoyka = {{"стены, двери", "Optima", "Optima Gel"},
+            {"напольные покрытия", "Comfort", "Comfort Extra"},
+            {"мусорные баки", "Optima", "Optima Gel"},
+            {"плафоны", "Optima", "Optima Gel"}};
+    String[][] sanuselTruby = {{"устранение засоров", "Draft"}};
+    String[][] sanuselZapah = {{"устранение запахов", "Block"}};
+    String[][] sanuselRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"антисептик", "Joy Sept"}};
+
+    String[][] officeOrgtehnika = {{"мониторы, телевизоры", "Twist", "Magic"},
+            {"телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
+            {"факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
+    String[][] officeMebelMygkaya = {{"кожаная обивка", "Kraft"},
+            {"текстильная обивка", "Well"}};
+    String[][] officeMebelTverdaya = {{"чистка", "Well"},
+            {"полировка", "Twist"}};
+    String[][] officeOkna = {{"окна, стекла, зеркала", "Magic"}};
+    String[][] officeMoyka = {{"стены, двери", "Optima", "Optima Gel"},
+            {"жалюзи", "Well", "Optima", "Optima Gel"},
+            {"батареи центрального отопления", "Well", "Optima", "Optima Gel"},
+            {"мусорные баки", "Optima", "Optima Gel"},
+            {"плафоны", "Optima", "Optima Gel"},
+            {"ламинат", "Comfort", "Comfort Extra"},
+            {"паркет", "Comfort", "Comfort Extra"},
+            {"линолеум", "Comfort", "Comfort Extra"},
+            {"ковролин", "Novatec", "Novatec Foam"},
+            {"полимерные покрытия", "Comfort", "Comfort Extra"}};
+    String[][] officeObshayaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
+
+    String[][] obshiyKliningOrgtehnika = {{"мониторы, телевизоры", "Twist", "Magic"},
+            {"телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
+            {"факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
+    String[][] obshiyKliningMyagkayaMebel = {{"кожаная обивка", "Kraft"},
+            {"текстильная обивка", "Well"}};
+    String[][] obshiyKliningDerevoMebel = {{"чистка", "Well"},
+            {"полировка", "Twist"}};
+    String[][] obshiyKliningOkna = {{"окна, стекла, зеркала", "Magic"}};
+    String[][] obshiyKliningMoyka = {{"стены, двери", "Optima", "Optima Gel"},
+            {"жалюзи", "Well", "Optima", "Optima Gel"},
+            {"батареи центрального отопления", "Well", "Optima", "Optima Gel"},
+            {"мусорные баки", "Optima", "Optima Gel"},
+            {"плафоны", "Optima", "Optima Gel"},
+            {"скотч, жев. резинка, маркер, наклейки", "Antistik"},
+            {"ламинат", "Comfort", "Comfort Extra"},
+            {"паркет", "Comfort", "Comfort Extra"},
+            {"линолеум", "Comfort", "Comfort Extra"},
+            {"ковровые покрытия", "Novatec", "Novatec Foam"},
+            {"керамическая плитка", "Comfort", "Comfort Extra"}};
+    String[][] obshiyKliningObshayaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
+    String[][] obshiyKliningRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"антисептик", "Joy Sept"}};
+    String[][] obshiyKliningZapah = {{"устранение запахов", "Block", "Fog"}};
+
+    String[][] remontRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"антисептик", "Joy Sept"},
+            {"очищающая паста", "Sapo"}};
+    String[][] remontOkna = {{"окна, стекла, зеркала", "Magic"}};
+    String[][] remontMoyka = {{"цемент, затирка, клей, шпаклевка, побелка", "Destroy"},
+            {"высолы", "Destroy"},
+            {"сажа, копоть на фасадах", "Daze", "Fortis"},
+            {"сажа, копоть на брусчатке", "Daze", "Fortis"},
+            {"водный камень", "Breeze", "Destroy"},
+            {"удаление следов скотча, наклеек, маркеров", "Antistik"},
+            {"стены, двери", "Optima", "Optima Gel"},
+            {"ламинат", "Comfort", "Comfort Extra"},
+            {"паркет", "Comfort", "Comfort Extra"},
+            {"линолеум", "Comfort", "Comfort Extra"},
+            {"ковровые покрытия", "Novatec", "Novatec Foam"},
+            {"керамическая плитка", "Comfort", "Comfort Extra"}};
+
+    String[][] PromKliningNeft = {{"следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"}};
+    String[][] PromKliningNeftRuki = {{"следы от нефтепродуктов и масел на руках", "Sapo"}};
+    String[][] PromKliningPojar = {{"очистка поверхностей после пожара", "Daze"}};
+    String[][] PromKliningPol = {{"мойка полов", "Comfort", "Comfort Extra"}};
+    String[][] PromKliningStena = {{"мойка стен", "Optima", "Optima Gel"}};
+    String[][] PromKliningSteklo = {{"мойка стекол, зеркал", "Magic"}};
+    String[][] PromKliningPlesen = {{"плесень, грибок", "Fumigel"}};
+    String[][] PromKliningZapah = {{"устранение запахов", "Block", "Fog"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,8 +165,7 @@ public class activity_klining_problema extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
+        //region Kuhnya
         if (id == 1 && id2 == 0) {
             ShowSredstva(kuhnyaPosuda);
         }else if (id == 1 && id2 == 1) {
@@ -111,6 +195,90 @@ public class activity_klining_problema extends AppCompatActivity
         }else if (id == 1 && id2 == 13) {
             ShowSredstva(kuhnyaRuki);
         }
+//endregion
+
+        //region Sanusel
+        else if (id == 2 && id2 == 0) {
+            ShowSredstva(sanuselUnitaz);
+        }else if (id == 2 && id2 == 1) {
+            ShowSredstva(sanuselVanna);
+        }else if (id == 2 && id2 == 2) {
+            ShowSredstva(sanuselOkna);
+        }else if (id == 2 && id2 == 3) {
+            ShowSredstva(sanuselMoyka);
+        }else if (id == 2 && id2 == 4) {
+            ShowSredstva(sanuselTruby);
+        }else if (id == 2 && id2 == 5) {
+            ShowSredstva(sanuselZapah);
+        }else if (id == 2 && id2 == 6) {
+            ShowSredstva(sanuselRuki);
+        }
+        //endregion
+
+        //region office
+        else if (id == 3 && id2 == 0) {
+            ShowSredstva(officeOrgtehnika);
+        }else if (id == 3 && id2 == 1) {
+            ShowSredstva(officeMebelMygkaya);
+        }else if (id == 3 && id2 == 2) {
+            ShowSredstva(officeMebelTverdaya);
+        }else if (id == 3 && id2 == 3) {
+            ShowSredstva(officeOkna);
+        }else if (id == 3 && id2 == 4) {
+            ShowSredstva(officeMoyka);
+        }else if (id == 3 && id2 == 5) {
+            ShowSredstva(officeObshayaDezinfekciya);
+        }
+        //endregion
+
+        //region obshiyKlinig
+        else if (id == 4 && id2 == 0) {
+            ShowSredstva(obshiyKliningOrgtehnika);
+        }else if (id == 4 && id2 == 1) {
+            ShowSredstva(obshiyKliningMyagkayaMebel);
+        }else if (id == 4 && id2 == 2) {
+            ShowSredstva(obshiyKliningDerevoMebel);
+        }else if (id == 4 && id2 == 3) {
+            ShowSredstva(obshiyKliningOkna);
+        }else if (id == 4 && id2 == 4) {
+            ShowSredstva(obshiyKliningMoyka);
+        }else if (id == 4 && id2 == 5) {
+            ShowSredstva(obshiyKliningObshayaDezinfekciya);
+        }else if (id == 4 && id2 == 6) {
+            ShowSredstva(obshiyKliningRuki);
+        }else if (id == 4 && id2 == 7) {
+            ShowSredstva(obshiyKliningZapah);
+        }
+        //endregion
+
+        //region Remont
+        else if (id == 5 && id2 == 0) {
+            ShowSredstva(remontRuki);
+        }else if (id == 5 && id2 == 1) {
+            ShowSredstva(remontOkna);
+        }else if (id == 5 && id2 == 2) {
+            ShowSredstva(remontMoyka);
+        }
+        //endregion
+
+
+        else if (id == 5 && id2 == 0) {
+            ShowSredstva(PromKliningNeft);
+        }else if (id == 5 && id2 == 1) {
+            ShowSredstva(PromKliningNeftRuki);
+        }else if (id == 5 && id2 == 2) {
+            ShowSredstva(PromKliningPojar);
+        }else if (id == 5 && id2 == 3) {
+            ShowSredstva(PromKliningPol);
+        }else if (id == 5 && id2 == 4) {
+            ShowSredstva(PromKliningStena);
+        }else if (id == 5 && id2 == 5) {
+            ShowSredstva(PromKliningSteklo);
+        }else if (id == 5 && id2 == 6) {
+            ShowSredstva(PromKliningPlesen);
+        }else if (id == 5 && id2 == 7) {
+            ShowSredstva(PromKliningZapah);
+        }
     }
 
     private void ShowSredstva(String[][] array) {
@@ -123,7 +291,6 @@ public class activity_klining_problema extends AppCompatActivity
 
                     TableRow tr = new TableRow(this);
                     TextView tv = new TextView(this);
-                    tv.setTypeface(null, Typeface.BOLD);
                     tv.setText(array[i][n]);
                     tr.addView(tv);
                     tbMain.addView(tr);
@@ -134,6 +301,8 @@ public class activity_klining_problema extends AppCompatActivity
                     TextView tv = new TextView(this);
                     tv.setText("");
                     TextView tv2 = new TextView(this);
+                    tv.setTypeface(null, Typeface.BOLD);
+                    tv2.setTextColor(Color.BLACK);
                     tv2.setText(array[i][n]);
                     tr.addView(tv);
                     tr.addView(tv2);

@@ -58,23 +58,8 @@
                         android:scaleType="fitCenter"
                         app:srcCompat="@mipmap/superkoncentrat" />
                 </TableRow>
+
             </TableLayout>
-
-            <Button
-                android:id="@+id/button31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickAuto123"
-                android:text="Автохимия"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/button30"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickSuperK123"
-                android:text="Супер концентрат"
-                android:visibility="invisible" />
         </LinearLayout>
     </ScrollView>
 
