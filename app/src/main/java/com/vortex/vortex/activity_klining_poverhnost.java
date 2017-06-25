@@ -26,15 +26,18 @@ public class activity_klining_poverhnost extends AppCompatActivity
     TableLayout tl;
     LinearLayout llmain;
     int length;
+    String title;
+    String titleProblem;
+    String[] array;
 
-    String[] kuhnya = {"посуда, противни, сковороды", "посудомоечная машина", "холодильник", "вытяжка", "плита, гриль, духовка", "микроволновая печь", "столовые приборы",
-            "моечная ванна", "общая дезинфекция", "рабочие столы и поверхности", "мойка и чистка", "трубы", "устрание запахов", "гигиена рук"};
-    String[] sanusel = {"унитаз, биде, писсуар, раковина", "ванна, душевая кабина", "окна, стекла, зеркала", "мойка и чистка", "трубы", "устранение запахов", "гигиена рук"};
-    String[] office = {"оргтехника", "мягкая мебель", "деревянная мебель", "окна, стекла, зеркала", "мойка и чистка", "общая дезинфекция"};
-    String[] obshiyKlining = {"оргтехника", "мягкая мебель", "деревянная мебель", "окна, стекла, зеркала", "мойка и чистка", "общая дезинфекция", "гигиена рук",
-            "устранение запахов"};
-    String[] remont = {"гигиена рук", "окна, стекла, зеркала", "мойка и чистка"};
-    String[] promKlining = {"Промышленный клининг"};
+    String[] kuhnya = {"ПОСУДА, ПРОТИВНИ, СКОВОРДЫ", "ПОСУДОМОЕЧНАЯ МАШИНА", "ХОЛОДИЛЬНИК", "ВЫТЯЖКА", "ПЛИТА, ГРИЛЬ, ДУХОВКА", "МИКРОВОЛНОВАЯ ПЕЧЬ", "СТОЛОВЫЕ ПРИБОРЫ",
+            "МОЕЧНАЯ ВАННАЯ", "ОБЩАЯ ДЕЗИНФЕКЦИЯ", "РАБОЧИЕ СТОЛЫ И ПОВЕРХНОСТИ", "МОЙКА И ЧИСТКА", "ТРУБЫ", "УСТРАНЕНИЕ ЗАПАХОВ", "ГИГИЕНА РУК"};
+    String[] sanusel = {"УНИТАЗ, БИДЕ, ПИССУАР, РАКОВИНА", "ВАННА, ДУШЕВАЯ КАБИНА", "ОКНА, СТЕКЛА, ЗЕРКАЛА", "МОЙКА И ЧИСТКА", "ТРУБЫ", "УСТРАНЕНИЕ ЗАПАХОВ", "ГИГИЕНА РУК"};
+    String[] office = {"ОРГТЕХНИКА", "МЯГКАЯ МЕБЕЛЬ", "ДЕРЕВЯННАЯ МЕБЕЛЬ", "ОКНА, СТЕКЛА, ЗЕРКАЛА", "МОЙКА И ЧИСТКА", "ОБЩАЯ ДЕЗИНФЕКЦИЯ"};
+    String[] obshiyKlining = {"ОРГТЕХНИКА", "МЯГКАЯ МЕБЕЛЬ", "ДЕРЕВЯННАЯ МЕБЕЛЬ", "ОКНА, СТЕКЛА, ЗЕРКАЛА", "МОЙКА И ЧИСТКА", "ОБЩАЯ ДЕЗИНФЕКЦИЯ", "ГИГИЕНА РУК",
+            "УСТРАНЕНИЕ ЗАПАХОВ"};
+    String[] remont = {"ГИГИЕНА РУК", "ОКНА, СТЕКЛА, ЗЕРКАЛА", "МОЙКА И ЧИСТКА"};
+    String[] promKlining = {"ПРОМЫШЛЕННЫЙ КЛИНИНГ"};
 
 
     @Override
@@ -43,11 +46,13 @@ public class activity_klining_poverhnost extends AppCompatActivity
         setContentView(R.layout.activity_klining_poverhnost);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Поверхности");
 
         id = getIntent().getExtras().getInt("id");
+        title = getIntent().getStringExtra("title");
         tl = (TableLayout) findViewById(R.id.tlMain);
         llmain = (LinearLayout) findViewById(R.id.llmain);
+
+        setTitle(title);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -81,12 +86,13 @@ public class activity_klining_poverhnost extends AppCompatActivity
     }
 
     private void CreateViews(String[] kuhnya) {
+        array = kuhnya;
         length = kuhnya.length;
         for (int i = 0; length > i; i++) {
-
-            TextView tv = new TextView(this);
+            TextView tv = (TextView) View.inflate(this, R.layout.textviewrigth, null);
             //tv = (TextView)getResources().getLayout(R.layout.textview_powerhnost);
             tv.setText(kuhnya[i].toString());
+
             tv.setId(i);
 
             tv.setTextColor(Color.BLACK);
@@ -99,10 +105,10 @@ public class activity_klining_poverhnost extends AppCompatActivity
     OnClickListener oclBtnCancel = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            String ssss = String.valueOf(v.getId());
             Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining_problema.class);
             intent.putExtra("id", id);
             intent.putExtra("id2", v.getId());
+            intent.putExtra("title", titleProblem = array[v.getId()].toString());
             startActivity(intent);
         }
     };

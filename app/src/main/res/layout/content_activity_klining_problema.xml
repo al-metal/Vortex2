@@ -18,12 +18,14 @@
         <LinearLayout
             android:id="@+id/llmain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TableLayout
                 android:id="@+id/tbMain"
                 android:layout_width="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="18dp"
                 android:layout_height="match_parent"
                 android:shrinkColumns="*"
                 android:stretchColumns="*">

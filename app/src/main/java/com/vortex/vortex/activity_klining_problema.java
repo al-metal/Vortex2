@@ -1,11 +1,8 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -25,6 +23,7 @@ public class activity_klining_problema extends AppCompatActivity
     int id;
     int id2;
     TableLayout tbMain;
+    String title;
 
     String[][] kuhnyaPosuda = {{"для замачивания", "Marvel", "Optima Gel"},
             {"против гари и копоти", "Daze"},
@@ -38,7 +37,8 @@ public class activity_klining_problema extends AppCompatActivity
     String[][] kuhnyaPlita = {{"", "Daze"}};
     String[][] kuhnyaPech = {{"", "Daze"}};
     String[][] kuhnyaPribory = {{"", "Marvel"}, {"Optima Gel"}};
-    String[][] kuhnyaVanna = {{"", "Fumigel"}};
+    String[][] kuhnyaVanna = {{"замачивание посуды", "Marvel", "Optima Gel"},
+            {"отбеливание посуды", "Fumigel"}};
     String[][] kuhnyaDezinfekciya = {{"", "Fumigel"}};
     String[][] kuhnyaRabStol = {{"", "Optima", "Optima Gel"}};
     String[][] kuhnyaMoyka = {{"стены, двери", "Optima Gel", "Optima"},
@@ -47,7 +47,8 @@ public class activity_klining_problema extends AppCompatActivity
             {"отбеливание мопов и полотенец", "Fumigel"},
             {"мусорные баки", "Optima", "Optima Gel"}};
     String[][] kuhnyaTruby = {{"устранение засоров", "Draft"}};
-    String[][] kuhnyaZapah = {{"", "Block", "Fog"}};
+    String[][] kuhnyaZapah = {{"локально", "Block"},
+            {"мотодом сухого тумана", "Fog"}};
     String[][] kuhnyaRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"антисептик", "Joy Sept"}};
 
@@ -57,19 +58,20 @@ public class activity_klining_problema extends AppCompatActivity
             {"мочевой, водный камень", "Breeze", "Destroy"},
             {"известковый налет", "Breeze", "Destroy"},
             {"плесень, грибок", "Fumigel"},
-            {"ржавчина", "Breeze", "Destroy"},
-            {"ржавчина", "Breeze", "Destroy"},
-            {"ржавчина", "Breeze", "Destroy"}};
+            {"потожировые загрязнения", "Breeze", "Fumigel"},
+            {"органика, микробы", "Fumigel"},
+            {"дезинфекция", "Fumigel"}};
 
     String[][] sanuselVanna = {{"потожировые и мыльные загрязнения", "Breeze", "Fumigel"},
             {"известковый налет", "Breeze"},
             {"ржавые подтеки", "Breeze"},
-            {"отбеливание и дезинфекция", "Fumigel"}};
+            {"отбеливание и дезинфекция", "Fumigel"},
+            {"очистка швов кафеля", "Fumigel"}};
     String[][] sanuselOkna = {{"окна, стекла, зеркала", "Magic"}};
     String[][] sanuselMoyka = {{"стены, двери", "Optima", "Optima Gel"},
             {"напольные покрытия", "Comfort", "Comfort Extra"},
             {"мусорные баки", "Optima", "Optima Gel"},
-            {"плафоны", "Optima", "Optima Gel"}};
+            {"плафоны", "Optima", "Optima Gel", "Magic"}};
     String[][] sanuselTruby = {{"устранение засоров", "Draft"}};
     String[][] sanuselZapah = {{"устранение запахов", "Block"}};
     String[][] sanuselRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
@@ -88,11 +90,14 @@ public class activity_klining_problema extends AppCompatActivity
             {"батареи центрального отопления", "Well", "Optima", "Optima Gel"},
             {"мусорные баки", "Optima", "Optima Gel"},
             {"плафоны", "Optima", "Optima Gel"},
-            {"ламинат", "Comfort", "Comfort Extra"},
-            {"паркет", "Comfort", "Comfort Extra"},
-            {"линолеум", "Comfort", "Comfort Extra"},
+            {"ламинат", "Comfort"},
+            {"паркет", "Comfort"},
+            {"линолеум", "Comfort"},
             {"ковролин", "Novatec", "Novatec Foam"},
-            {"полимерные покрытия", "Comfort", "Comfort Extra"}};
+            {"керамическая плитка", "Comfort", "Comfort Extra"},
+            {"полимерные покрытия", "Comfort", "Comfort Extra"},
+            {"удаление наклеек и скотча", "Antistik"},
+            {"плафоны", "Magic"}};
     String[][] officeObshayaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
 
     String[][] obshiyKliningOrgtehnika = {{"мониторы, телевизоры", "Twist", "Magic"},
@@ -107,17 +112,19 @@ public class activity_klining_problema extends AppCompatActivity
             {"жалюзи", "Well", "Optima", "Optima Gel"},
             {"батареи центрального отопления", "Well", "Optima", "Optima Gel"},
             {"мусорные баки", "Optima", "Optima Gel"},
-            {"плафоны", "Optima", "Optima Gel"},
+            {"плафоны", "Magic"},
             {"скотч, жев. резинка, маркер, наклейки", "Antistik"},
-            {"ламинат", "Comfort", "Comfort Extra"},
-            {"паркет", "Comfort", "Comfort Extra"},
-            {"линолеум", "Comfort", "Comfort Extra"},
+            {"ламинат", "Comfort"},
+            {"паркет", "Comfort"},
+            {"линолеум", "Comfort"},
             {"ковровые покрытия", "Novatec", "Novatec Foam"},
-            {"керамическая плитка", "Comfort", "Comfort Extra"}};
+            {"керамическая плитка", "Comfort", "Comfort Extra"},
+            {"полимерные покрытия", "Comfort", "Comfort Extra"}};
     String[][] obshiyKliningObshayaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
     String[][] obshiyKliningRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"антисептик", "Joy Sept"}};
-    String[][] obshiyKliningZapah = {{"устранение запахов", "Block", "Fog"}};
+    String[][] obshiyKliningZapah = {{"локально", "Block"},
+            {"мотодом сухого тумана", "Fog"}};
 
     String[][] remontRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"антисептик", "Joy Sept"},
@@ -136,14 +143,14 @@ public class activity_klining_problema extends AppCompatActivity
             {"ковровые покрытия", "Novatec", "Novatec Foam"},
             {"керамическая плитка", "Comfort", "Comfort Extra"}};
 
-    String[][] PromKliningNeft = {{"следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"}};
-    String[][] PromKliningNeftRuki = {{"следы от нефтепродуктов и масел на руках", "Sapo"}};
-    String[][] PromKliningPojar = {{"очистка поверхностей после пожара", "Daze"}};
-    String[][] PromKliningPol = {{"мойка полов", "Comfort", "Comfort Extra"}};
-    String[][] PromKliningStena = {{"мойка стен", "Optima", "Optima Gel"}};
-    String[][] PromKliningSteklo = {{"мойка стекол, зеркал", "Magic"}};
-    String[][] PromKliningPlesen = {{"плесень, грибок", "Fumigel"}};
-    String[][] PromKliningZapah = {{"устранение запахов", "Block", "Fog"}};
+    String[][] PromKlining = {{"следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"},
+            {"следы от нефтепродуктов и масел на руках", "Sapo"},
+            {"очистка поверхностей после пожара", "Daze"},
+            {"мойка полов", "Comfort", "Comfort Extra"},
+            {"мойка стен", "Optima", "Optima Gel"},
+            {"мойка стекол, зеркал", "Magic"},
+            {"плесень, грибок", "Fumigel"},
+            {"устранение запахов", "локально - Block", "мотодом сухого тумана - Fog"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,11 +158,12 @@ public class activity_klining_problema extends AppCompatActivity
         setContentView(R.layout.activity_klining_problema);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Рекомендованые средства");
 
         id = getIntent().getExtras().getInt("id");
         id2 = getIntent().getExtras().getInt("id2");
         tbMain = (TableLayout) findViewById(R.id.tbMain);
+        title = getIntent().getStringExtra("title");
+        setTitle(title);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -262,22 +270,8 @@ public class activity_klining_problema extends AppCompatActivity
         //endregion
 
 
-        else if (id == 5 && id2 == 0) {
-            ShowSredstva(PromKliningNeft);
-        }else if (id == 5 && id2 == 1) {
-            ShowSredstva(PromKliningNeftRuki);
-        }else if (id == 5 && id2 == 2) {
-            ShowSredstva(PromKliningPojar);
-        }else if (id == 5 && id2 == 3) {
-            ShowSredstva(PromKliningPol);
-        }else if (id == 5 && id2 == 4) {
-            ShowSredstva(PromKliningStena);
-        }else if (id == 5 && id2 == 5) {
-            ShowSredstva(PromKliningSteklo);
-        }else if (id == 5 && id2 == 6) {
-            ShowSredstva(PromKliningPlesen);
-        }else if (id == 5 && id2 == 7) {
-            ShowSredstva(PromKliningZapah);
+        else if (id == 6 && id2 == 0) {
+            ShowSredstva(PromKlining);
         }
     }
 
@@ -289,27 +283,30 @@ public class activity_klining_problema extends AppCompatActivity
 
                 if (n == 0) {
 
-                    TableRow tr = new TableRow(this);
-                    TextView tv = new TextView(this);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TextView tv = (TextView) View.inflate(this, R.layout.textviewleft, null);
+                    TextView tv2 = (TextView) View.inflate(this, R.layout.textviewrigth, null);
+                    tv.setWidth(400);
                     tv.setText(array[i][n]);
-                    tr.addView(tv);
-                    tbMain.addView(tr);
-
-                } else {
-
-                    TableRow tr = new TableRow(this);
-                    TextView tv = new TextView(this);
-                    tv.setText("");
-                    TextView tv2 = new TextView(this);
-                    tv.setTypeface(null, Typeface.BOLD);
-                    tv2.setTextColor(Color.BLACK);
-                    tv2.setText(array[i][n]);
                     tr.addView(tv);
                     tr.addView(tv2);
                     tbMain.addView(tr);
 
-                }
+                } else {
 
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TextView tv = (TextView) View.inflate(this, R.layout.textviewleft, null);
+                    TextView tv2 = (TextView) View.inflate(this, R.layout.textviewrigth, null);
+
+                    tv.setText("");
+
+                    tv2.setText(array[i][n]);
+                    tv2.setPadding(17,0,0,0);
+
+                    tr.addView(tv);
+                    tr.addView(tv2);
+                    tbMain.addView(tr);
+                }
             }
         }
     }

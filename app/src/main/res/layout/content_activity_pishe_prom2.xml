@@ -126,7 +126,8 @@
                         android:layout_marginLeft="17dp"
                         android:layout_span="4"
                         android:text="@string/tvKolichestvoPromyvokSutki"
-                        android:textColor="@color/colorGray" />
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
 
                     <EditText
                         android:id="@+id/etOperacSutki"
