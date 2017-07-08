@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -472,7 +470,7 @@ public class ActivityAuto2 extends AppCompatActivity
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
 
         LayoutInflater inflater = LayoutInflater.from(this);
-        TableRow tr = (TableRow) inflater.inflate(R.layout.table_row, null);
+        TableRow tr = (TableRow) inflater.inflate(R.layout.table_row2222, null);
         TextView tv = (TextView) tr.findViewById(R.id.col1);
         tv.setText(a);
         tv = (TextView) tr.findViewById(R.id.col2);
@@ -487,7 +485,7 @@ public class ActivityAuto2 extends AppCompatActivity
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         LayoutInflater inflater = LayoutInflater.from(this);
-        TableRow tr = (TableRow) inflater.inflate(R.layout.table_row2, null);
+        TableRow tr = (TableRow) inflater.inflate(R.layout.table_row22, null);
         TextView tv = (TextView) tr.findViewById(R.id.col1);
         tv.setText(a);
         tv = (TextView) tr.findViewById(R.id.col2);

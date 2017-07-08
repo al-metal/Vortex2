@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -25,135 +26,135 @@ public class activity_klining_problema extends AppCompatActivity
     TableLayout tbMain;
     String title;
 
-    String[][] kuhnyaPosuda = {{"для замачивания", "Marvel", "Optima Gel"},
-            {"против гари и копоти", "Daze"},
-            {"для отбеливания и дезинфекции", "Fumigel"}};
-    String[][] kuhnyaPosudaMashina = {{"для мойки", "Blank"},
-            {"для ополаскивания", "DeBlank"}};
-    String[][] kuhnyaHolodilnik = {{"внутри (при выключенном состоянии)", "Well", "Optima Gel", "Optima"},
-            {"снаружи", "Optima", "Optima Gel", "Well"}};
-    String[][] kuhnyaVytyajka = {{"обезжиривание", "Daze"},
-            {"блеск", "Twist", "Well"}};
-    String[][] kuhnyaPlita = {{"плита, гриль, духовка", "Daze"}};
-    String[][] kuhnyaPech = {{"микроволновая печь", "Daze"}};
-    String[][] kuhnyaPribory = {{"столовые приборы", "Marvel"}, {"", "Optima Gel"}};
-    String[][] kuhnyaVanna = {{"замачивание посуды", "Marvel", "Optima Gel"},
-            {"отбеливание посуды", "Fumigel"}};
-    String[][] kuhnyaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
-    String[][] kuhnyaRabStol = {{"рабочие столы и поверхности", "Optima", "Optima Gel"}};
-    String[][] kuhnyaMoyka = {{"стены, двери", "Optima Gel", "Optima", "Well"},
-            {"напольные покрытия", "Comfort", "Comfort Extra"},
-            {"окна и зеркала", "Magic"},
-            {"отбеливание мопов и полотенец", "Fumigel"},
-            {"мусорные баки", "Optima", "Optima Gel"}};
-    String[][] kuhnyaTruby = {{"устранение засоров", "Draft"}};
-    String[][] kuhnyaZapah = {{"локально", "Block"},
-            {"методом сухого тумана", "Fog"}};
-    String[][] kuhnyaRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
-            {"антисептик", "Joy Sept"}};
+    String[][] kuhnyaPosuda = {{"Для замачивания", "Marvel", "Optima Gel"},
+            {"Против гари и копоти", "Daze"},
+            {"Для отбеливания и дезинфекции", "Fumigel"}};
+    String[][] kuhnyaPosudaMashina = {{"Для мойки", "Blank"},
+            {"Для ополаскивания", "DeBlank"}};
+    String[][] kuhnyaHolodilnik = {{"Внутри (при выключенном состоянии)", "Well", "Optima Gel", "Optima"},
+            {"Снаружи", "Optima", "Optima Gel", "Well"}};
+    String[][] kuhnyaVytyajka = {{"Обезжиривание", "Daze"},
+            {"Блеск", "Twist", "Well"}};
+    String[][] kuhnyaPlita = {{"Плита, гриль, духовка", "Daze"}};
+    String[][] kuhnyaPech = {{"Микроволновая печь", "Daze"}};
+    String[][] kuhnyaPribory = {{"Столовые приборы", "Marvel"}, {"", "Optima Gel"}};
+    String[][] kuhnyaVanna = {{"Замачивание посуды", "Marvel", "Optima Gel"},
+            {"Отбеливание посуды", "Fumigel"}};
+    String[][] kuhnyaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
+    String[][] kuhnyaRabStol = {{"Рабочие столы и поверхности", "Optima", "Optima Gel"}};
+    String[][] kuhnyaMoyka = {{"Стены, двери", "Optima Gel", "Optima", "Well"},
+            {"Напольные покрытия", "Comfort", "Comfort Extra"},
+            {"Окна и зеркала", "Magic"},
+            {"Отбеливание мопов и полотенец", "Fumigel"},
+            {"Мусорные баки", "Optima", "Optima Gel"}};
+    String[][] kuhnyaTruby = {{"Устранение засоров", "Draft"}};
+    String[][] kuhnyaZapah = {{"Локально", "Block"},
+            {"Методом сухого тумана", "Fog"}};
+    String[][] kuhnyaRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"Антисептик", "Joy Sept"}};
 
 
 
-    String[][] sanuselUnitaz = {{"ржавчина", "Breeze", "Destroy"},
-            {"мочевой, водный камень", "Breeze", "Destroy"},
-            {"известковый налет", "Breeze", "Destroy"},
-            {"плесень, грибок", "Fumigel"},
-            {"потожировые загрязнения", "Breeze", "Fumigel"},
-            {"органика, микробы", "Fumigel"},
-            {"дезинфекция", "Fumigel"}};
+    String[][] sanuselUnitaz = {{"Ржавчина", "Breeze", "Destroy"},
+            {"Мочевой, водный камень", "Breeze", "Destroy"},
+            {"Известковый налет", "Breeze", "Destroy"},
+            {"Плесень, грибок", "Fumigel"},
+            {"Потожировые загрязнения", "Breeze", "Fumigel"},
+            {"Органика, микробы", "Fumigel"},
+            {"Дезинфекция", "Fumigel"}};
 
-    String[][] sanuselVanna = {{"потожировые и мыльные загрязнения", "Breeze", "Fumigel"},
-            {"известковый налет", "Breeze"},
-            {"ржавые подтеки", "Breeze"},
-            {"отбеливание и дезинфекция", "Fumigel"},
-            {"замачивание посуды", "Marvel", "Optima Gel"},
-            {"отбеливание посуды", "Fumigel"},
-            {"очистка швов кафеля", "Fumigel"}};
-    String[][] sanuselOkna = {{"окна, стекла, зеркала", "Magic"}};
-    String[][] sanuselMoyka = {{"стены, двери", "Optima", "Optima Gel"},
-            {"напольные покрытия", "Comfort", "Comfort Extra"},
-            {"мусорные баки", "Optima", "Optima Gel"},
-            {"плафоны", "Optima", "Optima Gel", "Magic"}};
-    String[][] sanuselTruby = {{"устранение засоров", "Draft"}};
-    String[][] sanuselZapah = {{"устранение запахов", "Block"}};
-    String[][] sanuselRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
-            {"антисептик", "Joy Sept"}};
+    String[][] sanuselVanna = {{"Потожировые и мыльные загрязнения", "Breeze", "Fumigel"},
+            {"Известковый налет", "Breeze"},
+            {"Ржавые подтеки", "Breeze"},
+            {"Отбеливание и дезинфекция", "Fumigel"},
+            {"Замачивание посуды", "Marvel", "Optima Gel"},
+            {"Отбеливание посуды", "Fumigel"},
+            {"Очистка швов кафеля", "Fumigel"}};
+    String[][] sanuselOkna = {{"Окна, стекла, зеркала", "Magic"}};
+    String[][] sanuselMoyka = {{"Стены, двери", "Optima", "Optima Gel"},
+            {"Напольные покрытия", "Comfort", "Comfort Extra"},
+            {"Мусорные баки", "Optima", "Optima Gel"},
+            {"Плафоны", "Optima", "Optima Gel", "Magic"}};
+    String[][] sanuselTruby = {{"Устранение засоров", "Draft"}};
+    String[][] sanuselZapah = {{"Устранение запахов", "Block"}};
+    String[][] sanuselRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"Антисептик", "Joy Sept"}};
 
-    String[][] officeOrgtehnika = {{"мониторы, телевизоры", "Twist", "Magic"},
-            {"телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
-            {"факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
-    String[][] officeMebelMygkaya = {{"кожаная обивка", "Kraft"},
-            {"текстильная обивка", "Well"}};
-    String[][] officeMebelTverdaya = {{"чистка", "Well"},
-            {"полировка", "Twist"}};
-    String[][] officeOkna = {{"окна, стекла, зеркала", "Magic"}};
-    String[][] officeMoyka = {{"стены, двери", "Optima", "Optima Gel"},
-            {"жалюзи", "Well", "Optima", "Optima Gel"},
-            {"батареи центрального отопления", "Well", "Optima", "Optima Gel"},
-            {"мусорные баки", "Optima", "Optima Gel"},
-            {"плафоны", "Optima", "Optima Gel"},
-            {"удаление наклеек и скотча", "Antistik"},
-            {"плафоны", "Magic"}};
-    String[][] officeObshayaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
-    String[][] officePol = {{"ламинат", "Comfort"},
-            {"паркет", "Comfort"},
-            {"линолеум", "Comfort"},
-            {"ковролин", "Novatec", "Novatec Foam"},
-            {"керамическая плитка", "Comfort", "Comfort Extra"},
-            {"полимерные покрытия", "Comfort", "Comfort Extra"}};
+    String[][] officeOrgtehnika = {{"Мониторы, телевизоры", "Twist", "Magic"},
+            {"Телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
+            {"Факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
+    String[][] officeMebelMygkaya = {{"Кожаная обивка", "Kraft"},
+            {"Текстильная обивка", "Well"}};
+    String[][] officeMebelTverdaya = {{"Чистка", "Well"},
+            {"Полировка", "Twist"}};
+    String[][] officeOkna = {{"Окна, стекла, зеркала", "Magic"}};
+    String[][] officeMoyka = {{"Стены, двери", "Optima", "Optima Gel"},
+            {"Жалюзи", "Well", "Optima", "Optima Gel"},
+            {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
+            {"Мусорные баки", "Optima", "Optima Gel"},
+            {"Плафоны", "Optima", "Optima Gel"},
+            {"Удаление наклеек и скотча", "Antistik"},
+            {"Плафоны", "Magic"}};
+    String[][] officeObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
+    String[][] officePol = {{"Ламинат", "Comfort"},
+            {"Раркет", "Comfort"},
+            {"Линолеум", "Comfort"},
+            {"Ковролин", "Novatec", "Novatec Foam"},
+            {"Керамическая плитка", "Comfort", "Comfort Extra"},
+            {"Полимерные покрытия", "Comfort", "Comfort Extra"}};
 
 
-    String[][] obshiyKliningOrgtehnika = {{"мониторы, телевизоры", "Twist", "Magic"},
-            {"телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
-            {"факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
-    String[][] obshiyKliningMyagkayaMebel = {{"кожаная обивка", "Kraft"},
-            {"текстильная обивка", "Well"}};
-    String[][] obshiyKliningDerevoMebel = {{"чистка", "Well"},
-            {"полировка", "Twist"}};
-    String[][] obshiyKliningOkna = {{"окна, стекла, зеркала", "Magic"}};
-    String[][] obshiyKliningMoyka = {{"стены, двери", "Optima", "Optima Gel"},
-            {"жалюзи", "Well", "Optima", "Optima Gel"},
-            {"батареи центрального отопления", "Well", "Optima", "Optima Gel"},
-            {"мусорные баки", "Optima", "Optima Gel"},
-            {"плафоны", "Magic"},
-            {"скотч, жев. резинка, маркер, наклейки", "Antistik"}};
-    String[][] obshiyKliningObshayaDezinfekciya = {{"общая дезинфекция", "Fumigel"}};
-    String[][] obshiyKliningRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
-            {"антисептик", "Joy Sept"}};
-    String[][] obshiyKliningZapah = {{"локально", "Block"},
-            {"методом сухого тумана", "Fog"}};
-    String[][] obshiyKliningPol = {{"ламинат", "Comfort"},
-            {"паркет", "Comfort"},
-            {"линолеум", "Comfort"},
-            {"ковролин", "Novatec", "Novatec Foam"},
-            {"керамическая плитка", "Comfort", "Comfort Extra"},
-            {"полимерные покрытия", "Comfort", "Comfort Extra"}};
+    String[][] obshiyKliningOrgtehnika = {{"Мониторы, телевизоры", "Twist", "Magic"},
+            {"Телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
+            {"Факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
+    String[][] obshiyKliningMyagkayaMebel = {{"Кожаная обивка", "Kraft"},
+            {"Текстильная обивка", "Well"}};
+    String[][] obshiyKliningDerevoMebel = {{"Чистка", "Well"},
+            {"Полировка", "Twist"}};
+    String[][] obshiyKliningOkna = {{"Окна, стекла, зеркала", "Magic"}};
+    String[][] obshiyKliningMoyka = {{"Стены, двери", "Optima", "Optima Gel"},
+            {"Жалюзи", "Well", "Optima", "Optima Gel"},
+            {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
+            {"Мусорные баки", "Optima", "Optima Gel"},
+            {"Плафоны", "Magic"},
+            {"Скотч, жев. резинка, маркер, наклейки", "Antistik"}};
+    String[][] obshiyKliningObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
+    String[][] obshiyKliningRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"Антисептик", "Joy Sept"}};
+    String[][] obshiyKliningZapah = {{"Локально", "Block"},
+            {"Методом сухого тумана", "Fog"}};
+    String[][] obshiyKliningPol = {{"Ламинат", "Comfort"},
+            {"Паркет", "Comfort"},
+            {"Линолеум", "Comfort"},
+            {"Ковролин", "Novatec", "Novatec Foam"},
+            {"Керамическая плитка", "Comfort", "Comfort Extra"},
+            {"Полимерные покрытия", "Comfort", "Comfort Extra"}};
 
-    String[][] remontRuki = {{"жидкое мыло", "Joy", "Joy Platinum", "Fay"},
-            {"антисептик", "Joy Sept"},
-            {"очищающая паста", "Sapo"}};
-    String[][] remontOkna = {{"окна, стекла, зеркала", "Magic"}};
-    String[][] remontMoyka = {{"цемент, затирка, клей, шпаклевка, побелка", "Destroy"},
-            {"высолы", "Destroy"},
-            {"сажа, копоть на фасадах", "Daze", "Fortis"},
-            {"сажа, копоть на брусчатке", "Daze", "Fortis"},
-            {"водный камень", "Breeze", "Destroy"},
-            {"удаление следов скотча, наклеек, маркеров", "Antistik"},
-            {"стены, двери", "Optima", "Optima Gel"}};
-    String[][] remontPol = {{"ламинат", "Comfort", "Comfort Extra"},
-            {"паркет", "Comfort", "Comfort Extra"},
-            {"линолеум", "Comfort", "Comfort Extra"},
-            {"ковровые покрытия", "Novatec", "Novatec Foam"},
-            {"керамическая плитка", "Comfort", "Comfort Extra"}};
+    String[][] remontRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"Антисептик", "Joy Sept"},
+            {"Очищающая паста", "Sapo"}};
+    String[][] remontOkna = {{"Окна, стекла, зеркала", "Magic"}};
+    String[][] remontMoyka = {{"Цемент, затирка, клей, шпаклевка, побелка", "Destroy"},
+            {"Высолы", "Destroy"},
+            {"Сажа, копоть на фасадах", "Daze", "Fortis"},
+            {"Сажа, копоть на брусчатке", "Daze", "Fortis"},
+            {"Водный камень", "Breeze", "Destroy"},
+            {"Удаление следов скотча, наклеек, маркеров", "Antistik"},
+            {"Стены, двери", "Optima", "Optima Gel"}};
+    String[][] remontPol = {{"Ламинат", "Comfort", "Comfort Extra"},
+            {"Паркет", "Comfort", "Comfort Extra"},
+            {"Линолеум", "Comfort", "Comfort Extra"},
+            {"Ковровые покрытия", "Novatec", "Novatec Foam"},
+            {"Керамическая плитка", "Comfort", "Comfort Extra"}};
 
-    String[][] PromKlining = {{"следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"},
-            {"следы от нефтепродуктов и масел на руках", "Sapo"},
-            {"очистка поверхностей после пожара", "Daze"},
-            {"мойка полов", "Comfort", "Comfort Extra"},
-            {"мойка стен", "Optima", "Optima Gel"},
-            {"мойка стекол, зеркал", "Magic"},
-            {"плесень, грибок", "Fumigel"},
-            {"устранение запахов", "локально - Block", "методом сухого тумана - Fog"}};
+    String[][] PromKlining = {{"Следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"},
+            {"Следы от нефтепродуктов и масел на руках", "Sapo"},
+            {"Очистка поверхностей после пожара", "Daze"},
+            {"Мойка полов", "Comfort", "Comfort Extra"},
+            {"Мойка стен", "Optima", "Optima Gel"},
+            {"Мойка стекол, зеркал", "Magic"},
+            {"Плесень, грибок", "Fumigel"},
+            {"Устранение запахов", "локально - Block", "методом сухого тумана - Fog"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -291,32 +292,25 @@ public class activity_klining_problema extends AppCompatActivity
 
             int count2 = array[i].length;
             for (int n = 0; count2 > n; n++) {
-                TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                //TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+
                 if (n == 0) {
-                    TextView tv = (TextView) View.inflate(this, R.layout.textviewleft, null);
-                    TextView tv2 = (TextView) View.inflate(this, R.layout.textviewrigth, null);
-                    tv.setWidth(400);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TextView tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText(array[i][n]);
                     n++;
-                    tv2.setText(array[i][n]);
-
-                    tr.addView(tv);
-                    tr.addView(tv2);
+                    tv = (TextView) tr.findViewById(R.id.col2);
+                    tv.setTextColor(Color.parseColor("#000000"));
+                    tv.setText(array[i][n]);
                     tbMain.addView(tr);
 
                 } else {
-
-
-                    TextView tv = (TextView) View.inflate(this, R.layout.textviewleft, null);
-                    TextView tv2 = (TextView) View.inflate(this, R.layout.textviewrigth, null);
-
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TextView tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText("");
-
-                    tv2.setText(array[i][n]);
-                    tv2.setPadding(17,0,0,0);
-
-                    tr.addView(tv);
-                    tr.addView(tv2);
+                    tv = (TextView) tr.findViewById(R.id.col2);
+                    tv.setTextColor(Color.parseColor("#000000"));
+                    tv.setText(array[i][n]);
                     tbMain.addView(tr);
                 }
             }

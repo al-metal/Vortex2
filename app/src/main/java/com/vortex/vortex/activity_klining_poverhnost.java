@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -90,16 +91,21 @@ public class activity_klining_poverhnost extends AppCompatActivity
         array = kuhnya;
         length = kuhnya.length;
         for (int i = 0; length > i; i++) {
-            TextView tv = (TextView) View.inflate(this, R.layout.textviewrigth, null);
-            //tv = (TextView)getResources().getLayout(R.layout.textview_powerhnost);
+            TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+            TextView tv = (TextView) tr.findViewById(R.id.col1);
+            tv.setTextColor(Color.parseColor("#000000"));
             tv.setText(kuhnya[i].toString());
-
             tv.setId(i);
+            //tv.setPadding(18,18,0,0);
+            tv.setOnClickListener(oclBtnCancel);
 
+            /*TextView tv = (TextView) View.inflate(this, R.layout.textviewrigth, null);
+            tv.setText(kuhnya[i].toString());
+            tv.setId(i);
             tv.setTextColor(Color.BLACK);
             tv.setPadding(18,18,0,0);
-            tv.setOnClickListener(oclBtnCancel);
-            llmain.addView(tv);
+            tv.setOnClickListener(oclBtnCancel);*/
+            llmain.addView(tr);
         }
     }
 
