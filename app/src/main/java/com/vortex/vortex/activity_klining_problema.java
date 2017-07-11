@@ -92,12 +92,11 @@ public class activity_klining_problema extends AppCompatActivity
             {"Жалюзи", "Well", "Optima", "Optima Gel"},
             {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
             {"Мусорные баки", "Optima", "Optima Gel"},
-            {"Плафоны", "Optima", "Optima Gel"},
-            {"Удаление наклеек и скотча", "Antistik"},
-            {"Плафоны", "Magic"}};
+            {"Плафоны", "Optima", "Optima Gel", "Magic"},
+            {"Удаление наклеек и скотча", "Antistik"}};
     String[][] officeObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
     String[][] officePol = {{"Ламинат", "Comfort"},
-            {"Раркет", "Comfort"},
+            {"Паркет", "Comfort"},
             {"Линолеум", "Comfort"},
             {"Ковролин", "Novatec", "Novatec Foam"},
             {"Керамическая плитка", "Comfort", "Comfort Extra"},
@@ -141,20 +140,12 @@ public class activity_klining_problema extends AppCompatActivity
             {"Водный камень", "Breeze", "Destroy"},
             {"Удаление следов скотча, наклеек, маркеров", "Antistik"},
             {"Стены, двери", "Optima", "Optima Gel"}};
-    String[][] remontPol = {{"Ламинат", "Comfort", "Comfort Extra"},
-            {"Паркет", "Comfort", "Comfort Extra"},
-            {"Линолеум", "Comfort", "Comfort Extra"},
-            {"Ковровые покрытия", "Novatec", "Novatec Foam"},
-            {"Керамическая плитка", "Comfort", "Comfort Extra"}};
-
-    String[][] PromKlining = {{"Следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"},
-            {"Следы от нефтепродуктов и масел на руках", "Sapo"},
-            {"Очистка поверхностей после пожара", "Daze"},
-            {"Мойка полов", "Comfort", "Comfort Extra"},
-            {"Мойка стен", "Optima", "Optima Gel"},
-            {"Мойка стекол, зеркал", "Magic"},
-            {"Плесень, грибок", "Fumigel"},
-            {"Устранение запахов", "локально - Block", "методом сухого тумана - Fog"}};
+    String[][] remontPol = {{"Ламинат", "Comfort"},
+            {"Паркет", "Comfort"},
+            {"Линолеум", "Comfort"},
+            {"Ковролин", "Novatec", "Novatec Foam"},
+            {"Керамическая плитка", "Comfort", "Comfort Extra"},
+            {"Полимерные покрытия", "Comfort", "Comfort Extra"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -278,11 +269,6 @@ public class activity_klining_problema extends AppCompatActivity
             ShowSredstva(remontPol);
         }
         //endregion
-
-
-        else if (id == 6 && id2 == 0) {
-            ShowSredstva(PromKlining);
-        }
     }
 
     private void ShowSredstva(String[][] array) {
@@ -292,7 +278,6 @@ public class activity_klining_problema extends AppCompatActivity
 
             int count2 = array[i].length;
             for (int n = 0; count2 > n; n++) {
-                //TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
 
                 if (n == 0) {
                     TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);

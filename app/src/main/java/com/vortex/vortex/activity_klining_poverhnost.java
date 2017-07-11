@@ -39,7 +39,14 @@ public class activity_klining_poverhnost extends AppCompatActivity
     String[] obshiyKlining = {"ОРГТЕХНИКА", "МЯГКАЯ МЕБЕЛЬ", "ДЕРЕВЯННАЯ МЕБЕЛЬ", "ОКНА, СТЕКЛА, ЗЕРКАЛА", "МОЙКА И ЧИСТКА", "ОБЩАЯ ДЕЗИНФЕКЦИЯ", "ГИГИЕНА РУК",
             "УСТРАНЕНИЕ ЗАПАХОВ", "НАПОЛЬНЫЕ ПОКРЫТИЯ"};
     String[] remont = {"ГИГИЕНА РУК", "ОКНА, СТЕКЛА, ЗЕРКАЛА", "МОЙКА И ЧИСТКА", "НАПОЛЬНЫЕ ПОКРЫТИЯ"};
-    String[] promKlining = {"ПРОМЫШЛЕННЫЙ КЛИНИНГ"};
+    String[][] PromKlining = {{"Следы от нефтепродуктов, жировых и масляных загрязнений на оборудовании, полах и стенах", "Fortis"},
+            {"Следы от нефтепродуктов и масел на руках", "Sapo"},
+            {"Очистка поверхностей после пожара", "Daze"},
+            {"Мойка полов", "Comfort", "Comfort Extra"},
+            {"Мойка стен", "Optima", "Optima Gel"},
+            {"Мойка стекол, зеркал", "Magic"},
+            {"Плесень, грибок", "Fumigel"},
+            {"Устранение запахов", "локально - Block", "методом сухого тумана - Fog"}};
 
 
     @Override
@@ -83,7 +90,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
         }else if (id == 5) {
             CreateViews(remont);
         }else if (id == 6) {
-            CreateViews(promKlining);
+            ShowSredstva(PromKlining);
         }
     }
 
@@ -96,16 +103,40 @@ public class activity_klining_poverhnost extends AppCompatActivity
             tv.setTextColor(Color.parseColor("#000000"));
             tv.setText(kuhnya[i].toString());
             tv.setId(i);
-            //tv.setPadding(18,18,0,0);
             tv.setOnClickListener(oclBtnCancel);
 
-            /*TextView tv = (TextView) View.inflate(this, R.layout.textviewrigth, null);
-            tv.setText(kuhnya[i].toString());
-            tv.setId(i);
-            tv.setTextColor(Color.BLACK);
-            tv.setPadding(18,18,0,0);
-            tv.setOnClickListener(oclBtnCancel);*/
             llmain.addView(tr);
+        }
+    }
+
+    private void ShowSredstva(String[][] array) {
+        int count = array.length;
+
+        for (int i = 0; count > i; i++) {
+
+            int count2 = array[i].length;
+            for (int n = 0; count2 > n; n++) {
+
+                if (n == 0) {
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TextView tv = (TextView) tr.findViewById(R.id.col1);
+                    tv.setText(array[i][n]);
+                    n++;
+                    tv = (TextView) tr.findViewById(R.id.col2);
+                    tv.setTextColor(Color.parseColor("#000000"));
+                    tv.setText(array[i][n]);
+                    tl.addView(tr);
+
+                } else {
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TextView tv = (TextView) tr.findViewById(R.id.col1);
+                    tv.setText("");
+                    tv = (TextView) tr.findViewById(R.id.col2);
+                    tv.setTextColor(Color.parseColor("#000000"));
+                    tv.setText(array[i][n]);
+                    tl.addView(tr);
+                }
+            }
         }
     }
 
