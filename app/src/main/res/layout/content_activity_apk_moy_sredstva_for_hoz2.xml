@@ -383,13 +383,14 @@
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/tvPriceKislot"
+                        android:id="@+id/tvPriceSheloch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="0"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
+
                 </TableRow>
 
                 <TableRow
@@ -406,13 +407,14 @@
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/tvPriceSheloch"
+                        android:id="@+id/tvPriceKislot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="0"
                         android:textColor="@android:color/black"
                         android:textSize="11sp" />
+
                 </TableRow>
 
                 <TableRow

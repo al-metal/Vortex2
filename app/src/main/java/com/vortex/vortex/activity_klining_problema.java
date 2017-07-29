@@ -52,6 +52,7 @@ public class activity_klining_problema extends AppCompatActivity
             {"Методом сухого тумана", "Fog"}};
     String[][] kuhnyaRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"Антисептик", "Joy Sept"}};
+    String[][] kuhnyaJiro = {{"Для жироуловителей и жироотделителей", "Tank Bio"}};
 
 
 
@@ -79,6 +80,9 @@ public class activity_klining_problema extends AppCompatActivity
     String[][] sanuselZapah = {{"Устранение запахов", "Block"}};
     String[][] sanuselRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"Антисептик", "Joy Sept"}};
+    String[][] sanuselBanya = {{"Для очистки поверхностей", "Sauna"}};
+    String[][] sanuselBIOTualet = {{"Для биотуалета", "Latrin"},
+            {"Для септика", "Latrin Bio"}};
 
     String[][] officeOrgtehnika = {{"Мониторы, телевизоры", "Twist", "Magic"},
             {"Телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
@@ -197,6 +201,8 @@ public class activity_klining_problema extends AppCompatActivity
             ShowSredstva(kuhnyaZapah);
         }else if (id == 1 && id2 == 13) {
             ShowSredstva(kuhnyaRuki);
+        }else if (id == 1 && id2 == 14) {
+            ShowSredstva(kuhnyaJiro);
         }
 //endregion
 
@@ -215,6 +221,10 @@ public class activity_klining_problema extends AppCompatActivity
             ShowSredstva(sanuselZapah);
         }else if (id == 2 && id2 == 6) {
             ShowSredstva(sanuselRuki);
+        }else if (id == 2 && id2 == 7) {
+            ShowSredstva(sanuselBanya);
+        }else if (id == 2 && id2 == 8) {
+            ShowSredstva(sanuselBIOTualet);
         }
         //endregion
 
