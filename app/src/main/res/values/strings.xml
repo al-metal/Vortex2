@@ -274,6 +274,7 @@
     <string name="tvObshKlining">общий клининг</string>
     <string name="tvRemont">Ремонт и послестрой</string>
     <string name="tvPromKlining">Промышленны клининг</string>
+    <string name="title_activity_spravochnik">Spravochnik</string>
 
 
 </resources>

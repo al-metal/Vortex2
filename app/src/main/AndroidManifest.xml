@@ -203,6 +203,10 @@
         <activity
             android:name=".activity_klining_problema"
             android:label="@string/title_activity_klining_problema"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Spravochnik"
+            android:label="@string/title_activity_spravochnik"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
