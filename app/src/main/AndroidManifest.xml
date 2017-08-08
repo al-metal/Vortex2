@@ -205,8 +205,12 @@
             android:label="@string/title_activity_klining_problema"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Spravochnik"
-            android:label="@string/title_activity_spravochnik"
+            android:name=".activity_spravka"
+            android:label="@string/title_activity_spravka"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity_spravka_sredstvo"
+            android:label="@string/title_activity_spravka_sredstvo"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

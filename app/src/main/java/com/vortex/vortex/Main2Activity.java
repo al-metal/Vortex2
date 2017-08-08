@@ -58,6 +58,7 @@ public class Main2Activity extends AppCompatActivity
         //Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
     }
 
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -92,6 +93,9 @@ public class Main2Activity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
             Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_spravochnik){
+            Intent intent = new Intent(Main2Activity.this, activity_spravka.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
