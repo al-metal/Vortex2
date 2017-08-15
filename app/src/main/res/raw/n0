@@ -1,27 +1,19 @@
-<html> 
-     <head> 
-          <title> 
-               Пример 1 
-          </title>
-     </head> 
-     <body> 
-          <H1> 
-               Привет! 
-          </H1> 
-          <P> 
-               Это простейший пример HTML-документа. 
-          </P> 
-          <P> 
-               Этот *.html-файл может быть 
-			   одновременно открыт и в Notepad, и в Netscape. 
-			   Сохранив изменения в Notepad, просто нажмите
-			    кнопку Reload ('перезагрузить') в Netscape,
-				 чтобы увидеть эти изменения реализованными 
-				 в HTML-документе. 
-          </P>
-          <p>
-          <img src="file:///android_res/raw/ic_launcher.png">
+<html>
+<head>
+</head>
+<style>
+   .leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+  </style>
+<body>
+    <H1 align="center">
+        TANK BIO
+    </H1>
+    <P>
+        <img height="150dp" src="file:///android_res/raw/ca_23.jpg" class="leftimg"> Промышленный биодеструктор пищевых жиров
+    </P>
+</body>
 
-          </p>
-     </body> 
 </html>
