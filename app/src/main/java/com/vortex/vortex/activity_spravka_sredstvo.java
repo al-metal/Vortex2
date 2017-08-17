@@ -1,25 +1,61 @@
 package com.vortex.vortex;
 
-import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import android.widget.Toast;
 
 public class activity_spravka_sredstvo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    String name;
+    String[] descriptions = {
+            "Промышленный биодеструктор пищевых жиров",
+            "Кислотное беспенное моющее средство на основе ортофосфорной кислоты",
+            "Кислотное беспенное моющее средство",
+            "Надуксусная кислота Марка НУК15",
+            "Высокощелочное беспенное моющее средств",
+            "Высокощелочное беспенное моющее средство",
+            "Высокощелочное беспенное моющее средство с активным хлором",
+            "Кислотное высокопенное моющее средство",
+            "Высокощелочное пенное моющее средство",
+            "Высокощелочное пенное моющее средство",
+            "Высокощелочное пенное моющее средство",
+            "Щелочное пенное дезинфицирующее моющее средство для цветных металлов с активным хлором",
+            "Щелочное пенное моющее средство с активным хлором",
+            "Щелочное высокопенное моющее средство на основе четвертичных аммониевых соединений (ЧАС)",
+            "Нейтральное концентрированное пенное средство для ручной мойки твердых поверхностей",
+            "Щелочное низкопенное моющее средство с активным хлором",
+            "Щелочное низкопенное моющее средство на основе четвертичных аммониевых соединений (ЧАС)"
+    };
+
+    String[] images = {
+            "tank_bio_60.jpg",
+            "ca_23.jpg",
+            "ca_27.jpg",
+            "cad_1415_3_20.jpg",
+            "cb_23.jpg",
+            "cb_46.jpg",
+            "cbd_2401_1.jpg",
+            "fa_18.jpg",
+            "fb_17.jpg",
+            "fb_36.jpg",
+            "fb_48.jpg",
+            "fbd_0402_1.jpg",
+            "fbd_0803_1.jpg",
+            "fbd_0902_2.jpg",
+            "fn.jpg",
+            "lbd_0107_1.jpg",
+            "lbd_1002_2.jpg"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,42 +67,23 @@ public class activity_spravka_sredstvo extends AppCompatActivity
 
         Intent intent = getIntent();
         //получаем строку и формируем имя ресурса
-        String resName = "n" + intent.getIntExtra("head", 0);
-        //Log.i("name", resName);
-        Context context = getBaseContext(); //получаем контекст
+        String resName = "" + intent.getIntExtra("head", 0);
+        name = intent.getStringExtra("headName");
 
-        //читаем текстовый файл из ресурсов по имени
-        String text = readRawTextFile(context, getResources().getIdentifier(resName, "raw", "com.vortex.vortex"));
+        setTitle(name);
 
-        webView.loadDataWithBaseURL(null, text, "text/html", "en_US", null);
+        int resId = Integer.parseInt(resName);
+        String img = String.valueOf(images[resId]);
+        String desc = String.valueOf(descriptions[resId]);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+        String str = "<html><head></head><style>.leftimg {float:left; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name +"</H1><P><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg\"> " + desc + "</P></body></html>";
+
+        webView.loadDataWithBaseURL(null, str, "text/html", "en_US", null);
+
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
-
-    private String readRawTextFile(Context context, int resId) {
-        InputStream inputStream = context.getResources().openRawResource(resId);
-
-        InputStreamReader inputReader = new InputStreamReader(inputStream);
-        BufferedReader buffReader = new BufferedReader(inputReader);
-        String line;
-        StringBuilder builder = new StringBuilder();
-
-        try {
-            while (( line = buffReader.readLine()) != null) {
-                builder.append(line);
-                builder.append("\n");
-            }
-        } catch (IOException e) {
-            return null;
-        }
-        return builder.toString();
     }
 
     @Override
@@ -82,23 +99,8 @@ public class activity_spravka_sredstvo extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_spravka_sredstvo, menu);
+        getMenuInflater().inflate(R.menu.main2, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -108,21 +110,29 @@ public class activity_spravka_sredstvo extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent intent = new Intent(activity_spravka_sredstvo.this, ApkActivity2.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-
+            Intent intent = new Intent(activity_spravka_sredstvo.this, ActivityPisheProm2.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intent = new Intent(activity_spravka_sredstvo.this, ActivityAutoVybor2.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_spravochnik){
+            Intent intent = new Intent(activity_spravka_sredstvo.this, activity_spravka.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onClickWebSite(View view) {
+        Uri uri = Uri.parse("http://www.pk-vortex.ru"); // missing 'http://' will cause crashed
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }

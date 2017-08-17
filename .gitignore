@@ -12,3 +12,4 @@ app/src/main/res/drawable*
 app/app-release.apk
 *.png
 app/src/main/res/mipmap-hdpi/ic_launcher.png
+app/src/main/res/raw/*

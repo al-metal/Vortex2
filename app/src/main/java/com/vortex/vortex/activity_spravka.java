@@ -20,8 +20,24 @@ import android.widget.Toast;
 public class activity_spravka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String[] names = { "Марья", "Петр", "Антон", "Даша", "Борис",
-            "Костя", "Игорь", "Анна", "Денис", "Андрей" };
+    String[] names = {
+            "TANK BIO",
+            "TANK CA23",
+            "TANK CA27",
+            "Tank CAD 1415/3",
+            "TANK CB23",
+            "TANK CB46",
+            "TANK CBD 2401/1",
+            "TANK FA18",
+            "TANK FB17",
+            "TANK FB36",
+            "TANK FB48",
+            "Tank FBD 0402/1",
+            "ТANK FBD 0803/1",
+            "TANK FBD 0902/2",
+            "Tank FN",
+            "Tank LBD 0107/1",
+            "TANK LBD 1002/2"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +45,7 @@ public class activity_spravka extends AppCompatActivity
         setContentView(R.layout.activity_spravka);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Test spravka");
+        setTitle("Справочник");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -57,6 +73,8 @@ public class activity_spravka extends AppCompatActivity
                 intent.setClass(activity_spravka.this, activity_spravka_sredstvo.class);
 
                 intent.putExtra("head", position);
+                intent.putExtra("headName", names[position]);
+                //intent.putExtra("position", position);
 
                 //запускаем вторую активность
                 startActivity(intent);
