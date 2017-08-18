@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,11 +19,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class activity_spravka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private final String TAG = getClass().getSimpleName();
     String[] names = {
             "TANK BIO",
             "TANK CA23",
@@ -77,11 +79,14 @@ public class activity_spravka extends AppCompatActivity
         //Обрабатываем щелчки на элементах ListView:
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                String nameProduct = ((TextView) v).getText().toString();
+                position = ReturnId(nameProduct);
                 Intent intent = new Intent();
                 intent.setClass(activity_spravka.this, activity_spravka_sredstvo.class);
-
+                Log.i(TAG, names[position]);
                 intent.putExtra("head", position);
                 intent.putExtra("headName", names[position]);
+
                 //intent.putExtra("position", position);
 
                 //запускаем вторую активность
@@ -109,6 +114,19 @@ public class activity_spravka extends AppCompatActivity
                 // TODO Auto-generated method stub
             }
         });
+    }
+
+    private int ReturnId(String nameProduct) {
+        int id = 0;
+
+        for(int i = 0; names.length > i; i++){
+            if(names[i].equals(nameProduct)){
+                id = i;
+                break;
+            }
+        }
+
+        return id;
     }
 
     @Override
