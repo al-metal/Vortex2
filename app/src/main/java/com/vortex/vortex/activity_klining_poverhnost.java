@@ -17,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class activity_klining_poverhnost extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -236,7 +235,11 @@ public class activity_klining_poverhnost extends AppCompatActivity
             Intent intent = new Intent(activity_klining_poverhnost.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_spravochnik){
+            Intent intent = new Intent(activity_klining_poverhnost.this, activity_spravka.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

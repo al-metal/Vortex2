@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -173,7 +171,11 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2 extends AppCo
             Intent intent = new Intent(ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2.this, activity_klining.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_spravochnik){
+            Intent intent = new Intent(ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2.this, activity_spravka.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

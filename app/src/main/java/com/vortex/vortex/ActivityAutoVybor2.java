@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 public class ActivityAutoVybor2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -71,7 +70,11 @@ public class ActivityAutoVybor2 extends AppCompatActivity
             Intent intent = new Intent(ActivityAutoVybor2.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ActivityAutoVybor2.this, activity_klining.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_spravochnik){
+            Intent intent = new Intent(ActivityAutoVybor2.this, activity_spravka.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

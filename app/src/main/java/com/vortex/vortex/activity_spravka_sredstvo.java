@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.Toast;
 
 public class activity_spravka_sredstvo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -226,7 +225,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "antistick.jpg",
             "blank_1.jpg",
             "block_apelsin.jpg",
-            "breez_0.5.jpg",
+            "breez_05.jpg",
             "comfort_1.jpg",
             "comfort_extra_1.jpg",
             "daze.jpg",
@@ -250,8 +249,8 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "optima.jpg",
             "optima_gel.jpg",
             "sauna.jpg",
-            "twist_0.5.jpg",
-            "well_0.5.jpg"
+            "twist_05.jpg",
+            "well_05.jpg"
     };
 
     @Override
@@ -316,7 +315,8 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             Intent intent = new Intent(activity_spravka_sredstvo.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(activity_spravka_sredstvo.this, activity_klining.class);
+            startActivity(intent);
         }else if (id == R.id.nav_spravochnik){
             Intent intent = new Intent(activity_spravka_sredstvo.this, activity_spravka.class);
             startActivity(intent);

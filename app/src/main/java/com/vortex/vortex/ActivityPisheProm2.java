@@ -197,7 +197,11 @@ public class ActivityPisheProm2 extends AppCompatActivity
             Intent intent = new Intent(ActivityPisheProm2.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ActivityPisheProm2.this, activity_klining.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_spravochnik){
+            Intent intent = new Intent(ActivityPisheProm2.this, activity_spravka.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

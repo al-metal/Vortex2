@@ -20,7 +20,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class activity_spravka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -261,7 +260,8 @@ public class activity_spravka extends AppCompatActivity
             Intent intent = new Intent(activity_spravka.this, ActivityAutoVybor2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(activity_spravka.this, activity_klining.class);
+            startActivity(intent);
         }else if (id == R.id.nav_spravochnik){
             Intent intent = new Intent(activity_spravka.this, activity_spravka.class);
             startActivity(intent);
