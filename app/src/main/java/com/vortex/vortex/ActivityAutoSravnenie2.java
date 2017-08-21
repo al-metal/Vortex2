@@ -42,7 +42,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"MAGNAT", "1:110", "450"},
             {"DELICATE", "1:80", "625"},
             {"SOLO", "1:70", "700"},
-            {"DIY", "1:120", "350"},
+            {"diy", "1:120", "350"},
             {"GURU", "1:120", "350"}};
 
     String[][] peno50defaultName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
@@ -59,7 +59,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"MAGNAT", "1:100", "500"},
             {"DELICATE", "1:60", "800"},
             {"SOLO", "1:55", "800"},
-            {"DIY", "1:100", "400"},
+            {"diy", "1:100", "400"},
             {"GURU", "1:120", "400"}};
 
     String[][] peno50hardName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
@@ -70,7 +70,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"SENZA", "1:80", "400"},
             {"ACE", "1:80", "400"},
             {"MAGNAT", "1:60", "600"},
-            {"DIY", "1:60", "600"},
+            {"diy", "1:60", "600"},
             {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligthName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
@@ -84,7 +84,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"MAGNAT", "1:9", "100"},
             {"DELICATE", "1:6", "150"},
             {"SOLO", "1:5", "170"},
-            {"DIY", "1:10", "90"},
+            {"diy", "1:10", "90"},
             {"GURU", "1:10", "80"}};
 
     String[][] penokomplektdefaultName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
@@ -101,7 +101,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"MAGNAT", "1:8", "110"},
             {"DELICATE", "1:4", "200"},
             {"SOLO", "1:4", "200"},
-            {"DIY", "1:8", "110"},
+            {"diy", "1:8", "110"},
             {"GURU", "1:12", "100"}};
 
     String[][] penokomplekthardName = {{"Продукт", "Разбавление", "Кол-во шампуня, мл"},
@@ -112,7 +112,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"SENZA", "1:10", "125"},
             {"ACE", "1:7", "125"},
             {"MAGNAT", "1:6", "145"},
-            {"DIY", "1:6", "145"},
+            {"diy", "1:6", "145"},
             {"GURU", "1:10", "125"}};
 
     String[][] dozatronligthName = {{"Продукт", "Показатель концентрации %"},
@@ -125,7 +125,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"ACE", "0.5"},
             {"DELICATE", "1.5"},
             {"SOLO", "1.5"},
-            {"DIY", "1"}};
+            {"diy", "1"}};
 
     String[][] dozatrondefaultName = {{"Продукт", "Показатель концентрации %"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -140,7 +140,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"ACE", "1"},
             {"DELICATE", "2"},
             {"SOLO", "2"},
-            {"DIY", "1"}};
+            {"diy", "1"}};
 
     String[][] dozatronhardName = {{"Продукт", "Показатель концентрации %"},
             {"ВЫБРАТЬ СРЕДСТВО", "0", "0"},
@@ -149,7 +149,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"PROFY", "2"},
             {"SENZA", "1.5"},
             {"ACE", "1.5"},
-            {"DIY", "2"}};
+            {"diy", "2"}};
 
     //endregion
 
@@ -164,7 +164,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             {"MAGNAT", "1:110", "450"},
             {"DELICATE", "1:80", "625"},
             {"SOLO", "1:70", "700"},
-            {"DIY", "1:120", "350"},
+            {"diy", "1:120", "350"},
             {"GURU", "1:120", "350"}};
 
     String[][] peno50default =
@@ -181,7 +181,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"MAGNAT", "1:100", "500"},
                     {"DELICATE", "1:60", "800"},
                     {"SOLO", "1:55", "800"},
-                    {"DIY", "1:100", "400"},
+                    {"diy", "1:100", "400"},
                     {"GURU", "1:120", "400"}};
     String[][] peno50hard =
             {
@@ -191,7 +191,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"SENZA", "1:80", "400"},
                     {"ACE", "1:80", "400"},
                     {"MAGNAT", "1:60", "600"},
-                    {"DIY", "1:60", "600"},
+                    {"diy", "1:60", "600"},
                     {"GURU", "1:80", "450"}};
 
     String[][] penokomplektligth =
@@ -205,7 +205,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"MAGNAT", "1:9", "100"},
                     {"DELICATE", "1:6", "150"},
                     {"SOLO", "1:5", "170"},
-                    {"DIY", "1:10", "90"},
+                    {"diy", "1:10", "90"},
                     {"GURU", "1:10", "80"}};
     String[][] penokomplektdefault =
             {
@@ -221,7 +221,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"MAGNAT", "1:8", "110"},
                     {"DELICATE", "1:4", "200"},
                     {"SOLO", "1:4", "200"},
-                    {"DIY", "1:8", "110"},
+                    {"diy", "1:8", "110"},
                     {"GURU", "1:12", "100"}};
     String[][] ppenokomplekthard =
             {
@@ -231,7 +231,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"SENZA", "1:10", "125"},
                     {"ACE", "1:7", "125"},
                     {"MAGNAT", "1:6", "145"},
-                    {"DIY", "1:6", "145"},
+                    {"diy", "1:6", "145"},
                     {"GURU", "1:10", "125"}};
 
     String[][] dozatronligth =
@@ -244,7 +244,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"ACE", "0.5"},
                     {"DELICATE", "1.5"},
                     {"SOLO", "1.5"},
-                    {"DIY", "1"}
+                    {"diy", "1"}
             };
     String[][] dozatrondefault =
             {
@@ -259,7 +259,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"ACE", "1"},
                     {"DELICATE", "2"},
                     {"SOLO", "2"},
-                    {"DIY", "1"}};
+                    {"diy", "1"}};
     String[][] dozatronhard =
             {
                     {"NOVICE", "3"},
@@ -267,7 +267,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                     {"PROFY", "2"},
                     {"SENZA", "1.5"},
                     {"ACE", "1.5"},
-                    {"DIY", "2"}};
+                    {"diy", "2"}};
 
     //endregion
 
