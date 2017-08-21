@@ -42,7 +42,35 @@ public class activity_spravka extends AppCompatActivity
             "TANK FBD 0902/2",
             "Tank FN",
             "Tank LBD 0107/1",
-            "TANK LBD 1002/2"};
+            "TANK LBD 1002/2",
+
+            "ALGALIT",
+            "ALGALIT 50",
+            "ALGAVIT 25",
+            "ALGAVIT 50",
+            "BIOTEC",
+            "BIOTEC M",
+            "BIOTEC C",
+            "BIOTEC SUPER",
+            "DESIMIX",
+            "DESITUB",
+            "ECOVIT",
+            "ELOVIT",
+            "FITOLIT",
+            "FORBICID",
+            "IMOVIT",
+            "KLIOVIT",
+            "KSILAN",
+            "KSILAN K",
+            "KSILAN M",
+            "KSILAN SUPER",
+            "LACTOVIT",
+            "PRIOLIT",
+            "SOMATEST",
+            "SUPRACID",
+            "VIOLIT"
+
+    };
 
     EditText inputSearch;
     ArrayAdapter<String> adapter;
