@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 /**
  * Created by KonyshevAM on 15.11.2017.
@@ -11,8 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 
 public class ClickLeftMenu extends AppCompatActivity {
 
-    public static Intent getIntent(Activity activiry, int id) {
+    public static Intent getIntent(Activity activiry, MenuItem item) {
         Intent intent = null;
+
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
         if (id == R.id.nav_camera) {
             intent = new Intent(activiry, ApkActivity2.class);
         } else if (id == R.id.nav_gallery) {

@@ -330,11 +330,7 @@ public class activity_klining_problema extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        Intent intent;
-        intent = ClickLeftMenu.getIntent(activity_klining_problema.this, id);
+        Intent intent = ClickLeftMenu.getIntent(activity_klining_problema.this, item);
         startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -62,11 +62,7 @@ public class ActivityGetDiscount extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        Intent intent;
-        intent = ClickLeftMenu.getIntent(ActivityGetDiscount.this, id);
+        Intent intent = ClickLeftMenu.getIntent(ActivityGetDiscount.this, item);
         startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

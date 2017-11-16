@@ -78,11 +78,7 @@ public class Main2Activity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        Intent intent;
-        intent = ClickLeftMenu.getIntent(Main2Activity.this, id);
+        Intent intent = ClickLeftMenu.getIntent(Main2Activity.this, item);
         startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

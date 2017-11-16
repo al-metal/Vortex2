@@ -189,11 +189,7 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        Intent intent;
-        intent = ClickLeftMenu.getIntent(ActivityAPKGigienaVymeniDoDoenia2.this, id);
+        Intent intent = ClickLeftMenu.getIntent(ActivityAPKGigienaVymeniDoDoenia2.this, item);
         startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
