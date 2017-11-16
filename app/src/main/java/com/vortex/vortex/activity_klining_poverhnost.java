@@ -84,13 +84,13 @@ public class activity_klining_poverhnost extends AppCompatActivity
             CreateViews(kuhnya);
         } else if (id == 2) {
             CreateViews(sanusel);
-        }else if (id == 3) {
+        } else if (id == 3) {
             CreateViews(office);
-        }else if (id == 4) {
+        } else if (id == 4) {
             CreateViews(obshiyKlining);
-        }else if (id == 5) {
+        } else if (id == 5) {
             CreateViews(remont);
-        }else if (id == 6) {
+        } else if (id == 6) {
             ShowSredstva(PromKlining);
         }
     }
@@ -154,49 +154,49 @@ public class activity_klining_poverhnost extends AppCompatActivity
     };
 
     private String GetTitleProble(String s) {
-        if(s == "ПОСУДА, ПРОТИВНИ, СКОВОРДЫ")
+        if (s == "ПОСУДА, ПРОТИВНИ, СКОВОРДЫ")
             s = "Посуда, противни, сковороды";
-        else if(s == "ПОСУДОМОЕЧНАЯ МАШИНА")
+        else if (s == "ПОСУДОМОЕЧНАЯ МАШИНА")
             s = "Посудомоечная машина";
-        else if(s == "ХОЛОДИЛЬНИК")
+        else if (s == "ХОЛОДИЛЬНИК")
             s = "Холодильник";
-        else if(s == "ВЫТЯЖКА")
+        else if (s == "ВЫТЯЖКА")
             s = "Вытяжка";
-        else if(s == "ПЛИТА, ГРИЛЬ, ДУХОВКА")
+        else if (s == "ПЛИТА, ГРИЛЬ, ДУХОВКА")
             s = "Плита, гриль, духовка";
-        else if(s == "МИКРОВОЛНОВАЯ ПЕЧЬ")
+        else if (s == "МИКРОВОЛНОВАЯ ПЕЧЬ")
             s = "Микроволновая печь";
-        else if(s == "СТОЛОВЫЕ ПРИБОРЫ")
+        else if (s == "СТОЛОВЫЕ ПРИБОРЫ")
             s = "Столовые приборы";
-        else if(s == "МОЕЧНАЯ ВАННА")
+        else if (s == "МОЕЧНАЯ ВАННА")
             s = "Моечная ванна";
-        else if(s == "ОБЩАЯ ДЕЗИНФЕКЦИЯ")
+        else if (s == "ОБЩАЯ ДЕЗИНФЕКЦИЯ")
             s = "Общая дезинфекция";
-        else if(s == "РАБОЧИЕ СТОЛЫ И ПОВЕРХНОСТИ")
+        else if (s == "РАБОЧИЕ СТОЛЫ И ПОВЕРХНОСТИ")
             s = "Рабочие столы и поверхности";
-        else if(s == "МОЙКА И ЧИСТКА")
+        else if (s == "МОЙКА И ЧИСТКА")
             s = "Мойка и чистка";
-        else if(s == "ТРУБЫ")
+        else if (s == "ТРУБЫ")
             s = "Трубы";
-        else if(s == "УСТРАНЕНИЕ ЗАПАХОВ")
+        else if (s == "УСТРАНЕНИЕ ЗАПАХОВ")
             s = "Устранение запахов";
-        else if(s == "ГИГИЕНА РУК")
+        else if (s == "ГИГИЕНА РУК")
             s = "Гигиена рук";
-        else if(s == "УНИТАЗ, БИДЕ, ПИССУАР, РАКОВИНА")
+        else if (s == "УНИТАЗ, БИДЕ, ПИССУАР, РАКОВИНА")
             s = "Унитаз, биде, писсуар, раковина";
-        else if(s == "ВАННА, ДУШЕВАЯ КАБИНА")
+        else if (s == "ВАННА, ДУШЕВАЯ КАБИНА")
             s = "Ванна, душевая кабина";
-        else if(s == "ОРГТЕХНИКА")
+        else if (s == "ОРГТЕХНИКА")
             s = "Оргтехника";
-        else if(s == "МЯГКАЯ МЕБЕЛЬ")
+        else if (s == "МЯГКАЯ МЕБЕЛЬ")
             s = "Мягкая мебель";
-        else if(s == "ДЕРЕВЯННАЯ МЕБЕЛЬ")
+        else if (s == "ДЕРЕВЯННАЯ МЕБЕЛЬ")
             s = "Деревянная мебель";
-        else if(s == "ОКНА, СТЕКЛА, ЗЕРКАЛА")
+        else if (s == "ОКНА, СТЕКЛА, ЗЕРКАЛА")
             s = "Окна, стекла, зеркала";
-        else if(s == "НАПОЛЬНЫЕ ПОКРЫТИЯ")
+        else if (s == "НАПОЛЬНЫЕ ПОКРЫТИЯ")
             s = "Напольные покрытия";
-        else if(s == "ПРОМЫШЛЕННЫЙ КЛИНИНГ")
+        else if (s == "ПРОМЫШЛЕННЫЙ КЛИНИНГ")
             s = "Промышленный клининг";
 
         return s;
@@ -225,22 +225,9 @@ public class activity_klining_poverhnost extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(activity_klining_poverhnost.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(activity_klining_poverhnost.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(activity_klining_poverhnost.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(activity_klining_poverhnost.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(activity_klining_poverhnost.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

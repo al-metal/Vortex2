@@ -278,6 +278,7 @@
     <string name="title_activity_spravochnik_show">spravochnik_show</string>
     <string name="title_activity_spravka">activity_spravka</string>
     <string name="title_activity_spravka_sredstvo">activity_spravka_sredstvo</string>
+    <string name="title_activity_get_discount">GetDiscount</string>
 
 
 </resources>

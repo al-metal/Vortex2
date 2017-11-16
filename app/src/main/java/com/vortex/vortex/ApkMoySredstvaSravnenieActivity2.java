@@ -79,12 +79,12 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         resStoimSmesiVotrex = getIntent().getExtras().getDouble("resStoimSmesi");
         nameVortex = getIntent().getExtras().getString("nameVortex");
 
-        etStoim = (EditText)findViewById(R.id.etStoim);
-        etName = (EditText)findViewById(R.id.etName);
-        etKoncentrat = (EditText)findViewById(R.id.etKoncentrat);
-        etVanna = (EditText)findViewById(R.id.etVanna);
-        etVes = (EditText)findViewById(R.id.etVes);
-        etPlotnost = (EditText)findViewById(R.id.etPlotnost);
+        etStoim = (EditText) findViewById(R.id.etStoim);
+        etName = (EditText) findViewById(R.id.etName);
+        etKoncentrat = (EditText) findViewById(R.id.etKoncentrat);
+        etVanna = (EditText) findViewById(R.id.etVanna);
+        etVes = (EditText) findViewById(R.id.etVes);
+        etPlotnost = (EditText) findViewById(R.id.etPlotnost);
 
 
         tvresPlotnostVortex = (TextView) findViewById(R.id.tvPlotnostVortex);
@@ -121,8 +121,8 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    public BigDecimal roundUp(double value, int digits){
-        return new BigDecimal(""+value).setScale(digits, BigDecimal.ROUND_HALF_UP);
+    public BigDecimal roundUp(double value, int digits) {
+        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickApkRes(View view) {
@@ -149,11 +149,11 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         double vanna = 0;
         double plotnost = 0;
 
-        etStoim = (EditText)findViewById(R.id.etStoim);
-        etKoncentrat = (EditText)findViewById(R.id.etKoncentrat);
-        etVanna = (EditText)findViewById(R.id.etVanna);
-        etVes = (EditText)findViewById(R.id.etVes);
-        etPlotnost = (EditText)findViewById(R.id.etPlotnost);
+        etStoim = (EditText) findViewById(R.id.etStoim);
+        etKoncentrat = (EditText) findViewById(R.id.etKoncentrat);
+        etVanna = (EditText) findViewById(R.id.etVanna);
+        etVes = (EditText) findViewById(R.id.etVes);
+        etPlotnost = (EditText) findViewById(R.id.etPlotnost);
 
         tvStoimKgSrav = (TextView) findViewById(R.id.tvStoimKgSravnenie);
         tvStoimLSrav = (TextView) findViewById(R.id.tvStoimLSravnenie);
@@ -168,9 +168,9 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         ves = Double.parseDouble(etVes.getText().toString());
         plotnost = Double.parseDouble(etPlotnost.getText().toString());
 
-        resStoimKg = stoimost/ves;
+        resStoimKg = stoimost / ves;
         resStoimL = resStoimKg * plotnost;
-        resStoimPromiv = (resStoimL*koncentrat*vanna)/100;
+        resStoimPromiv = (resStoimL * koncentrat * vanna) / 100;
         resStoimSmesi = resStoimPromiv / vanna;
 
         tvSravnenie.setText(name);
@@ -204,22 +204,9 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(ApkMoySredstvaSravnenieActivity2.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(ApkMoySredstvaSravnenieActivity2.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(ApkMoySredstvaSravnenieActivity2.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(ApkMoySredstvaSravnenieActivity2.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(ApkMoySredstvaSravnenieActivity2.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(ApkMoySredstvaSravnenieActivity2.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

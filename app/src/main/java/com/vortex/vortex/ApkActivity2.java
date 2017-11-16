@@ -61,28 +61,15 @@ public class ApkActivity2 extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(ApkActivity2.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(ApkActivity2.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(ApkActivity2.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(ApkActivity2.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(ApkActivity2.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(ApkActivity2.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     public void onClickWebSite(View view) {
         Uri uri = Uri.parse("http://www.pk-vortex.ru"); // missing 'http://' will cause crashed

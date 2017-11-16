@@ -211,7 +211,14 @@
         <activity
             android:name=".activity_spravka_sredstvo"
             android:label="@string/title_activity_spravka_sredstvo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityGetDiscount"
+            android:label="@string/title_activity_get_discount"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

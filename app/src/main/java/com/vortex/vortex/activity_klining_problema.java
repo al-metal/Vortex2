@@ -54,7 +54,6 @@ public class activity_klining_problema extends AppCompatActivity
     String[][] kuhnyaJiro = {{"Для жироуловителей и жироотделителей", "Tank Bio"}};
 
 
-
     String[][] sanuselUnitaz = {{"Ржавчина", "Breeze", "Destroy"},
             {"Мочевой, водный камень", "Breeze", "Destroy"},
             {"Известковый налет", "Breeze", "Destroy"},
@@ -174,33 +173,33 @@ public class activity_klining_problema extends AppCompatActivity
         //region Kuhnya
         if (id == 1 && id2 == 0) {
             ShowSredstva(kuhnyaPosuda);
-        }else if (id == 1 && id2 == 1) {
+        } else if (id == 1 && id2 == 1) {
             ShowSredstva(kuhnyaPosudaMashina);
-        }else if (id == 1 && id2 == 2) {
+        } else if (id == 1 && id2 == 2) {
             ShowSredstva(kuhnyaHolodilnik);
-        }else if (id == 1 && id2 == 3) {
+        } else if (id == 1 && id2 == 3) {
             ShowSredstva(kuhnyaVytyajka);
-        }else if (id == 1 && id2 == 4) {
+        } else if (id == 1 && id2 == 4) {
             ShowSredstva(kuhnyaPlita);
-        }else if (id == 1 && id2 == 5) {
+        } else if (id == 1 && id2 == 5) {
             ShowSredstva(kuhnyaPech);
-        }else if (id == 1 && id2 == 6) {
+        } else if (id == 1 && id2 == 6) {
             ShowSredstva(kuhnyaPribory);
-        }else if (id == 1 && id2 == 7) {
+        } else if (id == 1 && id2 == 7) {
             ShowSredstva(kuhnyaVanna);
-        }else if (id == 1 && id2 == 8) {
+        } else if (id == 1 && id2 == 8) {
             ShowSredstva(kuhnyaDezinfekciya);
-        }else if (id == 1 && id2 == 9) {
+        } else if (id == 1 && id2 == 9) {
             ShowSredstva(kuhnyaRabStol);
-        }else if (id == 1 && id2 == 10) {
+        } else if (id == 1 && id2 == 10) {
             ShowSredstva(kuhnyaMoyka);
-        }else if (id == 1 && id2 == 11) {
+        } else if (id == 1 && id2 == 11) {
             ShowSredstva(kuhnyaTruby);
-        }else if (id == 1 && id2 == 12) {
+        } else if (id == 1 && id2 == 12) {
             ShowSredstva(kuhnyaZapah);
-        }else if (id == 1 && id2 == 13) {
+        } else if (id == 1 && id2 == 13) {
             ShowSredstva(kuhnyaRuki);
-        }else if (id == 1 && id2 == 14) {
+        } else if (id == 1 && id2 == 14) {
             ShowSredstva(kuhnyaJiro);
         }
 //endregion
@@ -208,21 +207,21 @@ public class activity_klining_problema extends AppCompatActivity
         //region Sanusel
         else if (id == 2 && id2 == 0) {
             ShowSredstva(sanuselUnitaz);
-        }else if (id == 2 && id2 == 1) {
+        } else if (id == 2 && id2 == 1) {
             ShowSredstva(sanuselVanna);
-        }else if (id == 2 && id2 == 2) {
+        } else if (id == 2 && id2 == 2) {
             ShowSredstva(sanuselOkna);
-        }else if (id == 2 && id2 == 3) {
+        } else if (id == 2 && id2 == 3) {
             ShowSredstva(sanuselMoyka);
-        }else if (id == 2 && id2 == 4) {
+        } else if (id == 2 && id2 == 4) {
             ShowSredstva(sanuselTruby);
-        }else if (id == 2 && id2 == 5) {
+        } else if (id == 2 && id2 == 5) {
             ShowSredstva(sanuselZapah);
-        }else if (id == 2 && id2 == 6) {
+        } else if (id == 2 && id2 == 6) {
             ShowSredstva(sanuselRuki);
-        }else if (id == 2 && id2 == 7) {
+        } else if (id == 2 && id2 == 7) {
             ShowSredstva(sanuselBanya);
-        }else if (id == 2 && id2 == 8) {
+        } else if (id == 2 && id2 == 8) {
             ShowSredstva(sanuselBIOTualet);
         }
         //endregion
@@ -230,17 +229,17 @@ public class activity_klining_problema extends AppCompatActivity
         //region office
         else if (id == 3 && id2 == 0) {
             ShowSredstva(officeOrgtehnika);
-        }else if (id == 3 && id2 == 1) {
+        } else if (id == 3 && id2 == 1) {
             ShowSredstva(officeMebelMygkaya);
-        }else if (id == 3 && id2 == 2) {
+        } else if (id == 3 && id2 == 2) {
             ShowSredstva(officeMebelTverdaya);
-        }else if (id == 3 && id2 == 3) {
+        } else if (id == 3 && id2 == 3) {
             ShowSredstva(officeOkna);
-        }else if (id == 3 && id2 == 4) {
+        } else if (id == 3 && id2 == 4) {
             ShowSredstva(officeMoyka);
-        }else if (id == 3 && id2 == 5) {
+        } else if (id == 3 && id2 == 5) {
             ShowSredstva(officeObshayaDezinfekciya);
-        }else if (id == 3 && id2 == 6) {
+        } else if (id == 3 && id2 == 6) {
             ShowSredstva(officePol);
         }
         //endregion
@@ -248,21 +247,21 @@ public class activity_klining_problema extends AppCompatActivity
         //region obshiyKlinig
         else if (id == 4 && id2 == 0) {
             ShowSredstva(obshiyKliningOrgtehnika);
-        }else if (id == 4 && id2 == 1) {
+        } else if (id == 4 && id2 == 1) {
             ShowSredstva(obshiyKliningMyagkayaMebel);
-        }else if (id == 4 && id2 == 2) {
+        } else if (id == 4 && id2 == 2) {
             ShowSredstva(obshiyKliningDerevoMebel);
-        }else if (id == 4 && id2 == 3) {
+        } else if (id == 4 && id2 == 3) {
             ShowSredstva(obshiyKliningOkna);
-        }else if (id == 4 && id2 == 4) {
+        } else if (id == 4 && id2 == 4) {
             ShowSredstva(obshiyKliningMoyka);
-        }else if (id == 4 && id2 == 5) {
+        } else if (id == 4 && id2 == 5) {
             ShowSredstva(obshiyKliningObshayaDezinfekciya);
-        }else if (id == 4 && id2 == 6) {
+        } else if (id == 4 && id2 == 6) {
             ShowSredstva(obshiyKliningRuki);
-        }else if (id == 4 && id2 == 7) {
+        } else if (id == 4 && id2 == 7) {
             ShowSredstva(obshiyKliningZapah);
-        }else if (id == 4 && id2 == 8) {
+        } else if (id == 4 && id2 == 8) {
             ShowSredstva(obshiyKliningPol);
         }
         //endregion
@@ -270,11 +269,11 @@ public class activity_klining_problema extends AppCompatActivity
         //region Remont
         else if (id == 5 && id2 == 0) {
             ShowSredstva(remontRuki);
-        }else if (id == 5 && id2 == 1) {
+        } else if (id == 5 && id2 == 1) {
             ShowSredstva(remontOkna);
-        }else if (id == 5 && id2 == 2) {
+        } else if (id == 5 && id2 == 2) {
             ShowSredstva(remontMoyka);
-        }else if (id == 5 && id2 == 3) {
+        } else if (id == 5 && id2 == 3) {
             ShowSredstva(remontPol);
         }
         //endregion
@@ -334,22 +333,9 @@ public class activity_klining_problema extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(activity_klining_problema.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(activity_klining_problema.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(activity_klining_problema.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(activity_klining_problema.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(activity_klining_problema.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(activity_klining_problema.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

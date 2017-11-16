@@ -90,11 +90,11 @@ public class ActivityAPKKopytaMedKuporos2 extends AppCompatActivity
         btnRaschet.setBackgroundColor(gray);
         tableL.setVisibility(View.VISIBLE);
 
-        double stado =  Double.parseDouble(etStado.getText().toString());
-        double obrabotka =  Double.parseDouble(etObrabotka.getText().toString());
-        double kuporos =  Double.parseDouble(etKuporos.getText().toString());
-        double obrabotkaDen =  Double.parseDouble(etObrabotokDen.getText().toString());
-        double price =  Double.parseDouble(etPrice.getText().toString());
+        double stado = Double.parseDouble(etStado.getText().toString());
+        double obrabotka = Double.parseDouble(etObrabotka.getText().toString());
+        double kuporos = Double.parseDouble(etKuporos.getText().toString());
+        double obrabotkaDen = Double.parseDouble(etObrabotokDen.getText().toString());
+        double price = Double.parseDouble(etPrice.getText().toString());
 
         double trebuemKuporosKg = (stado / vanna) * ((vanna * kuporos) / 100) * obrabotka * obrabotkaDen;
         double stoimPeriod = trebuemKuporosKg * price;
@@ -136,22 +136,9 @@ public class ActivityAPKKopytaMedKuporos2 extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(ActivityAPKKopytaMedKuporos2.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(ActivityAPKKopytaMedKuporos2.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(ActivityAPKKopytaMedKuporos2.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(ActivityAPKKopytaMedKuporos2.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(ActivityAPKKopytaMedKuporos2.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(ActivityAPKKopytaMedKuporos2.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

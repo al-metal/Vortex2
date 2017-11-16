@@ -90,11 +90,10 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
-                if (spinner4.getSelectedItemId() == 0){
+                if (spinner4.getSelectedItemId() == 0) {
                     spinner = false;
                     return;
-                }
-                else if (spinner4.getSelectedItemId() == 1)
+                } else if (spinner4.getSelectedItemId() == 1)
                     dblRashodGolova = 5.6;
                 else if (spinner4.getSelectedItemId() == 2)
                     dblRashodGolova = 2.8;
@@ -167,7 +166,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
     }
 
     public void onClickSravnenie(View view) {
-        if(stoimKg ==0 || kolichGigien ==0 || stoimObrabotki ==0){
+        if (stoimKg == 0 || kolichGigien == 0 || stoimObrabotki == 0) {
             Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -204,22 +203,9 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoenia2.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(ActivityAPKGigienaVymeniPosleDoenia2.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -106,34 +106,34 @@ public class activity_spravka_sredstvo extends AppCompatActivity
 
             "Очиститель от следов скотча, наклеек, маркера, жевательной резинки",
             "Моющее средство для посудомоечных машин",
-           "Нейтрализатор запаха. Ароматы: апельсин, кожа, кофе",
-    "Средство для сантехники",
-    "Средство для мытья пола нейтральное",
-    "Средство для мытья пола щелочное",
-    "Средство для обезжиривания и удаления нагара",
-    "Ополаскиватель для посудомоечных машин",
-    "Кислотное низкопенное моющее средство для уборки после строительства и ремонта",
-    "Средство для канализации",
-    "Мыло пенка",
-    "Нейтрализатор запаха для сухого тумана. Ароматы: антитабак, корица, апельсин",
-    "Индустриальный обезжириватель",
-    "Чистящий гель для сантехники с дезинфицирующим и отбеливающим эффектом",
-    "Жидкое мыло эконом. Ароматы: апельсин, вишня, яблока, без цвета и запаха",
-    "Жидкое мыло с перламутром эконом",
-    "Антибактериальное жидкое мыло (кожный антисептик)",
-    "Очиститель - кондиционер для кожи",
-    "Концентрированное средство для биотуалетов на химической основе",
-    "Средство для септика на биологической основе",
-    "Очиститель стекол",
-    "Средство для мытья посуды",
-    "Низкопенный очиститель ковровых покрытий",
-    "Пенный очиститель ковровых покрытий",
-    "Универсальное пенное моющее средство",
-    "Универсальное гелеобразное пенное моющее средство",
-    "Моющее дезинфицирующее средство для бани и сауны",
-    "Очиститель - полироль для мебели",
-    "Универсальный очиститель"
-};
+            "Нейтрализатор запаха. Ароматы: апельсин, кожа, кофе",
+            "Средство для сантехники",
+            "Средство для мытья пола нейтральное",
+            "Средство для мытья пола щелочное",
+            "Средство для обезжиривания и удаления нагара",
+            "Ополаскиватель для посудомоечных машин",
+            "Кислотное низкопенное моющее средство для уборки после строительства и ремонта",
+            "Средство для канализации",
+            "Мыло пенка",
+            "Нейтрализатор запаха для сухого тумана. Ароматы: антитабак, корица, апельсин",
+            "Индустриальный обезжириватель",
+            "Чистящий гель для сантехники с дезинфицирующим и отбеливающим эффектом",
+            "Жидкое мыло эконом. Ароматы: апельсин, вишня, яблока, без цвета и запаха",
+            "Жидкое мыло с перламутром эконом",
+            "Антибактериальное жидкое мыло (кожный антисептик)",
+            "Очиститель - кондиционер для кожи",
+            "Концентрированное средство для биотуалетов на химической основе",
+            "Средство для септика на биологической основе",
+            "Очиститель стекол",
+            "Средство для мытья посуды",
+            "Низкопенный очиститель ковровых покрытий",
+            "Пенный очиститель ковровых покрытий",
+            "Универсальное пенное моющее средство",
+            "Универсальное гелеобразное пенное моющее средство",
+            "Моющее дезинфицирующее средство для бани и сауны",
+            "Очиститель - полироль для мебели",
+            "Универсальный очиститель"
+    };
 
     String[] images = {
             "tank_bio_60.jpg",
@@ -176,7 +176,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "ksilan_super.jpg",
             "lactovit.jpg",
             "priolit.jpg",
-            "", //соматест
+            "somatest.jpg",
             "supracid.jpg",
             "violit.jpg",
 
@@ -207,7 +207,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "propella_5.jpg",
             "rotae_5.jpg",
             "rotaevis_5.jpg",
-            "",//сапо
+            "sapo.jpg",
             "senza.jpg",
             "silicone_5.jpg",
             "solo.jpg",
@@ -220,7 +220,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "twin.jpg",
             "unior.jpg",
             "witrum_5.jpg",
-            "", //супер концентрат
+            "k_mini_all.jpg",
 
             "antistick.jpg",
             "blank_1.jpg",
@@ -272,10 +272,9 @@ public class activity_spravka_sredstvo extends AppCompatActivity
         String img = String.valueOf(images[resId]);
         String desc = String.valueOf(descriptions[resId]);
 
-        String str = "<html><head></head><style>.leftimg {float:left; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name +"</H1><P><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg\"> " + desc + "</P></body></html>";
+        String str = "<html><head></head><style>.leftimg {float:left; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name + "</H1><P><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg\"> " + desc + "</P></body></html>";
 
         webView.loadDataWithBaseURL(null, str, "text/html", "en_US", null);
-
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -305,22 +304,9 @@ public class activity_spravka_sredstvo extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(activity_spravka_sredstvo.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(activity_spravka_sredstvo.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(activity_spravka_sredstvo.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(activity_spravka_sredstvo.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(activity_spravka_sredstvo.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(activity_spravka_sredstvo.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

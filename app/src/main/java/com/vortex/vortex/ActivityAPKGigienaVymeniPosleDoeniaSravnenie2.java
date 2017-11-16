@@ -119,9 +119,9 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie2 extends AppCompatActi
     }
 
     public void onClickRaschet(View view) {
-        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
+        if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
                 || etPeriod.getText().length() == 0 || etObrabotokVDen.getText().length() == 0 || etRashodGolova.getText().length() == 0
-                || etSredstvo.getText().length() == 0){
+                || etSredstvo.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             tvStoimostKg.setText("0");
             tvKolichGigien.setText("0");
@@ -181,22 +181,9 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie2 extends AppCompatActi
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(ActivityAPKGigienaVymeniPosleDoeniaSravnenie2.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

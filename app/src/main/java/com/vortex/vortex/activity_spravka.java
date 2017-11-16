@@ -217,8 +217,8 @@ public class activity_spravka extends AppCompatActivity
     private int ReturnId(String nameProduct) {
         int id = 0;
 
-        for(int i = 0; names.length > i; i++){
-            if(names[i].equals(nameProduct)){
+        for (int i = 0; names.length > i; i++) {
+            if (names[i].equals(nameProduct)) {
                 id = i;
                 break;
             }
@@ -250,22 +250,9 @@ public class activity_spravka extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent intent = new Intent(activity_spravka.this, ApkActivity2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(activity_spravka.this, ActivityPisheProm2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(activity_spravka.this, ActivityAutoVybor2.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(activity_spravka.this, activity_klining.class);
-            startActivity(intent);
-        }else if (id == R.id.nav_spravochnik){
-            Intent intent = new Intent(activity_spravka.this, activity_spravka.class);
-            startActivity(intent);
-        }
+        Intent intent;
+        intent = ClickLeftMenu.getIntent(activity_spravka.this, id);
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
