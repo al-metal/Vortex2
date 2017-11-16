@@ -2,6 +2,7 @@ package com.vortex.vortex;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 
 /**
@@ -22,10 +23,17 @@ public class ClickLeftMenu extends AppCompatActivity {
             intent = new Intent(activiry, activity_klining.class);
         } else if (id == R.id.nav_spravochnik) {
             intent = new Intent(activiry, activity_spravka.class);
-        }else if (id == R.id.nav_getDiscount){
+        } else if (id == R.id.nav_getDiscount) {
             intent = new Intent(activiry, ActivityGetDiscount.class);
         }
 
+        return intent;
+    }
+
+    public static Intent getIntentWebSite() {
+        Intent intent = null;
+        Uri uri = Uri.parse("http://www.pk-vortex.ru"); // missing 'http://' will cause crashed
+        intent = new Intent(Intent.ACTION_VIEW, uri);
         return intent;
     }
 }

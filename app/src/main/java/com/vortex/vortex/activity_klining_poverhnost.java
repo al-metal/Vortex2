@@ -238,4 +238,9 @@ public class activity_klining_poverhnost extends AppCompatActivity
         Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining_problema.class);
         startActivity(intent);
     }
+
+    public void onClickWebSite(View view) {
+        Intent intent = ClickLeftMenu.getIntentWebSite();
+        startActivity(intent);
+    }
 }

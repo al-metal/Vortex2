@@ -204,8 +204,7 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicid2 extends AppCompatActiv
     }
 
     public void onClickWebSite(View view) {
-        Uri uri = Uri.parse("http://www.pk-vortex.ru"); // missing 'http://' will cause crashed
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        Intent intent = ClickLeftMenu.getIntentWebSite();
         startActivity(intent);
     }
 }
