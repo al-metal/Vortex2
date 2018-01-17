@@ -27,7 +27,8 @@
                 <item
                     android:id="@+id/nav_getDiscount"
 
-                    android:title="Получить скидку" />
+                    android:title="Получить скидку"
+                    android:visible="false" />
             </menu>
         </item>
 
