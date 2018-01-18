@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.vortex.vortex.activity_spravka_sredstvo"
-    tools:showIn="@layout/app_bar_activity_spravka_sredstvo">
+    tools:context="com.vortex.vortex.spravka_sredstvo_new"
+    tools:showIn="@layout/app_bar_spravka_sredstvo_new">
 
     <ScrollView
         android:layout_width="360dp"

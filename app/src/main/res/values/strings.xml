@@ -279,6 +279,9 @@
     <string name="title_activity_spravka">activity_spravka</string>
     <string name="title_activity_spravka_sredstvo">activity_spravka_sredstvo</string>
     <string name="title_activity_get_discount">GetDiscount</string>
+    <string name="title_activity_spravka_sredstvo_menu">spravka_sredstvo_menu</string>
+    <string name="title_activity_spravka_sredstvo_new">spravka_sredstvo_new</string>
+    <string name="title_activity_activiti_spravka_menu">activiti_spravka_menu</string>
 
 
 </resources>

@@ -9,7 +9,7 @@
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_activity_spravka_sredstvo"
+        layout="@layout/app_bar_spravka_sredstvo"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -18,8 +18,25 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@drawable/side_nav_bar"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main2"
-        app:menu="@menu/activity_main2_drawer" />
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        app:theme="@style/NavigationDrawerStyle"
+        app:menu="@menu/activity_main2_drawer" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="www.pk-vortex.ru"
+            android:onClick="onClickWebSite"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/colorWhite" />
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

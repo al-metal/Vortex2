@@ -24,6 +24,8 @@ import android.widget.TextView;
 public class activity_spravka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private final String TAG = getClass().getSimpleName();
+
+    //region names[]
     String[] names = {
             "TANK BIO",
             "TANK CA23",
@@ -141,6 +143,7 @@ public class activity_spravka extends AppCompatActivity
             "Twist",
             "Well"
     };
+//endregion
 
     EditText inputSearch;
     ArrayAdapter<String> adapter;
@@ -180,12 +183,12 @@ public class activity_spravka extends AppCompatActivity
                 String nameProduct = ((TextView) v).getText().toString();
                 position = ReturnId(nameProduct);
                 Intent intent = new Intent();
-                intent.setClass(activity_spravka.this, activity_spravka_sredstvo.class);
+                intent.setClass(activity_spravka.this, spravka_sredstvo_new.class);
                 Log.i(TAG, names[position]);
                 intent.putExtra("head", position);
                 intent.putExtra("headName", names[position]);
 
-                //intent.putExtra("position", position);
+                intent.putExtra("position", position);
 
                 //запускаем вторую активность
                 startActivity(intent);

@@ -1,7 +1,6 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 
-public class activity_spravka_sredstvo extends AppCompatActivity
+public class spravka_sredstvo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     String name;
+
+    //region descriptions[]
     String[] descriptions = {
             "Промышленный биодеструктор пищевых жиров",
             "Кислотное беспенное моющее средство на основе ортофосфорной кислоты",
@@ -134,7 +135,9 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "Очиститель - полироль для мебели",
             "Универсальный очиститель"
     };
+    //endregion
 
+    //region images[]
     String[] images = {
             "tank_bio_60.jpg",
             "ca_23.jpg",
@@ -252,6 +255,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
             "twist_05.jpg",
             "well_05.jpg"
     };
+//endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -259,6 +263,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
         setContentView(R.layout.activity_spravka_sredstvo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         WebView webView = (WebView) findViewById(R.id.webView);
 
         Intent intent = getIntent();
@@ -274,7 +279,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
 
         String str = "<html><head></head><style>.leftimg {float:left; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name + "</H1><P><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg\"> " + desc + "</P></body></html>";
 
-        webView.loadDataWithBaseURL(null, str, "text/html", "en_US", null);
+        webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -301,7 +306,7 @@ public class activity_spravka_sredstvo extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        Intent intent = ClickLeftMenu.getIntent(activity_spravka_sredstvo.this, item);
+        Intent intent = ClickLeftMenu.getIntent(spravka_sredstvo.this, item);
         startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
