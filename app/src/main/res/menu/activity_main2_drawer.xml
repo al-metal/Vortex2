@@ -22,13 +22,14 @@
             <menu>
                 <item
                     android:id="@+id/nav_spravochnik"
-
                     android:title="Справочник" />
                 <item
                     android:id="@+id/nav_getDiscount"
-
                     android:title="Получить скидку"
                     android:visible="false" />
+                <item
+                    android:id="@+id/nav_sendMail"
+                    android:title="Задать вопрос" />
             </menu>
         </item>
 

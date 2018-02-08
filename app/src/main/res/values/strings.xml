@@ -282,6 +282,7 @@
     <string name="title_activity_spravka_sredstvo_menu">spravka_sredstvo_menu</string>
     <string name="title_activity_spravka_sredstvo_new">spravka_sredstvo_new</string>
     <string name="title_activity_activiti_spravka_menu">activiti_spravka_menu</string>
+    <string name="title_activity_call_me">CallMeActivity</string>
 
 
 </resources>

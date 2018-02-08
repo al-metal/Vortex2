@@ -222,6 +222,10 @@
         <activity
             android:name=".spravka_sredstvo_new"
             android:label="@string/title_activity_spravka_sredstvo_new"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CallMeActivity"
+            android:label="@string/title_activity_call_me"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
