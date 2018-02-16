@@ -26,7 +26,7 @@
             android:id="@+id/textDiscount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="подождите идет получение данных"
+            android:text="Подождите идет получение данных"
             android:textAlignment="center"
             android:textSize="25dp"
             tools:layout_editor_absoluteX="0dp"

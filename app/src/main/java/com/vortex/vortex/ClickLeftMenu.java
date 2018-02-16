@@ -32,6 +32,12 @@ public class ClickLeftMenu extends AppCompatActivity {
             intent = new Intent(activiry, ActivityGetDiscount.class);
         } else if(id == R.id.nav_sendMail){
             intent = new Intent(activiry, CallMeActivity.class);
+        }else if(id == R.id.nav_news){
+            intent = new Intent(activiry, testNews.class);
+        }else if(id == R.id.nav_action){
+            intent = new Intent(activiry, CallMeActivity.class);
+        }else if(id == R.id.nav_buy_product){
+            intent = new Intent(activiry, ActivityOrder.class);
         }
 
         return intent;

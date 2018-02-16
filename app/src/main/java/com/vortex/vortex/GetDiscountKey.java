@@ -30,7 +30,7 @@ public class GetDiscountKey extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... voids) {
         try {
 
-            String link = "http://training.vortex-avto.ru/android/getDiscount.php";
+            String link = "http://training.vortex-avto.ru/android/news/getnews.php";
             String data = URLEncoder.encode("id", "UTF-8");
             URL url = new URL(link);
             URLConnection conn = url.openConnection();

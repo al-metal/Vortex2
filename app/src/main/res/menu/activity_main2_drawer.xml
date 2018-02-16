@@ -25,11 +25,26 @@
                     android:title="Справочник" />
                 <item
                     android:id="@+id/nav_getDiscount"
-                    android:title="Получить скидку"
-                    android:visible="false" />
+                    android:title="Получить скидку" />
                 <item
                     android:id="@+id/nav_sendMail"
                     android:title="Задать вопрос" />
+                <item
+                    android:id="@+id/nav_news"
+                    android:title="Новости" />
+                <item
+                    android:id="@+id/nav_action"
+                    android:title="Акции" />
+                <item
+                    android:id="@+id/nav_buy_product"
+                    android:title="Заказать продукцию" />
+            </menu>
+        </item>
+        <item>
+            <menu>
+                <item
+                    android:id="@+id/nav_site"
+                    android:title="pk-vortex.ru" />
             </menu>
         </item>
 

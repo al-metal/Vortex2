@@ -226,7 +226,11 @@
         <activity
             android:name=".CallMeActivity"
             android:label="@string/title_activity_call_me"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity_array_new" />
+        <activity android:name=".Activity_news1" />
+        <activity android:name=".ActivityOrder" />
+        <activity android:name=".testNews"></activity>
     </application>
 
 </manifest>
