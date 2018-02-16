@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.vortex.vortex.models.newsModel;
@@ -31,9 +32,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.view.View.INVISIBLE;
+
 public class testNews extends AppCompatActivity {
 
     ListView lv;
+    ProgressBar pgLoadNews;
+    TextView tvProgressBerText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,8 @@ public class testNews extends AppCompatActivity {
         setContentView(R.layout.activity_test_news);
 
         lv = (ListView) findViewById(R.id.lvNewsArray);
+        tvProgressBerText = (TextView) findViewById(R.id.tvProgressBerText);
+        pgLoadNews = (ProgressBar) findViewById(R.id.pgLoadNews);
 
         new NewsTask().execute("https://pk-vortex.ru/mobail-files/news/news.txt");
     }
@@ -82,7 +89,7 @@ public class testNews extends AppCompatActivity {
 
                     model.setDate(finalObjeckt.getString("date"));
                     model.setPreview(finalObjeckt.getString("preview"));
-                    model.setNews(finalObjeckt.getString("news"));
+                    //model.setNews(finalObjeckt.getString("news"));
                     model.setHeader(finalObjeckt.getString("head"));
 
                     newsModelList.add(model);
@@ -117,6 +124,8 @@ public class testNews extends AppCompatActivity {
         protected void onPostExecute(List<newsModel> result) {
             super.onPostExecute(result);
             NewsAdapter adapter = new NewsAdapter(getApplicationContext(), R.layout.rownewsarray, result);
+            pgLoadNews.setVisibility(View.GONE);
+            tvProgressBerText.setVisibility(View.GONE);
             lv.setAdapter(adapter);
         }
     }
@@ -142,18 +151,18 @@ public class testNews extends AppCompatActivity {
 
             TextView tvDate = null;
             TextView tvPreview;
-            TextView tvNews;
+            //TextView tvNews;
             TextView tvHeader;
 
             tvDate = (TextView) convertView.findViewById(R.id.tvDate);
             tvPreview = (TextView) convertView.findViewById(R.id.tvPreview);
-            tvNews = (TextView) convertView.findViewById(R.id.tvNews);
+            //tvNews = (TextView) convertView.findViewById(R.id.tvNews);
             tvHeader = (TextView) convertView.findViewById(R.id.tvHeader);
 
             tvDate.setText(newsModelList.get(position).getDate());
             tvHeader.setText(newsModelList.get(position).getHeader());
             tvPreview.setText(newsModelList.get(position).getPreview());
-            tvNews.setText(newsModelList.get(position).getNews());
+            //tvNews.setText(newsModelList.get(position).getNews());
 
             return convertView;
         }
