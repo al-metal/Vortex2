@@ -2,14 +2,18 @@ package com.vortex.vortex;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -18,6 +22,10 @@ import android.widget.TextView;
 
 import com.vortex.vortex.models.newsModel;
 
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,6 +47,7 @@ public class testNews extends AppCompatActivity {
     ListView lv;
     ProgressBar pgLoadNews;
     TextView tvProgressBerText;
+    List<newsModel> newsModelList = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +59,18 @@ public class testNews extends AppCompatActivity {
         pgLoadNews = (ProgressBar) findViewById(R.id.pgLoadNews);
 
         new NewsTask().execute("https://pk-vortex.ru/mobail-files/news/news.txt");
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                newsModel itemModel = newsModelList.get(position);
+                String idModel = String.valueOf(itemModel.getId());
+
+                Intent intent = new Intent(testNews.this, Activity_news1.class);
+                intent.putExtra("newsModel", new newsModel(itemModel.getId(), itemModel.getHeader(), itemModel.getDate(), itemModel.getPreview(), itemModel.getNews()));
+                startActivity(intent);
+            }
+        });
     }
 
     public class NewsTask extends AsyncTask<String, String, List<newsModel>> {
@@ -58,7 +79,7 @@ public class testNews extends AppCompatActivity {
         protected List<newsModel> doInBackground(String... params) {
             HttpURLConnection connection = null;
             BufferedReader reader = null;
-            List<newsModel> newsModelList = null;
+
             try {
                 URL url = new URL(params[0]);
                 connection = (HttpURLConnection) url.openConnection();
@@ -72,9 +93,7 @@ public class testNews extends AppCompatActivity {
 
                 String line = "";
                 while ((line = reader.readLine()) != null) {
-
                     buffer.append(line);
-
                 }
 
                 String finalJSON = buffer.toString();
@@ -89,16 +108,15 @@ public class testNews extends AppCompatActivity {
 
                     model.setDate(finalObjeckt.getString("date"));
                     model.setPreview(finalObjeckt.getString("preview"));
-                    //model.setNews(finalObjeckt.getString("news"));
+                    model.setNews(finalObjeckt.getString("news"));
                     model.setHeader(finalObjeckt.getString("head"));
+                    model.setId(finalObjeckt.getInt("id"));
 
                     newsModelList.add(model);
                 }
-
                 if (newsModelList == null) {
 
                 }
-
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -149,20 +167,17 @@ public class testNews extends AppCompatActivity {
                 convertView = inflater.inflate(resource, null);
             }
 
-            TextView tvDate = null;
+            TextView tvDate;
             TextView tvPreview;
-            //TextView tvNews;
             TextView tvHeader;
 
             tvDate = (TextView) convertView.findViewById(R.id.tvDate);
             tvPreview = (TextView) convertView.findViewById(R.id.tvPreview);
-            //tvNews = (TextView) convertView.findViewById(R.id.tvNews);
             tvHeader = (TextView) convertView.findViewById(R.id.tvHeader);
 
             tvDate.setText(newsModelList.get(position).getDate());
             tvHeader.setText(newsModelList.get(position).getHeader());
             tvPreview.setText(newsModelList.get(position).getPreview());
-            //tvNews.setText(newsModelList.get(position).getNews());
 
             return convertView;
         }

@@ -2,9 +2,14 @@ package com.vortex.vortex;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.vortex.vortex.models.newsModel;
+
 public class Activity_news1 extends AppCompatActivity {
+
+    newsModel model = new newsModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,10 +17,22 @@ public class Activity_news1 extends AppCompatActivity {
         setContentView(R.layout.activity_news1);
         setTitle("Новость 1");
 
-        TextView tv = (TextView) findViewById(R.id.tv);
+        //model = getIntent().getParcelableExtra("model");
+        newsModel model = (newsModel) getIntent().getParcelableExtra("newsModel");
+        WebView webView = (WebView) findViewById(R.id.wvNews);
 
-        tv.setText("С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.\n" +
-                "Повседневная практика показывает, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.\n" +
-                "Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу. Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия.");
-    }
+        TextView tvDate = null;
+        TextView tvNews;
+        TextView tvHeader;
+
+        tvDate = (TextView) findViewById(R.id.tvDate);
+        tvNews = (TextView) findViewById(R.id.tvNews);
+        tvHeader = (TextView) findViewById(R.id.tvHeader);
+
+        tvDate.setText(model.getDate());
+        tvHeader.setText(model.getHeader());
+        //tvNews.setText(model.getNews());
+        webView.loadDataWithBaseURL(null, model.getNews(), "text/html", "utf-8", null);
+
+        }
 }
