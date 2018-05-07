@@ -2,8 +2,9 @@ package com.vortex.vortex;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,18 +13,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 public class activity_klining_problema extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnTouchListener {
 
     int id;
     int id2;
     TableLayout tbMain;
     String title;
+    TextView tv;
+    String nameProduct;
 
     String[][] kuhnyaPosuda = {{"Для замачивания", "Marvel", "Optima Gel"},
             {"Против гари и копоти", "Daze"},
@@ -289,25 +293,43 @@ public class activity_klining_problema extends AppCompatActivity
 
                 if (n == 0) {
                     TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
-                    TextView tv = (TextView) tr.findViewById(R.id.col1);
+                    tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText(array[i][n]);
                     n++;
                     tv = (TextView) tr.findViewById(R.id.col2);
+                    tv.setClickable(true);
                     tv.setTextColor(Color.parseColor("#000000"));
                     tv.setText(array[i][n]);
                     tbMain.addView(tr);
+                    tv.setOnTouchListener(this);
+
+                    if (nameProduct != null) {
+                        StratRaschet(nameProduct);
+                    }
 
                 } else {
                     TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
-                    TextView tv = (TextView) tr.findViewById(R.id.col1);
+                    tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText("");
                     tv = (TextView) tr.findViewById(R.id.col2);
+                    tv.setClickable(true);
                     tv.setTextColor(Color.parseColor("#000000"));
                     tv.setText(array[i][n]);
+                    tv.setClickable(true);
                     tbMain.addView(tr);
+                    tv.setOnTouchListener(this);
+                    if (nameProduct != null) {
+                        StratRaschet(nameProduct);
+                    }
                 }
             }
         }
+    }
+
+    private void StratRaschet(String nameProduct) {
+        Intent intent = new Intent(activity_klining_problema.this, KliningRaschetActivity.class);
+        intent.putExtra("nameProduct", nameProduct);
+        startActivity(intent);
     }
 
     @Override
@@ -342,4 +364,21 @@ public class activity_klining_problema extends AppCompatActivity
         Intent intent = ClickLeftMenu.getIntentWebSite();
         startActivity(intent);
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+        TextView tv = (TextView) v;
+        nameProduct = tv.getText().toString();
+
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_UP: // отпускание
+                StratRaschet(nameProduct);
+                break;
+        }
+
+        return true;
+    }
 }
+

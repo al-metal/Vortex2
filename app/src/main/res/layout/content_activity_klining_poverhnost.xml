@@ -9,8 +9,8 @@
     tools:showIn="@layout/app_bar_activity_klining_poverhnost">
 
     <ScrollView
-        android:layout_width="360dp"
-        android:layout_height="495dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:padding="5dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="8dp">
@@ -18,7 +18,7 @@
         <LinearLayout
             android:id="@+id/llmain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TableLayout

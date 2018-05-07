@@ -230,7 +230,13 @@
         <activity android:name=".Activity_array_new" />
         <activity android:name=".Activity_news1" />
         <activity android:name=".ActivityOrder" />
-        <activity android:name=".testNews"></activity>
+        <activity android:name=".testNews" />
+        <activity android:name=".show_message" />
+        <activity android:name=".test_klining" />
+        <activity
+            android:name=".KliningRaschetActivity"
+            android:label="@string/title_activity_klining_raschet"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

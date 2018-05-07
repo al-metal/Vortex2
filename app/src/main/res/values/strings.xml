@@ -283,6 +283,10 @@
     <string name="title_activity_spravka_sredstvo_new">spravka_sredstvo_new</string>
     <string name="title_activity_activiti_spravka_menu">activiti_spravka_menu</string>
     <string name="title_activity_call_me">CallMeActivity</string>
+    <string name="title_activity_klining_raschet">KliningRaschetActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
 
 
 </resources>

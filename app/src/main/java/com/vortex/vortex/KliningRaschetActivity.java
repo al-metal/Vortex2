@@ -1,8 +1,10 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,18 +13,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity
+public class KliningRaschetActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    String product;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_klining_raschet);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Калькулятор Vortex");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -32,28 +34,13 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
 
-    public void onClick(View view) {
+        product = getIntent().getStringExtra("nameProduct");
+        setTitle(product);
 
-        Intent intent = new Intent(Main2Activity.this, ApkActivity2.class);
-        startActivity(intent);
-    }
-
-    public void onClickPisheProm(View view) {
-        Intent intent = new Intent(Main2Activity.this, ActivityPisheProm2.class);
-        startActivity(intent);
-    }
-
-    public void onClickAuto(View view) {
-        Intent intent = new Intent(Main2Activity.this, ActivityAutoVybor2.class);
-        startActivity(intent);
-    }
-
-    public void onClickKlining(View view) {
-        Intent intent = new Intent(Main2Activity.this, activity_klining.class);
-        startActivity(intent);
-        //Toast.makeText(getBaseContext(), "Данный раздел находится в разработке", Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Средство " + product, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     @Override
@@ -73,10 +60,11 @@ public class Main2Activity extends AppCompatActivity
         return true;
     }
 
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        Intent intent = ClickLeftMenu.getIntent(Main2Activity.this, item);
+        Intent intent = ClickLeftMenu.getIntent(KliningRaschetActivity.this, item);
         startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -88,4 +76,11 @@ public class Main2Activity extends AppCompatActivity
         Intent intent = ClickLeftMenu.getIntentWebSite();
         startActivity(intent);
     }
+
+
+
+
+
+
+
 }

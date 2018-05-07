@@ -38,6 +38,9 @@
                 <item
                     android:id="@+id/nav_buy_product"
                     android:title="Заказать продукцию" />
+                <item
+                    android:id="@+id/nav_show_message"
+                    android:title="Показать всплывающее сообщение" />
             </menu>
         </item>
         <item>
