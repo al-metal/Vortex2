@@ -238,10 +238,6 @@ public class activity_klining extends AppCompatActivity
             } else {
                 Log.d(LOG_TAG, "--- Таблиц больше 3 и равно " + countTablesDB + " ----");
             }
-
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "Обновление БД завершено", Toast.LENGTH_SHORT);
-            toast.show();
         }
     }
 

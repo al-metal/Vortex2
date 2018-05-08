@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class activity_klining_problema extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnTouchListener {
@@ -374,7 +375,13 @@ public class activity_klining_problema extends AppCompatActivity
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_UP: // отпускание
-                StratRaschet(nameProduct);
+                if(nameProduct.equals("Tank Bio")){
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "К сожалению расчет по средству Tank Bio не производится.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }else {
+                    StratRaschet(nameProduct);
+                }
                 break;
         }
 
