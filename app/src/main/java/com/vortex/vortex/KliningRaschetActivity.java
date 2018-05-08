@@ -21,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -58,6 +60,10 @@ public class KliningRaschetActivity extends AppCompatActivity
     TextView tvRashodMlM2;
     TextView tvRashodMl;
     TextView tvMassa;
+    TextView tvStoimostkg;
+    TextView tvStoimost;
+    TextView tvStoimostM2;
+    EditText etPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +81,13 @@ public class KliningRaschetActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        tvStoimostkg = (TextView) findViewById(R.id.tvStoimostkg);
+        tvStoimost = (TextView) findViewById(R.id.tvStoimost);
+        tvStoimostM2 = (TextView) findViewById(R.id.tvStoimostM2);
         tvRashodMlM2 = (TextView) findViewById(R.id.tvRashodMlM2);
         tvRashodMl = (TextView) findViewById(R.id.tvRashodMl);
         tvMassa = (TextView) findViewById(R.id.tvMassa);
+        etPrice = (EditText) findViewById(R.id.etPrice);
 
         tvRashodMlM2.setText("0");
         tvRashodMl.setText("0");
@@ -91,6 +101,20 @@ public class KliningRaschetActivity extends AppCompatActivity
     }
 
     public void onClickRaschet(View view) {
+
+        double price = Double.parseDouble(etPrice.getText().toString());
+        double stoimost1Kg = price / massaMarvel;
+        double stoimostSredstvam2 = stoimost1Kg / 1000 * rashodM2Marvel;
+        double stoimostUborki = stoimost1Kg / 1000 * rashodMlMarvel;
+
+        tvStoimost.setText(String.valueOf(roundUp(stoimostUborki, 2)));
+        tvStoimostkg.setText((String.valueOf(roundUp(stoimost1Kg, 2))));
+        tvStoimostM2.setText((String.valueOf(roundUp(stoimostSredstvam2, 2))));
+
+    }
+
+    public BigDecimal roundUp(double value, int digits) {
+        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public class Load_data extends AsyncTask<Void, Void, String> {

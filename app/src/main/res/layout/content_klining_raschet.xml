@@ -41,7 +41,7 @@
                         android:text="Цена за весь объем в таре, руб" />
 
                     <EditText
-                        android:id="@+id/etPriceMarvel"
+                        android:id="@+id/etPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="17dp"
@@ -130,7 +130,7 @@
                         android:text="Стоимость за 1 кг, руб" />
 
                     <TextView
-                        android:id="@+id/tvStoimkgMarvel"
+                        android:id="@+id/tvStoimostkg"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
@@ -152,7 +152,7 @@
                         android:text="Стоимость 1 уборки, руб" />
 
                     <TextView
-                        android:id="@+id/tvStoimostMarvel"
+                        android:id="@+id/tvStoimost"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
@@ -175,7 +175,7 @@
                         android:text="Стоимость средства на М2, руб" />
 
                     <TextView
-                        android:id="@+id/tvStoimostM2Marvel"
+                        android:id="@+id/tvStoimostM2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
