@@ -45,7 +45,7 @@ public class activity_klining extends AppCompatActivity
 
     int id = 0;
     String DB_VERSION;
-    final String LOG_TAG = "myLogs";
+    final String LOG_TAG = "---------------------- KLINING";
     private SQLiteDatabase mDb;
     private DatabaseHelper mDBHelper;
     private String pathTempFile;
@@ -155,6 +155,7 @@ public class activity_klining extends AppCompatActivity
             mContext = context;
         }
 
+        @SuppressLint("LongLogTag")
         @Override
         protected String doInBackground(Void... voids) {
             try {
@@ -188,9 +189,9 @@ public class activity_klining extends AppCompatActivity
                 try {
                     mDBHelper = new DatabaseHelper(mContext, DB_VERSION);
                 } catch (ExecutionException e) {
-                    e.printStackTrace();
+                    Log.d(LOG_TAG, "ошибка получения версии БД" + e);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    Log.d(LOG_TAG, "ошибка получения версии БД" + e);
                 }
 
                 mDBHelper.updateDataBase();
@@ -210,16 +211,18 @@ public class activity_klining extends AppCompatActivity
                     cursor.moveToFirst();
                     countTablesDB = cursor.getCount();
                 } catch (Exception e) {
-                    Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
+                    Log.d(LOG_TAG, "ошибка получения количества таблиц в БД" + e);
                 }
 
                 return sb.toString();
 
             } catch (Exception e) {
+                Log.d(LOG_TAG, "ошибка " + e);
                 return new String("Exception: " + e.getMessage());
             }
         }
 
+        @SuppressLint("LongLogTag")
         protected void onPostExecute(String result) {
 
             if (countTablesDB < 3) {
@@ -247,6 +250,7 @@ public class activity_klining extends AppCompatActivity
                 progressDialog.show();
             }
 
+            @SuppressLint("LongLogTag")
             @Override
             protected File doInBackground(String... params) {
                 URL url;
@@ -297,9 +301,11 @@ public class activity_klining extends AppCompatActivity
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                     m_error = e;
+                    Log.d(LOG_TAG, "ошибка скачнивания БД" + e);
                 } catch (IOException e) {
                     e.printStackTrace();
                     m_error = e;
+                    Log.d(LOG_TAG, "ошибка скачнивания БД" + e);
                 }
                 return null;
             }
@@ -310,6 +316,7 @@ public class activity_klining extends AppCompatActivity
                         .setProgress((int) ((values[0] / (float) values[1]) * 100));
             }
 
+            @SuppressLint("LongLogTag")
             @Override
             protected void onPostExecute(File file) {
                 // отображаем сообщение, если возникла ошибка
@@ -325,10 +332,15 @@ public class activity_klining extends AppCompatActivity
         }.execute(url);
     }
 
+    @SuppressLint("LongLogTag")
     private void CopyDB() {
         File file = new File(pathTempFile);
         Log.d(LOG_TAG, file.getPath());
-        String filename = DATABASE_PATH;
+        File filename = new File(DATABASE_PATH);
+
+        Log.d(LOG_TAG, "Файл для Чтения " + pathTempFile);
+        Log.d(LOG_TAG, "Файл для Записи " + DATABASE_PATH);
+        filename.delete();
 
         int size = (int) file.length();
         byte[] bytes = new byte[size];
@@ -345,10 +357,10 @@ public class activity_klining extends AppCompatActivity
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            Log.d(LOG_TAG, "ошибка копирования БД" + e);
         } catch (IOException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            Log.d(LOG_TAG, "ошибка копирования БД" + e);
         }
     }
 

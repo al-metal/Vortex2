@@ -360,6 +360,7 @@ public class KliningRaschetActivity extends AppCompatActivity
             InputStream buf = new BufferedInputStream(new FileInputStream(file));
             buf.read(bytes, 0, bytes.length);
 
+            Log.d(LOG_TAG, "--- ПУТЬ БД еще одно копирование файла ----");
             OutputStream myOutput = new FileOutputStream(filename);
             myOutput.write(bytes);
             myOutput.close();

@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -35,10 +36,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
-    final String LOG_TAG = "myLogs";
     String pathTempFile = "";
     int DB_VERSION_OLD;
-    private static final String TAG = "LOOOOOOOOOOOG";
+    private static final String TAG = "---------------------- DatabaseHelper";
     rx.Observer<Integer> observer;
     rx.Observable<Integer> observable;
 
@@ -57,25 +57,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.getReadableDatabase();
     }
 
+    @SuppressLint("LongLogTag")
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
-        if (android.os.Build.VERSION.SDK_INT >= 17)
+        if (android.os.Build.VERSION.SDK_INT >= 17) {
             DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
-        else
+            Log.d(TAG, "--- Путь 1 к программе ----" + context.getApplicationInfo().dataDir);
+        } else {
             DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
+            Log.d(TAG, "--- Путь 2 к программе ----" + context.getPackageName());
+        }
         this.mContext = context;
 
-        this.getReadableDatabase();
+        this.getWritableDatabase();
     }
 
+    @SuppressLint("LongLogTag")
     public void updateDataBase() {
         if (mNeedUpdate) {
 
-            Log.d(LOG_TAG, "--- Начинаем обновление БД ----");
+            Log.d(TAG, "--- Начинаем обновление БД ----");
             File dbFile = new File(DB_PATH + DB_NAME);
             if (dbFile.exists()) {
                 dbFile.delete();
-                Log.d(LOG_TAG, "--- Старая БД удалена ----");
+                Log.d(TAG, "--- Старая БД удалена ----");
             }
 
             NewDB();
@@ -84,6 +89,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    @SuppressLint("LongLogTag")
     private void NewDB() {
         // create onSubscribe
         rx.Observable.OnSubscribe<Integer> DownloadDB = subscriber -> {
@@ -111,16 +117,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // create observer
         observer = new rx.Observer<Integer>() {
+            @SuppressLint("LongLogTag")
             @Override
             public void onCompleted() {
                 Log.d(TAG, "onCompleted");
             }
 
+            @SuppressLint("LongLogTag")
             @Override
             public void onError(Throwable e) {
                 Log.d(TAG, "onError: " + e);
             }
 
+            @SuppressLint("LongLogTag")
             @Override
             public void onNext(Integer i) {
                 Log.d(TAG, "onNext: " + i);
@@ -129,7 +138,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         observable.subscribe(observer);
 
-        Log.d(LOG_TAG, "--- БД скопированна ----");
+        Log.d(TAG, "--- БД скопированна ----");
     }
 
     @Override
@@ -143,14 +152,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
     }
 
+    @SuppressLint("LongLogTag")
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (newVersion > oldVersion) {
-            Log.d(LOG_TAG, "--- Версии БД разные ----");
+            Log.d(TAG, "--- Версии БД разные ----");
             mNeedUpdate = true;
         }
     }
 
+    @SuppressLint("LongLogTag")
     public void Download() {
         URL url;
         HttpURLConnection urlConnection;
@@ -195,16 +206,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             CopyDB();
 
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            Log.d(TAG, "ошибка скачивания файла" + e);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.d(TAG, "ошибка скачивания файла" + e);
         }
     }
 
+    @SuppressLint("LongLogTag")
     private void CopyDB() {
         Log.d(TAG, "--- Начинаем Копирование файла ----");
         File file = new File(pathTempFile);
         Log.d(TAG, file.getPath());
+        Log.d(TAG, "--- ПУТЬ БД копирование файла ----");
         File folder = new File(DATABASE_PATH);
         if (!folder.exists()) {
             folder.mkdir();
@@ -225,11 +238,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             file.delete();
 
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            Log.d(TAG, "ошибка копирования файла" + e);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            Log.d(TAG, "ошибка копирования файла" + e);
         }
         Log.d(TAG, "--- Закончили Копирование файла ----");
     }
