@@ -78,7 +78,7 @@ public class ActivityAPKGigienaVymeniExpressMethod2 extends AppCompatActivity
 
     public void onClickRaschet(View view) {
 
-        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0){
+        if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -97,10 +97,10 @@ public class ActivityAPKGigienaVymeniExpressMethod2 extends AppCompatActivity
         double ves = Double.parseDouble(etVes.getText().toString());
         double kolichGolov = Double.parseDouble(etKolichGolov.getText().toString());
 
-        dblStoimKg = price/ves;
-        dblKolichestvo = kolichGolov*0.008;
-        dblStoimostVsego = 0.008*dblStoimKg*kolichGolov;
-        dblStoimostGolovy = dblStoimostVsego/kolichGolov;
+        dblStoimKg = price / ves;
+        dblKolichestvo = kolichGolov * 0.008;
+        dblStoimostVsego = 0.008 * dblStoimKg * kolichGolov;
+        dblStoimostGolovy = dblStoimostVsego / kolichGolov;
 
         tvStoimKg.setText(String.valueOf(roundUp(dblStoimKg, 2)));
         tvKolichestvo.setText(String.valueOf(roundUp(dblKolichestvo, 2)));
@@ -113,7 +113,7 @@ public class ActivityAPKGigienaVymeniExpressMethod2 extends AppCompatActivity
     }
 
     public void onClickSravnenie(View view) {
-        if(dblStoimKg ==0 || dblKolichestvo ==0 || dblStoimostVsego ==0 || dblStoimostGolovy ==0){
+        if (dblStoimKg == 0 || dblKolichestvo == 0 || dblStoimostVsego == 0 || dblStoimostGolovy == 0) {
             Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -152,10 +152,5 @@ public class ActivityAPKGigienaVymeniExpressMethod2 extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
     }
 }

@@ -177,9 +177,4 @@ public class ActivityAPKDezinfekciyaTumanIce2 extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
 }

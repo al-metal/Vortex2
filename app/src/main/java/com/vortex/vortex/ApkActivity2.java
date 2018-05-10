@@ -63,11 +63,6 @@ public class ApkActivity2 extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     public void onClickMoySredstva(View view) {
         Intent intent = new Intent(ApkActivity2.this, ActivityApkMoysredstvaMain2.class);
         startActivity(intent);

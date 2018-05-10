@@ -49,7 +49,6 @@ public class KliningRaschetActivity extends AppCompatActivity
     String DB_VERSION;
     static final String DB_FULL_PATH = "/data/data/ru.vortex.vortex/databases/vortex.db";
     private DatabaseHelper mDBHelper;
-    int countTablesDB;
     private SQLiteDatabase mDb;
     double rashodM2Marvel;
     double rashodMlMarvel;
@@ -253,17 +252,6 @@ public class KliningRaschetActivity extends AppCompatActivity
                 rwStoimostM2.setVisibility(View.GONE);
 
             }
-
-            /*if (countTablesDB < 3) {
-                Log.d(LOG_TAG, "--- Таблиц меньше 3 ----");
-                DownloadDB("https://pk-vortex.ru/mobail-files/db/db/vortex.db");
-            } else {
-                Log.d(LOG_TAG, "--- Таблиц больше 3 и равно " + countTablesDB + " ----");
-            }*/
-
-            /*Toast toast = Toast.makeText(getApplicationContext(),
-                    "Обновление БД завершено", Toast.LENGTH_SHORT);
-            toast.show();*/
         }
     }
 
@@ -416,11 +404,5 @@ public class KliningRaschetActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
 
 }

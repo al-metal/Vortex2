@@ -101,7 +101,7 @@ public class ActivityAPKGigienaVymeniExpressMethodSravnenie2 extends AppCompatAc
     }
 
     public void onClick(View view) {
-        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0 || etSredstvo.getText().length() == 0){
+        if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0 || etSredstvo.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -158,10 +158,5 @@ public class ActivityAPKGigienaVymeniExpressMethodSravnenie2 extends AppCompatAc
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
     }
 }

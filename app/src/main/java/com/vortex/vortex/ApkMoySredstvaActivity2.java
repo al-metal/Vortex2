@@ -145,11 +145,6 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     public void onClickBtn(View view) {
         tvStoimKg = (TextView) findViewById(R.id.tvStoimKg);
         tvStoimL = (TextView) findViewById(R.id.tvStoimL);

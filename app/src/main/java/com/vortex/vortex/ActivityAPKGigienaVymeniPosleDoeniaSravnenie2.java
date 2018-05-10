@@ -185,9 +185,4 @@ public class ActivityAPKGigienaVymeniPosleDoeniaSravnenie2 extends AppCompatActi
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
 }

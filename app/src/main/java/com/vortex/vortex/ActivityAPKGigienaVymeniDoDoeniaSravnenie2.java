@@ -152,9 +152,9 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie2 extends AppCompatActivit
     }
 
     public void onClickRaschet(View view) {
-        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etGolov.getText().length() == 0
+        if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etGolov.getText().length() == 0
                 || etDay.getText().length() == 0 || etObrabotok.getText().length() == 0 || dblRashodGolova == 0
-                || etSredstvo.getText().length() == 0){
+                || etSredstvo.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             tvStoimostKg.setText("0");
             tvKolichGigien.setText("0");
@@ -176,7 +176,7 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie2 extends AppCompatActivit
         double kolichObrabotok = Double.parseDouble(etObrabotok.getText().toString());
 
         stoimKg = price / ves;
-        kolichGigien = dblRashodGolova*kolichGolov*period*kolichObrabotok;
+        kolichGigien = dblRashodGolova * kolichGolov * period * kolichObrabotok;
         stoimObrabotki = dblRashodGolova * stoimKg;
 
         tvStoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
@@ -214,10 +214,5 @@ public class ActivityAPKGigienaVymeniDoDoeniaSravnenie2 extends AppCompatActivit
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
     }
 }

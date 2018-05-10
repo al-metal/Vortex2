@@ -34,5 +34,5 @@ public class Activity_news1 extends AppCompatActivity {
         //tvNews.setText(model.getNews());
         webView.loadDataWithBaseURL(null, model.getNews(), "text/html", "utf-8", null);
 
-        }
+    }
 }

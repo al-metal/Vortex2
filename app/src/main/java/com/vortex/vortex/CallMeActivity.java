@@ -123,11 +123,6 @@ public class CallMeActivity extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     public void onClick(View view) {
         btnCalMe = (Button) findViewById(R.id.btnCallMe);
         phone = (EditText) findViewById(R.id.etPhone);

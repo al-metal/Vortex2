@@ -165,9 +165,4 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicidSravnenie2 extends AppCo
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
 }

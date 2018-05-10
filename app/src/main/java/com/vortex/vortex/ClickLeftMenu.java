@@ -30,25 +30,21 @@ public class ClickLeftMenu extends AppCompatActivity {
             intent = new Intent(activiry, activity_spravka.class);
         } else if (id == R.id.nav_getDiscount) {
             intent = new Intent(activiry, ActivityGetDiscount.class);
-        } else if(id == R.id.nav_sendMail){
+        } else if (id == R.id.nav_sendMail) {
             intent = new Intent(activiry, CallMeActivity.class);
-        }else if(id == R.id.nav_news){
+        } else if (id == R.id.nav_news) {
             intent = new Intent(activiry, testNews.class);
-        }else if(id == R.id.nav_action){
+        } else if (id == R.id.nav_action) {
             intent = new Intent(activiry, CallMeActivity.class);
-        }else if(id == R.id.nav_buy_product){
+        } else if (id == R.id.nav_buy_product) {
             intent = new Intent(activiry, ActivityOrder.class);
-        }else if(id == R.id.nav_show_message){
+        } else if (id == R.id.nav_show_message) {
             intent = new Intent(activiry, show_message.class);
+        } else if (id == R.id.nav_site) {
+            Uri uri = Uri.parse("https://www.pk-vortex.ru"); // missing 'http://' will cause crashed
+            intent = new Intent(Intent.ACTION_VIEW, uri);
         }
 
-        return intent;
-    }
-
-    public static Intent getIntentWebSite() {
-        Intent intent = null;
-        Uri uri = Uri.parse("http://www.pk-vortex.ru"); // missing 'http://' will cause crashed
-        intent = new Intent(Intent.ACTION_VIEW, uri);
         return intent;
     }
 }

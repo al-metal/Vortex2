@@ -95,7 +95,7 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
-                if(pos == 0){
+                if (pos == 0) {
                     bollSpinner1 = false;
                     return;
                 }
@@ -126,18 +126,17 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
                                        int pos, long id) {
 
                 if (spinner2.getSelectedItemId() == 6) {
-                    if(spinner.getSelectedItemId() != 0){
+                    if (spinner.getSelectedItemId() != 0) {
                         if (spinner.getSelectedItemId() == 5)
                             spinner2.setSelection(6);
                         else
                             spinner2.setSelection(5);
                     }
                 }
-                if (spinner2.getSelectedItemId() == 0){
+                if (spinner2.getSelectedItemId() == 0) {
                     bollSpinner2 = false;
                     return;
-                }
-                else if (spinner2.getSelectedItemId() == 1)
+                } else if (spinner2.getSelectedItemId() == 1)
                     dblRashodGolova = 0.00008 * 4;
                 else if (spinner2.getSelectedItemId() == 2)
                     dblRashodGolova = 0.00012 * 4;
@@ -197,19 +196,14 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickRaschet(View view) {
-        if(etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
+        if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etKolichGolov.getText().length() == 0
                 || etDay.getText().length() == 0 || etKolichObrabotok.getText().length() == 0 || dblRashodGolova == 0
-                || !bollSpinner1 || !bollSpinner2){
+                || !bollSpinner1 || !bollSpinner2) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -226,7 +220,7 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
         double kolichObrabotok = Double.parseDouble(etKolichObrabotok.getText().toString());
 
         stoimKg = price / ves;
-        kolichGigien = dblRashodGolova*kolichGolov*period*kolichObrabotok;
+        kolichGigien = dblRashodGolova * kolichGolov * period * kolichObrabotok;
         stoimObrabotki = dblRashodGolova * stoimKg;
 
         tvSoimostKg.setText(String.valueOf(roundUp(stoimKg, 2)));
@@ -241,7 +235,7 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
     }
 
     public void onClickSravnenie(View view) {
-        if(stoimKg ==0 || kolichGigien ==0 || stoimObrabotki ==0){
+        if (stoimKg == 0 || kolichGigien == 0 || stoimObrabotki == 0) {
             Toast.makeText(getBaseContext(), "Данные для сравнения еще не расчитаны", Toast.LENGTH_SHORT).show();
             return;
         }

@@ -101,11 +101,6 @@ public class activity_klining extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     public void onClick(View view) {
         Intent intent = new Intent(activity_klining.this, activity_klining_poverhnost.class);
         startActivity(intent);
@@ -149,11 +144,6 @@ public class activity_klining extends AppCompatActivity
         Intent intent = new Intent(activity_klining.this, activity_klining_poverhnost.class);
         intent.putExtra("id", id);
         intent.putExtra("title", title);
-        startActivity(intent);
-    }
-
-    public void onClickKuhnya2(View view) {
-        Intent intent = new Intent(activity_klining.this, test_klining.class);
         startActivity(intent);
     }
 

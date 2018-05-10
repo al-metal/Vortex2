@@ -65,11 +65,6 @@ public class ActivityAutoVybor2 extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     public void onClickAuto(View view) {
         Intent intent = new Intent(ActivityAutoVybor2.this, ActivityAuto2.class);
         startActivity(intent);

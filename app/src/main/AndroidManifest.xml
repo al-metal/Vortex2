@@ -232,7 +232,6 @@
         <activity android:name=".ActivityOrder" />
         <activity android:name=".testNews" />
         <activity android:name=".show_message" />
-        <activity android:name=".test_klining" />
         <activity
             android:name=".KliningRaschetActivity"
             android:label="@string/title_activity_klining_raschet"

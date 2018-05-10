@@ -153,10 +153,9 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
         double dblStoimostZapravki = dblPrice2Kanistr / dblKolichestvoZapravok;
         double dblStoimostMoyki = dblStoimostZapravki / dblKooficient;
 
-        if(dblObjem == 35){
+        if (dblObjem == 35) {
             dblObjem = 40;
-        }
-        else {
+        } else {
             dblObjem = 400;
         }
 
@@ -184,10 +183,5 @@ public class ActivityAutoSuperKoncentratSravnenie2 extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
     }
 }

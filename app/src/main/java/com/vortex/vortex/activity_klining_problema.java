@@ -361,11 +361,6 @@ public class activity_klining_problema extends AppCompatActivity
         return true;
     }
 
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
-
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public boolean onTouch(View v, MotionEvent event) {
@@ -375,11 +370,11 @@ public class activity_klining_problema extends AppCompatActivity
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_UP: // отпускание
-                if(nameProduct.equals("Tank Bio")){
+                if (nameProduct.equals("Tank Bio")) {
                     Toast toast = Toast.makeText(getApplicationContext(),
                             "К сожалению расчет по средству Tank Bio не производится.", Toast.LENGTH_SHORT);
                     toast.show();
-                }else {
+                } else {
                     StratRaschet(nameProduct);
                 }
                 break;

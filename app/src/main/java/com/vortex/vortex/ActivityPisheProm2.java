@@ -247,9 +247,4 @@ public class ActivityPisheProm2 extends AppCompatActivity
         intent.putExtra("Sredstvo", sredstvo);
         startActivity(intent);
     }
-
-    public void onClickWebSite(View view) {
-        Intent intent = ClickLeftMenu.getIntentWebSite();
-        startActivity(intent);
-    }
 }
