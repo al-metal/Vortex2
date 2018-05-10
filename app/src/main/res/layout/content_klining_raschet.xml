@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,12 +73,13 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/rwRashodMl"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="35dp">
 
                     <TextView
-                        android:id="@+id/textView861512"
+                        android:id="@+id/tvRashodMlText"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
@@ -95,12 +96,13 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/rwRashodMlM2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="35dp">
 
                     <TextView
-                        android:id="@+id/textView86151222"
+                        android:id="@+id/tvRashodMlM2Text"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
@@ -139,12 +141,13 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/rwStoimost"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="35dp">
 
                     <TextView
-                        android:id="@+id/textView8635137"
+                        android:id="@+id/tvStoimostText"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"
@@ -162,12 +165,13 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/rwStoimostM2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="35dp">
 
                     <TextView
-                        android:id="@+id/textView86351327"
+                        android:id="@+id/tvStoimostM2Text"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="17dp"

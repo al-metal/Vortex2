@@ -9,21 +9,19 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -42,7 +40,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.util.concurrent.ExecutionException;
 
 public class KliningRaschetActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,6 +61,16 @@ public class KliningRaschetActivity extends AppCompatActivity
     TextView tvStoimost;
     TextView tvStoimostM2;
     EditText etPrice;
+
+    TextView tvStoimostM2Text;
+    TextView tvStoimostText;
+    TextView tvRashodMlM2Text;
+    TextView tvRashodMlText;
+
+    TableRow rwRashodMl;
+    TableRow rwRashodMlM2;
+    TableRow rwStoimost;
+    TableRow rwStoimostM2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +95,16 @@ public class KliningRaschetActivity extends AppCompatActivity
         tvRashodMl = (TextView) findViewById(R.id.tvRashodMl);
         tvMassa = (TextView) findViewById(R.id.tvMassa);
         etPrice = (EditText) findViewById(R.id.etPrice);
+
+        tvStoimostM2Text = (TextView) findViewById(R.id.tvStoimostM2Text);
+        tvStoimostText = (TextView) findViewById(R.id.tvStoimostText);
+        tvRashodMlM2Text = (TextView) findViewById(R.id.tvRashodMlM2Text);
+        tvRashodMlText = (TextView) findViewById(R.id.tvRashodMlText);
+
+        rwRashodMl = (TableRow) findViewById(R.id.rwRashodMl);
+        rwRashodMlM2 = (TableRow) findViewById(R.id.rwRashodMlM2);
+        rwStoimost = (TableRow) findViewById(R.id.rwStoimost);
+        rwStoimostM2 = (TableRow) findViewById(R.id.rwStoimostM2);
 
         tvRashodMlM2.setText("0");
         tvRashodMl.setText("0");
@@ -165,11 +182,12 @@ public class KliningRaschetActivity extends AppCompatActivity
                     throw mSQLException;
                 }
 
-                //Проверка на пустую БД
-                countTablesDB = 0;
+                rashodM2Marvel = 0;
+                rashodMlMarvel = 0;
+                massaMarvel = 0;
 
                 try {
-                    Log.d(LOG_TAG, "--- Получение количество таблиц в БД  в текуущем потоке" + " ----");
+                    Log.d(LOG_TAG, "--- Получение данных из БД cleanbox" + " ----");
                     Cursor c = mDb.query("cleanbox", null, null, null, null, null, null);
 
                     // ставим позицию курсора на первую строку выборки
@@ -191,9 +209,7 @@ public class KliningRaschetActivity extends AppCompatActivity
                                 rashodMlMarvel = Double.parseDouble(c.getString(consumptionmlColIndex));
                                 rashodM2Marvel = Double.parseDouble(c.getString(consumptionmlm2ColIndex));
 
-                                tvRashodMlM2.setText(String.valueOf(rashodM2Marvel));
-                                tvRashodMl.setText(String.valueOf(rashodMlMarvel));
-                                tvMassa.setText(String.valueOf(massaMarvel));
+
                                 // получаем значения по номерам столбцов и пишем все в лог
                                 Log.d(LOG_TAG,
                                         "ID = " + c.getInt(idColIndex) +
@@ -220,6 +236,23 @@ public class KliningRaschetActivity extends AppCompatActivity
         }
 
         protected void onPostExecute(String result) {
+
+            tvRashodMlM2.setText(String.valueOf(rashodM2Marvel));
+            tvRashodMl.setText(String.valueOf(rashodMlMarvel));
+            tvMassa.setText(String.valueOf(massaMarvel));
+
+            if (rashodMlMarvel == 0) {
+
+                rwRashodMl.setVisibility(View.GONE);
+                rwStoimost.setVisibility(View.GONE);
+
+            } else if (rashodM2Marvel == 0) {
+
+
+                rwRashodMlM2.setVisibility(View.GONE);
+                rwStoimostM2.setVisibility(View.GONE);
+
+            }
 
             /*if (countTablesDB < 3) {
                 Log.d(LOG_TAG, "--- Таблиц меньше 3 ----");
