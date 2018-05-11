@@ -28,7 +28,7 @@
                     android:title="Получить скидку" />
                 <item
                     android:id="@+id/nav_sendMail"
-                    android:title="Задать вопрос" />
+                    android:title="Обратная связь" />
                 <item
                     android:id="@+id/nav_news"
                     android:title="Новости" />

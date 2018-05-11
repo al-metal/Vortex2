@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -30,13 +32,21 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 
+import ru.tinkoff.decoro.MaskImpl;
+import ru.tinkoff.decoro.slots.PredefinedSlots;
+import ru.tinkoff.decoro.watchers.FormatWatcher;
+import ru.tinkoff.decoro.watchers.MaskFormatWatcher;
+
 public class CallMeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     EditText phone;
+    EditText etQuestion;
     Button btnCalMe;
     Spinner spinner;
     String department;
     String[] data = {"АПК", "Пищепром", "Автохимия", "Клининг", "Общие вопросы"};
+    final String LOG_TAG = "myLogs";
+    private boolean ERR_WEB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +57,13 @@ public class CallMeActivity extends AppCompatActivity
         setTitle("Оставить заявку");
         spinner = (Spinner) findViewById(R.id.spinnerCallMe);
 
+        phone = (EditText) findViewById(R.id.etPhone);
+        etQuestion = (EditText) findViewById(R.id.etQuestion);
+
+        MaskImpl mask = MaskImpl.createTerminated(PredefinedSlots.RUS_PHONE_NUMBER);
+        mask.setHideHardcodedHead(false); // default value
+        FormatWatcher formatWatcher = new MaskFormatWatcher(mask);
+        formatWatcher.installOn(phone);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -111,7 +128,6 @@ public class CallMeActivity extends AppCompatActivity
         return true;
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -125,19 +141,18 @@ public class CallMeActivity extends AppCompatActivity
 
     public void onClick(View view) {
         btnCalMe = (Button) findViewById(R.id.btnCallMe);
-        phone = (EditText) findViewById(R.id.etPhone);
 
-        String number = phone.getText().toString();
+        int phoneLength = phone.getText().length();
 
-        if (number.equals("")) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Не введен номер телефона", Toast.LENGTH_SHORT);
-            toast.show();
-        } else {
+        if (phoneLength == 18) {
             try {
                 new SendData().execute();
             } catch (Exception e) {
 
             }
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Проверьте ввод номера телефона", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 
@@ -156,10 +171,11 @@ public class CallMeActivity extends AppCompatActivity
 
                 String myURL = "https://pk-vortex.ru/mobail-files/send.php";
 
-                String parammetrs = "phone=" + phone.getText() + "-" + department;//+fio_in+"&dol="+dol_in+"&tel="+tel_in;
+                String parammetrs = "phone=" + phone.getText() + "†" + department + "†" + etQuestion.getText();//+fio_in+"&dol="+dol_in+"&tel="+tel_in;
                 byte[] data = null;
                 InputStream is = null;
-
+                ERR_WEB = false;
+                Log.d(LOG_TAG, "--- номер " + phone.getText() + " ----");
 
                 try {
                     URL url = new URL(myURL);
@@ -195,10 +211,8 @@ public class CallMeActivity extends AppCompatActivity
 
                         byte[] buffer = new byte[8192]; // размер буфера
 
-
                         // Далее так читаем ответ
                         int bytesRead;
-
 
                         while ((bytesRead = is.read(buffer)) != -1) {
                             baos.write(buffer, 0, bytesRead);
@@ -211,10 +225,14 @@ public class CallMeActivity extends AppCompatActivity
                     conn.disconnect();
                 } catch (MalformedURLException e) {
                     //resultString = "MalformedURLException:" + e.getMessage();
+                    Log.d(LOG_TAG, "--- ошибка MalformedURLException" + e + " ----");
                 } catch (IOException e) {
                     //resultString = "IOException:" + e.getMessage();
+                    Log.d(LOG_TAG, "--- ошибка IOException" + e + " ----");
+                    ERR_WEB = true;
                 } catch (Exception e) {
                     //resultString = "Exception:" + e.getMessage();
+                    Log.d(LOG_TAG, "--- ошибка Exception" + e + " ----");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -226,7 +244,12 @@ public class CallMeActivity extends AppCompatActivity
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            Toast toast = Toast.makeText(getApplicationContext(), "Данные переданы!", Toast.LENGTH_SHORT);
+            Toast toast;
+            if (ERR_WEB) {
+                toast = Toast.makeText(getApplicationContext(), "К сожалению возникли проблемы с интернетом. Попробуйте отправить заявку позже.", Toast.LENGTH_SHORT);
+            } else {
+                toast = Toast.makeText(getApplicationContext(), "Данные переданы!", Toast.LENGTH_SHORT);
+            }
             toast.show();
         }
     }
