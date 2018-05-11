@@ -280,7 +280,8 @@ public class spravka_sredstvo_new extends AppCompatActivity
         String img = String.valueOf(images[resId]);
         String desc = String.valueOf(descriptions[resId]);
 
-        String str = "<html><head></head><style>.leftimg {float:left; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name + "</H1><P><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg\"> " + desc + "</P></body></html>";
+        String str = "<html><head></head><style>.leftimg {float:left; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name +
+                "</H1><P><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg\"> " + desc + "</P></body></html>";
 
         webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
 
