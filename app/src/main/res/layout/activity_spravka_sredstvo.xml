@@ -26,17 +26,6 @@
         app:theme="@style/NavigationDrawerStyle"
         app:menu="@menu/activity_main2_drawer" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:text="www.pk-vortex.ru"
-            android:onClick="onClickWebSite"
-            android:textSize="14sp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="@color/colorWhite" />
-
     </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
