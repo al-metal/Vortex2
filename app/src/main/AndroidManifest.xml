@@ -227,14 +227,19 @@
             android:name=".CallMeActivity"
             android:label="@string/title_activity_call_me"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity_array_new" />
-        <activity android:name=".Activity_news1" />
         <activity android:name=".ActivityOrder" />
-        <activity android:name=".testNews" />
         <activity android:name=".show_message" />
         <activity
             android:name=".KliningRaschetActivity"
             android:label="@string/title_activity_klining_raschet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".news_array2"
+            android:label="@string/title_activity_news_array2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".news_item"
+            android:label="@string/title_activity_news_item"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

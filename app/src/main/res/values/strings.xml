@@ -287,6 +287,7 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-
+    <string name="title_activity_news_array2">news_array2</string>
+    <string name="title_activity_news_item">news_item</string>
 
 </resources>
