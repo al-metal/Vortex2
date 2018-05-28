@@ -32,12 +32,12 @@
                 android:text="12.12.2017"
                 android:textSize="10dp" />
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/tvNews"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="Небольшой маленький текстбольшой маленький текстбольшой маленький текстбольшой маленький текстбольшой маленький текстбольшой маленький текст" />
+                android:text="Небольшой маленький текстбольшой маленький текстбольшой маленький текстбольшой маленький текстбольшой маленький текстбольшой маленький текст" />-->
 
             <WebView
                 android:id="@+id/wvNews"

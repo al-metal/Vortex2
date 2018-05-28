@@ -15,11 +15,12 @@ public class Activity_news1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news1);
-        setTitle("Новость 1");
 
         //model = getIntent().getParcelableExtra("model");
         newsModel model = (newsModel) getIntent().getParcelableExtra("newsModel");
+        String headerNews = model.getHeader();
         WebView webView = (WebView) findViewById(R.id.wvNews);
+        setTitle(headerNews);
 
         TextView tvDate = null;
         TextView tvNews;
@@ -30,7 +31,7 @@ public class Activity_news1 extends AppCompatActivity {
         tvHeader = (TextView) findViewById(R.id.tvHeader);
 
         tvDate.setText(model.getDate());
-        tvHeader.setText(model.getHeader());
+        tvHeader.setText(headerNews);
         //tvNews.setText(model.getNews());
         webView.loadDataWithBaseURL(null, model.getNews(), "text/html", "utf-8", null);
 
