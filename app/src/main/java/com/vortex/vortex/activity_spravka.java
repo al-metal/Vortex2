@@ -1,7 +1,12 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,136 +20,40 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
+
 public class activity_spravka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private final String TAG = getClass().getSimpleName();
 
-    //region names[]
-    String[] names = {
-            "TANK BIO",
-            "TANK CA23",
-            "TANK CA27",
-            "Tank CAD 1415/3",
-            "TANK CB23",
-            "TANK CB46",
-            "TANK CBD 2401/1",
-            "TANK FA18",
-            "TANK FB17",
-            "TANK FB36",
-            "TANK FB48",
-            "Tank FBD 0402/1",
-            "ТANK FBD 0803/1",
-            "TANK FBD 0902/2",
-            "Tank FN",
-            "Tank LBD 0107/1",
-            "TANK LBD 1002/2",
+    String name;
+    final String LOG_TAG = "myLogs";
+    private String pathTempFile;
+    String DB_VERSION;
+    static final String DB_FULL_PATH = "/data/data/ru.vortex.vortex/databases/vortex.db";
+    private DatabaseHelper mDBHelper;
+    private SQLiteDatabase mDb;
 
-            "ALGALIT",
-            "ALGALIT 50",
-            "ALGAVIT 25",
-            "ALGAVIT 50",
-            "BIOTEC",
-            "BIOTEC M",
-            "BIOTEC C",
-            "BIOTEC SUPER",
-            "DESIMIX",
-            "DESITUB",
-            "ECOVIT",
-            "ELOVIT",
-            "FITOLIT",
-            "FORBICID",
-            "IMOVIT",
-            "KLIOVIT",
-            "KSILAN",
-            "KSILAN K",
-            "KSILAN M",
-            "KSILAN SUPER",
-            "LACTOVIT",
-            "PRIOLIT",
-            "SOMATEST",
-            "SUPRACID",
-            "VIOLIT",
+    int[] ids;
+    String[] names;
+    String[] descriptions;
+    String[] images;
+    int[] visibles;
 
-            "ACE",
-            "APEX",
-            "DEBUG",
-            "DEFROSTER",
-            "DELICATE",
-            "diy",
-            "DOZEX",
-            "GURU",
-            "HANDS",
-            "HANDS NANOMAX",
-            "HANDS SHINE",
-            "LOCO",
-            "MAGNAT",
-            "MASTER",
-            "MASTER TONE",
-            "MOBILE",
-            "NANEX",
-            "NANO FINISH",
-            "NANO NEXT",
-            "NOVICE",
-            "ORBIS",
-            "POLITURA",
-            "POLITURA GLOSS",
-            "PROFY",
-            "PROPELLA",
-            "ROTAE",
-            "ROTAE VIS",
-            "SAPO",
-            "SENZA",
-            "SILICONE",
-            "SOLO",
-            "TANTUM",
-            "TIRO",
-            "TIRO TONE",
-            "TUTELA",
-            "TUTELA FAST",
-            "TUTOR",
-            "TWIN",
-            "UNIOR",
-            "WITRUM",
-            "СУПЕРКОНЦЕНТРАТ",
-
-            "Antistick",
-            "Blank",
-            "Block",
-            "Breeze",
-            "Соmfort",
-            "Соmfort Extra",
-            "Daze",
-            "DeBlank",
-            "DeStroy",
-            "Draft",
-            "Fay",
-            "Fog",
-            "Fortis",
-            "FUMIGEL",
-            "Joy",
-            "Joy Platinum",
-            "JoySept",
-            "Kraft",
-            "Latrin",
-            "Latrin Bio",
-            "Magic",
-            "Marvel",
-            "Novatec",
-            "Novatec Foam",
-            "Optima",
-            "Optima Gel",
-            "Sauna",
-            "Twist",
-            "Well"
-    };
-//endregion
-
+    ListView listView;
+    Context context;
     EditText inputSearch;
     ArrayAdapter<String> adapter;
 
@@ -156,7 +65,7 @@ public class activity_spravka extends AppCompatActivity
         setSupportActionBar(toolbar);
         setTitle("Справочник");
 
-        inputSearch = (EditText) findViewById(R.id.inputSearch);
+        inputSearch = (EditText) findViewById(R.id.inputSearch);// находим список
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -166,55 +75,9 @@ public class activity_spravka extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        context = this;
 
-        // находим список
-        ListView listView = (ListView) findViewById(R.id.lvMain);
-
-        // создаем адаптер
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, names);
-
-        // присваиваем адаптер списку
-        listView.setAdapter(adapter);
-
-        //Обрабатываем щелчки на элементах ListView:
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                String nameProduct = ((TextView) v).getText().toString();
-                position = ReturnId(nameProduct);
-                Intent intent = new Intent();
-                intent.setClass(activity_spravka.this, spravka_sredstvo_new.class);
-                Log.i(TAG, names[position]);
-                intent.putExtra("head", position);
-                intent.putExtra("headName", names[position]);
-
-                intent.putExtra("position", position);
-
-                //запускаем вторую активность
-                startActivity(intent);
-            }
-        });
-
-        inputSearch.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                // When user changed the Text
-                activity_spravka.this.adapter.getFilter().filter(cs);
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                          int arg3) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable arg0) {
-                // TODO Auto-generated method stub
-            }
-        });
+        new Load_data(this).execute();
     }
 
     private int ReturnId(String nameProduct) {
@@ -226,7 +89,6 @@ public class activity_spravka extends AppCompatActivity
                 break;
             }
         }
-
         return id;
     }
 
@@ -256,5 +118,171 @@ public class activity_spravka extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public class Load_data extends AsyncTask<Void, Void, String> {
+
+        Context mContext;
+
+        public Load_data(Context context) {
+            mContext = context;
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+                String link = "https://pk-vortex.ru/mobail-files/db/getVersionDB.php";
+                String data = URLEncoder.encode("id", "UTF-8");
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+                wr.write(data);
+                wr.flush();
+
+                BufferedReader reader = new BufferedReader(new
+                        InputStreamReader(conn.getInputStream()));
+
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+
+                //Read Server Response
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line);
+                    break;
+                }
+
+                DB_VERSION = sb.toString();
+
+                Log.d(LOG_TAG, "--- Версия БД: " + DB_VERSION + " ----");
+
+                mDBHelper = new DatabaseHelper(mContext, DB_VERSION);
+
+                //mDBHelper.updateDataBase();
+
+                try {
+                    mDb = mDBHelper.getWritableDatabase();//.getReadableDatabase();
+                } catch (SQLException mSQLException) {
+                    throw mSQLException;
+                }
+                Log.d(LOG_TAG, "--- GOOOOOOO" + " ----");
+                try {
+                    Log.d(LOG_TAG, "--- Получение данных из БД cleanbox" + " ----");
+                    Cursor c = mDb.query("manualproduct", null, null, null, null, null, null);
+
+                    int countRow = c.getCount();
+
+                    ids = new int[countRow];
+                    names = new String[countRow];
+                    descriptions = new String[countRow];
+                    images = new String[countRow];
+                    visibles = new int[countRow];
+
+                    // ставим позицию курсора на первую строку выборки
+                    // если в выборке нет строк, вернется false
+                    if (c.moveToFirst()) {
+
+                        // определяем номера столбцов по имени в выборке
+                        int idColIndex = c.getColumnIndex("id");
+                        int nameColIndex = c.getColumnIndex("nameproduct");
+                        int descriptionColIndex = c.getColumnIndex("descriptionproduct");
+                        int imageColIndex = c.getColumnIndex("image");
+                        int visibleColIndex = c.getColumnIndex("visible");
+
+                        int count = 0;
+
+                        do {
+                            int id = Integer.parseInt(c.getString(idColIndex));
+                            String name = String.valueOf(c.getString(nameColIndex));
+                            String description = String.valueOf(c.getString(descriptionColIndex));
+                            String image = String.valueOf(c.getString(imageColIndex));
+                            int visible = Integer.parseInt(c.getString(visibleColIndex));
+
+                            ids[count] = id;
+                            names[count] = name;
+                            descriptions[count] = description;
+                            images[count] = image;
+                            visibles[count] = visible;
+
+                            // получаем значения по номерам столбцов и пишем все в лог
+                            Log.d(LOG_TAG,
+                                    "ID = " + id +
+                                            ", name = " + name +
+                                            ", description = " + description +
+                                            ", image = " + image +
+                                            ", visible = " + visible);
+
+                            // переход на следующую строку
+                            // а если следующей нет (текущая - последняя), то false - выходим из цикла
+                            count++;
+                        } while (c.moveToNext());
+                    } else
+                        Log.d(LOG_TAG, "0 rows");
+                    c.close();
+                } catch (Exception e) {
+                    Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
+                }
+
+                return sb.toString();
+
+            } catch (Exception e) {
+                Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
+                return new String("Exception: " + e.getMessage());
+            }
+        }
+
+        protected void onPostExecute(String result) {
+
+            Log.d(LOG_TAG, "--- postexecut ----");
+
+
+            listView = (ListView) findViewById(R.id.lvMain);
+            // создаем адаптер
+            adapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, names);
+
+            // присваиваем адаптер списку
+            listView.setAdapter(adapter);
+
+            //Обрабатываем щелчки на элементах ListView:
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                    String nameProduct = ((TextView) v).getText().toString();
+                    position = ReturnId(nameProduct);
+                    Intent intent = new Intent();
+                    intent.setClass(activity_spravka.this, spravka_sredstvo_new.class);
+                    Log.i(TAG, names[position]);
+                    intent.putExtra("head", position);
+                    intent.putExtra("headName", names[position]);
+
+                    intent.putExtra("position", position);
+
+                    //запускаем вторую активность
+                    startActivity(intent);
+                }
+            });
+
+            inputSearch.addTextChangedListener(new TextWatcher() {
+
+                @Override
+                public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+                    // When user changed the Text
+                    activity_spravka.this.adapter.getFilter().filter(cs);
+                }
+
+                @Override
+                public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+                                              int arg3) {
+                    // TODO Auto-generated method stub
+                }
+
+                @Override
+                public void afterTextChanged(Editable arg0) {
+                    // TODO Auto-generated method stub
+                }
+            });
+        }
     }
 }

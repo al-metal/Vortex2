@@ -1,9 +1,15 @@
 package com.vortex.vortex;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,336 +21,29 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
+
 public class spravka_sredstvo_new extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     String name;
+    final String LOG_TAG = "myLogs";
+    private String pathTempFile;
+    String DB_VERSION;
+    static final String DB_FULL_PATH = "/data/data/ru.vortex.vortex/databases/vortex.db";
+    private DatabaseHelper mDBHelper;
+    private SQLiteDatabase mDb;
 
-    //region descriptions[]
-    String[] descriptions = {
-            /*tank BIO*/
-            "Улучшение работы жироуловителей. Разложение\n" +
-                    "животных, растительных, минеральных жиров, а также\n" +
-                    "белков, углеводов и целлюлозы. Устранение неприятных\n" +
-                    "запахов, сохранение проходимости трубопроводов,\n" +
-                    "снижение количества осадка, вывозимого на утилизацию",
-            /*tank CA23*/
-            "Кислотная мойка технологического оборудования,\n" +
-                    "емкостей, резервуаров, трубопроводов\n" +
-                    "автоматических линий производства пищевых\n" +
-                    "эмульсий, теплообменников, смесителей,\n" +
-                    "охладителей, сепараторов. Удаление молочного\n" +
-                    "камня, минеральных отложений",
-            /*tank CA27*/
-            "Кислотная мойка технологического оборудования,\n" +
-                    "емкостей, резервуаров, трубопроводов\n" +
-                    "автоматических линий производства пищевых\n" +
-                    "эмульсий, теплообменников, смесителей,\n" +
-                    "охладителей, сепараторов. Удаляет пивной камень,\n" +
-                    "минеральные отложения.",
-            /*tank FB 1415/3*/
-            "Низкотемпературная дезинфекция технологического\n" +
-                    "оборудования, емкостей, резервуаров, трубопроводов,\n" +
-                    "инвентаря, тары методом циркуляции, орошения,\n" +
-                    "погружения. Применяется для обеззараживания\n" +
-                    "сточных вод, оборотной воды в охлаждающих\n" +
-                    "системах, для биоцидной обработки различных\n" +
-                    "поверхностей и изделий",
-            /*tank CB23*/
-            "Мойка емкостей, резервуаров, танков-охладителей,\n" +
-                    "молоковозов, доильно-молочного оборудования,\n" +
-                    "трубопроводов, фильтров, пастеризационных\n" +
-                    "установок, вакуумаппаратов, сепараторов,\n" +
-                    "сливкосозревателей, гомогенезаторов, линий\n" +
-                    "производства масла, творога, сыроизготовителей\n" +
-                    "и т. д",
-            /*tank CB46*/
-            "Мойка емкостей, резервуаров, танков-охладителей,\n" +
-                    "молоковозов, доильно-молочного оборудования,\n" +
-                    "трубопроводов, фильтров, пастеризационных\n" +
-                    "установок, вакуумаппаратов, сепараторов,\n" +
-                    "сливкосозревателей, гомогенезаторов, линий\n" +
-                    "производства масла, творога, сыроизготовителей\n" +
-                    "и т. д.",
-            /*tank CBD 2401/1*/
-            "Высокощелочное беспенное моющее средство с активным хлором-------------------------------",
-            /*tank FA18*/
-            "Ручная и механизированная мойка оборудования\n" +
-                    "для удаления неорганических солевых отложений",
-            /*tank FB17*/
-            "Очистка печей, камер холодного копчения,\n" +
-                    "дымогенераторов, калориферов, вентиляции,\n" +
-                    "пароконвектоматов, климокамер и т. п",
-            /*tank FB36*/
-            "Очистка печей, камер холодного копчения,\n" +
-                    "дымогенераторов, калориферов, вентиляции,\n" +
-                    "пароконвектоматов, климокамер и т. п",
-            /*tank FB48*/
-            "Очистка печей, камер холодного копчения,\n" +
-                    "дымогенераторов, калориферов, вентиляции,\n" +
-                    "пароконвектоматов, климокамер, котлов для варки\n" +
-                    "колбас, жаровочных шкафов, фритюрниц, грилей\n" +
-                    "и т. п",
-            /*tank lbd 0402/1*/
-            "Комплексная мойка и дезинфекция различного\n" +
-                    "технологического оборудования, инвентаря, тары,\n" +
-                    "емкостей, мойка полов, стен, производственных\n" +
-                    "помещений и т.п. Применяется для обработки\n" +
-                    "оборудования из нержавеющей стали, алюминия,\n" +
-                    "меди, цинка и др. цветных металлов",
-            /*tank lbd 0803/1*/
-            "Комплексная мойка и дезинфекция различного\n" +
-                    "технологического оборудования, разделочных\n" +
-                    "столов, инвентаря, тары, емкостей, мойка полов, стен,\n" +
-                    "производственных помещений и т. п.",
-            /*tank lbd 0902/2*/
-            "Комплексная мойка и дезинфекция технологического\n" +
-                    "оборудования: формовочных автоматов, машин\n" +
-                    "для нарезки, фасования, упаковки и т. п., мойка\n" +
-                    "холодильных помещений, полов, стен, автотранспорта,\n" +
-                    "конвейеров, подъемно-транспортного оборудования.\n" +
-                    "Эффективно уничтожает плесень, дрожжевые грибки\n" +
-                    "и предотвращает их рост.",
-            /*tank FN*/
-            "Ручная мойка технологического оборудования,\n" +
-                    "разделочных столов, досок, рабочих столов,\n" +
-                    "инвентаря, тары, лабораторного оборудования и т. д.",
-            /*tank lbd 0107/1*/
-            "Применяется для стирки творожных и кремовых\n" +
-                    "мешочков, фильтров и других текстильных\n" +
-                    "материалов, имеющих контакт с пищевыми\n" +
-                    "продуктами; для замачивания хлопчатобумажного\n" +
-                    "белого белья, спецодежды, лабораторных халатов\n" +
-                    "с целью отбеливания и дезинфекции; для мойки\n" +
-                    "и санитарной обработки твердых поверхностей\n" +
-                    "(нержавеющая сталь, керамическая плитка)",
-            /*tank lbd1002/2*/
-            "Очистка печей, камер холодного копчения,\n" +
-                    "дымогенераторов, калориферов, вентиляции,\n" +
-                    "пароконвектоматов, климокамер, котлов для варки\n" +
-                    "колбас, жаровочных шкафов, фритюрниц, грилей\n" +
-                    "и т. п.",
-
-
-            "Средство для обработки вымени до доения на основе йода 0,25% готовый раствор",
-            "Средство для обработки вымени до доения на основе йода 0,5%",
-            "Средство для обработки вымени после доения на основе йода 0,25%",
-            "Средство для обработки вымени после доения на основе йода 0,5%",
-            "Щелочное беспенное дезинфицирующее моющее средство для воды повышенной жесткости",
-            "Щелочное беспенное дезинфицирующее моющее средство для воды мягкой и средней жесткости",
-            "Щелочное беспенное дезинфицирующее моющее средство для воды средней жесткости",
-            "Щелочное беспенное дезинфицирующее моющее средство для воды любой жесткости",
-            "Добавка к медному и цинковому купоросу для копытных ванн",
-            "Моющее и дезинфицирующее средство для копыт",
-            "Средство для обработки вымени после доения с экстратом ромашки",
-            "Средство для обработки вымени после доения на основе хлоргексидина 0,25%",
-            "Средство для обработки вымени до доения с экстрактом алоэ вера",
-            "Дезинфицирующее средство для объектов ветеринароного надзора и  профилактики инфекционных болезней животных",
-            "Средство для обработки вымени после доения на основе молочной кислоты",
-            "Средство для обработки вымени после доения на основе хлоргексидина 0,5%",
-            "Кислотное моющее средство для воды повышенной жесткости",
-            "Кислотное моющее средство для воды средней жесткости",
-            "Кислотное моющее средство для воды мягкой и средней жесткости",
-            "Кислотное моющее средство для воды любой жесткости",
-            "Средство для обработки вымени после доения на основе молочной кислоты",
-            "Средство для обработки вымени до доения на основе хлоргексидина",
-            "Экспресс-тест для определения содержания соматических клеток в сыром молоке",
-            "Добавка на основе комплекса органических кислот",
-            "Средство для обработки вымени до доения на основе молочной кислоты",
-
-            "Высококонцентрированное средство для бесконтактной мойки класс суперпремиум, для воды высокой жесткости",
-            "Жидкость незамерзающая для стеклоомывателей",
-            "Средство для удаления мошек, тополиных почек, смол деревьев",
-            "Размораживатель стекол и замков",
-            "Концентрированное слабощелочное средство для профессиональной деликатной мойки автотранспорта",
-            "Высокопенное средство для бесконтактной мойки автомобиля на мойках самообслуживания",
-            "Высококонцентрированное средство для бесконтактной мойки класс премиум, для воды средней жесткости",
-            "Двухкомпонентное средство для бесконтактной мойки класс премиум, для воды высокой жесткости",
-            "Средство для ручной мойки автомобиля",
-            "Средство для ручной мойки автомобиля с грязезащитным и водоотталкивающим эффектом",
-            "Средство для ручной мойки автомобиля с усиленным блеском",
-            "Очиститель кузова универсальный",
-            "Высококонцентрированное средство для бесконтактной мойки грузового и легкового транспорта класс стандарт, для воды высокой жесткости",
-            "Средство для бесконтактной мойки класс стандарт, для воды средней жесткости",
-            "Средство для бесконтактной мойки класс стандарт, цветная пена для воды средней жесткости",
-            "Очиститель двигателя",
-            "Защитное водоотталкивающее нанопокрытие для стекол",
-            "Нано-средство для сушки, блеска, консервации автомобиля",
-            "Наношампунь для ручной обработки автомобиля",
-            "Средство для бесконтактной мойки класс эконом, для воды высокой жесткости",
-            "Активное кислотное средство для очистки всех типов колесных дисков",
-            "Матовая полироль-очиститель для пластиковых, виниловых и кожаных изделий",
-            "Глянцевая полироль-очиститель для пластиковых, виниловых и кожаных изделий",
-            "Средство для бесконтактной мойки класс премиум для воды средней жесткости",
-            "Очиститель - кондиционер для кожи",
-            "Чернитель резины",
-            "Чернитель резины на основе силикона",
-            "Очищающая паста для рук",
-            "Средство для бесконтактной мойки класс премиум, для воды высокой жесткости",
-            "Силиконовая смазка",
-            "Низкопенное средство для бесконтактной мойки автомобиля на мойках самообслуживания",
-            "Универсальное средство для химчистки салона автомобиля",
-            "Средство для бесконтактной мойки класс эконом, для воды средней жесткости",
-            "Средство для бесконтактной мойки класс эконом, цветная пена для воды средней жесткости",
-            "Воск для кузова",
-            "Воск для кузова",
-            "Средство для бесконтактной мойки класс стандарт, для воды высокой жесткости",
-            "Набор автокосметики: химчистка салона - Tantum, полироль - Politura, губка и микрофибра",
-            "Средство для бесконтактной мойки класс эконом минус, для воды средней жесткости",
-            "Стеклоочиститель универсальный",
-            "Автошампунь для бесконтактной мойки автомобилей",
-
-            "Очиститель от следов скотча, наклеек, маркера, жевательной резинки",
-            "Моющее средство для посудомоечных машин",
-            "Нейтрализатор запаха. Ароматы: апельсин, кожа, кофе",
-            "Средство для сантехники",
-            "Средство для мытья пола нейтральное",
-            "Средство для мытья пола щелочное",
-            "Средство для обезжиривания и удаления нагара",
-            "Ополаскиватель для посудомоечных машин",
-            "Кислотное низкопенное моющее средство для уборки после строительства и ремонта",
-            "Средство для канализации",
-            "Мыло пенка",
-            "Нейтрализатор запаха для сухого тумана. Ароматы: антитабак, корица, апельсин",
-            "Индустриальный обезжириватель",
-            "Чистящий гель для сантехники с дезинфицирующим и отбеливающим эффектом",
-            "Жидкое мыло эконом. Ароматы: апельсин, вишня, яблока, без цвета и запаха",
-            "Жидкое мыло с перламутром эконом",
-            "Антибактериальное жидкое мыло (кожный антисептик)",
-            "Очиститель - кондиционер для кожи",
-            "Концентрированное средство для биотуалетов на химической основе",
-            "Средство для септика на биологической основе",
-            "Очиститель стекол",
-            "Средство для мытья посуды",
-            "Низкопенный очиститель ковровых покрытий",
-            "Пенный очиститель ковровых покрытий",
-            "Универсальное пенное моющее средство",
-            "Универсальное гелеобразное пенное моющее средство",
-            "Моющее дезинфицирующее средство для бани и сауны",
-            "Очиститель - полироль для мебели",
-            "Универсальный очиститель"
-    };
-    //endregion
-
-    //region images[]
-    String[] images = {
-            "tank_bio_60.jpg",
-            "ca_23.jpg",
-            "ca_27.jpg",
-            "cad_1415_3_20.jpg",
-            "cb_23.jpg",
-            "cb_46.jpg",
-            "cbd_2401_1.jpg",
-            "fa_18.jpg",
-            "fb_17.jpg",
-            "fb_36.jpg",
-            "fb_48.jpg",
-            "fbd_0402_1.jpg",
-            "fbd_0803_1.jpg",
-            "fbd_0902_2.jpg",
-            "fn.jpg",
-            "lbd_0107_1.jpg",
-            "lbd_1002_2.jpg",
-
-            "algalit.jpg",
-            "algalit_50.jpg",
-            "algavit_25.jpg",
-            "algavit_50.jpg",
-            "biotec.jpg",
-            "biotec_m.jpg",
-            "biotec_c.jpg",
-            "biotec_super.jpg",
-            "desimix.jpg",
-            "desitub.jpg",
-            "ecovit.jpg",
-            "elovit.jpg",
-            "fitolit.jpg",
-            "forbicid.jpg",
-            "imovit.jpg",
-            "kliovit.jpg",
-            "ksilan.jpg",
-            "ksilan_k.jpg",
-            "ksilan_m.jpg",
-            "ksilan_super.jpg",
-            "lactovit.jpg",
-            "priolit.jpg",
-            "somatest.jpg",
-            "supracid.jpg",
-            "violit.jpg",
-
-            "ace.jpg",
-            "apex_10.jpg",
-            "debug_5.jpg",
-            "defroster.jpg",
-            "delicate_5.jpg",
-            "diy.jpg",
-            "dozex.jpg",
-            "guru.jpg",
-            "hands_5.jpg",
-            "hands_hm.jpg",
-            "hands_shine_5.jpg",
-            "loco.jpg",
-            "magnat.jpg",
-            "master.jpg",
-            "master_tone.jpg",
-            "mobile.jpg",
-            "nanex.jpg",
-            "nano_finish.jpg",
-            "nano_next.jpg",
-            "novice_5.jpg",
-            "orbis_5.jpg",
-            "politura_5.jpg",
-            "politura_gloss_5.jpg",
-            "profy.jpg",
-            "propella_5.jpg",
-            "rotae_5.jpg",
-            "rotaevis_5.jpg",
-            "sapo.jpg",
-            "senza.jpg",
-            "silicone_5.jpg",
-            "solo.jpg",
-            "tantum.jpg",
-            "tiro.jpg",
-            "tiro_tone.jpg",
-            "tutela_cherry.jpg",
-            "tutela_fast_5.jpg",
-            "tutor.jpg",
-            "twin.jpg",
-            "unior.jpg",
-            "witrum_5.jpg",
-            "k_mini_all.jpg",
-
-            "antistick.jpg",
-            "blank_1.jpg",
-            "block_apelsin.jpg",
-            "breez_05.jpg",
-            "comfort_1.jpg",
-            "comfort_extra_1.jpg",
-            "daze.jpg",
-            "deblank_1.jpg",
-            "destroy_1.jpg",
-            "draft_1.jpg",
-            "fay_5.jpg",
-            "", //фог
-            "fortis_1.jpg",
-            "fumigel_1.jpg",
-            "joy_orange_1_pet.jpg",
-            "joy_platinum_1_pet.jpg",
-            "joy_sept_tea_pet.jpg",
-            "kraft05.jpg",
-            "latrin.jpg",
-            "latrin_bio.jpg",
-            "magic.jpg",
-            "marvel_lemon_1_pet.jpg",
-            "novatec_1.jpg",
-            "novatec_foam_1.jpg",
-            "optima.jpg",
-            "optima_gel.jpg",
-            "sauna.jpg",
-            "twist_05.jpg",
-            "well_05.jpg"
-    };
-//endregion
+    int[] ids;
+    String[] names;
+    String[] descriptions;
+    String[] images;
+    int[] visibles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -352,24 +51,6 @@ public class spravka_sredstvo_new extends AppCompatActivity
         setContentView(R.layout.activity_spravka_sredstvo_new);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        WebView webView = (WebView) findViewById(R.id.webView);
-
-        Intent intent = getIntent();
-        //получаем строку и формируем имя ресурса
-        String resName = "" + intent.getIntExtra("head", 0);
-        name = intent.getStringExtra("headName");
-
-        setTitle(name);
-
-        int resId = Integer.parseInt(resName);
-        String img = String.valueOf(images[resId]);
-        String desc = String.valueOf(descriptions[resId]);
-
-        String str = "<html><head></head><style>.center-pic {text-align:center; margin: 7px 7px 7px 0; }</style><body><H1 align=\"center\">" + name +
-                "</H1><P class=\"center-pic\"><img height=\"150dp\" src=\"file:///android_res/raw/" + img + "\" class=\"leftimg1\"></P><P> " + desc + "</P></body></html>";
-
-        webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -379,6 +60,8 @@ public class spravka_sredstvo_new extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        new Load_data(this).execute();
     }
 
     @Override
@@ -407,5 +90,146 @@ public class spravka_sredstvo_new extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public class Load_data extends AsyncTask<Void, Void, String> {
+
+        Context mContext;
+
+        public Load_data(Context context) {
+            mContext = context;
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+                String link = "https://pk-vortex.ru/mobail-files/db/getVersionDB.php";
+                String data = URLEncoder.encode("id", "UTF-8");
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+                wr.write(data);
+                wr.flush();
+
+                BufferedReader reader = new BufferedReader(new
+                        InputStreamReader(conn.getInputStream()));
+
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+
+                //Read Server Response
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line);
+                    break;
+                }
+
+                DB_VERSION = sb.toString();
+
+                Log.d(LOG_TAG, "--- Версия БД: " + DB_VERSION + " ----");
+
+                mDBHelper = new DatabaseHelper(mContext, DB_VERSION);
+
+                //mDBHelper.updateDataBase();
+
+                try {
+                    mDb = mDBHelper.getWritableDatabase();//.getReadableDatabase();
+                } catch (SQLException mSQLException) {
+                    throw mSQLException;
+                }
+                Log.d(LOG_TAG, "--- GOOOOOOO" + " ----");
+                try {
+                    Log.d(LOG_TAG, "--- Получение данных из БД cleanbox" + " ----");
+                    Cursor c = mDb.query("manualproduct", null, null, null, null, null, null);
+
+                    int countRow = c.getCount();
+
+                    ids = new int[countRow];
+                    names = new String[countRow];
+                    descriptions = new String[countRow];
+                    images = new String[countRow];
+                    visibles = new int[countRow];
+
+                    // ставим позицию курсора на первую строку выборки
+                    // если в выборке нет строк, вернется false
+                    if (c.moveToFirst()) {
+
+                        // определяем номера столбцов по имени в выборке
+                        int idColIndex = c.getColumnIndex("id");
+                        int nameColIndex = c.getColumnIndex("nameproduct");
+                        int descriptionColIndex = c.getColumnIndex("descriptionproduct");
+                        int imageColIndex = c.getColumnIndex("image");
+                        int visibleColIndex = c.getColumnIndex("visible");
+
+                        int count = 0;
+
+                        do {
+                            int id = Integer.parseInt(c.getString(idColIndex));
+                            String name = String.valueOf(c.getString(nameColIndex));
+                            String description = String.valueOf(c.getString(descriptionColIndex));
+                            String image = String.valueOf(c.getString(imageColIndex));
+                            int visible = Integer.parseInt(c.getString(visibleColIndex));
+
+                            ids[count] = id;
+                            names[count] = name;
+                            descriptions[count] = description;
+                            images[count] = image;
+                            visibles[count] = visible;
+
+                            // получаем значения по номерам столбцов и пишем все в лог
+                            Log.d(LOG_TAG,
+                                    "ID = " + id +
+                                            ", name = " + name +
+                                            ", description = " + description +
+                                            ", image = " + image +
+                                            ", visible = " + visible);
+
+                            // переход на следующую строку
+                            // а если следующей нет (текущая - последняя), то false - выходим из цикла
+                            count++;
+                        } while (c.moveToNext());
+                    } else
+                        Log.d(LOG_TAG, "0 rows");
+                    c.close();
+                } catch (Exception e) {
+                    Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
+                }
+
+                return sb.toString();
+
+            } catch (Exception e) {
+                Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
+                return new String("Exception: " + e.getMessage());
+            }
+        }
+
+        protected void onPostExecute(String result) {
+
+            Log.d(LOG_TAG, "--- postexecut ----");
+
+            WebView webView = (WebView) findViewById(R.id.webView);
+
+            Intent intent = getIntent();
+            //получаем строку и формируем имя ресурса
+            String resName = "" + intent.getIntExtra("head", 0);
+            name = intent.getStringExtra("headName");
+
+            setTitle(name);
+
+            int resId = Integer.parseInt(resName);
+            String img = String.valueOf(images[resId]);
+            String desc = String.valueOf(descriptions[resId]);
+
+            String str = "<html><head></head><style>.center-pic {text-align:center; margin: 7px 7px 7px 0; }</style><body>" +
+                    "<P class=\"center-pic\">" +
+                    "<img height=\"150dp\" src=\"" + img + "\">" +
+                    "</P>" +
+                    "<P> " + desc + "</P>" +
+                    "</body></html>";
+
+            webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
+        }
     }
 }

@@ -216,10 +216,6 @@
             android:label="@string/title_activity_get_discount"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".spravka_sredstvo"
-            android:label="@string/title_activity_spravka_sredstvo"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".spravka_sredstvo_new"
             android:label="@string/title_activity_spravka_sredstvo_new"
             android:theme="@style/AppTheme.NoActionBar" />
