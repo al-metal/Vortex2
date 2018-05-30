@@ -100,7 +100,7 @@ public class activity_klining_problema extends AppCompatActivity
             {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
             {"Мусорные баки", "Optima", "Optima Gel"},
             {"Плафоны", "Optima", "Optima Gel", "Magic"},
-            {"Удаление наклеек и скотча", "Antistik"}};
+            {"Удаление наклеек и скотча", "Antistick"}};
     String[][] officeObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
     String[][] officePol = {{"Ламинат", "Comfort"},
             {"Паркет", "Comfort"},
@@ -123,7 +123,7 @@ public class activity_klining_problema extends AppCompatActivity
             {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
             {"Мусорные баки", "Optima", "Optima Gel"},
             {"Плафоны", "Magic"},
-            {"Скотч, жев. резинка, маркер, наклейки", "Antistik"}};
+            {"Скотч, жев. резинка, маркер, наклейки", "Antistick"}};
     String[][] obshiyKliningObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
     String[][] obshiyKliningRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"Антисептик", "Joy Sept"}};
@@ -145,7 +145,7 @@ public class activity_klining_problema extends AppCompatActivity
             {"Сажа, копоть на фасадах", "Daze", "Fortis"},
             {"Сажа, копоть на брусчатке", "Daze", "Fortis"},
             {"Водный камень", "Breeze", "Destroy"},
-            {"Удаление следов скотча, наклеек, маркеров", "Antistik"},
+            {"Удаление следов скотча, наклеек, маркеров", "Antistick"},
             {"Стены, двери", "Optima", "Optima Gel"}};
     String[][] remontPol = {{"Ламинат", "Comfort"},
             {"Паркет", "Comfort"},
