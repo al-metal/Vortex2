@@ -18,9 +18,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 
@@ -35,6 +37,7 @@ public class KliningRaschetActivity extends AppCompatActivity
     private double rashodM2Marvel;
     private double rashodMlMarvel;
     private double massaMarvel;
+    private boolean err;
 
     private TextView tvRashodMlM2;
     private TextView tvRashodMl;
@@ -53,6 +56,8 @@ public class KliningRaschetActivity extends AppCompatActivity
     private TableRow rwRashodMlM2;
     private TableRow rwStoimost;
     private TableRow rwStoimostM2;
+
+    private Button btnRaschetMarvel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +93,8 @@ public class KliningRaschetActivity extends AppCompatActivity
         rwStoimost = (TableRow) findViewById(R.id.rwStoimost);
         rwStoimostM2 = (TableRow) findViewById(R.id.rwStoimostM2);
 
+        btnRaschetMarvel = (Button) findViewById(R.id.btnRaschetMarvel);
+
         tvRashodMlM2.setText("0");
         tvRashodMl.setText("0");
         tvMassa.setText("0");
@@ -95,7 +102,7 @@ public class KliningRaschetActivity extends AppCompatActivity
         product = getIntent().getStringExtra("nameProduct");
         setTitle(product);
         product = product.toUpperCase();
-
+        err = false;
         new Load_data(this).execute();
     }
 
@@ -185,28 +192,41 @@ public class KliningRaschetActivity extends AppCompatActivity
                         Log.d(LOG_TAG, "0 rows");
                     c.close();
                 } catch (Exception e) {
+                    err = true;
                     Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
                 }
                 //return "";//sb.toString();
 
             } catch (Exception e) {
+                err = true;
                 //return new String("Exception: " + e.getMessage());
             }
             return null;
         }
 
+        @SuppressLint("WrongConstant")
         protected void onPostExecute(Void result) {
 
-            tvRashodMlM2.setText(String.valueOf(rashodM2Marvel));
-            tvRashodMl.setText(String.valueOf(rashodMlMarvel));
-            tvMassa.setText(String.valueOf(massaMarvel));
+            if (err) {
+                btnRaschetMarvel.setEnabled(false);
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Возникли проблемы с данными. Включите интернет и " +
+                                "откройте программу заново", Toast.LENGTH_SHORT);
+                toast.setDuration(50000);
+                toast.show();
+            } else {
 
-            if (rashodMlMarvel == 0) {
-                rwRashodMl.setVisibility(View.GONE);
-                rwStoimost.setVisibility(View.GONE);
-            } else if (rashodM2Marvel == 0) {
-                rwRashodMlM2.setVisibility(View.GONE);
-                rwStoimostM2.setVisibility(View.GONE);
+                tvRashodMlM2.setText(String.valueOf(rashodM2Marvel));
+                tvRashodMl.setText(String.valueOf(rashodMlMarvel));
+                tvMassa.setText(String.valueOf(massaMarvel));
+
+                if (rashodMlMarvel == 0) {
+                    rwRashodMl.setVisibility(View.GONE);
+                    rwStoimost.setVisibility(View.GONE);
+                } else if (rashodM2Marvel == 0) {
+                    rwRashodMlM2.setVisibility(View.GONE);
+                    rwStoimostM2.setVisibility(View.GONE);
+                }
             }
         }
     }

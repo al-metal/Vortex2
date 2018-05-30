@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -34,29 +36,35 @@ import java.util.concurrent.ExecutionException;
 
 public class Logo extends AppCompatActivity {
 
+    public static final String APP_PREFERENCES = "versionDB";
+    public static final String APP_PREFERENCES_COUNTER = "counter";
+    public static SharedPreferences mSettings;
+
     private TextView tv;
     private String DB_VERSION;
-    private final String LOG_TAG = "---------------------- KLINING";
+    private final String LOG_TAG = " Logo TAG";
     private SQLiteDatabase mDb;
     private DatabaseHelper mDBHelper;
     private String pathTempFile;
     private int countTablesDB;
     private static final String DATABASE_PATH = "/data/data/com.vortex.vortex/databases/vortex.db";
+    private boolean err;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
         setTitle("");
+        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
         tv = (TextView) findViewById(R.id.tv);
 
+        if (mSettings.contains(APP_PREFERENCES_COUNTER)) {
+            // Получаем число из настроек
+            DB_VERSION = mSettings.getString(APP_PREFERENCES_COUNTER, "");
+        }
+        err = false;
         new GetDB_Version(this).execute();
-    }
-
-    public void onClick(View view) {
-        Intent intent = new Intent(Logo.this, Main2Activity.class);
-        startActivity(intent);
     }
 
     public class GetDB_Version extends AsyncTask<Void, Void, String> {
@@ -95,6 +103,10 @@ public class Logo extends AppCompatActivity {
                 }
 
                 DB_VERSION = sb.toString();
+
+                SharedPreferences.Editor editor = mSettings.edit();
+                editor.putString(APP_PREFERENCES_COUNTER, DB_VERSION);
+                editor.apply();
 
                 Log.d(LOG_TAG, "--- Версия БД: " + DB_VERSION + " ----");
 
@@ -150,7 +162,6 @@ public class Logo extends AppCompatActivity {
 
     @SuppressLint("StaticFieldLeak")
     private void DownloadDB(String url) {
-        final ProgressDialog progressDialog = new ProgressDialog(this);
 
         new AsyncTask<String, Integer, File>() {
             private Exception m_error = null;
@@ -211,10 +222,12 @@ public class Logo extends AppCompatActivity {
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                     m_error = e;
+                    err = true;
                     Log.d(LOG_TAG, "ошибка скачнивания БД" + e);
                 } catch (IOException e) {
                     e.printStackTrace();
                     m_error = e;
+                    err = true;
                     Log.d(LOG_TAG, "ошибка скачнивания БД" + e);
                 }
                 return null;
@@ -225,9 +238,17 @@ public class Logo extends AppCompatActivity {
                 tv.setText("Скачивание файлов: " + (int) ((values[0] / (float) values[1]) * 100));
             }
 
-            @SuppressLint("LongLogTag")
+            @SuppressLint({"LongLogTag", "WrongConstant"})
             @Override
             protected void onPostExecute(File file) {
+                if (err) {
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "К сожалению сейчас нет возможности обновить базу данных," +
+                                    " попробуйте позже", Toast.LENGTH_SHORT);
+                    toast.setDuration(5000);
+                    toast.show();
+
+                }
                 // отображаем сообщение, если возникла ошибка
                 if (m_error != null) {
                     m_error.printStackTrace();

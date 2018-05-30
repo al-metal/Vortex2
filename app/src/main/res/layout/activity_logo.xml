@@ -14,10 +14,4 @@
         android:id="@+id/tv"
         android:textAlignment="center" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="На главный экран" />
-
 </LinearLayout>
