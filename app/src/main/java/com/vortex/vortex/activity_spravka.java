@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,6 +21,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -65,7 +67,8 @@ public class activity_spravka extends AppCompatActivity
         setSupportActionBar(toolbar);
         setTitle("Справочник");
 
-        inputSearch = (EditText) findViewById(R.id.inputSearch);// находим список
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,7 +79,8 @@ public class activity_spravka extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         context = this;
-
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(inputSearch.getWindowToken(), 0);
         new Load_data(this).execute();
     }
 
@@ -119,7 +123,6 @@ public class activity_spravka extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
     public class Load_data extends AsyncTask<Void, Void, String> {
 
@@ -285,4 +288,5 @@ public class activity_spravka extends AppCompatActivity
             });
         }
     }
+
 }
