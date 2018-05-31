@@ -2,8 +2,10 @@ package com.vortex.vortex;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -72,6 +74,7 @@ public class Logo extends AppCompatActivity {
         err = false;
         tvProgressBarText.setVisibility(View.INVISIBLE);
         pbLoadDB.setVisibility(View.INVISIBLE);
+
         new GetDB_Version(this).execute();
     }
 
@@ -87,6 +90,11 @@ public class Logo extends AppCompatActivity {
         @Override
         protected String doInBackground(Void... voids) {
             try {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 String link = "https://pk-vortex.ru/mobail-files/db/getVersionDB.php";
                 String data = URLEncoder.encode("id", "UTF-8");
                 URL url = new URL(link);
@@ -164,15 +172,7 @@ public class Logo extends AppCompatActivity {
             } else {
                 Log.d(LOG_TAG, "--- Таблиц больше 3 и равно " + countTablesDB + " ----");
             }
-
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            Intent intent = new Intent(Logo.this, Main2Activity.class);
-            startActivity(intent);
+            Log.d(LOG_TAG, "--- Проверка на ошибку ----");
         }
     }
 
@@ -186,7 +186,6 @@ public class Logo extends AppCompatActivity {
             protected void onPreExecute() {
                 tvProgressBarText.setVisibility(View.VISIBLE);
                 pbLoadDB.setVisibility(View.VISIBLE);
-
             }
 
             @SuppressLint("LongLogTag")
@@ -251,25 +250,28 @@ public class Logo extends AppCompatActivity {
                 return null;
             }
 
-            // обновляем progressDialog
-            protected void onProgressUpdate(Integer... values) {
-
-            }
-
             @SuppressLint({"LongLogTag", "WrongConstant"})
             @Override
             protected void onPostExecute(File file) {
+                pbLoadDB.setVisibility(View.INVISIBLE);
+                tvProgressBarText.setVisibility(View.INVISIBLE);
                 if (err) {
-                    Toast toast = Toast.makeText(getApplicationContext(),
-                            "К сожалению сейчас нет возможности обновить базу данных," +
-                                    " попробуйте позже", Toast.LENGTH_SHORT);
-                    toast.setDuration(5000);
-                    toast.show();
-
-                }else {
-
-                    pbLoadDB.setVisibility(View.INVISIBLE);
-                    tvProgressBarText.setVisibility(View.INVISIBLE);
+                    Log.d(LOG_TAG, "--- Ошибка есть ----");
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Logo.this);
+                    builder.setTitle("Ошибка")
+                            .setMessage(R.string.noneINTERNET)
+                            //.setIcon(R.drawable.ic_android_cat)
+                            .setCancelable(false)
+                            .setNegativeButton("ОК",
+                                    (dialog, id) -> {
+                                        //dialog.cancel();
+                                        Intent intent = new Intent(Logo.this, Main2Activity.class);
+                                        startActivity(intent);
+                                    });
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                    Log.d(LOG_TAG, "--- Диалог показан ----");
+                } else {
                     // отображаем сообщение, если возникла ошибка
                     if (m_error != null) {
                         m_error.printStackTrace();

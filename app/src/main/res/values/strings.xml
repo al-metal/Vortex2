@@ -289,5 +289,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_news_array2">news_array2</string>
     <string name="title_activity_news_item">news_item</string>
+    <string name="noneDB">В приложении отсутсвует база с продуктами.
+        Для ее обновления необходимо подключение к сети. Проверьте подключение
+        и запустите программу заново.</string>
+    <string name="noneINTERNET">Скорее всего проблемы возникли из-за отсутствия интернета. Проверьте подключение к сети и попробуйте снова.</string>
 
 </resources>

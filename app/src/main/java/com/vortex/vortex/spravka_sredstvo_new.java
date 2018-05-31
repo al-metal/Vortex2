@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,6 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -31,19 +33,18 @@ import java.net.URLEncoder;
 public class spravka_sredstvo_new extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String name;
-    final String LOG_TAG = "myLogs";
-    private String pathTempFile;
-    String DB_VERSION;
-    static final String DB_FULL_PATH = "/data/data/ru.vortex.vortex/databases/vortex.db";
+    private String name;
+    private final String LOG_TAG = "myLogs";
+    private String DB_VERSION;
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
 
-    int[] ids;
-    String[] names;
-    String[] descriptions;
-    String[] images;
-    int[] visibles;
+    private int[] ids;
+    private String[] names;
+    private String[] descriptions;
+    private String[] images;
+    private int[] visibles;
+    private boolean err;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class spravka_sredstvo_new extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        err = false;
 
         new Load_data(this).execute();
     }
@@ -92,7 +94,7 @@ public class spravka_sredstvo_new extends AppCompatActivity
         return true;
     }
 
-    public class Load_data extends AsyncTask<Void, Void, String> {
+    public class Load_data extends AsyncTask<Void, Void, Void> {
 
         Context mContext;
 
@@ -101,38 +103,17 @@ public class spravka_sredstvo_new extends AppCompatActivity
         }
 
         @Override
-        protected String doInBackground(Void... voids) {
+        protected Void doInBackground(Void... voids) {
             try {
-                String link = "https://pk-vortex.ru/mobail-files/db/getVersionDB.php";
-                String data = URLEncoder.encode("id", "UTF-8");
-                URL url = new URL(link);
-                URLConnection conn = url.openConnection();
-                conn.setDoOutput(true);
-
-                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-
-                wr.write(data);
-                wr.flush();
-
-                BufferedReader reader = new BufferedReader(new
-                        InputStreamReader(conn.getInputStream()));
-
-                StringBuilder sb = new StringBuilder();
-                String line = null;
-
-                //Read Server Response
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line);
-                    break;
+                Logo.mSettings = getSharedPreferences(Logo.APP_PREFERENCES, Context.MODE_PRIVATE);
+                if (Logo.mSettings.contains(Logo.APP_PREFERENCES_COUNTER)) {
+                    // Получаем число из настроек
+                    DB_VERSION = Logo.mSettings.getString(Logo.APP_PREFERENCES_COUNTER, "");
                 }
-
-                DB_VERSION = sb.toString();
 
                 Log.d(LOG_TAG, "--- Версия БД: " + DB_VERSION + " ----");
 
                 mDBHelper = new DatabaseHelper(mContext, DB_VERSION);
-
-                //mDBHelper.updateDataBase();
 
                 try {
                     mDb = mDBHelper.getWritableDatabase();//.getReadableDatabase();
@@ -194,42 +175,51 @@ public class spravka_sredstvo_new extends AppCompatActivity
                         Log.d(LOG_TAG, "0 rows");
                     c.close();
                 } catch (Exception e) {
+                    err = true;
                     Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
                 }
 
-                return sb.toString();
-
             } catch (Exception e) {
+                err = true;
                 Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
-                return new String("Exception: " + e.getMessage());
+                //return new String("Exception: " + e.getMessage());
             }
+            return null;
         }
 
-        protected void onPostExecute(String result) {
+        @SuppressLint("WrongConstant")
+        protected void onPostExecute(Void result) {
 
-            Log.d(LOG_TAG, "--- postexecut ----");
+            if (err) {
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Возникли проблемы с данными. Включите интернет и " +
+                                "откройте программу заново", Toast.LENGTH_SHORT);
+                toast.setDuration(50000);
+                toast.show();
+            } else {
 
-            WebView webView = (WebView) findViewById(R.id.webView);
+                WebView webView = (WebView) findViewById(R.id.webView);
 
-            Intent intent = getIntent();
-            //получаем строку и формируем имя ресурса
-            String resName = "" + intent.getIntExtra("head", 0);
-            name = intent.getStringExtra("headName");
+                Intent intent = getIntent();
+                //получаем строку и формируем имя ресурса
+                String resName = "" + intent.getIntExtra("head", 0);
+                name = intent.getStringExtra("headName");
 
-            setTitle(name);
+                setTitle(name);
 
-            int resId = Integer.parseInt(resName);
-            String img = String.valueOf(images[resId]);
-            String desc = String.valueOf(descriptions[resId]);
+                int resId = Integer.parseInt(resName);
+                String img = String.valueOf(images[resId]);
+                String desc = String.valueOf(descriptions[resId]);
 
-            String str = "<html><head></head><style>.center-pic {text-align:center; margin: 7px 7px 7px 0; }</style><body>" +
-                    "<P class=\"center-pic\">" +
-                    "<img height=\"150dp\" src=\"" + img + "\">" +
-                    "</P>" +
-                    "<P> " + desc + "</P>" +
-                    "</body></html>";
+                String str = "<html><head></head><style>.center-pic {text-align:center; margin: 7px 7px 7px 0; }</style><body>" +
+                        "<P class=\"center-pic\">" +
+                        "<img height=\"150dp\" src=\"" + img + "\">" +
+                        "</P>" +
+                        "<P> " + desc + "</P>" +
+                        "</body></html>";
 
-            webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
+                webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
+            }
         }
     }
 }

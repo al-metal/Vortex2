@@ -3,25 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorRed"
+    android:orientation="vertical"
     tools:context=".Logo">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/firstlogo"
         android:layout_above="@id/pbLoadDB"
-         />
+        android:src="@drawable/firstlogo" />
 
     <ProgressBar
         android:id="@+id/pbLoadDB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:visibility="invisible"
         android:layout_above="@id/tvProgressBarText"
-         />
+        tools:visibility="invisible" />
 
     <TextView
         android:id="@+id/tvProgressBarText"

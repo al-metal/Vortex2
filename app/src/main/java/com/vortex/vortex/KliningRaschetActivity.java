@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -208,12 +209,20 @@ public class KliningRaschetActivity extends AppCompatActivity
         protected void onPostExecute(Void result) {
 
             if (err) {
-                btnRaschetMarvel.setEnabled(false);
-                Toast toast = Toast.makeText(getApplicationContext(),
-                        "Возникли проблемы с данными. Включите интернет и " +
-                                "откройте программу заново", Toast.LENGTH_SHORT);
-                toast.setDuration(50000);
-                toast.show();
+                Log.d(LOG_TAG, "--- Ошибка есть ----");
+                AlertDialog.Builder builder = new AlertDialog.Builder(KliningRaschetActivity.this);
+                builder.setTitle("Ошибка")
+                        .setMessage(getString(R.string.noneDB))
+                        //.setIcon(R.drawable.ic_android_cat)
+                        .setCancelable(false)
+                        .setNegativeButton("ОК",
+                                (dialog, id) -> {
+                                    btnRaschetMarvel.setEnabled(false);
+                                    dialog.cancel();
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+                Log.d(LOG_TAG, "--- Диалог показан ----");
             } else {
 
                 tvRashodMlM2.setText(String.valueOf(rashodM2Marvel));

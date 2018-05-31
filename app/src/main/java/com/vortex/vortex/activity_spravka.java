@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -40,24 +41,23 @@ public class activity_spravka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private final String TAG = getClass().getSimpleName();
 
-    String name;
-    final String LOG_TAG = "myLogs";
-    private String pathTempFile;
-    String DB_VERSION;
-    static final String DB_FULL_PATH = "/data/data/ru.vortex.vortex/databases/vortex.db";
+    private String name;
+    private final String LOG_TAG = "myLogs";
+    private String DB_VERSION;
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
 
-    int[] ids;
-    String[] names;
-    String[] descriptions;
-    String[] images;
-    int[] visibles;
+    private int[] ids;
+    private String[] names;
+    private String[] descriptions;
+    private String[] images;
+    private int[] visibles;
+    private boolean err;
 
-    ListView listView;
-    Context context;
-    EditText inputSearch;
-    ArrayAdapter<String> adapter;
+    private ListView listView;
+    private Context context;
+    private EditText inputSearch;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +81,7 @@ public class activity_spravka extends AppCompatActivity
         context = this;
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(inputSearch.getWindowToken(), 0);
+        err = false;
         new Load_data(this).execute();
     }
 
@@ -124,7 +125,7 @@ public class activity_spravka extends AppCompatActivity
         return true;
     }
 
-    public class Load_data extends AsyncTask<Void, Void, String> {
+    public class Load_data extends AsyncTask<Void, Void, Void> {
 
         Context mContext;
 
@@ -133,38 +134,17 @@ public class activity_spravka extends AppCompatActivity
         }
 
         @Override
-        protected String doInBackground(Void... voids) {
+        protected Void doInBackground(Void... voids) {
             try {
-                String link = "https://pk-vortex.ru/mobail-files/db/getVersionDB.php";
-                String data = URLEncoder.encode("id", "UTF-8");
-                URL url = new URL(link);
-                URLConnection conn = url.openConnection();
-                conn.setDoOutput(true);
-
-                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-
-                wr.write(data);
-                wr.flush();
-
-                BufferedReader reader = new BufferedReader(new
-                        InputStreamReader(conn.getInputStream()));
-
-                StringBuilder sb = new StringBuilder();
-                String line = null;
-
-                //Read Server Response
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line);
-                    break;
+                Logo.mSettings = getSharedPreferences(Logo.APP_PREFERENCES, Context.MODE_PRIVATE);
+                if (Logo.mSettings.contains(Logo.APP_PREFERENCES_COUNTER)) {
+                    // Получаем число из настроек
+                    DB_VERSION = Logo.mSettings.getString(Logo.APP_PREFERENCES_COUNTER, "");
                 }
-
-                DB_VERSION = sb.toString();
 
                 Log.d(LOG_TAG, "--- Версия БД: " + DB_VERSION + " ----");
 
                 mDBHelper = new DatabaseHelper(mContext, DB_VERSION);
-
-                //mDBHelper.updateDataBase();
 
                 try {
                     mDb = mDBHelper.getWritableDatabase();//.getReadableDatabase();
@@ -227,65 +207,87 @@ public class activity_spravka extends AppCompatActivity
                     c.close();
                 } catch (Exception e) {
                     Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
+                    err = true;
                 }
 
-                return sb.toString();
+                //return sb.toString();
 
             } catch (Exception e) {
                 Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
-                return new String("Exception: " + e.getMessage());
+                err = true;
+                //return new String("Exception: " + e.getMessage());
             }
+            return null;
         }
 
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(Void result) {
 
             Log.d(LOG_TAG, "--- postexecut ----");
 
+            if (err) {
+                Log.d(LOG_TAG, "--- Ошибка есть ----");
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity_spravka.this);
+                builder.setTitle("Ошибка")
+                        .setMessage(getString(R.string.noneDB))
+                        //.setIcon(R.drawable.ic_android_cat)
+                        .setCancelable(false)
+                        .setNegativeButton("ОК",
+                                (dialog, id) -> {
+                                    //dialog.cancel();
+                                    Intent intent = new Intent(activity_spravka.this, Main2Activity.class);
+                                    startActivity(intent);
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+                Log.d(LOG_TAG, "--- Диалог показан ----");
+            } else {
+                listView = (ListView) findViewById(R.id.lvMain);
+                // создаем адаптер
+                adapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, names);
 
-            listView = (ListView) findViewById(R.id.lvMain);
-            // создаем адаптер
-            adapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, names);
+                // присваиваем адаптер списку
+                listView.setAdapter(adapter);
 
-            // присваиваем адаптер списку
-            listView.setAdapter(adapter);
+                //Обрабатываем щелчки на элементах ListView:
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                        String nameProduct = ((TextView) v).getText().toString();
+                        position = ReturnId(nameProduct);
+                        Intent intent = new Intent();
+                        intent.setClass(activity_spravka.this, spravka_sredstvo_new.class);
+                        Log.i(TAG, names[position]);
+                        intent.putExtra("head", position);
+                        intent.putExtra("headName", names[position]);
 
-            //Обрабатываем щелчки на элементах ListView:
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                    String nameProduct = ((TextView) v).getText().toString();
-                    position = ReturnId(nameProduct);
-                    Intent intent = new Intent();
-                    intent.setClass(activity_spravka.this, spravka_sredstvo_new.class);
-                    Log.i(TAG, names[position]);
-                    intent.putExtra("head", position);
-                    intent.putExtra("headName", names[position]);
+                        intent.putExtra("position", position);
 
-                    intent.putExtra("position", position);
+                        //запускаем вторую активность
+                        startActivity(intent);
+                    }
+                });
 
-                    //запускаем вторую активность
-                    startActivity(intent);
-                }
-            });
+                inputSearch.addTextChangedListener(new TextWatcher() {
 
-            inputSearch.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+                        // When user changed the Text
+                        activity_spravka.this.adapter.getFilter().filter(cs);
+                    }
 
-                @Override
-                public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                    // When user changed the Text
-                    activity_spravka.this.adapter.getFilter().filter(cs);
-                }
+                    @Override
+                    public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+                                                  int arg3) {
+                        // TODO Auto-generated method stub
+                    }
 
-                @Override
-                public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                              int arg3) {
-                    // TODO Auto-generated method stub
-                }
+                    @Override
+                    public void afterTextChanged(Editable arg0) {
+                        // TODO Auto-generated method stub
+                    }
+                });
+            }
 
-                @Override
-                public void afterTextChanged(Editable arg0) {
-                    // TODO Auto-generated method stub
-                }
-            });
+
         }
     }
 
