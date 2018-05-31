@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,7 +42,6 @@ public class Logo extends AppCompatActivity {
     public static final String APP_PREFERENCES_COUNTER = "counter";
     public static SharedPreferences mSettings;
 
-    private TextView tv;
     private String DB_VERSION;
     private final String LOG_TAG = " Logo TAG";
     private SQLiteDatabase mDb;
@@ -50,20 +51,27 @@ public class Logo extends AppCompatActivity {
     private static final String DATABASE_PATH = "/data/data/com.vortex.vortex/databases/vortex.db";
     private boolean err;
 
+    private ProgressBar pbLoadDB;
+    private TextView tvProgressBarText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
         setTitle("");
+
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
-        tv = (TextView) findViewById(R.id.tv);
+        tvProgressBarText = (TextView) findViewById(R.id.tvProgressBarText);
+        pbLoadDB = (ProgressBar) findViewById(R.id.pbLoadDB);
 
         if (mSettings.contains(APP_PREFERENCES_COUNTER)) {
             // Получаем число из настроек
             DB_VERSION = mSettings.getString(APP_PREFERENCES_COUNTER, "");
         }
         err = false;
+        tvProgressBarText.setVisibility(View.INVISIBLE);
+        pbLoadDB.setVisibility(View.INVISIBLE);
         new GetDB_Version(this).execute();
     }
 
@@ -104,6 +112,7 @@ public class Logo extends AppCompatActivity {
 
                 DB_VERSION = sb.toString();
 
+                //записываем версию БД в память приложения
                 SharedPreferences.Editor editor = mSettings.edit();
                 editor.putString(APP_PREFERENCES_COUNTER, DB_VERSION);
                 editor.apply();
@@ -155,6 +164,13 @@ public class Logo extends AppCompatActivity {
             } else {
                 Log.d(LOG_TAG, "--- Таблиц больше 3 и равно " + countTablesDB + " ----");
             }
+
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             Intent intent = new Intent(Logo.this, Main2Activity.class);
             startActivity(intent);
         }
@@ -168,7 +184,9 @@ public class Logo extends AppCompatActivity {
 
             @Override
             protected void onPreExecute() {
-                tv.setText("Скачивание файлов ...");
+                tvProgressBarText.setVisibility(View.VISIBLE);
+                pbLoadDB.setVisibility(View.VISIBLE);
+
             }
 
             @SuppressLint("LongLogTag")
@@ -235,7 +253,7 @@ public class Logo extends AppCompatActivity {
 
             // обновляем progressDialog
             protected void onProgressUpdate(Integer... values) {
-                tv.setText("Скачивание файлов: " + (int) ((values[0] / (float) values[1]) * 100));
+
             }
 
             @SuppressLint({"LongLogTag", "WrongConstant"})
@@ -248,15 +266,17 @@ public class Logo extends AppCompatActivity {
                     toast.setDuration(5000);
                     toast.show();
 
+                }else {
+
+                    pbLoadDB.setVisibility(View.INVISIBLE);
+                    tvProgressBarText.setVisibility(View.INVISIBLE);
+                    // отображаем сообщение, если возникла ошибка
+                    if (m_error != null) {
+                        m_error.printStackTrace();
+                        return;
+                    }
+                    Log.d(LOG_TAG, file.getPath());
                 }
-                // отображаем сообщение, если возникла ошибка
-                if (m_error != null) {
-                    m_error.printStackTrace();
-                    return;
-                }
-                // закрываем прогресс и удаляем временный файл
-                tv.setText("Скачивание файлов завершено");
-                Log.d(LOG_TAG, file.getPath());
             }
         }.execute(url);
     }
@@ -283,6 +303,11 @@ public class Logo extends AppCompatActivity {
             buf.close();
             Log.d(LOG_TAG, " записан файл");
             file.delete();
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block

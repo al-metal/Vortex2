@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorRed"
     tools:context=".Logo">
 
-    <TextView
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Информационный текст"
-        android:id="@+id/tv"
-        android:textAlignment="center" />
+        android:src="@drawable/firstlogo"
+        android:layout_above="@id/pbLoadDB"
+         />
 
-</LinearLayout>
+    <ProgressBar
+        android:id="@+id/pbLoadDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="invisible"
+        android:layout_above="@id/tvProgressBarText"
+         />
+
+    <TextView
+        android:id="@+id/tvProgressBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Подождите идет получение данных"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

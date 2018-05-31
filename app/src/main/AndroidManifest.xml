@@ -14,7 +14,6 @@
         <activity
             android:name=".Main2Activity"
             android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
 
         <activity
@@ -234,10 +233,10 @@
             android:name=".news_item"
             android:label="@string/title_activity_news_item"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Logo">
+        <activity android:name=".Logo"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
