@@ -43,6 +43,7 @@ public class spravka_sredstvo_new extends AppCompatActivity
     private String[] names;
     private String[] descriptions;
     private String[] images;
+    private String[] urls;
     private int[] visibles;
     private boolean err;
 
@@ -131,6 +132,7 @@ public class spravka_sredstvo_new extends AppCompatActivity
                     names = new String[countRow];
                     descriptions = new String[countRow];
                     images = new String[countRow];
+                    urls = new String[countRow];
                     visibles = new int[countRow];
 
                     // ставим позицию курсора на первую строку выборки
@@ -142,6 +144,7 @@ public class spravka_sredstvo_new extends AppCompatActivity
                         int nameColIndex = c.getColumnIndex("nameproduct");
                         int descriptionColIndex = c.getColumnIndex("descriptionproduct");
                         int imageColIndex = c.getColumnIndex("image");
+                        int urlColIndex = c.getColumnIndex("url");
                         int visibleColIndex = c.getColumnIndex("visible");
 
                         int count = 0;
@@ -151,12 +154,14 @@ public class spravka_sredstvo_new extends AppCompatActivity
                             String name = String.valueOf(c.getString(nameColIndex));
                             String description = String.valueOf(c.getString(descriptionColIndex));
                             String image = String.valueOf(c.getString(imageColIndex));
+                            String url = String.valueOf(c.getString(urlColIndex));
                             int visible = Integer.parseInt(c.getString(visibleColIndex));
 
                             ids[count] = id;
                             names[count] = name;
                             descriptions[count] = description;
                             images[count] = image;
+                            urls[count] = url;
                             visibles[count] = visible;
 
                             // получаем значения по номерам столбцов и пишем все в лог
@@ -165,6 +170,7 @@ public class spravka_sredstvo_new extends AppCompatActivity
                                             ", name = " + name +
                                             ", description = " + description +
                                             ", image = " + image +
+                                            ", url = " + url +
                                             ", visible = " + visible);
 
                             // переход на следующую строку
@@ -209,13 +215,20 @@ public class spravka_sredstvo_new extends AppCompatActivity
 
                 int resId = Integer.parseInt(resName);
                 String img = String.valueOf(images[resId]);
+                String url = String.valueOf(urls[resId]);
                 String desc = String.valueOf(descriptions[resId]);
+
+                String urlHTML = "";
+                if(url.equals(null) || url.equals("")){
+                    urlHTML = "<p><a href=\"" + url + "\">Подробная информация</a></p>";
+                }
 
                 String str = "<html><head></head><style>.center-pic {text-align:center; margin: 7px 7px 7px 0; }</style><body>" +
                         "<P class=\"center-pic\">" +
                         "<img height=\"150dp\" src=\"" + img + "\">" +
                         "</P>" +
                         "<P> " + desc + "</P>" +
+                        urlHTML +
                         "</body></html>";
 
                 webView.loadDataWithBaseURL(null, str, "text/html", "utf-8", null);
