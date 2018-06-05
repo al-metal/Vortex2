@@ -240,7 +240,6 @@ public class CallMeActivity extends AppCompatActivity
             return null;
         }
 
-
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);

@@ -286,8 +286,6 @@ public class activity_spravka extends AppCompatActivity
                     }
                 });
             }
-
-
         }
     }
 

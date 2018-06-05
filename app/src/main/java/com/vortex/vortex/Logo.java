@@ -169,8 +169,11 @@ public class Logo extends AppCompatActivity {
             if (countTablesDB < 3) {
                 Log.d(LOG_TAG, "--- Таблиц меньше 3 ----");
                 DownloadDB("https://pk-vortex.ru/mobail-files/db/db/vortex.db");
+
             } else {
                 Log.d(LOG_TAG, "--- Таблиц больше 3 и равно " + countTablesDB + " ----");
+                Intent intent = new Intent(Logo.this, Main2Activity.class);
+                startActivity(intent);
             }
             Log.d(LOG_TAG, "--- Проверка на ошибку ----");
         }
@@ -278,6 +281,8 @@ public class Logo extends AppCompatActivity {
                         return;
                     }
                     Log.d(LOG_TAG, file.getPath());
+                    Intent intent = new Intent(Logo.this, Main2Activity.class);
+                    startActivity(intent);
                 }
             }
         }.execute(url);
