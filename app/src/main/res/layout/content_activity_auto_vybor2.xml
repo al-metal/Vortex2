@@ -41,7 +41,8 @@
                         android:background="@null"
                         android:onClick="onClickAuto"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/avtohim" />
+                        app:srcCompat="@drawable/complex_menu_autohim"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -57,7 +58,8 @@
                         android:background="@null"
                         android:onClick="onClickSuperK"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/superkoncentrat" />
+                        app:srcCompat="@drawable/complex_menu_superk"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
             </TableLayout>

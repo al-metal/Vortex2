@@ -293,5 +293,9 @@
         Для ее обновления необходимо подключение к сети. Проверьте подключение
         и запустите программу заново.</string>
     <string name="noneINTERNET">Скорее всего проблемы возникли из-за отсутствия интернета. Проверьте подключение к сети и попробуйте снова.</string>
+    <string name="TM_cleanbox">Раздел Clenabox</string>
+    <string name="TM_complex">Раздел Complex</string>
+    <string name="TM_tank">Раздел tank</string>
+    <string name="TM_vortex">Раздел vortex</string>
 
 </resources>

@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +26,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="0dp"
                 android:shrinkColumns="*"
-                android:stretchColumns="*">
+                android:stretchColumns="*"
+                tools:ignore="UselessParent">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -37,10 +38,11 @@
                         android:id="@+id/imageButton32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
                         android:onClick="onClickTumanFire"
-                        app:srcCompat="@mipmap/tumanfire"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        app:srcCompat="@drawable/vortex_menu_profilaktika_tuman_fire" />
                 </TableRow>
 
                 <TableRow
@@ -52,10 +54,11 @@
                         android:id="@+id/imageButton33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
                         android:onClick="onClickTumanIce"
-                        app:srcCompat="@mipmap/tumanice"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        app:srcCompat="@drawable/vortex_menu_profilaktika_tuman_ice" />
                 </TableRow>
 
                 <TableRow
@@ -67,10 +70,11 @@
                         android:id="@+id/imageButton34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
                         android:onClick="onClickTumanIceAnimal"
-                        app:srcCompat="@mipmap/tumananimal"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        app:srcCompat="@drawable/vortex_menu_profilaktika_tuman_animal" />
                 </TableRow>
 
             </TableLayout>

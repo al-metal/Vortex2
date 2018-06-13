@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,10 +37,12 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:layout_span="2"
+                        android:adjustViewBounds="true"
                         android:background="@null"
+                        android:contentDescription="@string/TM_vortex"
                         android:onClick="onClick"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/vortex" />
+                        app:srcCompat="@drawable/vortex" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
@@ -48,10 +50,13 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:layout_span="2"
+                        android:adjustViewBounds="true"
                         android:background="@null"
+                        android:contentDescription="@string/TM_tank"
                         android:onClick="onClickPisheProm"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/tank" />
+                        app:srcCompat="@drawable/tank"
+                        tools:ignore="VectorDrawableCompat" />
 
                 </TableRow>
 
@@ -65,10 +70,13 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:layout_span="2"
+                        android:adjustViewBounds="true"
                         android:background="@null"
+                        android:contentDescription="@string/TM_complex"
                         android:onClick="onClickAuto"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/complex" />
+                        app:srcCompat="@drawable/complex"
+                        tools:ignore="VectorDrawableCompat" />
 
                     <ImageButton
                         android:id="@+id/imageButton8"
@@ -76,10 +84,13 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:layout_span="2"
+                        android:adjustViewBounds="true"
                         android:background="@null"
+                        android:contentDescription="@string/TM_cleanbox"
                         android:onClick="onClickKlining"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/cleanbox" />
+                        app:srcCompat="@drawable/cleanbox"
+                        tools:ignore="VectorDrawableCompat" />
                 </TableRow>
 
             </TableLayout>

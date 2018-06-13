@@ -12,20 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:stretchColumns="*"
-                android:shrinkColumns="*">
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -34,15 +34,13 @@
 
                     <ImageButton
                         android:id="@+id/imageButton9"
-                        android:onClick="onClickVoda"
-                        app:srcCompat="@mipmap/apkdjestkost"
-                        android:scaleType="fitCenter"
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:background="@null"/>
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:onClick="onClickVoda"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/vortex_menu_raschet_voda" />
                 </TableRow>
 
                 <TableRow
@@ -52,15 +50,13 @@
 
                     <ImageButton
                         android:id="@+id/imageButton10"
-
-                        android:onClick="onClickRaschetStoimostiRabRastvor"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkstoimostrabrast"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:background="@null"/>
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:onClick="onClickRaschetStoimostiRabRastvor"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/vortex_menu_raschet_rastvor" />
                 </TableRow>
 
                 <TableRow
@@ -70,18 +66,15 @@
 
                     <ImageButton
                         android:id="@+id/imageButton11"
-
-                        android:onClick="onClickRaschetMoySredstvForHoz"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkraschethozyastv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:background="@null"/>
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:onClick="onClickRaschetMoySredstvForHoz"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/vortex_menu_raschet_sredstva" />
 
                 </TableRow>
-
             </TableLayout>
         </LinearLayout>
     </ScrollView>

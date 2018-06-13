@@ -40,7 +40,8 @@
                         android:background="@null"
                         android:onClick="onClickOzdorovlenie"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkozdorovlenie" />
+                        app:srcCompat="@drawable/vortex_menu_kopyta_zdorov"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -55,7 +56,8 @@
                         android:background="@null"
                         android:onClick="onClickProfilaktika"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkprofilaktikakopyta" />
+                        app:srcCompat="@drawable/vortex_menu_kopyta_zdorov"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -70,7 +72,8 @@
                         android:background="@null"
                         android:onClick="onClickMedKuporos"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkkuporos" />
+                        app:srcCompat="@drawable/vortex_menu_kopyta_kuporos"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -85,7 +88,8 @@
                         android:background="@null"
                         android:onClick="onClickDesitabProfilaktika"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkdesitabprofilaktika" />
+                        app:srcCompat="@drawable/vortex_menu_kopyta_desitub_prof"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -100,7 +104,8 @@
                         android:background="@null"
                         android:onClick="onClickDesitabProfilaktikaUsil"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/apkdesitabusilprof" />
+                        app:srcCompat="@drawable/vortex_menu_kopyta_desitub_super_prof"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
             </TableLayout>
 

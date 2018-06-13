@@ -41,7 +41,8 @@
                         android:background="@null"
                         android:onClick="onClickKuhnya"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/klining_kuhnya" />
+                        app:srcCompat="@drawable/cleanbox_menu_kuhnya"
+                        android:adjustViewBounds="true"/>
 
                 </TableRow>
 
@@ -58,7 +59,8 @@
                         android:background="@null"
                         android:onClick="onClickSanusel"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/klining_sanusel" />
+                        app:srcCompat="@drawable/cleanbox_menu_sanuzel"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -74,7 +76,9 @@
                         android:background="@null"
                         android:onClick="onClickOffice"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/klining_office" />
+                        app:srcCompat="@drawable/cleanbox_menu_office"
+                        android:adjustViewBounds="true"
+                        />
                 </TableRow>
 
                 <TableRow
@@ -90,7 +94,8 @@
                         android:background="@null"
                         android:onClick="onClickObshKlining"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/klining_obshklining" />
+                        app:srcCompat="@drawable/cleanbox_menu_other"
+                        android:adjustViewBounds="true"/>
 
                 </TableRow>
 
@@ -107,7 +112,8 @@
                         android:background="@null"
                         android:onClick="onClickRemont"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/klining_remont" />
+                        app:srcCompat="@drawable/cleanbox_menu_remont"
+                        android:adjustViewBounds="true"/>
 
                 </TableRow>
 
@@ -124,7 +130,8 @@
                         android:background="@null"
                         android:onClick="onClickPromKlining"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/klining_promklining" />
+                        app:srcCompat="@drawable/cleanbox_menu_prom"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
             </TableLayout>
         </LinearLayout>

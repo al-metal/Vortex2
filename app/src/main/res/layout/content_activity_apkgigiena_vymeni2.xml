@@ -41,7 +41,8 @@
                         android:background="@null"
                         android:onClick="onClickAPKGigienaDoDoenia"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/vymyadodoen" />
+                        app:srcCompat="@drawable/vortex_menu_vymya_do"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -56,7 +57,8 @@
                         android:background="@null"
                         android:onClick="onClickAPKGigienaPosleDoenia"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/vymyaposledoen" />
+                        app:srcCompat="@drawable/vortex_menu_vymya_posle"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
 
                 <TableRow
@@ -71,7 +73,8 @@
                         android:background="@null"
                         android:onClick="onClickAPKGigienaExpressMethod"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@mipmap/vymyaexpress" />
+                        app:srcCompat="@drawable/vortex_menu_vymya_mastit"
+                        android:adjustViewBounds="true"/>
                 </TableRow>
             </TableLayout>
 
