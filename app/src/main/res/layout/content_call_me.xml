@@ -21,6 +21,36 @@
             android:background="@color/colorSpiner"
             android:spinnerMode="dialog" />
 
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:id="@+id/radioGroupFilial">
+
+            <RadioButton
+                android:id="@+id/rButtonCentralOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Центральный офис"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rButtonSouthOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Вортекс-Юг" />
+
+            <RadioButton
+                android:id="@+id/rButtonSiberianOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Вортекс-Сибирь" />
+        </RadioGroup>
+
         <EditText
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
@@ -32,7 +62,7 @@
             android:id="@+id/etQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Задайте свой вопрос"
+            android:hint="@string/your_question"
             android:inputType="textMultiLine" />
 
         <Button
@@ -40,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClick"
-            android:text="Отправить запрос" />
+            android:text="@string/Submit_question" />
 
     </LinearLayout>
 

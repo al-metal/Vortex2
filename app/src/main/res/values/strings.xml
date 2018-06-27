@@ -297,5 +297,8 @@
     <string name="TM_complex">Раздел Complex</string>
     <string name="TM_tank">Раздел tank</string>
     <string name="TM_vortex">Раздел vortex</string>
+    <string name="Submit_question">Отправить вопрос</string>
+    <string name="your_question">Ваш вопрос</string>
+    <string name="feedback">Обратная связь</string>
 
 </resources>

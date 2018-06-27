@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +45,7 @@ public class CallMeActivity extends AppCompatActivity
     Button btnCalMe;
     Spinner spinner;
     String department;
+    String filial;
     String[] data = {"АПК", "Пищепром", "Автохимия", "Клининг", "Общие вопросы"};
     final String LOG_TAG = "myLogs";
     private boolean ERR_WEB;
@@ -54,7 +56,7 @@ public class CallMeActivity extends AppCompatActivity
         setContentView(R.layout.activity_call_me);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Оставить заявку");
+        setTitle(getResources().getText(R.string.feedback));
         spinner = (Spinner) findViewById(R.id.spinnerCallMe);
 
         phone = (EditText) findViewById(R.id.etPhone);
@@ -109,6 +111,32 @@ public class CallMeActivity extends AppCompatActivity
                 }
             }
         });
+
+        filial = "Центр";
+
+        RadioGroup rGroup = (RadioGroup) findViewById(R.id.radioGroupFilial);
+        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case -1:
+                        filial = "err";
+                        break;
+                    case R.id.rButtonCentralOffice:
+                        filial = "Центр";
+                        break;
+                    case R.id.rButtonSouthOffice:
+                        filial = "Юг";
+                        break;
+                    case R.id.rButtonSiberianOffice:
+                        filial = "Сибирь";
+                        break;
+                    default:
+                        filial = "err";
+                        break;
+                }
+            }
+        });
     }
 
     @Override
@@ -144,14 +172,14 @@ public class CallMeActivity extends AppCompatActivity
 
         int phoneLength = phone.getText().length();
 
-        if (phoneLength == 18) {
+        if (phoneLength == 18 && filial.equals("err")) {
             try {
                 new SendData().execute();
             } catch (Exception e) {
 
             }
         } else {
-            Toast toast = Toast.makeText(getApplicationContext(), "Проверьте ввод номера телефона", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(getApplicationContext(), "Проверьте ввод номера телефона и выбранный филиал", Toast.LENGTH_SHORT);
             toast.show();
         }
     }
@@ -171,7 +199,7 @@ public class CallMeActivity extends AppCompatActivity
 
                 String myURL = "https://pk-vortex.ru/mobail-files/send.php";
 
-                String parammetrs = "phone=" + phone.getText() + "†" + department + "†" + etQuestion.getText();//+fio_in+"&dol="+dol_in+"&tel="+tel_in;
+                String parammetrs = "phone=" + phone.getText() + "†" + department + "†" + etQuestion.getText() + "†" + filial;//+fio_in+"&dol="+dol_in+"&tel="+tel_in;
                 byte[] data = null;
                 InputStream is = null;
                 ERR_WEB = false;
