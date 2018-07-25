@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -7,6 +8,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -24,6 +27,10 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.vortex.vortex.Adapter.FeedAdapter;
+import com.vortex.vortex.Common.HTTPDataHandler;
+import com.vortex.vortex.Model.RSSObject;
 import com.vortex.vortex.models.newsModel;
 
 import org.json.JSONArray;
@@ -43,10 +50,14 @@ import java.util.List;
 public class news_array2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ListView lv;
     ProgressBar pgLoadNews;
     TextView tvProgressBerText;
-    List<newsModel> newsModelList = null;
+    android.widget.Toolbar toolbar;
+    RecyclerView recyclerView;
+    RSSObject rssObject;
+
+    private final String RSSLink = "https://pk-vortex.ru/news/rss/";
+    private final String RSSToJsonApi = "https://api.rss2json.com/v1/api.json?rss_url=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +76,17 @@ public class news_array2 extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        lv = (ListView) findViewById(R.id.lvNewsArray);
+        //lv = (ListView) findViewById(R.id.lvNewsArray);
         tvProgressBerText = (TextView) findViewById(R.id.tvProgressBerText);
         pgLoadNews = (ProgressBar) findViewById(R.id.pgLoadNews);
 
-        new NewsTask().execute("https://pk-vortex.ru/mobail-files/news/news.txt");
+        recyclerView = (RecyclerView)findViewById(R.id.recycler);
+        LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        LoadRSS();
+
+        /*new NewsTask().execute("https://pk-vortex.ru/mobail-files/news/news.txt");
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
@@ -81,7 +98,7 @@ public class news_array2 extends AppCompatActivity
                 intent.putExtra("newsModel", new newsModel(itemModel.getId(), itemModel.getHeader(), itemModel.getDate(), itemModel.getPreview(), itemModel.getNews()));
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     @Override
@@ -111,7 +128,7 @@ public class news_array2 extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+/*
     public class NewsTask extends AsyncTask<String, String, List<newsModel>> {
 
         @Override
@@ -220,5 +237,36 @@ public class news_array2 extends AppCompatActivity
 
             return convertView;
         }
+    }*/
+
+    public void LoadRSS() {
+        @SuppressLint("StaticFieldLeak") AsyncTask<String, String, String> loadRSSAsync = new AsyncTask<String, String, String>() {
+
+            @Override
+            protected void onPostExecute(String s) {
+                pgLoadNews.setVisibility(View.GONE);
+                tvProgressBerText.setVisibility(View.GONE);
+                rssObject = new Gson().fromJson(s, RSSObject.class);
+                FeedAdapter adapter = new FeedAdapter(rssObject, getBaseContext());
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            protected String doInBackground(String... strings) {
+                String result;
+                HTTPDataHandler httpDataHandler = new HTTPDataHandler();
+                result = httpDataHandler.getHTTPData(strings[0]);
+                return result;
+            }
+
+        };
+        StringBuilder url_get_data = new StringBuilder(RSSToJsonApi);
+        url_get_data.append(RSSLink);
+        loadRSSAsync.execute(url_get_data.toString());
+    }
+
+    public void onClickStartService(View view) {
+        startService(new Intent(this, GetNewNewsService.class));
     }
 }

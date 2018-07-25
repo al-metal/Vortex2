@@ -13,9 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Main2Activity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ActivityPisheProm2"
             android:label="@string/title_activity_pishe_prom2"
@@ -206,8 +204,8 @@
         <activity
             android:name=".activity_spravka"
             android:label="@string/title_activity_spravka"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ActivityGetDiscount"
             android:label="@string/title_activity_get_discount"
@@ -234,13 +232,20 @@
             android:name=".news_item"
             android:label="@string/title_activity_news_item"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Logo"
+        <activity
+            android:name=".Logo"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".GetNewNewsService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
