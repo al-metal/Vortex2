@@ -1,6 +1,7 @@
 package com.vortex.vortex;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -76,29 +77,14 @@ public class news_array2 extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //lv = (ListView) findViewById(R.id.lvNewsArray);
         tvProgressBerText = (TextView) findViewById(R.id.tvProgressBerText);
         pgLoadNews = (ProgressBar) findViewById(R.id.pgLoadNews);
 
-        recyclerView = (RecyclerView)findViewById(R.id.recycler);
-        LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         LoadRSS();
-
-        /*new NewsTask().execute("https://pk-vortex.ru/mobail-files/news/news.txt");
-
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                newsModel itemModel = newsModelList.get(position);
-                String idModel = String.valueOf(itemModel.getId());
-
-                Intent intent = new Intent(news_array2.this, news_item.class);
-                intent.putExtra("newsModel", new newsModel(itemModel.getId(), itemModel.getHeader(), itemModel.getDate(), itemModel.getPreview(), itemModel.getNews()));
-                startActivity(intent);
-            }
-        });*/
     }
 
     @Override
@@ -128,116 +114,6 @@ public class news_array2 extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-/*
-    public class NewsTask extends AsyncTask<String, String, List<newsModel>> {
-
-        @Override
-        protected List<newsModel> doInBackground(String... params) {
-            HttpURLConnection connection = null;
-            BufferedReader reader = null;
-
-            try {
-                URL url = new URL(params[0]);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.connect();
-
-                InputStream stream = connection.getInputStream();
-
-                reader = new BufferedReader(new InputStreamReader(stream));
-
-                StringBuffer buffer = new StringBuffer();
-
-                String line = "";
-                while ((line = reader.readLine()) != null) {
-                    buffer.append(line);
-                }
-
-                String finalJSON = buffer.toString();
-
-                JSONObject parentObjeckt = new JSONObject(finalJSON);
-                JSONArray parentArray = parentObjeckt.getJSONArray("newsArray");
-
-                newsModelList = new ArrayList<>();
-                for (int i = 0; parentArray.length() > i; i++) {
-                    JSONObject finalObjeckt = parentArray.getJSONObject(i);
-                    newsModel model = new newsModel();
-
-                    model.setDate(finalObjeckt.getString("date"));
-                    model.setPreview(finalObjeckt.getString("preview"));
-                    model.setNews(finalObjeckt.getString("news"));
-                    model.setHeader(finalObjeckt.getString("head"));
-                    model.setId(finalObjeckt.getInt("id"));
-
-                    newsModelList.add(model);
-                }
-                if (newsModelList == null) {
-
-                }
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-                try {
-                    if (reader != null) {
-                        reader.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return newsModelList;
-        }
-
-        @Override
-        protected void onPostExecute(List<newsModel> result) {
-            super.onPostExecute(result);
-            NewsAdapter adapter = new NewsAdapter(getApplicationContext(), R.layout.rownewsarray, result);
-            pgLoadNews.setVisibility(View.GONE);
-            tvProgressBerText.setVisibility(View.GONE);
-            lv.setAdapter(adapter);
-        }
-    }
-
-    public class NewsAdapter extends ArrayAdapter {
-
-        private List<newsModel> newsModelList;
-        private int resource;
-        private LayoutInflater inflater;
-
-        public NewsAdapter(@NonNull Context context, int resource, @NonNull List<newsModel> objects) {
-            super(context, resource, objects);
-            newsModelList = objects;
-            this.resource = resource;
-            inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        }
-
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            if (convertView == null) {
-                convertView = inflater.inflate(resource, null);
-            }
-
-            TextView tvDate;
-            TextView tvPreview;
-            TextView tvHeader;
-
-            tvDate = (TextView) convertView.findViewById(R.id.tvDate);
-            tvPreview = (TextView) convertView.findViewById(R.id.tvPreview);
-            tvHeader = (TextView) convertView.findViewById(R.id.tvHeader);
-
-            tvDate.setText(newsModelList.get(position).getDate());
-            tvHeader.setText(newsModelList.get(position).getHeader());
-            tvPreview.setText(newsModelList.get(position).getPreview());
-
-            return convertView;
-        }
-    }*/
 
     public void LoadRSS() {
         @SuppressLint("StaticFieldLeak") AsyncTask<String, String, String> loadRSSAsync = new AsyncTask<String, String, String>() {
@@ -246,10 +122,26 @@ public class news_array2 extends AppCompatActivity
             protected void onPostExecute(String s) {
                 pgLoadNews.setVisibility(View.GONE);
                 tvProgressBerText.setVisibility(View.GONE);
-                rssObject = new Gson().fromJson(s, RSSObject.class);
-                FeedAdapter adapter = new FeedAdapter(rssObject, getBaseContext());
-                recyclerView.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
+                if (s == null) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(news_array2.this);
+                    builder.setTitle("Ошибка")
+                            .setMessage(R.string.noneINTERNET)
+                            //.setIcon(R.drawable.ic_android_cat)
+                            .setCancelable(false)
+                            .setNegativeButton("ОК",
+                                    (dialog, id) -> {
+                                        //dialog.cancel();
+                                        Intent intent = new Intent(news_array2.this, Main2Activity.class);
+                                        startActivity(intent);
+                                    });
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                } else {
+                    rssObject = new Gson().fromJson(s, RSSObject.class);
+                    FeedAdapter adapter = new FeedAdapter(rssObject, getBaseContext());
+                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                }
             }
 
             @Override
@@ -259,7 +151,6 @@ public class news_array2 extends AppCompatActivity
                 result = httpDataHandler.getHTTPData(strings[0]);
                 return result;
             }
-
         };
         StringBuilder url_get_data = new StringBuilder(RSSToJsonApi);
         url_get_data.append(RSSLink);

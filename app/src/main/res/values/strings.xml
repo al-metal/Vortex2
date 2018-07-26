@@ -300,5 +300,6 @@
     <string name="Submit_question">Отправить вопрос</string>
     <string name="your_question">Ваш вопрос</string>
     <string name="feedback">Обратная связь</string>
+    <string name="newsTitleNotification">Новости ПК Вортекс</string>
 
 </resources>

@@ -36,13 +36,13 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
     @Override
     public void onClick(View v) {
 
-        itemClickListener.onClick(v,getAdapterPosition(),false);
+        itemClickListener.onClick(v, getAdapterPosition(), false);
 
     }
 
     @Override
     public boolean onLongClick(View v) {
-        itemClickListener.onClick(v,getAdapterPosition(),true);
+        itemClickListener.onClick(v, getAdapterPosition(), true);
         return true;
     }
 }
@@ -73,8 +73,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
         holder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
-                if(!isLongClick)
-                {
+                if (!isLongClick) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(rssObject.getItems().get(position).getLink()));
                     context.startActivity(browserIntent);
                 }
@@ -84,6 +83,8 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
 
     @Override
     public int getItemCount() {
+        if (rssObject == null)
+            return 0;
         return rssObject.items.size();
     }
 }

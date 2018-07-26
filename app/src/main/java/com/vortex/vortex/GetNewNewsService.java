@@ -2,6 +2,7 @@ package com.vortex.vortex;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 
 public class GetNewNewsService extends Service {
     private MyThread mythread;
-    public boolean isRunning = false;
+    public boolean isRunning = true;
     RSSObject rssObject;
 
     private final String RSSLink = "https://pk-vortex.ru/news/rss/";
@@ -44,6 +45,7 @@ public class GetNewNewsService extends Service {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
     }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -54,14 +56,20 @@ public class GetNewNewsService extends Service {
     }
 
     private void SendNotifi(String message) {
-        Uri uri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Intent resultIntent = new Intent(this, news_array2.class);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(this, 0, resultIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setVibrate(new long[] {0, 500, 50, 1000} )
-                        .setContentTitle("Title")
+                        .setSmallIcon(R.drawable.smallicon)
+                        .setVibrate(new long[]{0, 500, 50, 1000})
+                        .setContentTitle(getString(R.string.newsTitleNotification))
                         .setSound(uri)
-                        .setContentText(message);
+                        .setContentText(message)
+                        .setContentIntent(resultPendingIntent)
+                        .setAutoCancel(true);
 
         Notification notification = builder.build();
 
@@ -72,9 +80,8 @@ public class GetNewNewsService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (!isRunning) {
+        if (isRunning) {
             mythread.start();
-            //isRunning = true;
         }
         return START_STICKY;
     }
@@ -84,18 +91,16 @@ public class GetNewNewsService extends Service {
 
         @Override
         public void run() {
-            //while(isRunning){
-
-            try {
-                //Thread.sleep(DELAY);
-                TimeUnit.SECONDS.sleep(15);
-                readWebPage();
-                Thread.sleep(DELAY);
-            } catch (InterruptedException e) {
-                isRunning = false;
-                e.printStackTrace();
+            while (isRunning) {
+                try {
+                    TimeUnit.MINUTES.sleep(2);
+                    readWebPage();
+                    //Thread.sleep(DELAY);
+                } catch (InterruptedException e) {
+                    isRunning = true;
+                    e.printStackTrace();
+                }
             }
-            //}
         }
     }
 
@@ -129,7 +134,7 @@ public class GetNewNewsService extends Service {
         }
     }
 
-    private void ClearPreference(){
+    private void ClearPreference() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(PREFERENCE_NAME, "");
         editor.apply();
