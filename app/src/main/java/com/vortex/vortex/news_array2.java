@@ -156,8 +156,4 @@ public class news_array2 extends AppCompatActivity
         url_get_data.append(RSSLink);
         loadRSSAsync.execute(url_get_data.toString());
     }
-
-    public void onClickStartService(View view) {
-        startService(new Intent(this, GetNewNewsService.class));
-    }
 }

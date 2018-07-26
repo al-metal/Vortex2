@@ -75,6 +75,8 @@ public class Logo extends AppCompatActivity {
         tvProgressBarText.setVisibility(View.INVISIBLE);
         pbLoadDB.setVisibility(View.INVISIBLE);
 
+        startService(new Intent(this, GetNewNewsService.class));
+
         new GetDB_Version(this).execute();
     }
 

@@ -63,7 +63,7 @@ public class GetNewNewsService extends Service {
         Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.smallicon)
+                        .setSmallIcon(R.drawable.ic_top)
                         .setVibrate(new long[]{0, 500, 50, 1000})
                         .setContentTitle(getString(R.string.newsTitleNotification))
                         .setSound(uri)
@@ -87,15 +87,13 @@ public class GetNewNewsService extends Service {
     }
 
     private class MyThread extends Thread {
-        static final long DELAY = 10000;
 
         @Override
         public void run() {
             while (isRunning) {
                 try {
-                    TimeUnit.MINUTES.sleep(2);
+                    TimeUnit.SECONDS.sleep(30);
                     readWebPage();
-                    //Thread.sleep(DELAY);
                 } catch (InterruptedException e) {
                     isRunning = true;
                     e.printStackTrace();

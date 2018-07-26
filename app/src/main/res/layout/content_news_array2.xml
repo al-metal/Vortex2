@@ -13,12 +13,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickStartService"
-            android:text="Start Service" />
-
         <ProgressBar
             android:id="@+id/pgLoadNews"
             style="?android:attr/progressBarStyle"
