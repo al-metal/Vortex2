@@ -92,7 +92,7 @@ public class GetNewNewsService extends Service {
         public void run() {
             while (isRunning) {
                 try {
-                    TimeUnit.SECONDS.sleep(30);
+                    TimeUnit.MINUTES.sleep(30);
                     readWebPage();
                 } catch (InterruptedException e) {
                     isRunning = true;

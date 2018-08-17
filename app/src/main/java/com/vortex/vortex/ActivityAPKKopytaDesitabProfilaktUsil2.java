@@ -105,6 +105,7 @@ public class ActivityAPKKopytaDesitabProfilaktUsil2 extends AppCompatActivity
         double ves = Double.parseDouble(etVes.getText().toString());
 
         double percentDesitab = (vanna * percent) / 100;
+
         double kolichObrabotok = (prodolDen / 7) * 10;
         double kolichVann = (kolichObrabotok * stado) / 200;
         double trebuemDesitab = percentDesitab * kolichVann;
