@@ -301,5 +301,10 @@
     <string name="your_question">Ваш вопрос</string>
     <string name="feedback">Обратная связь</string>
     <string name="newsTitleNotification">Новости ПК Вортекс</string>
+    <string name="title_activity_kliningnfo_product">KliningnfoProductActivity</string>
+    <string name="title_activity_klining_new_calculation">ActivityKliningNewCalculation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -18,16 +18,16 @@
             android:name=".BootReceiver"
             android:enabled="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
-
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
         <activity
             android:name=".Main2Activity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ActivityPisheProm2"
             android:label="@string/title_activity_pishe_prom2"
@@ -259,7 +259,16 @@
         <service
             android:name=".GetNewNewsService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity
+            android:name=".KliningnfoProductActivity"
+            android:label="@string/title_activity_kliningnfo_product"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityKliningNewCalculation"
+            android:label="@string/title_activity_klining_new_calculation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

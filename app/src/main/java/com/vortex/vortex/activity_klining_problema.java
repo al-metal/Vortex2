@@ -328,7 +328,7 @@ public class activity_klining_problema extends AppCompatActivity
     }
 
     private void StratRaschet(String nameProduct) {
-        Intent intent = new Intent(activity_klining_problema.this, KliningRaschetActivity.class);
+        Intent intent = new Intent(activity_klining_problema.this, KliningnfoProductActivity.class);
         intent.putExtra("nameProduct", nameProduct);
         startActivity(intent);
     }
