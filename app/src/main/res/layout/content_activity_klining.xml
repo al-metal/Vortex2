@@ -133,6 +133,22 @@
                         app:srcCompat="@drawable/cleanbox_menu_prom"
                         android:adjustViewBounds="true"/>
                 </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton400"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="2"
+                        android:background="@null"
+                        android:onClick="onClickHotel"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/cleanbox_menu_prom"
+                        android:adjustViewBounds="true"/>
+                </TableRow>
             </TableLayout>
         </LinearLayout>
     </ScrollView>

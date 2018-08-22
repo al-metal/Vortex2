@@ -30,7 +30,28 @@ public class activity_klining_problema extends AppCompatActivity
     TextView tv;
     String nameProduct;
 
-    String[][] kuhnyaPosuda = {{"Для замачивания", "Marvel", "Optima Gel"},
+    String[][] kitchenDishWasher = {{"Для основной мойки", "Blank"},
+            {"Для ополаскивания", "DeBlank"}};
+    String[][] kitchenHandWashing = {{"Ручная мойка, замачивание", "Marvel", "Optima Gel"},
+            {"Против жира, нагара и копоти", "Daze", "TANK FB 36", "TANK FB 48"},
+            {"Для отбеливания и дезинфекции посуды", "TANK LBD 0107/1"}};
+    String[][] kitchenSmokeChamber = {{"Против жира, нагара и копоти", "Daze", "TANK FB 36", "TANK FB 48"}};
+    String[][] kitchenRefrigerator = {{"Внутри (при выключенном состоянии)", "Fungus", "Optima Gel"},
+            {"Снаружи", "Well", "Optima Gel", "Optima"}};
+    String[][] kitchenDisinfection = {{"Дезинфекция", "TANK LBD 1002/2"}};
+    String[][] kitchenTextile = {{"Стирка и отбеливание", "TANK LBD 0107/1"}};
+    String[][] kitchenGreaseTrap = {{"Против жира", "TANK BIO"}};
+    String[][] kitchenTubing = {{"Устранение засоров", "Draft"}};
+    String[][] kitchenSmell = {{"Устраняет запахи любого происхождения", "Block", "Fog"}};
+    String[][] kitchenRoom = {{"Стены, двери, подоконники", "Well", "Optima Gel"},
+            {"Напольные покрытия", "Comfort", "Comfort Extra"},
+            {"Окна, зеркала и витрины", "Magic"},
+            {"Мусорные баки", "Well", "Optima Gel", "Optima"},
+            {"Рабочие столы и поверхности", "Well", "Optima Gel", "Optima"}};
+    String[][] kitchenHandHygiene = {{"Жидкое мыло", "Joy", "Joy Крем-мыло", "Fay"},
+            {"Антисептик", "Joy Sept"}};
+
+    /*String[][] kuhnyaPosuda = {{"Для замачивания", "Marvel", "Optima Gel"},
             {"Против гари и копоти", "Daze"},
             {"Для отбеливания и дезинфекции", "Fumigel"}};
     String[][] kuhnyaPosudaMashina = {{"Для мойки", "Blank"},
@@ -56,7 +77,7 @@ public class activity_klining_problema extends AppCompatActivity
             {"Методом сухого тумана", "Fog"}};
     String[][] kuhnyaRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
             {"Антисептик", "Joy Sept"}};
-    String[][] kuhnyaJiro = {{"Для жироуловителей и жироотделителей", "Tank Bio"}};
+    String[][] kuhnyaJiro = {{"Для жироуловителей и жироотделителей", "Tank Bio"}};*/
 
 
     String[][] sanuselUnitaz = {{"Ржавчина", "Breeze", "Destroy"},
@@ -176,29 +197,30 @@ public class activity_klining_problema extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         //region Kuhnya
+
         if (id == 1 && id2 == 0) {
-            ShowSredstva(kuhnyaPosuda);
+            ShowSredstva(kitchenDishWasher);
         } else if (id == 1 && id2 == 1) {
-            ShowSredstva(kuhnyaPosudaMashina);
+            ShowSredstva(kitchenHandWashing);
         } else if (id == 1 && id2 == 2) {
-            ShowSredstva(kuhnyaHolodilnik);
+            ShowSredstva(kitchenSmokeChamber);
         } else if (id == 1 && id2 == 3) {
-            ShowSredstva(kuhnyaVytyajka);
+            ShowSredstva(kitchenRefrigerator);
         } else if (id == 1 && id2 == 4) {
-            ShowSredstva(kuhnyaPlita);
+            ShowSredstva(kitchenDisinfection);
         } else if (id == 1 && id2 == 5) {
-            ShowSredstva(kuhnyaPech);
+            ShowSredstva(kitchenTextile);
         } else if (id == 1 && id2 == 6) {
-            ShowSredstva(kuhnyaPribory);
+            ShowSredstva(kitchenGreaseTrap);
         } else if (id == 1 && id2 == 7) {
-            ShowSredstva(kuhnyaVanna);
+            ShowSredstva(kitchenTubing);
         } else if (id == 1 && id2 == 8) {
-            ShowSredstva(kuhnyaDezinfekciya);
+            ShowSredstva(kitchenSmell);
         } else if (id == 1 && id2 == 9) {
-            ShowSredstva(kuhnyaRabStol);
+            ShowSredstva(kitchenRoom);
         } else if (id == 1 && id2 == 10) {
-            ShowSredstva(kuhnyaMoyka);
-        } else if (id == 1 && id2 == 11) {
+            ShowSredstva(kitchenHandHygiene);
+        }/* else if (id == 1 && id2 == 11) {
             ShowSredstva(kuhnyaTruby);
         } else if (id == 1 && id2 == 12) {
             ShowSredstva(kuhnyaZapah);
@@ -206,7 +228,7 @@ public class activity_klining_problema extends AppCompatActivity
             ShowSredstva(kuhnyaRuki);
         } else if (id == 1 && id2 == 14) {
             ShowSredstva(kuhnyaJiro);
-        }
+        }*/
 //endregion
 
         //region Sanusel

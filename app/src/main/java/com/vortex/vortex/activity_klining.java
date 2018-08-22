@@ -110,4 +110,9 @@ public class activity_klining extends AppCompatActivity
         intent.putExtra("title", title);
         startActivity(intent);
     }
+
+    public void onClickHotel(View view) {
+        id = 7;
+        SetIdKlining(id, "Промышленный клининг");
+    }
 }

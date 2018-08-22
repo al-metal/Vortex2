@@ -72,7 +72,10 @@ public class KliningCalculation1Fragment extends Fragment {
         EditText etWeightOfProductInContainer = view.findViewById(R.id.etWeightOfProductInContainer);
         TextView tvTheCostOfToolsPerM2 = view.findViewById(R.id.tvTheCostOfToolsPerM2);
         TextView tvThePricePerKg = view.findViewById(R.id.tvThePricePerKg);
-        double expence = 10;
+
+        TextView tvExpence = view.findViewById(R.id.tvExpense);
+        double expence = getArguments().getDouble("expence");
+        tvExpence.setText("Расход, мл./м2 = " + expence);
 
 
         Button button = view.findViewById(R.id.btnCalculation);
