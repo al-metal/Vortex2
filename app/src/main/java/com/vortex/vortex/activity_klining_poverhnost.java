@@ -2,7 +2,9 @@ package com.vortex.vortex;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,15 +13,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class activity_klining_poverhnost extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, TextView.OnClickListener {
 
     int id;
 
@@ -30,6 +34,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
     String titleProblem;
     String titleProblemNew;
     String[] array;
+    String nameProduct;
 
     String[] kuhnya = {"ПОСУДОМОЕЧНАЯ МАШИНА", "РУЧНАЯ МОЙКА ПАСУДЫ, ЗАМАЧИВАНИЕ, ОТБЕЛИВАНИЕ", "КОПТИЛЬНАЯ КАМЕРА, ПЛИТА, ГРИЛЬ, ДУХОВКА, МИКРОВОЛНОВАЯ ПЕЧЬ", "ХОЛОДИЛЬНИК", "ДЕЗИНФЕКЦИЯ", "СТИРКА ТВОРОЖНЫХ И КРЕМОВЫХ МЕШОЧКОВ И ДРУГИХ ТЕКСТИЛЬНЫХ МАТЕРИАЛОВ", "ЖИРОУЛОВИТЕЛИ",
             "ТРУБЫ", "УСТРАНЕНИЕ ЗАПАХОВ", "МОЙКА И ЧИСТКА ПОМЕЩЕНИЯ", "ГИГИЕНА РУК"};
@@ -91,7 +96,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
             CreateViews(remont);
         } else if (id == 6) {
             ShowSredstva(PromKlining);
-        }else if (id == 7) {
+        } else if (id == 7) {
             CreateViews(hotel);
         }
     }
@@ -127,7 +132,9 @@ public class activity_klining_poverhnost extends AppCompatActivity
                     tv = (TextView) tr.findViewById(R.id.col2);
                     tv.setTextColor(Color.parseColor("#000000"));
                     tv.setText(array[i][n]);
+                    tv.setClickable(true);
                     tl.addView(tr);
+                    tv.setOnClickListener(this);
 
                 } else {
                     TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
@@ -136,7 +143,9 @@ public class activity_klining_poverhnost extends AppCompatActivity
                     tv = (TextView) tr.findViewById(R.id.col2);
                     tv.setTextColor(Color.parseColor("#000000"));
                     tv.setText(array[i][n]);
+                    tv.setClickable(true);
                     tl.addView(tr);
+                    tv.setOnClickListener(this);
                 }
             }
         }
@@ -197,4 +206,17 @@ public class activity_klining_poverhnost extends AppCompatActivity
         startActivity(intent);
     }
 
+    private void StratRaschet(String nameProduct) {
+        Intent intent = new Intent(activity_klining_poverhnost.this, KliningnfoProductActivity.class);
+        intent.putExtra("nameProduct", nameProduct);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        TextView tv = (TextView) v;
+        nameProduct = tv.getText().toString();
+        StratRaschet(nameProduct);
+    }
 }

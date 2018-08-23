@@ -51,7 +51,6 @@ public class activity_klining_problema extends AppCompatActivity
     String[][] kitchenHandHygiene = {{"Жидкое мыло", "Joy", "Joy Крем-мыло", "Fay"},
             {"Антисептик", "Joy Sept"}};
 
-
     String[][] bathroomToilet = {{"Ржавчина, мочевой, водный камень, известковый налет", "Breeze"},
             {"Плесень, грибок, органика, микробы", "Fumigel", "Fungus"},
             {"Потожировые загрязнения", "Fumigel", "Fungus"},

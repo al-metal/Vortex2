@@ -189,10 +189,10 @@ public class KliningnfoProductActivity extends AppCompatActivity
                 Log.d(LOG_TAG, "--- Диалог показан ----");
             } else {
 
-                if(appointment != "" && instruction != "") {
+                if (appointment != "" && instruction != "") {
                     tvAppointment.setText(appointment);
                     tvInstruction.setText(instruction);
-                }else {
+                } else {
                     tvAppointment.setText(strNONE);
                     tvInstruction.setText(strNONE);
                 }
