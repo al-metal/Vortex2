@@ -51,129 +51,123 @@ public class activity_klining_problema extends AppCompatActivity
     String[][] kitchenHandHygiene = {{"Жидкое мыло", "Joy", "Joy Крем-мыло", "Fay"},
             {"Антисептик", "Joy Sept"}};
 
-    /*String[][] kuhnyaPosuda = {{"Для замачивания", "Marvel", "Optima Gel"},
-            {"Против гари и копоти", "Daze"},
-            {"Для отбеливания и дезинфекции", "Fumigel"}};
-    String[][] kuhnyaPosudaMashina = {{"Для мойки", "Blank"},
-            {"Для ополаскивания", "DeBlank"}};
-    String[][] kuhnyaHolodilnik = {{"Внутри (при выключенном состоянии)", "Well", "Optima Gel", "Optima"},
-            {"Снаружи", "Optima", "Optima Gel", "Well"}};
-    String[][] kuhnyaVytyajka = {{"Обезжиривание", "Daze"},
-            {"Блеск", "Twist", "Well"}};
-    String[][] kuhnyaPlita = {{"Плита, гриль, духовка", "Daze"}};
-    String[][] kuhnyaPech = {{"Микроволновая печь", "Daze"}};
-    String[][] kuhnyaPribory = {{"Столовые приборы", "Marvel"}, {"", "Optima Gel"}};
-    String[][] kuhnyaVanna = {{"Замачивание посуды", "Marvel", "Optima Gel"},
-            {"Отбеливание посуды", "Fumigel"}};
-    String[][] kuhnyaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
-    String[][] kuhnyaRabStol = {{"Рабочие столы и поверхности", "Optima", "Optima Gel"}};
-    String[][] kuhnyaMoyka = {{"Стены, двери", "Optima Gel", "Optima", "Well"},
+
+    String[][] bathroomToilet = {{"Ржавчина, мочевой, водный камень, известковый налет", "Breeze"},
+            {"Плесень, грибок, органика, микробы", "Fumigel", "Fungus"},
+            {"Потожировые загрязнения", "Fumigel", "Fungus"},
+            {"Дезинфекция", "Fumigel", "Fungus"}};
+
+    String[][] bathroomBath = {{"Потожировые и мыльные загрязнения", "Fumigel", "Breeze"},
+            {"Известковый налет, ржавые подтеки", "Breeze"},
+            {"Отбеливание и дезинфекция", "Fumigel", "Fungus"}};
+
+    String[][] bathroomWindows = {{"Стеклянные поверхности", "Magic"}};
+
+    String[][] bathroomWashing = {{"Стены, двери", "Well", "Optima Gel"},
             {"Напольные покрытия", "Comfort", "Comfort Extra"},
-            {"Окна и зеркала", "Magic"},
-            {"Отбеливание мопов и полотенец", "Fumigel"},
-            {"Мусорные баки", "Optima", "Optima Gel"}};
-    String[][] kuhnyaTruby = {{"Устранение засоров", "Draft"}};
-    String[][] kuhnyaZapah = {{"Локально", "Block"},
-            {"Методом сухого тумана", "Fog"}};
-    String[][] kuhnyaRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"Мусорные баки", "Well", "Optima Gel", "Optima"},
+            {"Плафоны", "Well", "Optima Gel", "Optima"}};
+
+    String[][] bathroomTubing = {{"Устранение засоров", "Draft"}};
+
+    String[][] bathroomSmell = {{"Устраняет запахи любого происхождения", "Block", "Fog"}};
+
+    String[][] bathroomSepticTank = {{"Для биотуалетов", "Latrin"},
+            {"Для септика и выгребной ямы", "Latrin Bio(Жидкий)", "Latrin Bio(Сухой)"}};
+
+    String[][] bathroomHands = {{"Жидкое мыло", "Joy", "Joy Крем-мыло", "Fay"},
             {"Антисептик", "Joy Sept"}};
-    String[][] kuhnyaJiro = {{"Для жироуловителей и жироотделителей", "Tank Bio"}};*/
 
 
-    String[][] sanuselUnitaz = {{"Ржавчина", "Breeze", "Destroy"},
-            {"Мочевой, водный камень", "Breeze", "Destroy"},
-            {"Известковый налет", "Breeze", "Destroy"},
-            {"Плесень, грибок", "Fumigel"},
-            {"Потожировые загрязнения", "Breeze", "Fumigel"},
-            {"Органика, микробы", "Fumigel"},
-            {"Дезинфекция", "Fumigel"}};
+    String[][] officeTechnique = {{"Мониторы, телевизоры", "Magic"},
+            {"Телефоны", "Well", "Magic", "Twist"},
+            {"Факсы, принтеры, ксероксы", "Well", "Magic", "Twist"}};
 
-    String[][] sanuselVanna = {{"Потожировые и мыльные загрязнения", "Breeze", "Fumigel"},
-            {"Известковый налет", "Breeze"},
-            {"Ржавые подтеки", "Breeze"},
-            {"Отбеливание и дезинфекция", "Fumigel"},
-            {"Замачивание посуды", "Marvel", "Optima Gel"},
-            {"Отбеливание посуды", "Fumigel"},
-            {"Очистка швов кафеля", "Fumigel"}};
-    String[][] sanuselOkna = {{"Окна, стекла, зеркала", "Magic"}};
-    String[][] sanuselMoyka = {{"Стены, двери", "Optima", "Optima Gel"},
+    String[][] officeSoftFurniture = {{"Кожаная обивка", "Kraft"},
+            {"Текстильная обивка", "Well"}};
+
+    String[][] officeWoodenFurniture = {{"Чистка", "Well"},
+            {"Полировка", "Twist"}};
+
+    String[][] officeMetalFurniture = {{"Нержавеющая сталь, хромированные поручни, ограждения, анодированные предметы. Чистка и полировка", "Polex"}};
+
+    String[][] officeWindows = {{"Стеклянные поверхности", "Magic"}};
+
+    String[][] officeScotch = {{"Удаление следов", "Antistick"}};
+
+    String[][] officeWashing = {{"Стены, двери, подоконники", "Well", "Optima Gel", "Optima"},
+            {"Жалюзи", "Well", "Optima Gel", "Optima"},
+            {"Батареи центрального отопления", "Well", "Optima Gel", "Optima"},
+            {"Мусорные баки", "Well", "Optima Gel", "Optima"},
+            {"Плафоны", "Well", "Well", "Optima Gel", "Optima"},
+            {"Напольные покрытия", "Comfort", "Comfort Extra"}};
+
+    String[][] officeSmell = {{"Устраняет запахи любого происхождения", "Block", "Fog"}};
+
+
+    String[][] cleaningTechnique = {{"Мониторы, телевизоры", "Magic"},
+            {"Телефоны", "Well", "Magic", "Twist"},
+            {"Факсы, принтеры, ксероксы", "Well", "Magic", "Twist"}};
+
+    String[][] cleaningSoftFurniture = {{"Кожаная обивка", "Kraft"},
+            {"Текстильная обивка", "Well"}};
+
+    String[][] cleaningWoodenFurniture = {{"Чистка", "Well"},
+            {"Полировка", "Twist"}};
+
+    String[][] cleaningMetalFurniture = {{"Нержавеющая сталь, хромированные поручни, ограждения, анодированные предметы. Чистка и полировка", "Polex"}};
+
+    String[][] cleaningWindows = {{"Стеклянные поверхности", "Magic"}};
+
+    String[][] cleaningScotch = {{"Удаление следов", "Antistick"}};
+
+    String[][] cleaningBassein = {{"Органические загрязнения, плесень, грибы. Дезинфекция", "Fumigel", "TANK FBD 0803/1"},
+            {"Ржавчина, мочевой, водный камень, известковый налет", "Breeze", "TANK FA18"}};
+
+    String[][] cleaningWashing = {{"Стены, двери, подоконники", "Well", "Optima Gel"},
+            {"Жалюзи", "Well", "Optima Gel"},
+            {"Батареи центрального отопления", "Well", "Optima Gel"},
+            {"Мусорные баки", "Well", "Optima Gel"},
+            {"Плафоны", "Well", "Optima Gel"},
             {"Напольные покрытия", "Comfort", "Comfort Extra"},
-            {"Мусорные баки", "Optima", "Optima Gel"},
-            {"Плафоны", "Optima", "Optima Gel", "Magic"}};
-    String[][] sanuselTruby = {{"Устранение засоров", "Draft"}};
-    String[][] sanuselZapah = {{"Устранение запахов", "Block"}};
-    String[][] sanuselRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+            {"Ковровые покрытия", "Novatec", "Novatec Foam"}};
+
+    String[][] cleaningSmell = {{"Устраняет запахи любого происхождения", "Block", "Fog"}};
+
+    String[][] cleaningHands = {{"Жидкое мыло", "Joy", "Joy Крем-мыло", "Fay"},
             {"Антисептик", "Joy Sept"}};
-    String[][] sanuselBanya = {{"Для очистки поверхностей", "Sauna"}};
-    String[][] sanuselBIOTualet = {{"Для биотуалета", "Latrin"},
-            {"Для септика", "Latrin Bio"}};
-
-    String[][] officeOrgtehnika = {{"Мониторы, телевизоры", "Twist", "Magic"},
-            {"Телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
-            {"Факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
-    String[][] officeMebelMygkaya = {{"Кожаная обивка", "Kraft"},
-            {"Текстильная обивка", "Well"}};
-    String[][] officeMebelTverdaya = {{"Чистка", "Well"},
-            {"Полировка", "Twist"}};
-    String[][] officeOkna = {{"Окна, стекла, зеркала", "Magic"}};
-    String[][] officeMoyka = {{"Стены, двери", "Optima", "Optima Gel"},
-            {"Жалюзи", "Well", "Optima", "Optima Gel"},
-            {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
-            {"Мусорные баки", "Optima", "Optima Gel"},
-            {"Плафоны", "Optima", "Optima Gel", "Magic"},
-            {"Удаление наклеек и скотча", "Antistick"}};
-    String[][] officeObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
-    String[][] officePol = {{"Ламинат", "Comfort"},
-            {"Паркет", "Comfort"},
-            {"Линолеум", "Comfort"},
-            {"Ковролин", "Novatec", "Novatec Foam"},
-            {"Керамическая плитка", "Comfort", "Comfort Extra"},
-            {"Полимерные покрытия", "Comfort", "Comfort Extra"}};
 
 
-    String[][] obshiyKliningOrgtehnika = {{"Мониторы, телевизоры", "Twist", "Magic"},
-            {"Телефоны", "Twist", "Magic", "Optima", "Optima Gel"},
-            {"Факсы, принтеры, ксероксы", "Twist", "Magic", "Optima", "Optima Gel"}};
-    String[][] obshiyKliningMyagkayaMebel = {{"Кожаная обивка", "Kraft"},
-            {"Текстильная обивка", "Well"}};
-    String[][] obshiyKliningDerevoMebel = {{"Чистка", "Well"},
-            {"Полировка", "Twist"}};
-    String[][] obshiyKliningOkna = {{"Окна, стекла, зеркала", "Magic"}};
-    String[][] obshiyKliningMoyka = {{"Стены, двери", "Optima", "Optima Gel"},
-            {"Жалюзи", "Well", "Optima", "Optima Gel"},
-            {"Батареи центрального отопления", "Well", "Optima", "Optima Gel"},
-            {"Мусорные баки", "Optima", "Optima Gel"},
-            {"Плафоны", "Magic"},
-            {"Скотч, жев. резинка, маркер, наклейки", "Antistick"}};
-    String[][] obshiyKliningObshayaDezinfekciya = {{"Общая дезинфекция", "Fumigel"}};
-    String[][] obshiyKliningRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
-            {"Антисептик", "Joy Sept"}};
-    String[][] obshiyKliningZapah = {{"Локально", "Block"},
-            {"Методом сухого тумана", "Fog"}};
-    String[][] obshiyKliningPol = {{"Ламинат", "Comfort"},
-            {"Паркет", "Comfort"},
-            {"Линолеум", "Comfort"},
-            {"Ковролин", "Novatec", "Novatec Foam"},
-            {"Керамическая плитка", "Comfort", "Comfort Extra"},
-            {"Полимерные покрытия", "Comfort", "Comfort Extra"}};
-
-    String[][] remontRuki = {{"Жидкое мыло", "Joy", "Joy Platinum", "Fay"},
+    String[][] repairHands = {{"Жидкое мыло", "Joy", "Joy Крем-мыло", "Fay"},
             {"Антисептик", "Joy Sept"},
-            {"Очищающая паста", "Sapo"}};
-    String[][] remontOkna = {{"Окна, стекла, зеркала", "Magic"}};
-    String[][] remontMoyka = {{"Цемент, затирка, клей, шпаклевка, побелка", "Destroy"},
+            {"очищающая паста", "Sapo"}};
+
+    String[][] repairWindows = {{"Стеклянные поверхности", "Magic"}};
+
+    String[][] repairWashing = {{"Цемент, затирка, клей, шпаклевка, побелка", "Destroy"},
             {"Высолы", "Destroy"},
             {"Сажа, копоть на фасадах", "Daze", "Fortis"},
             {"Сажа, копоть на брусчатке", "Daze", "Fortis"},
             {"Водный камень", "Breeze", "Destroy"},
-            {"Удаление следов скотча, наклеек, маркеров", "Antistick"},
-            {"Стены, двери", "Optima", "Optima Gel"}};
-    String[][] remontPol = {{"Ламинат", "Comfort"},
-            {"Паркет", "Comfort"},
-            {"Линолеум", "Comfort"},
-            {"Ковролин", "Novatec", "Novatec Foam"},
-            {"Керамическая плитка", "Comfort", "Comfort Extra"},
-            {"Полимерные покрытия", "Comfort", "Comfort Extra"}};
+            {"Удаление следов скотча, наклеек, маркеров", "Antistick\n"},
+            {"Стены, двери", "Well", "Optima Gel"}};
+
+    String[][] repairFloor = {{"Ламинат", "Comfort", "Comfort Extra"},
+            {"Паркет", "Comfort", "Comfort Extra"},
+            {"Линолеум", "Comfort", "Comfort Extra"},
+            {"Ковровые покрытия", "Novatec", "Novatec Foam"},
+            {"Керамическая плитка", "Comfort", "Comfort Extra"}};
+
+
+    String[][] hotelRoom = {{"Влажная уборка: тумбочки, полки, подоконник, оргтехника", "Well"},
+            {"Стекла, зеркала, экран телевизора", "Magic"},
+            {"Полироль для деревянной и пластиковой мебели", "Twist"},
+            {"Нейтрализация запахов, освежитель воздуха", "Block"}};
+
+    String[][] hotelBathRoom = {{"Унитаз", "Breeze"},
+            {"Кафель, сантехника, ванная, раковина", "Breeze Spray"},
+            {"Зеркало", "Magic"},
+            {"Нейтрализация запахов, освежитель воздуха", "Block"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -220,90 +214,94 @@ public class activity_klining_problema extends AppCompatActivity
             ShowSredstva(kitchenRoom);
         } else if (id == 1 && id2 == 10) {
             ShowSredstva(kitchenHandHygiene);
-        }/* else if (id == 1 && id2 == 11) {
-            ShowSredstva(kuhnyaTruby);
-        } else if (id == 1 && id2 == 12) {
-            ShowSredstva(kuhnyaZapah);
-        } else if (id == 1 && id2 == 13) {
-            ShowSredstva(kuhnyaRuki);
-        } else if (id == 1 && id2 == 14) {
-            ShowSredstva(kuhnyaJiro);
-        }*/
+        }
 //endregion
 
         //region Sanusel
         else if (id == 2 && id2 == 0) {
-            ShowSredstva(sanuselUnitaz);
+            ShowSredstva(bathroomToilet);
         } else if (id == 2 && id2 == 1) {
-            ShowSredstva(sanuselVanna);
+            ShowSredstva(bathroomBath);
         } else if (id == 2 && id2 == 2) {
-            ShowSredstva(sanuselOkna);
+            ShowSredstva(bathroomWindows);
         } else if (id == 2 && id2 == 3) {
-            ShowSredstva(sanuselMoyka);
+            ShowSredstva(bathroomWashing);
         } else if (id == 2 && id2 == 4) {
-            ShowSredstva(sanuselTruby);
+            ShowSredstva(bathroomTubing);
         } else if (id == 2 && id2 == 5) {
-            ShowSredstva(sanuselZapah);
+            ShowSredstva(bathroomSmell);
         } else if (id == 2 && id2 == 6) {
-            ShowSredstva(sanuselRuki);
+            ShowSredstva(bathroomSepticTank);
         } else if (id == 2 && id2 == 7) {
-            ShowSredstva(sanuselBanya);
-        } else if (id == 2 && id2 == 8) {
-            ShowSredstva(sanuselBIOTualet);
+            ShowSredstva(bathroomHands);
         }
         //endregion
 
         //region office
         else if (id == 3 && id2 == 0) {
-            ShowSredstva(officeOrgtehnika);
+            ShowSredstva(officeTechnique);
         } else if (id == 3 && id2 == 1) {
-            ShowSredstva(officeMebelMygkaya);
+            ShowSredstva(officeSoftFurniture);
         } else if (id == 3 && id2 == 2) {
-            ShowSredstva(officeMebelTverdaya);
+            ShowSredstva(officeWoodenFurniture);
         } else if (id == 3 && id2 == 3) {
-            ShowSredstva(officeOkna);
+            ShowSredstva(officeMetalFurniture);
         } else if (id == 3 && id2 == 4) {
-            ShowSredstva(officeMoyka);
+            ShowSredstva(officeWindows);
         } else if (id == 3 && id2 == 5) {
-            ShowSredstva(officeObshayaDezinfekciya);
+            ShowSredstva(officeScotch);
         } else if (id == 3 && id2 == 6) {
-            ShowSredstva(officePol);
+            ShowSredstva(officeWashing);
+        } else if (id == 3 && id2 == 7) {
+            ShowSredstva(officeSmell);
         }
         //endregion
 
         //region obshiyKlinig
         else if (id == 4 && id2 == 0) {
-            ShowSredstva(obshiyKliningOrgtehnika);
+            ShowSredstva(cleaningTechnique);
         } else if (id == 4 && id2 == 1) {
-            ShowSredstva(obshiyKliningMyagkayaMebel);
+            ShowSredstva(cleaningSoftFurniture);
         } else if (id == 4 && id2 == 2) {
-            ShowSredstva(obshiyKliningDerevoMebel);
+            ShowSredstva(cleaningWoodenFurniture);
         } else if (id == 4 && id2 == 3) {
-            ShowSredstva(obshiyKliningOkna);
+            ShowSredstva(cleaningMetalFurniture);
         } else if (id == 4 && id2 == 4) {
-            ShowSredstva(obshiyKliningMoyka);
+            ShowSredstva(cleaningWindows);
         } else if (id == 4 && id2 == 5) {
-            ShowSredstva(obshiyKliningObshayaDezinfekciya);
+            ShowSredstva(cleaningScotch);
         } else if (id == 4 && id2 == 6) {
-            ShowSredstva(obshiyKliningRuki);
+            ShowSredstva(cleaningBassein);
         } else if (id == 4 && id2 == 7) {
-            ShowSredstva(obshiyKliningZapah);
+            ShowSredstva(cleaningWashing);
         } else if (id == 4 && id2 == 8) {
-            ShowSredstva(obshiyKliningPol);
+            ShowSredstva(cleaningSmell);
+        } else if (id == 4 && id2 == 9) {
+            ShowSredstva(cleaningHands);
         }
         //endregion
 
         //region Remont
         else if (id == 5 && id2 == 0) {
-            ShowSredstva(remontRuki);
+            ShowSredstva(repairHands);
         } else if (id == 5 && id2 == 1) {
-            ShowSredstva(remontOkna);
+            ShowSredstva(repairWindows);
         } else if (id == 5 && id2 == 2) {
-            ShowSredstva(remontMoyka);
+            ShowSredstva(repairWashing);
         } else if (id == 5 && id2 == 3) {
-            ShowSredstva(remontPol);
+            ShowSredstva(repairFloor);
         }
         //endregion
+
+        //hotel
+
+        else if (id == 7 && id2 == 0) {
+            ShowSredstva(hotelRoom);
+        } else if (id == 7 && id2 == 1) {
+            ShowSredstva(hotelBathRoom);
+        }
+
+        //hotel
     }
 
     private void ShowSredstva(String[][] array) {

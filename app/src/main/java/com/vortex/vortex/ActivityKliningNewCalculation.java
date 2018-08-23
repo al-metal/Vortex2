@@ -48,14 +48,98 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         kliningCalculation1Fragment = new KliningCalculation1Fragment();
         kliningCalculationDefaultFragment = new KliningCalculationDefaultFragment();
 
+        Bundle bundle = new Bundle();
+
         transaction = manager.beginTransaction();
         switch (product) {
             case "DAZE":
                 transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 10);
+                break;
+            case "TANK FB 36":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 6);
+                break;
+            case "TANK FB 48":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 3);
+                break;
+            case "MAGIC":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "TWIST":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "POLEX":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "DESTROY":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 20);
+                break;
+            case "FORTIS":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 6);
+                break;
+            case "BREEZE SPRAY":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "TANK LBD 1002/2":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 3);
+                break;
+            case "OPTIMA":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 1);
+                break;
+            case "KRAFT":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "ANTISTICK":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "NOVATEC FOAM":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 40);
+                break;
+            case "FUNGUS":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "WELL":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 30);
+                break;
+            case "COMFORT":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 1);
+                break;
+            case "COMFORT EXTRA":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 1);
+                break;
+            case "TANK FBD 0803/1":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "TANK FA18":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "NOVATEC":
+                transaction.add(R.id.container, kliningCalculation1Fragment);
+                bundle.putDouble("expence", 60);
                 break;
             default:
                 transaction.add(R.id.container, kliningCalculationDefaultFragment);
         }
+        kliningCalculation1Fragment.setArguments(bundle);
         transaction.commit();
     }
 

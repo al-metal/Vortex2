@@ -113,6 +113,6 @@ public class activity_klining extends AppCompatActivity
 
     public void onClickHotel(View view) {
         id = 7;
-        SetIdKlining(id, "Промышленный клининг");
+        SetIdKlining(id, "Номерной фонд");
     }
 }
