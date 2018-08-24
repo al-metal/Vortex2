@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vortex.vortex.R;
 
@@ -68,8 +70,10 @@ public class KliningCalculation1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_klining_calculation1, container, false);
+
         EditText etPricePerVolume = view.findViewById(R.id.etPricePerVolume);
         EditText etWeightOfProductInContainer = view.findViewById(R.id.etWeightOfProductInContainer);
+
         TextView tvTheCostOfToolsPerM2 = view.findViewById(R.id.tvTheCostOfToolsPerM2);
         TextView tvThePricePerKg = view.findViewById(R.id.tvThePricePerKg);
 
@@ -82,6 +86,15 @@ public class KliningCalculation1Fragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (etPricePerVolume.getText().length() == 0 || etWeightOfProductInContainer.getText().length() == 0) {
+                    Toast.makeText(getContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                TableLayout tb = view.findViewById(R.id.tableL);
+                tb.setVisibility(View.VISIBLE);
+
                 double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
                 double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());
                 double thePricePerKg = pricePerVolume / weightOfProductInContainer;

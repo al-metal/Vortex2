@@ -84,7 +84,7 @@
         android:layout_marginTop="20dp"
         android:shrinkColumns="*"
         android:stretchColumns="*"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <TableRow
             android:layout_width="match_parent"
@@ -96,21 +96,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
+                android:gravity="start"
                 android:text="Стоимость за 1кг. руб."
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
                 android:id="@+id/tvThePricePerKg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
         </TableRow>
 
@@ -125,21 +125,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
+                android:gravity="start"
                 android:text="Стоимость за 1 уборку (унитаз), руб"
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
                 android:id="@+id/tvPriceFor1Cleaning"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
         </TableRow>
 
         <TableRow
@@ -152,21 +152,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
+                android:gravity="start"
                 android:text="Стоимость средства на м2, руб"
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
                 android:id="@+id/tvTheCostOfFundsOnTheMeter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
         </TableRow>
 
     </TableLayout>

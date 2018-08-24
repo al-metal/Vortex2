@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vortex.vortex.R;
 
@@ -86,6 +88,14 @@ public class KliningCalculation13Fragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (etPricePerVolume.getText().length() == 0 || etWeightOfProductInContainer.getText().length() == 0 || etTheRoom.getText().length() == 0) {
+                    Toast.makeText(getContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                TableLayout tb = view.findViewById(R.id.tableL);
+                tb.setVisibility(View.VISIBLE);
+
                 double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
                 double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());
                 double theRoom = Double.valueOf(etTheRoom.getText().toString());

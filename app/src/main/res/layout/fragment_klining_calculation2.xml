@@ -63,7 +63,7 @@
         android:layout_marginTop="20dp"
         android:shrinkColumns="*"
         android:stretchColumns="*"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <TableRow
             android:layout_width="match_parent"
@@ -75,21 +75,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
+                android:gravity="start"
                 android:text="Стоимость за 1кг. руб."
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
                 android:id="@+id/tvThePricePerKg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
         </TableRow>
 
@@ -104,21 +104,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
+                android:gravity="start"
                 android:text="Стоимость 1 применения"
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
                 android:id="@+id/tvTheCostOfToolsPerM2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
         </TableRow>
 
 

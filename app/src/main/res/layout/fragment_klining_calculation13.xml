@@ -92,7 +92,7 @@
         android:layout_marginTop="20dp"
         android:shrinkColumns="*"
         android:stretchColumns="*"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <TableRow
             android:layout_width="match_parent"
@@ -123,8 +123,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="17dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -178,8 +177,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="17dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
