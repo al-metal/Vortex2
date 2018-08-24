@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Fragments.KliningCalculation1Fragment">
+    tools:context=".Fragments.KliningCalculation5Fragment">
 
     <EditText
-        android:layout_width="match_parent"
         android:id="@+id/etPricePerVolume"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Цена за весь объем в таре,руб."
         android:inputType="numberDecimal" />
 
     <EditText
-        android:layout_width="match_parent"
         android:id="@+id/etWeightOfProductInContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Масса средства в таре"
         android:inputType="numberDecimal" />
 
-    <TableRow
+    <EditText
+        android:id="@+id/etVolume"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:hint="Объем накопительного бака, л"
+        android:inputType="numberDecimal" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="5"
-            android:text="Расход, мл./м2"
-            android:textAlignment="textStart"
-            android:gravity="start" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:visibility="visible">
 
-        <TextView
-            android:id="@+id/tvExpense"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="3"
-            android:text="10" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="5"
+                android:gravity="start"
+                android:text="Расход, мл./л"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/tvExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="25" />
+
+        </TableRow>
+
+    </TableLayout>
 
     <Button
         android:id="@+id/btnCalculation"
@@ -66,21 +82,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
+                android:gravity="start"
                 android:text="Стоимость за 1кг. руб."
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
                 android:id="@+id/tvThePricePerKg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
         </TableRow>
 
@@ -95,21 +111,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
-                android:text="Стоимость средства на м2, руб."
+                android:gravity="start"
+                android:text="Стоимость средства на накопительный бак"
                 android:textAlignment="textStart"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
 
             <TextView
-                android:id="@+id/tvTheCostOfToolsPerM2"
+                android:id="@+id/tvTheCost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
+                android:gravity="start"
                 android:text="0"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:gravity="start" />
+                android:textSize="11sp" />
         </TableRow>
 
 

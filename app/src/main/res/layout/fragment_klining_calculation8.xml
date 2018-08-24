@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Fragments.KliningCalculation1Fragment">
+    tools:context=".Fragments.KliningCalculation8Fragment">
 
     <EditText
         android:layout_width="match_parent"
@@ -20,26 +20,63 @@
         android:hint="Масса средства в таре"
         android:inputType="numberDecimal" />
 
-    <TableRow
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/etWaterСapacity"
+        android:layout_height="wrap_content"
+        android:hint="Вместимость воды (ванная для замачивания), л"
+        android:inputType="numberDecimal" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="5"
-            android:text="Расход, мл./м2"
-            android:textAlignment="textStart"
-            android:gravity="start" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:visibility="visible">
 
-        <TextView
-            android:id="@+id/tvExpense"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="3"
-            android:text="10" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="5"
+                android:text="Расход, мл/л (мойка)"
+                android:textAlignment="textStart"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/tvExpenseWashing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="5"
+                android:text="Расход, мл/л (замачивание)"
+                android:textAlignment="textStart"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/tvExpenseSoak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="0" />
+
+        </TableRow>
+
+    </TableLayout>
 
     <Button
         android:id="@+id/btnCalculation"
@@ -95,13 +132,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
-                android:text="Стоимость средства на м2, руб."
+                android:text="Стоимость за 1 мойку посуды (50 тарелок), руб"
                 android:textAlignment="textStart"
                 android:textSize="11sp"
                 android:gravity="start" />
 
             <TextView
-                android:id="@+id/tvTheCostOfToolsPerM2"
+                android:id="@+id/tvPriceFor1DishWashing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="3"
@@ -112,7 +149,34 @@
                 android:gravity="start" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="17dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_span="5"
+                android:text="Стоимость 1-го замачивания на ванну, руб"
+                android:textAlignment="textStart"
+                android:textSize="11sp"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/tvTheCostOfThe1stSoak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="0"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="11sp"
+                android:gravity="start" />
+        </TableRow>
 
     </TableLayout>
+
 
 </LinearLayout>

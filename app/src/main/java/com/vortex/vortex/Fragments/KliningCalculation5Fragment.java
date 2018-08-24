@@ -16,12 +16,12 @@ import com.vortex.vortex.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link KliningCalculation1Fragment.OnFragmentInteractionListener} interface
+ * {@link KliningCalculation5Fragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link KliningCalculation1Fragment#newInstance} factory method to
+ * Use the {@link KliningCalculation5Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class KliningCalculation1Fragment extends Fragment {
+public class KliningCalculation5Fragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +33,7 @@ public class KliningCalculation1Fragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public KliningCalculation1Fragment() {
+    public KliningCalculation5Fragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +43,11 @@ public class KliningCalculation1Fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment KliningCalculation1Fragment.
+     * @return A new instance of fragment KliningCalculation5Fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static KliningCalculation1Fragment newInstance(String param1, String param2) {
-        KliningCalculation1Fragment fragment = new KliningCalculation1Fragment();
+    public static KliningCalculation5Fragment newInstance(String param1, String param2) {
+        KliningCalculation5Fragment fragment = new KliningCalculation5Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,16 +67,15 @@ public class KliningCalculation1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_klining_calculation1, container, false);
+        View view = inflater.inflate(R.layout.fragment_klining_calculation5, container, false);
+
         EditText etPricePerVolume = view.findViewById(R.id.etPricePerVolume);
         EditText etWeightOfProductInContainer = view.findViewById(R.id.etWeightOfProductInContainer);
-        TextView tvTheCostOfToolsPerM2 = view.findViewById(R.id.tvTheCostOfToolsPerM2);
+        EditText etVolume = view.findViewById(R.id.etVolume);
         TextView tvThePricePerKg = view.findViewById(R.id.tvThePricePerKg);
+        TextView tvTheCost = view.findViewById(R.id.tvTheCost);
 
-        TextView tvExpence = view.findViewById(R.id.tvExpense);
-        double expence = getArguments().getDouble("expence");
-        tvExpence.setText(String.valueOf(expence));
-
+        double expence = 25;
 
         Button button = view.findViewById(R.id.btnCalculation);
         button.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +83,13 @@ public class KliningCalculation1Fragment extends Fragment {
             public void onClick(View v) {
                 double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
                 double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());
-                double thePricePerKg = pricePerVolume / weightOfProductInContainer;
-                double theCostOfToolsPerM2 = thePricePerKg / 1000 * expence;
+                double volume = Double.valueOf(etVolume.getText().toString());
 
+                double thePricePerKg = pricePerVolume / weightOfProductInContainer;
+                double cost = (thePricePerKg / 1000 * expence) * volume;
 
                 tvThePricePerKg.setText(String.valueOf(thePricePerKg));
-                tvTheCostOfToolsPerM2.setText(String.valueOf(theCostOfToolsPerM2));
+                tvTheCost.setText(String.valueOf(cost));
 
             }
         });
@@ -119,8 +119,8 @@ public class KliningCalculation1Fragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }*/
-
+    }
+*/
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

@@ -13,7 +13,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.vortex.vortex.Fragments.KliningCalculation10Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation11Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation13Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation1Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation2Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation3Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation4Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation5Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation6Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation7Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation8Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation9Fragment;
 import com.vortex.vortex.Fragments.KliningCalculationDefaultFragment;
 
 public class ActivityKliningNewCalculation extends AppCompatActivity
@@ -22,6 +33,17 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
     private FragmentManager manager;
     private FragmentTransaction transaction;
     private KliningCalculation1Fragment kliningCalculation1Fragment;
+    private KliningCalculation2Fragment kliningCalculation2Fragment;
+    private KliningCalculation3Fragment kliningCalculation3Fragment;
+    private KliningCalculation4Fragment kliningCalculation4Fragment;
+    private KliningCalculation5Fragment kliningCalculation5Fragment;
+    private KliningCalculation6Fragment kliningCalculation6Fragment;
+    private KliningCalculation7Fragment kliningCalculation7Fragment;
+    private KliningCalculation8Fragment kliningCalculation8Fragment;
+    private KliningCalculation9Fragment kliningCalculation9Fragment;
+    private KliningCalculation10Fragment kliningCalculation10Fragment;
+    private KliningCalculation11Fragment kliningCalculation11Fragment;
+    private KliningCalculation13Fragment kliningCalculation13Fragment;
     private KliningCalculationDefaultFragment kliningCalculationDefaultFragment;
     private String product;
 
@@ -46,6 +68,17 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
 
         manager = getSupportFragmentManager();
         kliningCalculation1Fragment = new KliningCalculation1Fragment();
+        kliningCalculation2Fragment = new KliningCalculation2Fragment();
+        kliningCalculation3Fragment = new KliningCalculation3Fragment();
+        kliningCalculation4Fragment = new KliningCalculation4Fragment();
+        kliningCalculation5Fragment = new KliningCalculation5Fragment();
+        kliningCalculation6Fragment = new KliningCalculation6Fragment();
+        kliningCalculation7Fragment = new KliningCalculation7Fragment();
+        kliningCalculation8Fragment = new KliningCalculation8Fragment();
+        kliningCalculation9Fragment = new KliningCalculation9Fragment();
+        kliningCalculation10Fragment = new KliningCalculation10Fragment();
+        kliningCalculation11Fragment = new KliningCalculation11Fragment();
+        kliningCalculation13Fragment = new KliningCalculation13Fragment();
         kliningCalculationDefaultFragment = new KliningCalculationDefaultFragment();
 
         Bundle bundle = new Bundle();
@@ -136,10 +169,74 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
                 transaction.add(R.id.container, kliningCalculation1Fragment);
                 bundle.putDouble("expence", 60);
                 break;
+            case "JOY":
+                transaction.add(R.id.container, kliningCalculation2Fragment);
+                bundle.putDouble("expence", 1.5);
+                break;
+            case "JOY SEPT":
+                transaction.add(R.id.container, kliningCalculation2Fragment);
+                bundle.putDouble("expence", 5);
+                break;
+            case "FAY":
+                transaction.add(R.id.container, kliningCalculation2Fragment);
+                bundle.putDouble("expence", 0.5);
+                break;
+            case "SAPO":
+                transaction.add(R.id.container, kliningCalculation2Fragment);
+                bundle.putDouble("expence", 1.5);
+                break;
+            case "BREEZE":
+                transaction.add(R.id.container, kliningCalculation3Fragment);
+                break;
+            case "FUMIGEL":
+                transaction.add(R.id.container, kliningCalculation3Fragment);
+                break;
+            case "LATRIN BIO(ЖИДКИЙ)":
+                transaction.add(R.id.container, kliningCalculation4Fragment);
+                break;
+            case "LATRIN":
+                transaction.add(R.id.container, kliningCalculation5Fragment);
+                break;
+            case "DRAFT":
+                transaction.add(R.id.container, kliningCalculation6Fragment);
+                break;
+            case "TANK BIO":
+                transaction.add(R.id.container, kliningCalculation7Fragment);
+                break;
+            case "TANK LBD 0107/1":
+                transaction.add(R.id.container, kliningCalculation8Fragment);
+                bundle.putDouble("expenseWashing", 5);
+                bundle.putDouble("expenseSoak", 20);
+                break;
+            case "MARVEL":
+                transaction.add(R.id.container, kliningCalculation8Fragment);
+                bundle.putDouble("expenseWashing", 1);
+                bundle.putDouble("expenseSoak", 4.5);
+                break;
+            case "FOG":
+                transaction.add(R.id.container, kliningCalculation9Fragment);
+                break;
+            case "BLANK":
+                transaction.add(R.id.container, kliningCalculation10Fragment);
+                bundle.putDouble("expence", 1.5);
+                break;
+            case "DEBLANK":
+                transaction.add(R.id.container, kliningCalculation10Fragment);
+                bundle.putDouble("expence", 0.6);
+                break;
+            case "OPTIMA GEL":
+                transaction.add(R.id.container, kliningCalculation11Fragment);
+                break;
+            case "BLOCK":
+                transaction.add(R.id.container, kliningCalculation13Fragment);
+                break;
             default:
                 transaction.add(R.id.container, kliningCalculationDefaultFragment);
         }
         kliningCalculation1Fragment.setArguments(bundle);
+        kliningCalculation2Fragment.setArguments(bundle);
+        kliningCalculation8Fragment.setArguments(bundle);
+        kliningCalculation10Fragment.setArguments(bundle);
         transaction.commit();
     }
 

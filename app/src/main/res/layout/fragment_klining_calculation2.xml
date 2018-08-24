@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.KliningCalculation1Fragment">
+    android:layout_height="match_parent"
+    tools:context=".Fragments.KliningCalculation2Fragment">
 
     <EditText
         android:layout_width="match_parent"
@@ -20,26 +20,35 @@
         android:hint="Масса средства в таре"
         android:inputType="numberDecimal" />
 
-    <TableRow
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:visibility="visible">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="5"
-            android:text="Расход, мл./м2"
-            android:textAlignment="textStart"
-            android:gravity="start" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvExpense"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="3"
-            android:text="10" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="5"
+                android:text="Расход, мл."
+                android:textAlignment="textStart"
+                android:gravity="start" />
 
-    </TableRow>
+            <TextView
+                android:id="@+id/tvExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:text="10" />
+
+        </TableRow>
+
+ </TableLayout>
 
     <Button
         android:id="@+id/btnCalculation"
@@ -95,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17dp"
                 android:layout_span="5"
-                android:text="Стоимость средства на м2, руб."
+                android:text="Стоимость 1 применения"
                 android:textAlignment="textStart"
                 android:textSize="11sp"
                 android:gravity="start" />

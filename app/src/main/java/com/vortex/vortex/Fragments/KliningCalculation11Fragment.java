@@ -16,12 +16,12 @@ import com.vortex.vortex.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link KliningCalculation1Fragment.OnFragmentInteractionListener} interface
+ * {@link KliningCalculation11Fragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link KliningCalculation1Fragment#newInstance} factory method to
+ * Use the {@link KliningCalculation11Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class KliningCalculation1Fragment extends Fragment {
+public class KliningCalculation11Fragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +33,7 @@ public class KliningCalculation1Fragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public KliningCalculation1Fragment() {
+    public KliningCalculation11Fragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +43,11 @@ public class KliningCalculation1Fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment KliningCalculation1Fragment.
+     * @return A new instance of fragment KliningCalculation11Fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static KliningCalculation1Fragment newInstance(String param1, String param2) {
-        KliningCalculation1Fragment fragment = new KliningCalculation1Fragment();
+    public static KliningCalculation11Fragment newInstance(String param1, String param2) {
+        KliningCalculation11Fragment fragment = new KliningCalculation11Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,16 +67,21 @@ public class KliningCalculation1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_klining_calculation1, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_klining_calculation11, container, false);
+
         EditText etPricePerVolume = view.findViewById(R.id.etPricePerVolume);
         EditText etWeightOfProductInContainer = view.findViewById(R.id.etWeightOfProductInContainer);
-        TextView tvTheCostOfToolsPerM2 = view.findViewById(R.id.tvTheCostOfToolsPerM2);
+        EditText etWaterCapacity = view.findViewById(R.id.etWaterCapacity);
+
         TextView tvThePricePerKg = view.findViewById(R.id.tvThePricePerKg);
+        TextView tvTheCostOfWashingDishes = view.findViewById(R.id.tvTheCostOfWashingDishes);
+        TextView tvTheCostOfSoaking = view.findViewById(R.id.tvTheCostOfSoaking);
+        TextView tvTheCostOfFunds = view.findViewById(R.id.tvTheCostOfFunds);
 
-        TextView tvExpence = view.findViewById(R.id.tvExpense);
-        double expence = getArguments().getDouble("expence");
-        tvExpence.setText(String.valueOf(expence));
-
+        double expenceWashing = 3;
+        double expenceSoak = 5;
+        double expence = 1;
 
         Button button = view.findViewById(R.id.btnCalculation);
         button.setOnClickListener(new View.OnClickListener() {
@@ -84,13 +89,17 @@ public class KliningCalculation1Fragment extends Fragment {
             public void onClick(View v) {
                 double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
                 double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());
-                double thePricePerKg = pricePerVolume / weightOfProductInContainer;
-                double theCostOfToolsPerM2 = thePricePerKg / 1000 * expence;
+                double waterCapacity = Double.valueOf(etWaterCapacity.getText().toString());
 
+                double thePricePerKg = pricePerVolume / weightOfProductInContainer;
+                double theCostOfWashingDishes = thePricePerKg / 1000 * expenceWashing;
+                double theCostOfSoaking = (expenceSoak * waterCapacity / 1000) * thePricePerKg;
+                double theCostOfFunds = thePricePerKg / 1000 * expence;
 
                 tvThePricePerKg.setText(String.valueOf(thePricePerKg));
-                tvTheCostOfToolsPerM2.setText(String.valueOf(theCostOfToolsPerM2));
-
+                tvTheCostOfWashingDishes.setText(String.valueOf(theCostOfWashingDishes));
+                tvTheCostOfSoaking.setText(String.valueOf(theCostOfSoaking));
+                tvTheCostOfFunds.setText(String.valueOf(theCostOfFunds));
             }
         });
         // Inflate the layout for this fragment
