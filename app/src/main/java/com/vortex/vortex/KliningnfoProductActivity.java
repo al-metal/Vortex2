@@ -40,6 +40,7 @@ public class KliningnfoProductActivity extends AppCompatActivity
     private String appointment;
     private String instruction;
     private String strNONE;
+    private String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,10 @@ public class KliningnfoProductActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         product = getIntent().getStringExtra("nameProduct");
+        title = getIntent().getStringExtra("title");
         setTitle(product);
         product = product.toUpperCase();
+        title = title.toUpperCase();
 
         tvAppointment = findViewById(R.id.tvAppointment);
         tvInstruction = findViewById(R.id.tvInstruction);
@@ -102,6 +105,7 @@ public class KliningnfoProductActivity extends AppCompatActivity
     public void onclickCalculation(View view) {
         Intent intent = new Intent(KliningnfoProductActivity.this, ActivityKliningNewCalculation.class);
         intent.putExtra("nameProduct", product);
+        intent.putExtra("title", title);
         startActivity(intent);
     }
 

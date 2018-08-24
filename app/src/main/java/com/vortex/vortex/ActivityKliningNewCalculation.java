@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 import com.vortex.vortex.Fragments.KliningCalculation10Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation11Fragment;
+import com.vortex.vortex.Fragments.KliningCalculation12Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation13Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation1Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation2Fragment;
@@ -43,9 +44,11 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
     private KliningCalculation9Fragment kliningCalculation9Fragment;
     private KliningCalculation10Fragment kliningCalculation10Fragment;
     private KliningCalculation11Fragment kliningCalculation11Fragment;
+    private KliningCalculation12Fragment kliningCalculation12Fragment;
     private KliningCalculation13Fragment kliningCalculation13Fragment;
     private KliningCalculationDefaultFragment kliningCalculationDefaultFragment;
     private String product;
+    private String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         product = getIntent().getStringExtra("nameProduct");
+        title = getIntent().getStringExtra("title");
         setTitle(product);
 
         manager = getSupportFragmentManager();
@@ -78,6 +82,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         kliningCalculation9Fragment = new KliningCalculation9Fragment();
         kliningCalculation10Fragment = new KliningCalculation10Fragment();
         kliningCalculation11Fragment = new KliningCalculation11Fragment();
+        kliningCalculation12Fragment = new KliningCalculation12Fragment();
         kliningCalculation13Fragment = new KliningCalculation13Fragment();
         kliningCalculationDefaultFragment = new KliningCalculationDefaultFragment();
 
@@ -204,9 +209,13 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
                 transaction.add(R.id.container, kliningCalculation7Fragment);
                 break;
             case "TANK LBD 0107/1":
-                transaction.add(R.id.container, kliningCalculation8Fragment);
-                bundle.putDouble("expenseWashing", 5);
-                bundle.putDouble("expenseSoak", 20);
+                if(title.contains("МЕШОЧКОВ")){
+                    transaction.add(R.id.container, kliningCalculation12Fragment);
+                }else {
+                    transaction.add(R.id.container, kliningCalculation8Fragment);
+                    bundle.putDouble("expenseWashing", 5);
+                    bundle.putDouble("expenseSoak", 20);
+                }
                 break;
             case "MARVEL":
                 transaction.add(R.id.container, kliningCalculation8Fragment);
