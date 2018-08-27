@@ -1,207 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/linearLayouteMain"
     tools:context=".Fragments.KliningCalculation13Fragment">
 
-    <EditText
-        android:id="@+id/etPricePerVolume"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Цена за весь объем в таре,руб."
-        android:inputType="numberDecimal" />
+    <ScrollView
+        style="@style/scrollView"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
 
-    <EditText
-        android:id="@+id/etWeightOfProductInContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Масса средства в таре"
-        android:inputType="numberDecimal" />
+        <LinearLayout style="@style/linearLayoutInputData">
 
-    <EditText
-        android:id="@+id/etTheRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Помещение м2"
-        android:inputType="numberDecimal" />
+            <TableLayout style="@style/tableViewInputData">
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:shrinkColumns="*"
-        android:stretchColumns="*"
-        android:visibility="visible">
+                <TableRow style="@style/tableRowInputData">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        style="@style/textViewInputName"
+                        android:text="Цена за весь объем в таре,руб." />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="5"
-                android:gravity="start"
-                android:text="Расход на 1 применение, мл"
-                android:textAlignment="textStart" />
+                    <EditText
+                        android:id="@+id/etPricePerVolume"
+                        style="@style/editTextDataInTable" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:text="1.5" />
+                </TableRow>
 
+                <TableRow style="@style/tableRowInputData">
 
-        </TableRow>
+                    <TextView
+                        style="@style/textViewInputName"
+                        android:text="Масса средства в таре" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <EditText
+                        android:id="@+id/etWeightOfProductInContainer"
+                        style="@style/editTextDataInTable" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="5"
-                android:gravity="start"
-                android:text="Расход на м2"
-                android:textAlignment="textStart" />
+                </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:text="0.3" />
+                <TableRow style="@style/tableRowInputData">
+
+                    <TextView
+                        style="@style/textViewInputName"
+                        android:text="Помещение м2" />
+
+                    <EditText
+                        android:id="@+id/etTheRoom"
+                        style="@style/editTextDataInTable" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnCalculation"
+                style="@style/buttonResult"
+                android:text="@string/btnResult" />
+
+            <TableLayout
+                android:id="@+id/tableL"
+                style="@style/tableLayoutResult">
+
+                <TableRow style="@style/tableRowResultFirst">
+
+                    <TextView
+                        style="@style/textResultLeft"
+                        android:text="Расход на 1 применение, мл" />
+
+                    <TextView
+                        style="@style/textResultRight"
+                        android:text="1.5" />
 
 
-        </TableRow>
+                </TableRow>
 
-    </TableLayout>
+                <TableRow style="@style/tableRowResultOther">
 
-    <Button
-        android:id="@+id/btnCalculation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btnResult" />
+                    <TextView
+                        style="@style/textResultLeft"
+                        android:text="Расход на м2" />
 
-    <TableLayout
-        android:id="@+id/tableL"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:shrinkColumns="*"
-        android:stretchColumns="*"
-        android:visibility="gone">
+                    <TextView
+                        style="@style/textResultRight"
+                        android:text="0.3" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="17dp"
-                android:layout_span="5"
-                android:gravity="start"
-                android:text="Стоимость за 1кг. руб."
-                android:textAlignment="textStart"
-                android:textSize="11sp" />
+                <TableRow style="@style/tableRowResultOther">
 
-            <TextView
-                android:id="@+id/tvThePricePerKg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:gravity="start"
-                android:text="0"
-                android:textAlignment="textStart"
-                android:textColor="@android:color/black"
-                android:textSize="11sp" />
+                    <TextView
+                        style="@style/textResultLeft"
+                        android:text="Стоимость за 1кг. руб." />
 
-        </TableRow>
+                    <TextView
+                        android:id="@+id/tvThePricePerKg"
+                        style="@style/textResultRight" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="17dp"
-                android:layout_span="5"
-                android:gravity="start"
-                android:text="Стоимость 1 применения, руб"
-                android:textAlignment="textStart"
-                android:textSize="11sp" />
+                <TableRow style="@style/tableRowResultOther">
 
-            <TextView
-                android:id="@+id/tvTheCostOf1Application"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:gravity="start"
-                android:text="0"
-                android:textAlignment="textStart"
-                android:textColor="@android:color/black"
-                android:textSize="11sp" />
-        </TableRow>
+                    <TextView
+                        style="@style/textResultLeft"
+                        android:text="Стоимость 1 применения, руб" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvTheCostOf1Application"
+                        style="@style/textResultRight" />
 
-            <TextView
-                android:id="@+id/textView134"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="17dp"
-                android:layout_span="5"
-                android:gravity="start"
-                android:text="Стоимость средства на м2, руб."
-                android:textAlignment="textStart"
-                android:textSize="11sp" />
+                </TableRow>
 
-            <TextView
-                android:id="@+id/tvTheCostOfFundsOnTheMeter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:gravity="start"
-                android:text="0"
-                android:textAlignment="textStart"
-                android:textColor="@android:color/black"
-                android:textSize="11sp" />
+                <TableRow style="@style/tableRowResultOther">
 
-        </TableRow>
+                    <TextView
+                        style="@style/textResultLeft"
+                        android:text="Стоимость средства на м2, руб." />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvTheCostOfFundsOnTheMeter"
+                        style="@style/textResultRight" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="17dp"
-                android:layout_span="5"
-                android:gravity="start"
-                android:text="Стоимость обработки помещения, руб"
-                android:textAlignment="textStart"
-                android:textSize="11sp" />
+                </TableRow>
 
-            <TextView
-                android:id="@+id/tvTheCostOfTheRoom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:gravity="start"
-                android:text="0"
-                android:textAlignment="textStart"
-                android:textColor="@android:color/black"
-                android:textSize="11sp" />
-        </TableRow>
+                <TableRow style="@style/tableRowResultOther">
 
-    </TableLayout>
+                    <TextView
+                        style="@style/textResultLeft"
+                        android:text="Стоимость обработки помещения, руб" />
+
+                    <TextView
+                        android:id="@+id/tvTheCostOfTheRoom"
+                        style="@style/textResultRight" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>
