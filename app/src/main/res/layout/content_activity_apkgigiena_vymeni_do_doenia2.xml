@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,8 +60,8 @@
                     <Spinner
                         android:id="@+id/spinner2"
                         android:layout_width="match_parent"
-                        android:layout_marginRight="17dp"
                         android:layout_height="37dp"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:background="@color/colorSpiner"
                         android:spinnerMode="dialog" />
@@ -132,9 +132,9 @@
                         android:id="@+id/etVes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
-                        android:layout_marginRight="17dp"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
@@ -154,9 +154,9 @@
                         android:id="@+id/etKolichGolov"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
-                        android:layout_marginRight="17dp"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
@@ -174,9 +174,9 @@
 
                     <EditText
                         android:id="@+id/etDay"
-                        android:layout_marginRight="17dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
@@ -198,30 +198,19 @@
                         android:id="@+id/etKolichObrabotok"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_span="2"
                         android:layout_marginRight="17dp"
+                        android:layout_span="2"
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp">
-
-                    <Button
-                        android:id="@+id/btnRaschet"
-                        android:layout_width="match_parent"
-                        android:layout_height="37dp"
-                        android:layout_span="6"
-                        android:background="@color/colorRed"
-                        android:fontFamily="sans-serif"
-                        android:onClick="onClickRaschet"
-                        android:text="@string/btnResult"
-                        android:textColor="@android:color/background_light"
-                        android:textSize="16sp" />
-                </TableRow>
             </TableLayout>
+
+            <Button
+                android:id="@+id/btnRaschet"
+                style="@style/buttonResult"
+                android:onClick="onClickRaschet"
+                android:text="@string/btnResult" />
 
             <TableLayout
                 android:id="@+id/tableL"

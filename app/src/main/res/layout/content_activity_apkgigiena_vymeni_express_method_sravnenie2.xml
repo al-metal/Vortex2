@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="10dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="10dp">
 
         <LinearLayout
             android:layout_width="344dp"
@@ -117,25 +117,13 @@
                         android:ems="10"
                         android:inputType="numberDecimal" />
                 </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp">
-
-                    <Button
-                        android:id="@+id/btnRaschet"
-                        android:layout_width="match_parent"
-                        android:layout_height="37dp"
-                        android:layout_span="5"
-                        android:background="@color/colorRed"
-                        android:fontFamily="sans-serif"
-                        android:onClick="onClick"
-                        android:text="@string/btnResult"
-                        android:textColor="@android:color/background_light"
-                        android:textSize="16sp" />
-                </TableRow>
             </TableLayout>
+
+            <Button
+                android:id="@+id/btnRaschet"
+
+                android:onClick="onClick"
+                android:text="@string/btnResult" />
 
             <TableLayout
                 android:id="@+id/tableL"

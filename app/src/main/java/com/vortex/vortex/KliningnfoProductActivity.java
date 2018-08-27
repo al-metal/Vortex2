@@ -186,6 +186,10 @@ public class KliningnfoProductActivity extends AppCompatActivity
                         .setNegativeButton("ОК",
                                 (dialog, id) -> {
                                     //btnRaschetMarvel.setEnabled(false);
+                                    Intent intent = new Intent(KliningnfoProductActivity.this, activity_klining.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
                                     dialog.cancel();
                                 });
                 AlertDialog alert = builder.create();
