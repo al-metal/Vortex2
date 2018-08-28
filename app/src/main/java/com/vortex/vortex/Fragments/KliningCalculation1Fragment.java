@@ -1,6 +1,5 @@
 package com.vortex.vortex.Fragments;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,7 +12,10 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.vortex.vortex.Calculations.RoundUp;
 import com.vortex.vortex.R;
+
+import static com.vortex.vortex.Calculations.RoundUp.roundUp;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -100,9 +102,8 @@ public class KliningCalculation1Fragment extends Fragment {
                 double thePricePerKg = pricePerVolume / weightOfProductInContainer;
                 double theCostOfToolsPerM2 = thePricePerKg / 1000 * expence;
 
-
-                tvThePricePerKg.setText(String.valueOf(thePricePerKg));
-                tvTheCostOfToolsPerM2.setText(String.valueOf(theCostOfToolsPerM2));
+                tvThePricePerKg.setText(String.valueOf(roundUp(thePricePerKg, 2)));
+                tvTheCostOfToolsPerM2.setText(String.valueOf(roundUp(theCostOfToolsPerM2, 2)));
 
             }
         });

@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.vortex.vortex.R;
 
+import static com.vortex.vortex.Calculations.RoundUp.roundUp;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -93,7 +95,7 @@ public class KliningCalculation8Fragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (etPricePerVolume.getText().length() == 0 || etWeightOfProductInContainer.getText().length() == 0|| etWaterСapacity.getText().length() == 0) {
+                if (etPricePerVolume.getText().length() == 0 || etWeightOfProductInContainer.getText().length() == 0 || etWaterСapacity.getText().length() == 0) {
                     Toast.makeText(getContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -110,9 +112,9 @@ public class KliningCalculation8Fragment extends Fragment {
                 double theCostOfThe1stSoak = (expenseSoak * waterСapacity / 1000) * thePricePerKg;
 
 
-                tvThePricePerKg.setText(String.valueOf(thePricePerKg));
-                tvPriceFor1DishWashing.setText(String.valueOf(priceFor1DishWashing));
-                tvTheCostOfThe1stSoak.setText(String.valueOf(theCostOfThe1stSoak));
+                tvThePricePerKg.setText(String.valueOf(roundUp(thePricePerKg, 2)));
+                tvPriceFor1DishWashing.setText(String.valueOf(roundUp(priceFor1DishWashing, 2)));
+                tvTheCostOfThe1stSoak.setText(String.valueOf(roundUp(theCostOfThe1stSoak, 2)));
 
             }
         });
@@ -144,6 +146,7 @@ public class KliningCalculation8Fragment extends Fragment {
         mListener = null;
     }
 */
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

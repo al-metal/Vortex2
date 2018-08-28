@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.vortex.vortex.R;
 
+import static com.vortex.vortex.Calculations.RoundUp.roundUp;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -105,10 +107,10 @@ public class KliningCalculation13Fragment extends Fragment {
                 double theCostOfFundsOnTheMeter = thePricePerKg / 1000 * expenceMetr2;
                 double theCostOfTheRoom = theCostOfFundsOnTheMeter * theRoom;
 
-                tvThePricePerKg.setText(String.valueOf(thePricePerKg));
-                tvTheCostOf1Application.setText(String.valueOf(theCostOf1Application));
-                tvTheCostOfFundsOnTheMeter.setText(String.valueOf(theCostOfFundsOnTheMeter));
-                tvTheCostOfTheRoom.setText(String.valueOf(theCostOfTheRoom));
+                tvThePricePerKg.setText(String.valueOf(roundUp(thePricePerKg, 2)));
+                tvTheCostOf1Application.setText(String.valueOf(roundUp(theCostOf1Application, 2)));
+                tvTheCostOfFundsOnTheMeter.setText(String.valueOf(roundUp(theCostOfFundsOnTheMeter, 2)));
+                tvTheCostOfTheRoom.setText(String.valueOf(roundUp(theCostOfTheRoom, 2)));
             }
         });
         // Inflate the layout for this fragment

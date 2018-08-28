@@ -23,6 +23,8 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 
+import static com.vortex.vortex.Calculations.RoundUp.roundUp;
+
 public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -119,10 +121,6 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
-
-    public BigDecimal roundUp(double value, int digits) {
-        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickIcon(View view) {

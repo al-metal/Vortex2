@@ -26,6 +26,8 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 
+import static com.vortex.vortex.Calculations.RoundUp.roundUp;
+
 public class ActivityAPKDezinfekciyaTumanIce2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -150,10 +152,6 @@ public class ActivityAPKDezinfekciyaTumanIce2 extends AppCompatActivity
         tvRashodKoncentrata.setText(String.valueOf(roundUp(dblKoncentraciya, 2)));
         tvForbicida.setText(String.valueOf(roundUp(dblForbizida, 2)));
 
-    }
-
-    public BigDecimal roundUp(double value, int digits) {
-        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     @Override

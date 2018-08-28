@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 
+import static com.vortex.vortex.Calculations.RoundUp.roundUp;
+
 public class ActivityApkMoySredstvaForHoz2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -159,10 +161,6 @@ public class ActivityApkMoySredstvaForHoz2 extends AppCompatActivity
         tvPriceKislot.setText(String.valueOf(roundUp(respriceKislot, 2)));
         tvPriceSheloch.setText(String.valueOf(roundUp(respriceSheloch, 2)));
         tvPriceObsh.setText(String.valueOf(roundUp(respriceObsh, 2)));
-    }
-
-    public BigDecimal roundUp(double value, int digits) {
-        return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public void onClickIcon(View view) {
