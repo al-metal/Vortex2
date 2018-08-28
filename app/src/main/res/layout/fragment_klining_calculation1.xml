@@ -61,7 +61,8 @@
 
                 <TableRow style="@style/tableRowResultOther">
 
-                    <TextView style="@style/textResultLeft" />
+                    <TextView style="@style/textResultLeft"
+                        android:text="Стоимость за 1 кг, руб"/>
 
                     <TextView
                         android:id="@+id/tvThePricePerKg"

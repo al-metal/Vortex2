@@ -37,6 +37,16 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="buttonGoResult">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:background">@color/colorRed</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/background_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="buttonInfo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -48,7 +58,7 @@
     <style name="textResultLeft">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">17dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
         <item name="android:layout_span">5</item>
         <item name="android:gravity">start</item>
         <item name="android:textAlignment">textStart</item>
@@ -106,14 +116,14 @@
     <style name="textViewInputName">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">17dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
         <item name="android:layout_span">3</item>
     </style>
 
     <style name="editTextDataInTable">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">17dp</item>
+        <item name="android:layout_marginRight">13dp</item>
         <item name="android:layout_span">3</item>
         <item name="android:ems">10</item>
         <item name="android:inputType">numberDecimal</item>
@@ -129,6 +139,27 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="textViewKleaningInfoProduct">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">13dp</item>
+        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">13dp</item>
+    </style>
+
+    <style name="textViewKleaningInfoProductHead">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">13dp</item>
+        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
