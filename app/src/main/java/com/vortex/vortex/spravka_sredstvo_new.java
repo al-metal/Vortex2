@@ -77,6 +77,12 @@ public class spravka_sredstvo_new extends AppCompatActivity
         }
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

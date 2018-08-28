@@ -125,6 +125,12 @@ public class ApkMoySredstvaSravnenieActivity2 extends AppCompatActivity
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickApkRes(View view) {
 
         if (etName.getText().length() == 0 || etStoim.getText().length() == 0 || etKoncentrat.getText().length() == 0 || etVanna.getText().length() == 0 || etVes.getText().length() == 0

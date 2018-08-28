@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.content.Intent;
 import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -60,6 +61,12 @@ public class ActivityOrder extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 
     public void onClickOrderBuy(View view) {

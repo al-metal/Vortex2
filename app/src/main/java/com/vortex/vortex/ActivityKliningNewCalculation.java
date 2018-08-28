@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.vortex.vortex.Fragments.KliningCalculation10Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation11Fragment;
@@ -247,6 +248,12 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         kliningCalculation8Fragment.setArguments(bundle);
         kliningCalculation10Fragment.setArguments(bundle);
         transaction.commit();
+    }
+
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -82,4 +82,10 @@ public class ApkActivity2 extends AppCompatActivity
         Intent intent = new Intent(ApkActivity2.this, ActivityAPKKopyta2.class);
         startActivity(intent);
     }
+
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
 }

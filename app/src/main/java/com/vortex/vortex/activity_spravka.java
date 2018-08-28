@@ -125,6 +125,12 @@ public class activity_spravka extends AppCompatActivity
         return true;
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public class Load_data extends AsyncTask<Void, Void, Void> {
 
         Context mContext;
@@ -219,6 +225,7 @@ public class activity_spravka extends AppCompatActivity
             }
             return null;
         }
+
 
         protected void onPostExecute(Void result) {
 

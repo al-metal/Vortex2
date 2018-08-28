@@ -165,6 +165,12 @@ public class ActivityApkMoySredstvaForHoz2 extends AppCompatActivity
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

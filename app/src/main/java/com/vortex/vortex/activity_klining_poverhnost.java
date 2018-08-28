@@ -209,6 +209,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
     private void StratRaschet(String nameProduct) {
         Intent intent = new Intent(activity_klining_poverhnost.this, KliningnfoProductActivity.class);
         intent.putExtra("nameProduct", nameProduct);
+        intent.putExtra("title", title);
         startActivity(intent);
     }
 
@@ -218,5 +219,11 @@ public class activity_klining_poverhnost extends AppCompatActivity
         TextView tv = (TextView) v;
         nameProduct = tv.getText().toString();
         StratRaschet(nameProduct);
+    }
+
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 }

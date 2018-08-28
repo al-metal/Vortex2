@@ -36,6 +36,12 @@ public class ActivityAPKDezinfekciya2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickProfilakt(View view) {
         Intent intent = new Intent(ActivityAPKDezinfekciya2.this, ActivityAPKDezinfekciyaProfilaktikaForbicid2.class);
         startActivity(intent);

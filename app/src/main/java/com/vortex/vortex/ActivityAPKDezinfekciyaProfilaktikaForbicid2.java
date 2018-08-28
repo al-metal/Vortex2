@@ -116,6 +116,12 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicid2 extends AppCompatActiv
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickRaschet(View view) {
         if (etPloshad.getText().length() == 0 || etPrice.getText().length() == 0 || etVes.getText().length() == 0
                 || tvKoncentraciya.getText().length() == 0 || tvRashod.getText().length() == 0 || tvEkspoziciya.getText().length() == 0) {

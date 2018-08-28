@@ -81,6 +81,12 @@ public class ActivityAPKKopytaDesitabProfilaktUsil2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickRaschet(View view) {
         if (etStado.getText().length() == 0 || etProdolDen.getText().length() == 0
                 || etPercent.getText().length() == 0 || etPrice.getText().length() == 0

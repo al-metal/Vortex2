@@ -1,5 +1,6 @@
 package com.vortex.vortex;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -114,5 +115,11 @@ public class activity_klining extends AppCompatActivity
     public void onClickHotel(View view) {
         id = 7;
         SetIdKlining(id, "Номерной фонд");
+    }
+
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 }

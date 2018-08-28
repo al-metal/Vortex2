@@ -113,6 +113,12 @@ public class ActivityAPKDezinfekciyaTumanIceAnimal2 extends AppCompatActivity
         btnRaschet.setBackgroundColor(gray);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }

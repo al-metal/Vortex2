@@ -74,6 +74,12 @@ public class ActivityAPKKopytaMedKuporos2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClick(View view) {
         if (etStado.getText().length() == 0 || etObrabotka.getText().length() == 0
                 || etKuporos.getText().length() == 0 || etObrabotokDen.getText().length() == 0 || etPrice.getText().length() == 0) {

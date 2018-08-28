@@ -107,6 +107,12 @@ public class KliningRaschetActivity extends AppCompatActivity
         new Load_data(this).execute();
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickRaschet(View view) {
 
         double price = Double.parseDouble(etPrice.getText().toString());

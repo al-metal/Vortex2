@@ -111,6 +111,12 @@ public class ActivityAPKDezinfekciyaTumanIce2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickRaschet(View view) {
         if (etVysota.getText().length() == 0 || etVysotaKon.getText().length() == 0 || etDlinna.getText().length() == 0
                 || etShirina.getText().length() == 0 || etKratnost.getText().length() == 0) {

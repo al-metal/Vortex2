@@ -402,5 +402,10 @@ public class activity_klining_problema extends AppCompatActivity
 
         return true;
     }
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
 }
 

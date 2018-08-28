@@ -247,4 +247,10 @@ public class ActivityPisheProm2 extends AppCompatActivity
         intent.putExtra("Sredstvo", sredstvo);
         startActivity(intent);
     }
+
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
 }

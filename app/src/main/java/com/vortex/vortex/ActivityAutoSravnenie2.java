@@ -532,6 +532,12 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     private void ReturnPeno(String penogenob) {
         double objem = Double.parseDouble(penogenob);
 

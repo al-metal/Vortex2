@@ -36,6 +36,12 @@ public class ActivityAPKGigienaVymeni2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickAPKGigienaDoDoenia(View view) {
         Intent intent = new Intent(ActivityAPKGigienaVymeni2.this, ActivityAPKGigienaVymeniDoDoenia2.class);
         startActivity(intent);

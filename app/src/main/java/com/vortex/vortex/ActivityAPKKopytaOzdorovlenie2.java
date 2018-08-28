@@ -86,6 +86,12 @@ public class ActivityAPKKopytaOzdorovlenie2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickRaschet(View view) {
         if (etStado.getText().length() == 0 || etDesimix1.getText().length() == 0 || etKuporos1.getText().length() == 0
                 || etDesimix2.getText().length() == 0 || etKuporos2.getText().length() == 0) {

@@ -135,6 +135,12 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     private void ReturnVoda(String tvVoda) {
         double vod = Double.parseDouble(tvVoda);
         if (0 <= vod && vod < 1.5) {

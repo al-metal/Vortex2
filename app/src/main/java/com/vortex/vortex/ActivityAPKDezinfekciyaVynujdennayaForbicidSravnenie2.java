@@ -100,6 +100,12 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicidSravnenie2 extends AppCo
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public BigDecimal roundUp(double value, int digits) {
         return new BigDecimal("" + value).setScale(digits, BigDecimal.ROUND_HALF_UP);
     }

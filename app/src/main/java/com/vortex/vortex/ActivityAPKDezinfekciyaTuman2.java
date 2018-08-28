@@ -41,6 +41,12 @@ public class ActivityAPKDezinfekciyaTuman2 extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickTumanIce(View view) {
         Intent intent = new Intent(ActivityAPKDezinfekciyaTuman2.this, ActivityAPKDezinfekciyaTumanIce2.class);
         startActivity(intent);

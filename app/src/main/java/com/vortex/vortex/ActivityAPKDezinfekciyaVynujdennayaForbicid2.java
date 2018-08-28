@@ -81,6 +81,12 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicid2 extends AppCompatActiv
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void onClickIcon(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void onClickRaschet(View view) {
         if (etPrice.getText().length() == 0 || etVes.getText().length() == 0 || etS.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
