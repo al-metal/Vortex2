@@ -8,108 +8,62 @@
     tools:context="com.vortex.vortex.ActivityAPKKopyta2"
     tools:showIn="@layout/app_bar_activity_apkkopyta2">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+    <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="0dp"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickOzdorovlenie"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/vortex_menu_kopyta_zdorov"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/vortex_menu_kopyta_zdorov" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickProfilaktika"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/vortex_menu_kopyta_zdorov"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/vortex_menu_kopyta_profilak" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickMedKuporos"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/vortex_menu_kopyta_kuporos"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/vortex_menu_kopyta_kuporos" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickDesitabProfilaktika"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/vortex_menu_kopyta_desitub_prof"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/vortex_menu_kopyta_desitub_prof" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickDesitabProfilaktikaUsil"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/vortex_menu_kopyta_desitub_super_prof"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/vortex_menu_kopyta_desitub_super_prof" />
+
                 </TableRow>
+
             </TableLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

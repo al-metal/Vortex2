@@ -8,163 +8,83 @@
     tools:context="com.vortex.vortex.ActivityPisheProm2"
     tools:showIn="@layout/app_bar_activity_pishe_prom2">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRow">
 
                     <Spinner
                         android:id="@+id/spinner7"
-                        style="@style/SpinnerTheme"
-                        android:layout_width="match_parent"
-                        android:layout_height="37dp"
-                        android:layout_span="6"
-                        android:background="@color/colorSpiner"
-                        android:spinnerMode="dialog" />
+                        style="@style/spinerInputData" />
+
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView70"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimostRub_Kg"
-                        android:textColor="@color/colorGray" />
+                        style="@style/textViewInputData"
+                        android:text="@string/tvStoimostRub_Kg" />
 
                     <EditText
                         android:id="@+id/etPrice"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        style="@style/editTextInputData" />
+
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView130"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvKoncentraciyaProcent"
-                        android:textColor="@color/colorGray" />
+                        style="@style/textViewInputData"
+                        android:text="@string/tvKoncentraciyaProcent" />
 
                     <EditText
                         android:id="@+id/etKoncentratRastvor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        style="@style/editTextInputData" />
+
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView136"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvObjemRastvoraL"
-                        android:textColor="@color/colorGray" />
+                        style="@style/textViewInputData"
+                        android:text="@string/tvObjemRastvoraL" />
 
                     <EditText
                         android:id="@+id/etObjemRastvor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        style="@style/editTextInputData" />
+
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView138"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvKolichestvoPromyvokSutki"
-                        android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        style="@style/textViewInputData"
+                        android:text="@string/tvKolichestvoPromyvokSutki" />
 
                     <EditText
                         android:id="@+id/etOperacSutki"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        style="@style/editTextInputData" />
+
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView142"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvKolichestvoRabochihDneyMes"
-                        android:textColor="@color/colorGray" />
+                        style="@style/textViewInputData"
+                        android:text="@string/tvKolichestvoRabochihDneyMes" />
 
                     <EditText
                         android:id="@+id/etDay"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/colorGray"
-                        android:textSize="14sp" />
+                        style="@style/editTextInputData" />
+
                 </TableRow>
 
             </TableLayout>
@@ -177,182 +97,80 @@
 
             <TableLayout
                 android:id="@+id/tableRaschet"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:shrinkColumns="*"
-                android:stretchColumns="*"
-                android:visibility="gone">
+                style="@style/tableLayoutResult">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        android:id="@+id/textView56"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:fontFamily=""
-                        android:paddingRight="10dp"
-                        android:text="@string/tvPlotnostKg_L"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvPlotnostKg_L" />
 
                     <TextView
                         android:id="@+id/tvPlotnost"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView60"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:paddingRight="10dp"
-                        android:text="@string/tvCenaZa1LRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvCenaZa1LRub" />
 
                     <TextView
                         android:id="@+id/tvPriceLitr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView63"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:paddingRight="10dp"
-                        android:text="@string/tvStoimostMoyushegoRastvoraRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvStoimostMoyushegoRastvoraRub" />
 
                     <TextView
                         android:id="@+id/tvStoimostRastvora"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView65"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:paddingRight="10dp"
-                        android:text="@string/tvRashodSredstvaZa1MoykuL"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvRashodSredstvaZa1MoykuL" />
 
                     <TextView
                         android:id="@+id/tvRashodSrdstvaMoyka"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView67"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:paddingRight="10dp"
-                        android:text="@string/tvRashodSredstvaVMesyacL"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvRashodSredstvaVMesyacL" />
 
                     <TextView
                         android:id="@+id/tvRashodSredstvaMes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView69"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:paddingRight="10dp"
-                        android:text="@string/tvRashodNaPokupkuSredstvaMesyacRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvRashodNaPokupkuSredstvaMesyacRub" />
 
                     <TextView
                         android:id="@+id/tvPriceSredstva"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
             </TableLayout>
 
             <Button
                 android:id="@+id/btnSravnenie"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_marginTop="23dp"
-                android:background="@color/colorRed"
-                android:fontFamily="sans-serif"
+                style="@style/buttonCompare"
                 android:onClick="onClickSravnenie"
-                android:text="@string/btnSrav"
-                android:textColor="@android:color/background_light"
-                android:textSize="16sp"
-                android:visibility="invisible" />
+                android:text="@string/btnSrav" />
         </LinearLayout>
     </ScrollView>
 

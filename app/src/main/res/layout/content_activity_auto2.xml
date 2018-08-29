@@ -8,13 +8,7 @@
     tools:context="com.vortex.vortex.ActivityAuto2"
     tools:showIn="@layout/app_bar_activity_auto2">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout
             android:id="@+id/llmain"

@@ -8,13 +8,7 @@
     tools:context=".KliningRaschetActivity"
     tools:showIn="@layout/app_bar_klining_raschet">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout
             android:layout_width="match_parent"

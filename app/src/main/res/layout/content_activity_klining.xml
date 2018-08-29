@@ -8,149 +8,83 @@
     tools:context="com.vortex.vortex.activity_klining"
     tools:showIn="@layout/app_bar_activity_klining">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+    <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="0dp"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton35"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickKuhnya"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_kuhnya"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/cleanbox_menu_kuhnya" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton36"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickSanusel"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_sanuzel"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/cleanbox_menu_sanuzel" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton37"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickOffice"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_office"
-                        android:adjustViewBounds="true"
-                        />
+                        app:srcCompat="@drawable/cleanbox_menu_office" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton38"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickObshKlining"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_other"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/cleanbox_menu_other" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton39"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickRemont"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_remont"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/cleanbox_menu_remont" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton40"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickPromKlining"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_prom"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/cleanbox_menu_prom" />
                 </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp">
+
+                <TableRow style="@style/tableRow">
 
                     <ImageButton
                         android:id="@+id/imageButton400"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_span="2"
-                        android:background="@null"
+                        style="@style/imageButtonHorizontal"
                         android:onClick="onClickHotel"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox_menu_prom"
-                        android:adjustViewBounds="true"/>
+                        app:srcCompat="@drawable/cleanbox_menu_prom" />
+
                 </TableRow>
+
             </TableLayout>
+
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

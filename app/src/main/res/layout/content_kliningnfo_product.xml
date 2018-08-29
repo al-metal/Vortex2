@@ -9,11 +9,7 @@
     tools:context=".KliningnfoProductActivity"
     tools:showIn="@layout/app_bar_kliningnfo_product">
 
-    <ScrollView
-        style="@style/scrollView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout style="@style/linearLayoutInputData">
 

@@ -8,20 +8,14 @@
     tools:context=".ActivityKliningNewCalculation"
     tools:showIn="@layout/app_bar_activity_klining_new_calculation">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            
+
         </LinearLayout>
     </ScrollView>
 

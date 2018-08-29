@@ -4,10 +4,7 @@
     style="@style/linearLayouteMain"
     tools:context=".Fragments.KliningCalculation9Fragment">
 
-    <ScrollView
-        style="@style/scrollView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout style="@style/linearLayoutInputData">
 
@@ -16,48 +13,50 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
-                        android:text="Расход (исходя из запаха, слабый - 2, средний - 3.5, сильный - 5), мл" />
+                        style="@style/textViewInputData"
+                        android:lines="4"
+                        android:maxLines="4"
+                        android:text="Расход (исходя из запаха,\nслабый - 2, средний - 3.5,\nсильный - 5), мл" />
 
                     <EditText
                         android:id="@+id/etExpense"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Помещение м3" />
 
                     <EditText
                         android:id="@+id/etRoom"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
@@ -75,12 +74,12 @@
                 <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость за 1кг. руб." />
 
                     <TextView
                         android:id="@+id/tvThePricePerKg"
-                        style="@style/textResultRight"
+                        style="@style/textViewResultRight"
                         android:text="0" />
 
                 </TableRow>
@@ -88,12 +87,12 @@
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость обработки помещения, руб" />
 
                     <TextView
                         android:id="@+id/tvTheCostOfProcessingFacilities"
-                        style="@style/textResultRight" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
             </TableLayout>

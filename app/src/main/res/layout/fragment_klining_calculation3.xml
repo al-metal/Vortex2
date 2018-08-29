@@ -4,10 +4,7 @@
     style="@style/linearLayouteMain"
     tools:context=".Fragments.KliningCalculation3Fragment">
 
-    <ScrollView
-        style="@style/scrollView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout style="@style/linearLayoutInputData">
 
@@ -16,24 +13,24 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
@@ -51,61 +48,61 @@
                 <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Расход, мл. на унитаз" />
 
                     <TextView
                         android:id="@+id/tvExpenseToilet"
-                        style="@style/textResultRight"
-                        android:text="10"/>
+                        style="@style/textViewResultRight"
+                        android:text="10" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Расход, мл./м2" />
 
                     <TextView
                         android:id="@+id/tvExpense"
-                        style="@style/textResultRight"
-                        android:text="5"/>
+                        style="@style/textViewResultRight"
+                        android:text="5" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость за 1кг. руб." />
 
                     <TextView
                         android:id="@+id/tvThePricePerKg"
-                        style="@style/textResultRight" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость за 1 уборку (унитаз), руб" />
 
                     <TextView
                         android:id="@+id/tvPriceFor1Cleaning"
-                        style="@style/textResultRight" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость средства на м2, руб" />
 
                     <TextView
                         android:id="@+id/tvTheCostOfFundsOnTheMeter"
-                        style="@style/textResultRight" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 

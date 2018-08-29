@@ -4,10 +4,7 @@
     style="@style/linearLayouteMain"
     tools:context=".Fragments.KliningCalculation7Fragment">
 
-    <ScrollView
-        style="@style/scrollView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout style="@style/linearLayoutInputData">
 
@@ -16,36 +13,36 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Количество монодоз" />
 
                     <EditText
                         android:id="@+id/etNumberOfMonodoses"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputName"
+                        style="@style/textViewInputData"
                         android:text="Вместимость жироуловителя, м3" />
 
                     <EditText
                         android:id="@+id/etCapacityOfTheGreaseTrap"
-                        style="@style/editTextDataInTable" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
@@ -63,12 +60,12 @@
                 <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Расход на 1 м3 жироуловителя, монодоза" />
 
                     <TextView
                         android:id="@+id/tvExpense"
-                        style="@style/textResultRight"
+                        style="@style/textViewResultRight"
                         android:text="2" />
 
                 </TableRow>
@@ -76,24 +73,24 @@
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость 1 монодозы, руб." />
 
                     <TextView
                         android:id="@+id/tvThePrice"
-                        style="@style/textResultRight" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textResultLeft"
+                        style="@style/textViewResultLeft"
                         android:text="Стоимость 1-го применения, руб" />
 
                     <TextView
                         android:id="@+id/tvCostOfApplication"
-                        style="@style/textResultRight" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 

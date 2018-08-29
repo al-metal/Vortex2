@@ -8,89 +8,41 @@
     tools:context="com.vortex.vortex.Main2Activity"
     tools:showIn="@layout/app_bar_main2">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp">
+    <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowResultFirst">
 
                     <ImageButton
                         android:id="@+id/imageButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_span="2"
-                        android:adjustViewBounds="true"
-                        android:background="@null"
-                        android:contentDescription="@string/TM_vortex"
+                        style="@style/imageButtonMainActivity"
                         android:onClick="onClick"
-                        android:scaleType="fitCenter"
                         app:srcCompat="@drawable/vortex" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_span="2"
-                        android:adjustViewBounds="true"
-                        android:background="@null"
-                        android:contentDescription="@string/TM_tank"
+                        style="@style/imageButtonMainActivity"
                         android:onClick="onClickPisheProm"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/tank"
-                        tools:ignore="VectorDrawableCompat" />
+                        app:srcCompat="@drawable/tank" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                <TableRow style="@style/tableRowResultFirst">
 
                     <ImageButton
                         android:id="@+id/imageButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_span="2"
-                        android:adjustViewBounds="true"
-                        android:background="@null"
-                        android:contentDescription="@string/TM_complex"
+                        style="@style/imageButtonMainActivity"
                         android:onClick="onClickAuto"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/complex"
-                        tools:ignore="VectorDrawableCompat" />
+                        app:srcCompat="@drawable/complex" />
 
                     <ImageButton
                         android:id="@+id/imageButton8"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_span="2"
-                        android:adjustViewBounds="true"
-                        android:background="@null"
-                        android:contentDescription="@string/TM_cleanbox"
+                        style="@style/imageButtonMainActivity"
                         android:onClick="onClickKlining"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/cleanbox"
-                        tools:ignore="VectorDrawableCompat" />
+                        app:srcCompat="@drawable/cleanbox" />
                 </TableRow>
 
             </TableLayout>

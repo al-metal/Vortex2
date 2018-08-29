@@ -31,10 +31,26 @@
         <item name="android:layout_height">37dp</item>
         <item name="android:layout_marginTop">17dp</item>
         <item name="android:layout_span">7</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
         <item name="android:background">@color/colorRed</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/background_light</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="buttonCompare">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:layout_span">7</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">@color/colorRed</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/background_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:visibility">gone</item>
     </style>
 
     <style name="buttonGoResult">
@@ -55,26 +71,6 @@
         <item name="android:background">@null</item>
     </style>
 
-    <style name="textResultLeft">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">7dp</item>
-        <item name="android:layout_span">5</item>
-        <item name="android:gravity">start</item>
-        <item name="android:textAlignment">textStart</item>
-        <item name="android:textSize">11sp</item>
-    </style>
-
-    <style name="textResultRight">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_span">3</item>
-        <item name="android:gravity">start</item>
-        <item name="android:textAlignment">textStart</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">11sp</item>
-    </style>
-
     <style name="tableRowResultOther">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -82,6 +78,11 @@
     </style>
 
     <style name="tableRowResultFirst">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="tableRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
@@ -97,8 +98,8 @@
 
     <style name="scrollView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">9dp</item>
     </style>
 
     <style name="tableViewInputData">
@@ -106,27 +107,6 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:shrinkColumns">*</item>
         <item name="android:stretchColumns">*</item>
-    </style>
-
-    <style name="tableRowInputData">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
-    <style name="textViewInputName">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">7dp</item>
-        <item name="android:layout_span">3</item>
-    </style>
-
-    <style name="editTextDataInTable">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">13dp</item>
-        <item name="android:layout_span">3</item>
-        <item name="android:ems">10</item>
-        <item name="android:inputType">numberDecimal</item>
     </style>
 
     <style name="linearLayouteMain">
@@ -137,7 +117,7 @@
 
     <style name="linearLayoutInputData">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>
 
@@ -160,6 +140,82 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginLeft">13dp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="imageButtonMainActivity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:contentDescription">@string/TM_vortex</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="imageButtonHorizontal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="tableRowInputData">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="textViewInputData">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:layout_span">4</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="editTextInputData">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="spinerInputData" parent="SpinnerTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_span">6</item>
+        <item name="android:background">@color/colorSpiner</item>
+        <item name="android:spinnerMode">dialog</item>
+    </style>
+
+    <style name="textViewResultLeft">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">17dp</item>
+        <item name="android:layout_span">5</item>
+        <item name="android:fontFamily"></item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="textViewResultRight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">11sp</item>
     </style>
 
 </resources>
