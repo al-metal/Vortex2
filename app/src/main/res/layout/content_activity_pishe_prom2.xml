@@ -106,7 +106,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"

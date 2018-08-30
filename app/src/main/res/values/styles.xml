@@ -268,4 +268,42 @@
         <item name="android:textSize">11sp</item>
     </style>
 
+    <style name="radioButtonAutoCheked">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="radioButtonAutoNonCheck">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="textViewLongResultLeft">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_span">4</item>
+        <item name="android:layout_marginLeft">27dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="textViewLongResultMiddle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="textViewLongResultRight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
 </resources>

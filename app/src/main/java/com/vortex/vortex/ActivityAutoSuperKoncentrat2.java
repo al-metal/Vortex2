@@ -60,6 +60,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
 
     EditText etPrice2Kanistr;
     Button btnRaschet;
+    Button btnCompare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,7 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
 
         tableL = (TableLayout) findViewById(R.id.tableL);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        btnCompare = findViewById(R.id.btnCompare);
 
         RadioGroupUstroystvo = (RadioGroup) findViewById(R.id.RadioGroupUstroystvo);
         RadioGroupVes = (RadioGroup) findViewById(R.id.RadioGroupVes);
@@ -194,8 +196,9 @@ public class ActivityAutoSuperKoncentrat2 extends AppCompatActivity
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(btnRaschet.getWindowToken(),
                 InputMethodManager.HIDE_NOT_ALWAYS);
-
+        btnCompare.setVisibility(View.VISIBLE);
         tableL.setVisibility(View.VISIBLE);
+
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
 
