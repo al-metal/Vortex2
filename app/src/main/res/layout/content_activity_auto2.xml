@@ -11,20 +11,13 @@
     <ScrollView style="@style/scrollView">
 
         <LinearLayout
-            android:id="@+id/llmain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            style="@style/linearLayoutInputData">
 
             <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+                style="@style/tableViewInputData">
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    style="@style/tableRowInputData">
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -70,9 +63,7 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp">
+                    style="@style/tableRowInputData">
 
                     <EditText
                         android:id="@+id/etVoda"
@@ -101,8 +92,7 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView78"
@@ -121,9 +111,7 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp">
+                    style="@style/tableRowInputData">
 
                     <Spinner
                         android:id="@+id/spinner8"
@@ -135,9 +123,7 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="7dp">
+                    style="@style/tableRowInputData">
 
                     <Button
                         android:id="@+id/btnRaschet"
@@ -164,7 +150,7 @@
                         android:layout_span="7"
                         android:shrinkColumns="*"
                         android:stretchColumns="*"
-                        android:visibility="gone"></TableLayout>
+                        android:visibility="gone" />
                 </TableRow>
 
                 <TableRow

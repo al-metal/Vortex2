@@ -30,9 +30,18 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">37dp</item>
         <item name="android:layout_marginTop">17dp</item>
-        <item name="android:layout_span">7</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginRight">9dp</item>
+        <item name="android:background">@color/colorRed</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/background_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="buttonResultFrag">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:layout_marginTop">17dp</item>
         <item name="android:background">@color/colorRed</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/background_light</item>
@@ -43,9 +52,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">37dp</item>
         <item name="android:layout_marginTop">17dp</item>
-        <item name="android:layout_span">7</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginRight">9dp</item>
         <item name="android:background">@color/colorRed</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/background_light</item>
@@ -57,6 +65,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">37dp</item>
         <item name="android:layout_marginTop">17dp</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginRight">9dp</item>
         <item name="android:background">@color/colorRed</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/background_light</item>
@@ -99,7 +109,6 @@
     <style name="scrollView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">9dp</item>
     </style>
 
     <style name="tableViewInputData">
@@ -118,34 +127,35 @@
     <style name="linearLayoutInputData">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">9dp</item>
         <item name="android:orientation">vertical</item>
     </style>
 
     <style name="textViewKleaningInfoProduct">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">8dp</item>
-        <item name="android:layout_marginRight">13dp</item>
-        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginStart">25dp</item>
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
     </style>
 
     <style name="textViewKleaningInfoProductHead">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">8dp</item>
-        <item name="android:layout_marginRight">13dp</item>
-        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginStart">25dp</item>
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="imageButtonMainActivity">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_margin">9dp</item>
         <item name="android:layout_span">2</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:background">@null</item>
@@ -174,6 +184,15 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">6</item>
         <item name="android:layout_span">4</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="textViewInputDataFrag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:layout_span">4</item>
         <item name="android:textColor">@color/colorGray</item>
     </style>
 
@@ -182,7 +201,18 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_span">2</item>
         <item name="android:ems">10</item>
-        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="editTextInputDataFrag">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginRight">40dp</item>
         <item name="android:inputType">numberDecimal</item>
         <item name="android:textColor">@color/colorGray</item>
         <item name="android:textSize">14sp</item>
@@ -191,14 +221,24 @@
     <style name="spinerInputData" parent="SpinnerTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">37dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
         <item name="android:layout_span">6</item>
         <item name="android:background">@color/colorSpiner</item>
         <item name="android:spinnerMode">dialog</item>
     </style>
 
     <style name="textViewResultLeft">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">27dp</item>
+        <item name="android:layout_span">5</item>
+        <item name="android:fontFamily"></item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="textViewResultLeftFrag">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">17dp</item>
@@ -212,7 +252,17 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">4dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="textViewResultRightFrag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">14dp</item>
         <item name="android:layout_span">2</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">11sp</item>

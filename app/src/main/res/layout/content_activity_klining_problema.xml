@@ -12,21 +12,16 @@
 
         <LinearLayout
             android:id="@+id/llmain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            style="@style/linearLayoutInputData">
 
             <TableLayout
                 android:id="@+id/tbMain"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+                style="@style/tableViewInputData">
 
             </TableLayout>
 
-
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

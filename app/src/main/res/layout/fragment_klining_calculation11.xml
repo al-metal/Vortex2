@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/linearLayouteMain"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Fragments.KliningCalculation11Fragment">
 
     <ScrollView style="@style/scrollView">
@@ -13,36 +16,36 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Вместимость воды (ванная для замачивания), л" />
 
                     <EditText
                         android:id="@+id/etWaterCapacity"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
@@ -50,7 +53,7 @@
 
             <Button
                 android:id="@+id/btnCalculation"
-                style="@style/buttonResult"
+                style="@style/buttonResultFrag"
                 android:text="@string/btnResult" />
 
             <TableLayout
@@ -60,11 +63,11 @@
                 <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Расход, мл/л (мойка)" />
 
                     <TextView
-                        style="@style/textViewResultRight"
+                        style="@style/textViewResultRightFrag"
                         android:text="3" />
 
                 </TableRow>
@@ -72,11 +75,11 @@
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Расход, мл/л (замачивание)" />
 
                     <TextView
-                        style="@style/textViewResultRight"
+                        style="@style/textViewResultRightFrag"
                         android:text="5" />
 
                 </TableRow>
@@ -84,11 +87,11 @@
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Расход, мл./м2" />
 
                     <TextView
-                        style="@style/textViewResultRight"
+                        style="@style/textViewResultRightFrag"
                         android:text="1" />
 
                 </TableRow>
@@ -96,48 +99,48 @@
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость за 1кг. руб." />
 
                     <TextView
                         android:id="@+id/tvThePricePerKg"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость за 1 мойку посуды (50 тарелок)" />
 
                     <TextView
                         android:id="@+id/tvTheCostOfWashingDishes"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость 1 замачивания на ванну, руб." />
 
                     <TextView
                         android:id="@+id/tvTheCostOfSoaking"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость средства на м2, руб." />
 
                     <TextView
                         android:id="@+id/tvTheCostOfFunds"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
@@ -147,4 +150,4 @@
 
     </ScrollView>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

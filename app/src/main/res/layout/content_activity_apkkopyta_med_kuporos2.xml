@@ -10,21 +10,11 @@
 
     <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="23dp"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView73"
@@ -51,115 +41,60 @@
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView90"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewInputData"
                         android:text="@string/tvKolichestvoDoynogoStada" />
 
                     <EditText
                         android:id="@+id/etStado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView91"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewInputData"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etObrabotka"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView92"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewInputData"
                         android:text="@string/tvMednyKuporos_Procent" />
 
                     <EditText
                         android:id="@+id/etKuporos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView93"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewInputData"
                         android:text="@string/tvKolichestvoObrabotokVDenSht" />
 
                     <EditText
                         android:id="@+id/etObrabotokDen"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView94"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewInputData"
                         android:text="@string/tvStoimost1KGRUB" />
 
                     <EditText
                         android:id="@+id/etPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
             </TableLayout>
@@ -172,86 +107,45 @@
 
             <TableLayout
                 android:id="@+id/tableL"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:shrinkColumns="*"
-                android:stretchColumns="*"
-                android:visibility="gone">
+                style="@style/tableLayoutResult">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        android:id="@+id/textView95"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
-                        android:text="@string/tvTrebuemoeKolichestvoSht"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvTrebuemoeKolichestvoSht" />
 
                     <TextView
                         android:id="@+id/tvKuporos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView97"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
-                        android:text="@string/tvStoimostObrabotkiZaPeriodRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvStoimostObrabotkiZaPeriodRub" />
 
                     <TextView
                         android:id="@+id/tvPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView99"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
-                        android:text="@string/tvStoimostObrabotkiGolovyZaPeriodRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/tvStoimostObrabotkiGolovyZaPeriodRub" />
 
                     <TextView
                         android:id="@+id/tvObrabotka"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="3"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
             </TableLayout>
+
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

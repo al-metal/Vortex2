@@ -9,17 +9,11 @@
     tools:showIn="@layout/app_bar_call_me">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        style="@style/linearLayoutInputData">
 
         <Spinner
             android:id="@+id/spinnerCallMe"
-            style="@style/SpinnerTheme"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:background="@color/colorSpiner"
-            android:spinnerMode="dialog" />
+            style="@style/spinerInputData"/>
 
         <RadioGroup
             android:layout_width="wrap_content"

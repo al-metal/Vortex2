@@ -8,12 +8,12 @@
     tools:context="com.vortex.vortex.activity_spravka"
     tools:showIn="@layout/app_bar_activity_spravka">
 
-    <ScrollView style="@style/scrollView">
+    <ScrollView
+        style="@style/scrollView"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
             <EditText
                 android:id="@+id/inputSearch"

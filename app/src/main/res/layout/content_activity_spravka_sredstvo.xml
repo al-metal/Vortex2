@@ -10,10 +10,7 @@
 
     <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
             <WebView
                 android:id="@+id/webView"
@@ -21,6 +18,7 @@
                 android:layout_height="match_parent"></WebView>
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

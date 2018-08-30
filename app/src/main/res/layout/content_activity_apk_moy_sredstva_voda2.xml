@@ -8,23 +8,13 @@
     tools:context="com.vortex.vortex.ActivityApkMoySredstvaVoda2"
     tools:showIn="@layout/app_bar_activity_apk_moy_sredstva_voda2">
 
-    <ScrollView
-        style="@style/scrollView">
+    <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -69,9 +59,7 @@
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
 
                     <EditText
@@ -100,9 +88,7 @@
                         android:textSize="16sp" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView78"
@@ -128,30 +114,17 @@
 
                     <Button
                         android:id="@+id/btnRaschet"
-                        android:layout_width="match_parent"
-                        android:layout_height="37dp"
-                        android:layout_span="7"
-                        android:background="@color/colorRed"
-                        android:fontFamily="sans-serif"
+                        style="@style/buttonResult"
                         android:onClick="onClickRaschetRekomendSredstv"
-                        android:text="@string/btnPredlojitSredstva"
-                        android:textColor="@android:color/background_light"
-                        android:textSize="16sp" />
+                        android:text="@string/btnPredlojitSredstva" />
 
                 </TableRow>
 
                 <TableLayout
-                    android:id="@+id/tableL"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
-                    android:shrinkColumns="*"
-                    android:stretchColumns="*"
-                    android:visibility="gone">
+                    style="@style/tableLayoutResult">
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/tableRowResultFirst">
 
                         <TextView
                             android:id="@+id/textView128"
@@ -169,9 +142,7 @@
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="23dp">
+                        style="@style/tableRowResultOther">
 
                         <TextView
                             android:id="@+id/tvSheloch1"
@@ -189,9 +160,7 @@
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="23dp">
+                        style="@style/tableRowResultOther">
 
                         <TextView
                             android:id="@+id/tvSheloch2"
@@ -209,9 +178,7 @@
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="23dp">
+                        style="@style/tableRowResultOther">
 
                         <TextView
                             android:id="@+id/tvSheloch3"
@@ -229,9 +196,7 @@
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="23dp">
+                        style="@style/tableRowResultOther">
 
                         <TextView
                             android:id="@+id/tvSheloch4"

@@ -8,7 +8,8 @@
     tools:context="com.vortex.vortex.ActivityPisheProm2"
     tools:showIn="@layout/app_bar_activity_pishe_prom2">
 
-    <ScrollView style="@style/scrollView">
+    <ScrollView
+        style="@style/scrollView">
 
         <LinearLayout style="@style/linearLayoutInputData">
 
@@ -25,7 +26,6 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView70"
                         style="@style/textViewInputData"
                         android:text="@string/tvStoimostRub_Kg" />
 
@@ -38,7 +38,6 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView130"
                         style="@style/textViewInputData"
                         android:text="@string/tvKoncentraciyaProcent" />
 
@@ -51,7 +50,6 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView136"
                         style="@style/textViewInputData"
                         android:text="@string/tvObjemRastvoraL" />
 
@@ -64,7 +62,6 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView138"
                         style="@style/textViewInputData"
                         android:text="@string/tvKolichestvoPromyvokSutki" />
 
@@ -77,7 +74,6 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView142"
                         style="@style/textViewInputData"
                         android:text="@string/tvKolichestvoRabochihDneyMes" />
 
@@ -91,7 +87,7 @@
 
             <Button
                 android:id="@+id/btnRaschet"
-                style="@style/buttonResult"
+                style="@style/buttonGoResult"
                 android:onClick="onClickRaschet"
                 android:text="@string/btnResult" />
 
@@ -110,7 +106,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowResultOther">
+                <TableRow style="@style/tableLayoutResult">
 
                     <TextView
                         style="@style/textViewResultLeft"

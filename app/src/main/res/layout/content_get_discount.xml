@@ -8,10 +8,7 @@
     tools:context="com.vortex.vortex.ActivityGetDiscount"
     tools:showIn="@layout/app_bar_get_discount">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+    <LinearLayout style="@style/linearLayoutInputData">
 
         <TextView
             android:id="@+id/headDiscount"

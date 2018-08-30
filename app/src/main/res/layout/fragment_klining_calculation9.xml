@@ -13,50 +13,50 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:lines="4"
                         android:maxLines="4"
                         android:text="Расход (исходя из запаха,\nслабый - 2, средний - 3.5,\nсильный - 5), мл" />
 
                     <EditText
                         android:id="@+id/etExpense"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Помещение м3" />
 
                     <EditText
                         android:id="@+id/etRoom"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
@@ -64,7 +64,7 @@
 
             <Button
                 android:id="@+id/btnCalculation"
-                style="@style/buttonResult"
+                style="@style/buttonResultFrag"
                 android:text="@string/btnResult" />
 
             <TableLayout
@@ -74,12 +74,12 @@
                 <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость за 1кг. руб." />
 
                     <TextView
                         android:id="@+id/tvThePricePerKg"
-                        style="@style/textViewResultRight"
+                        style="@style/textViewResultRightFrag"
                         android:text="0" />
 
                 </TableRow>
@@ -87,12 +87,12 @@
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость обработки помещения, руб" />
 
                     <TextView
                         android:id="@+id/tvTheCostOfProcessingFacilities"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
                 </TableRow>
 
             </TableLayout>

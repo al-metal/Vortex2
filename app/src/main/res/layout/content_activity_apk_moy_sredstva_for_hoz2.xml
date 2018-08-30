@@ -12,236 +12,118 @@
         android:id="@+id/scrollview"
         style="@style/scrollView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="17dp"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKolichestvoKorov" />
 
                     <EditText
                         android:id="@+id/edKolichKorov"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKolichestvoDoekDen" />
 
                     <EditText
                         android:id="@+id/etKolichDoek"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKoncentraciyzShelochi" />
 
                     <EditText
                         android:id="@+id/etKoncentratSheloch"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKoncentraciyzKisloty" />
 
                     <EditText
                         android:id="@+id/etKoncentratKislot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKolichestvoShelochMoek" />
 
                     <EditText
                         android:id="@+id/etKolichShelochMoek"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKolichestvoKislotMoek" />
 
                     <EditText
                         android:id="@+id/etKolichKislotMoek"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView148"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblObjemVanna" />
 
                     <EditText
                         android:id="@+id/etVanna"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView150"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblKolichestvoDney" />
 
                     <EditText
                         android:id="@+id/etDay"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView177"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblStoimostSheloch1KG" />
 
                     <EditText
                         android:id="@+id/etPriceSheloch"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView178"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewInputData"
                         android:text="@string/lblStoimostKislot1KG" />
 
                     <EditText
                         android:id="@+id/edPriceKislot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
             </TableLayout>
@@ -254,175 +136,88 @@
 
             <TableLayout
                 android:id="@+id/tableL"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:shrinkColumns="*"
-                android:stretchColumns="*"
-                android:visibility="gone">
+                style="@style/tableLayoutResult">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblSrednPlotnostKG_L"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblSrednPlotnostKG_L" />
 
                     <TextView
                         android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="1.22"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight"
+                        android:text="1.22" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblObsheeKolichestvoMoySredstvKG"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblObsheeKolichestvoMoySredstvKG" />
 
                     <TextView
                         android:id="@+id/tvKolichSredstvKg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblKolichestvoShelochSredstvaKG"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblKolichestvoShelochSredstvaKG" />
 
                     <TextView
                         android:id="@+id/tvKolichShelochKg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblKolichestvoKislotSredstvaKG"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblKolichestvoKislotSredstvaKG" />
 
                     <TextView
                         android:id="@+id/tvKolichKislotKg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="5dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblStoimostShelochSredstvaRUB"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblStoimostShelochSredstvaRUB" />
 
                     <TextView
                         android:id="@+id/tvPriceSheloch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblStoimostKislotSredtstvaRUB"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblStoimostKislotSredtstvaRUB" />
 
                     <TextView
                         android:id="@+id/tvPriceKislot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="@string/lblStoimostObsheeRUB"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultLeft"
+                        android:text="@string/lblStoimostObsheeRUB" />
 
                     <TextView
                         android:id="@+id/tvPriceObsh"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewResultRight" />
                 </TableRow>
             </TableLayout>
 

@@ -13,36 +13,36 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewInputData"
+                        style="@style/textViewInputDataFrag"
                         android:text="Вместимость воды (ванная для замачивания), л" />
 
                     <EditText
                         android:id="@+id/etWaterСapacity"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputDataFrag" />
 
                 </TableRow>
 
@@ -50,7 +50,7 @@
 
             <Button
                 android:id="@+id/btnCalculation"
-                style="@style/buttonResult"
+                style="@style/buttonResultFrag"
                 android:text="@string/btnResult" />
 
             <TableLayout
@@ -60,60 +60,60 @@
                 <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Расход, мл/л (мойка)" />
 
                     <TextView
                         android:id="@+id/tvExpenseWashing"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Расход, мл/л (замачивание)" />
 
                     <TextView
                         android:id="@+id/tvExpenseSoak"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость за 1кг. руб." />
 
                     <TextView
                         android:id="@+id/tvThePricePerKg"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость за 1 мойку посуды (50 тарелок), руб" />
 
                     <TextView
                         android:id="@+id/tvPriceFor1DishWashing"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        style="@style/textViewResultLeft"
+                        style="@style/textViewResultLeftFrag"
                         android:text="Стоимость 1-го замачивания на ванну, руб" />
 
                     <TextView
                         android:id="@+id/tvTheCostOfThe1stSoak"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRightFrag" />
 
                 </TableRow>
 
