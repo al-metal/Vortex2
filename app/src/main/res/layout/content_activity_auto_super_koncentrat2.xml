@@ -135,7 +135,7 @@
 
                         <TextView
                             android:id="@+id/tvStoimostZapravki"
-                            style="@style/textViewResultRight" />
+                            style="@style/textViewResultLeft" />
                     </TableRow>
 
                     <TableRow style="@style/tableRowResultOther">

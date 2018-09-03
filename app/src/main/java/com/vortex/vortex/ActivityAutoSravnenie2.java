@@ -346,6 +346,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
     Button btnRaschet;
 
     boolean spin;
+    int gray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -389,6 +390,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
         tvVortex3 = (TextView) findViewById(R.id.tvVortex3);
         tvVortex4 = (TextView) findViewById(R.id.tvVortex4);
         tvVortex5 = (TextView) findViewById(R.id.tvVortex5);
+        gray = Color.parseColor("#7B7979");
 
         tvMashinBolshePenokomplekt = (TextView) findViewById(R.id.tvMashinBolshePenokomplekt);
         tvPribylPenokomplekt = (TextView) findViewById(R.id.tvPribylPenokomplekt);
@@ -593,7 +595,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
                 InputMethodManager.HIDE_NOT_ALWAYS);
 
         tbllt3.setVisibility(View.VISIBLE);
-        int gray = Color.parseColor("#7B7979");
+
         btnRaschet.setBackgroundColor(gray);
 
         if (tvRashodPenoKomplektS.getText() != "0") {
@@ -702,6 +704,8 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
             return;
         }
         tbllt2.setVisibility(View.VISIBLE);
+        btnSravnenie.setBackgroundColor(gray);
+        btnRaschet.setVisibility(View.VISIBLE);
     }
 
     @Override

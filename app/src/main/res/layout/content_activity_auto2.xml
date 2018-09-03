@@ -10,69 +10,49 @@
 
     <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            style="@style/linearLayoutInputData">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                style="@style/tableViewInputData">
+            <TableLayout style="@style/tableViewInputData">
 
                 <TableRow
-                    style="@style/tableRowInputData">
+                    style="@style/tableRow"
+                    android:layout_marginTop="17dp">
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_columnSpan="3"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="7"
                         android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/rbMgL"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/rbDh"
-                            android:layout_toRightOf="@+id/rbDh"
-                            android:layout_weight="1"
+                            style="@style/radioButtonAutoNonCheck"
                             android:onClick="onRadioButtonClicked"
-                            android:text="@string/rbMG_e_L"
-                            android:textSize="16sp" />
+                            android:text="@string/rbMG_e_L" />
 
                         <RadioButton
                             android:id="@+id/rbDh"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="-5dp"
-                            android:layout_toEndOf="@+id/rbDjeskost"
-                            android:layout_toRightOf="@+id/rbDjeskost"
-                            android:layout_weight="1"
+                            style="@style/radioButtonAutoNonCheck"
                             android:onClick="onRadioButtonClicked"
-                            android:text="@string/rbDH"
-                            android:textSize="16sp" />
+                            android:text="@string/rbDH" />
 
                         <RadioButton
                             android:id="@+id/rbDjeskost"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:checked="true"
+                            style="@style/radioButtonAutoCheked"
                             android:onClick="onRadioButtonClicked"
-                            android:text="@string/rbJ"
-                            android:textSize="16sp" />
+                            android:text="@string/rbJ" />
                     </RadioGroup>
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <EditText
                         android:id="@+id/etVoda"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        style="@style/textViewInputData"
                         android:layout_marginRight="10dp"
                         android:layout_span="3"
-                        android:ems="10"
                         android:inputType="numberDecimal"
                         android:textColor="@android:color/black"
                         android:textSize="33sp" />
@@ -81,18 +61,16 @@
                         android:id="@+id/tvVoda"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="24dp"
                         android:layout_span="4"
-                        android:width="80dp"
                         android:text="@string/tvVybrannayaDjestkostVody"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="14sp" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData"
+                    android:layout_marginTop="0dp">
 
                     <TextView
                         android:id="@+id/textView78"
@@ -104,79 +82,54 @@
                         android:id="@+id/tvVodaStr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_span="4"
                         android:text="@string/tvVodaMyagkaya"
                         android:textColor="@color/colorGray" />
+
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRow">
 
                     <Spinner
                         android:id="@+id/spinner8"
+                        android:layout_marginTop="17dp"
                         android:layout_width="match_parent"
-                        android:layout_height="37dp"
                         android:layout_span="7"
-                        android:background="@color/colorSpiner"
-                        android:spinnerMode="dialog" />
-                </TableRow>
+                        style="@style/spinerInputData" />
 
-                <TableRow
-                    style="@style/tableRowInputData">
-
-                    <Button
-                        android:id="@+id/btnRaschet"
-                        android:layout_width="match_parent"
-                        android:layout_height="37dp"
-                        android:layout_span="7"
-                        android:background="@color/colorRed"
-                        android:fontFamily="sans-serif"
-                        android:onClick="onClick"
-                        android:text="@string/btnPredlojitSredstva"
-                        android:textColor="@android:color/background_light"
-                        android:textSize="16sp" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableLayout
-                        android:id="@+id/table"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="15dp"
-                        android:layout_span="7"
-                        android:shrinkColumns="*"
-                        android:stretchColumns="*"
-                        android:visibility="gone" />
-                </TableRow>
-
-                <TableRow
-                    android:id="@+id/tableR"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:visibility="gone">
-
-                    <Button
-                        android:id="@+id/button16"
-                        android:layout_width="match_parent"
-                        android:layout_height="37dp"
-                        android:layout_span="7"
-                        android:background="@color/colorRed"
-                        android:fontFamily="sans-serif"
-                        android:onClick="onClickSravnenie"
-                        android:text="@string/btnSravnitSredstva"
-                        android:textColor="@android:color/background_light"
-                        android:textSize="16sp" />
                 </TableRow>
 
             </TableLayout>
 
+                    <Button
+                        android:id="@+id/btnRaschet"
+                        style="@style/buttonGoResult"
+                        android:onClick="onClick"
+                        android:text="@string/btnPredlojitSredstva"
+                         />
+           <TableLayout
+               style="@style/tableViewInputData">
+
+                <TableRow
+                    style="@style/tableRowResultOther">
+
+                    <TableLayout
+                        android:id="@+id/table"
+                        style="@style/tableLayoutResult"
+                        android:layout_marginTop="0dp"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnCompare"
+                style="@style/buttonCompare"
+                android:onClick="onClickSravnenie"
+                android:text="@string/btnSravnitSredstva" />
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

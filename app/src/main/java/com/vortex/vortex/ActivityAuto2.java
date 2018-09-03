@@ -164,6 +164,7 @@ public class ActivityAuto2 extends AppCompatActivity
     private RadioButton rbDh;
     private RadioButton rbMgL;
     private Button btnRaschet;
+    private Button btnCompare;
 
     private double voda;
     String spin;
@@ -176,7 +177,6 @@ public class ActivityAuto2 extends AppCompatActivity
     boolean bollSpinner = false;
 
     TableLayout table;
-    TableRow tableR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -188,7 +188,7 @@ public class ActivityAuto2 extends AppCompatActivity
         strVoda = null;
 
         table = (TableLayout) findViewById(R.id.table);
-        tableR = (TableRow) findViewById(R.id.tableR);
+        btnCompare = (Button) findViewById(R.id.btnCompare);
 
         llmain = (LinearLayout) findViewById(R.id.llmain);
 
@@ -426,7 +426,7 @@ public class ActivityAuto2 extends AppCompatActivity
                 InputMethodManager.HIDE_NOT_ALWAYS);
 
         table.setVisibility(View.VISIBLE);
-        tableR.setVisibility(View.VISIBLE);
+        btnCompare.setVisibility(View.VISIBLE);
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         tableLayout.removeAllViewsInLayout();

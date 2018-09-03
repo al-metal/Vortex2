@@ -165,7 +165,7 @@
     <string name="tvKolichestvoMednyKuporosKg">Количество медного купороса, кг</string>
     <string name="tvDesemixKg">DESIMIX, кг</string>
     <string name="tvMednyKuporosKg">Медный купорос, кг</string>
-    <string name="tvVybrannayaDjestkostVody">выбранная жесткость воды °Ж</string>
+    <string name="tvVybrannayaDjestkostVody">выбранная жесткость\nводы °Ж</string>
     <string name="tvRazbavlenieMlL">Разбавление, мл</string>
     <string name="tvOtObsheyStoimosti_procent">От общей стоимости, %</string>
     <string name="tvPoStoimosti1Moyki_procent">По стоимости 1 мойки, %</string>
@@ -246,7 +246,7 @@
     <string name="tvSredstvo">СРЕДСТВО</string>
     <string name="tvObjem1L">Объем 1 л</string>
     <string name="tvRazvedenieNaDozatron">РАЗВЕДЕНИЕ НА ДОЗАТРОН</string>
-    <string name="tvPenokomplekt">Пенокомплект</string>
+    <string name="tvPenokomplekt">ПЕНОКОМПЛЕКТ</string>
     <string name="tvSredneeKolichestvoChistihAvto">Среднее количество чистых авто</string>
     <string name="tvSredniyRashodNaMoyku">Средний расход на мойку\n(1 авто, пенокомплект, мл)</string>
     <string name="tvPenogenerator50L">ПЕНЕНОГЕНЕРАТОР 50 л.</string>

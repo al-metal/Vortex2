@@ -2,27 +2,18 @@
 
     <TextView
         android:id="@+id/col1"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="18dp"
-        android:layout_span="3"
-        android:text=""
-        android:textSize="11sp" />
+        style="@style/textViewLongResultLeft"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/col2"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="18dp"
-        android:layout_span="2"
-        android:text=""
-        android:textColor="@color/colorBlack"
-        android:textSize="11sp" />
+        style="@style/textViewLongResultMiddle"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/col3"
-        android:layout_marginTop="18dp"
-        android:layout_span="2"
-        android:text=""
-        android:textColor="@color/colorBlack"
-        android:textSize="11sp" />
+        style="@style/textViewLongResultRight"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" />
 
 </TableRow>
