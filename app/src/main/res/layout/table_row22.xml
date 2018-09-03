@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/col2"
-        style="@style/textViewResultLeft"
+        style="@style/textViewResultRight"
         android:layout_marginTop="10dp"/>
 
 </TableRow>

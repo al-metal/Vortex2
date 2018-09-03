@@ -167,7 +167,9 @@
                 style="@style/buttonCompare"
                 android:onClick="onClickSravnenie"
                 android:text="@string/btnSrav" />
+
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
