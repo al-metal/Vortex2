@@ -93,7 +93,9 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowResultFirst">
+                <TableRow
+                    style="@style/tableRowResultFirst"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -101,10 +103,13 @@
 
                     <TextView
                         android:id="@+id/tvEkspoz"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRight"
+                        android:text="3" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowResultFirst">
+                <TableRow
+                    style="@style/tableRowResultFirst"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -112,10 +117,13 @@
 
                     <TextView
                         android:id="@+id/tvRashodRastvora"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRight"
+                        android:text="5" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowResultFirst">
+                <TableRow
+                    style="@style/tableRowResultFirst"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -123,10 +131,13 @@
 
                     <TextView
                         android:id="@+id/tvRashodKoncentrata"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRight"
+                        android:text="1.25" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowResultFirst">
+                <TableRow
+                    style="@style/tableRowResultFirst"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/textViewResultLeft"

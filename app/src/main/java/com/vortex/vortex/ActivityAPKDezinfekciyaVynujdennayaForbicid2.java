@@ -48,6 +48,7 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicid2 extends AppCompatActiv
 
     TableLayout tableL;
     Button btnRaschet;
+    Button btnCompare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicid2 extends AppCompatActiv
 
         tableL = (TableLayout) findViewById(R.id.tableL);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        btnCompare = (Button) findViewById(R.id.btnCompare);
 
         etS = (EditText) findViewById(R.id.etS);
         etPrice = (EditText) findViewById(R.id.etPrice);
@@ -101,6 +103,7 @@ public class ActivityAPKDezinfekciyaVynujdennayaForbicid2 extends AppCompatActiv
                 InputMethodManager.HIDE_NOT_ALWAYS);
 
         tableL.setVisibility(View.VISIBLE);
+        btnCompare.setVisibility(View.VISIBLE);
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
 

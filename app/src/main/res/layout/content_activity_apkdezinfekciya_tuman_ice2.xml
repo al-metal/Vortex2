@@ -20,17 +20,16 @@
                         android:id="@+id/textView233"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_span="4"
                         android:text="@string/tvKoncentraciyaProcent" />
 
                     <Spinner
                         android:id="@+id/spinner6"
-                        style="@style/SpinnerTheme"
                         android:layout_width="match_parent"
                         android:layout_height="37dp"
                         android:layout_marginRight="17dp"
-                        android:layout_span="4"
+                        android:layout_span="2"
                         android:background="@color/colorSpiner"
                         android:spinnerMode="dialog" />
                 </TableRow>
@@ -121,7 +120,8 @@
 
                     <TextView
                         android:id="@+id/tvEkspoz"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRight"
+                        android:text="3" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
@@ -132,7 +132,8 @@
 
                     <TextView
                         android:id="@+id/tvRashodRastvora"
-                        style="@style/textViewResultRight" />
+                        style="@style/textViewResultRight"
+                        android:text="30" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">

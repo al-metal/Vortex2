@@ -17,26 +17,16 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView89"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
-                        android:text="@string/tvObjemVanny"
-                        android:textSize="17sp" />
+                        style="@style/textViewLongInputDataWitchImageLeft"
+                        android:text="@string/tvObjemVanny" />
 
                     <TextView
-                        android:id="@+id/textView107"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_span="2"
-                        android:text="@string/tv200"
-                        android:textSize="17sp" />
+                        style="@style/textViewLongInputDataWitchImageMiddle"
+                        android:text="@string/tv200" />
 
                     <ImageButton
                         android:id="@+id/imageButton23"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
                         android:onClick="onClickVanna"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>
@@ -55,25 +45,19 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView132"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewLongInputDataWitchImageLeft"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etProdolDen"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_span="2"
-                        android:ems="10"
+                        style="@style/textViewLongInputDataWitchImageMiddle"
+                        android:layout_marginLeft="0dp"
                         android:inputType="numberDecimal" />
 
                     <ImageButton
                         android:id="@+id/imageButton25"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
+                        android:layout_marginTop="14dp"
                         android:onClick="onClickVanna"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>

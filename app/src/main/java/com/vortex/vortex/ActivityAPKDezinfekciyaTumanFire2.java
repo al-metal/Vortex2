@@ -146,4 +146,8 @@ public class ActivityAPKDezinfekciyaTumanFire2 extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void onClickRaschet2(View view) {
+        Toast.makeText(getBaseContext(), "ПРОВЕРКА", Toast.LENGTH_SHORT).show();
+    }
 }

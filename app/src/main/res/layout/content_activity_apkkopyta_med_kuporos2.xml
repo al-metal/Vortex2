@@ -17,26 +17,18 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView73"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewLongInputDataWitchImageLeft"
                         android:text="@string/tvObjemVanny"
-                        android:textSize="17sp" />
+                         />
 
                     <TextView
-                        android:id="@+id/textView88"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:layout_span="2"
+                        style="@style/textViewLongInputDataWitchImageMiddle"
                         android:text="@string/tv200"
-                        android:textSize="17sp" />
+                       />
 
                     <ImageButton
                         android:id="@+id/imageButton21"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
                         android:onClick="onClickVanna"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>

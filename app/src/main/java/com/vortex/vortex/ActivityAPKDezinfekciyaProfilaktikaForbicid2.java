@@ -54,6 +54,7 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicid2 extends AppCompatActiv
 
     TableLayout tableL;
     Button btnRaschet;
+    Button btnSravnenie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,7 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicid2 extends AppCompatActiv
 
         tableL = (TableLayout) findViewById(R.id.tableL);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        btnSravnenie = (Button) findViewById(R.id.btnSravnenie);
 
         spinner5 = (Spinner) findViewById(R.id.spinner5);
         tvKoncentraciya = (TextView) findViewById(R.id.tvKoncentraciya);
@@ -137,6 +139,7 @@ public class ActivityAPKDezinfekciyaProfilaktikaForbicid2 extends AppCompatActiv
                 InputMethodManager.HIDE_NOT_ALWAYS);
 
         tableL.setVisibility(View.VISIBLE);
+        btnSravnenie.setVisibility(View.VISIBLE);
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
 

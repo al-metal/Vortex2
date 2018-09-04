@@ -17,7 +17,7 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        astyle="@style/textViewInputData"
+                        style="@style/textViewInputData"
                         android:text="@string/tvPloshad" />
 
                     <EditText
@@ -68,6 +68,7 @@
                     <TextView
                         android:id="@+id/textView35"
                         style="@style/textViewResultRight"
+                        android:layout_marginRight="0dp"
                         android:text="@string/tvProtiranieOroshenie" />
                 </TableRow>
 
@@ -146,7 +147,7 @@
                         android:id="@+id/textView49"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
+                        android:layout_marginLeft="27dp"
                         android:layout_span="8"
                         android:text="@string/tvRastvorObyazatelnoSmyvat"
                         android:textColor="@color/colorRed"
@@ -157,7 +158,7 @@
             </TableLayout>
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/btnCompare"
                 style="@style/buttonCompare"
                 android:onClick="onClickSravnenie"
                 android:text="@string/btnSrav" />

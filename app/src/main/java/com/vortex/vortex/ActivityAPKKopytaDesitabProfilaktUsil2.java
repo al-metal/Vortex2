@@ -159,4 +159,8 @@ public class ActivityAPKKopytaDesitabProfilaktUsil2 extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void onClickVanna(View view) {
+        Toast.makeText(getBaseContext(), "Проходимость составляет 500 голов через 200 литров", Toast.LENGTH_SHORT).show();
+    }
 }

@@ -10,42 +10,29 @@
 
     <ScrollView style="@style/scrollView">
 
-        <LinearLayout
-            style="@style/linearLayoutInputData">
+        <LinearLayout style="@style/linearLayoutInputData">
 
-            <TableLayout
-                style="@style/tableViewInputData">
+            <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView191"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
-                        android:text="@string/tvObjemVanny"
-                        android:textSize="17sp" />
+                        style="@style/textViewLongInputDataWitchImageLeft"
+                        android:text="@string/tvObjemVanny" />
 
                     <TextView
-                        android:id="@+id/textView192"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="@string/tv200"
-                        android:textSize="17sp" />
+                        style="@style/textViewLongInputDataWitchImageMiddle"
+                        android:text="@string/tv200" />
 
                     <ImageButton
                         android:id="@+id/imgbtnObjemVanna"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
                         android:onClick="onClickVanna"
                         app:srcCompat="@mipmap/btninfo" />
 
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         style="@style/textViewInputData"
@@ -53,31 +40,31 @@
 
                     <EditText
                         android:id="@+id/etStado"
+                        android:layout_marginRight="20dp"
                         style="@style/editTextInputData" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView194"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="7"
+                        android:layout_marginLeft="10dp"
+                        android:layout_span="6"
                         android:text="@string/tvEtap1"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp" />
 
                     <ImageButton
                         android:id="@+id/imageButton17"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
+                        android:layout_marginTop="4dp"
                         android:onClick="onCLicketap1"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         style="@style/textViewInputData"
@@ -86,11 +73,11 @@
                     <EditText
                         android:id="@+id/etDesimix1"
                         style="@style/editTextInputData"
+                        android:layout_marginRight="20dp"
                         android:text="2" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         style="@style/textViewInputData"
@@ -99,31 +86,31 @@
                     <EditText
                         android:id="@+id/etKuporos1"
                         style="@style/editTextInputData"
+                        android:layout_marginRight="20dp"
                         android:text="2" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView195"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="7"
+                        android:layout_marginLeft="10dp"
+                        android:layout_span="6"
                         android:text="@string/tvEtap2"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp" />
 
                     <ImageButton
                         android:id="@+id/imageButton19"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
+                        android:layout_marginTop="4dp"
                         android:onClick="onCLicketap2"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         style="@style/textViewInputData"
@@ -132,11 +119,11 @@
                     <EditText
                         android:id="@+id/etDesimix2"
                         style="@style/editTextInputData"
+                        android:layout_marginRight="20dp"
                         android:text="2" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         style="@style/textViewInputData"
@@ -144,6 +131,7 @@
 
                     <EditText
                         android:id="@+id/etKuporos2"
+                        android:layout_marginRight="20dp"
                         style="@style/editTextInputData"
                         android:text="1" />
 
@@ -161,127 +149,68 @@
                 android:id="@+id/tableL"
                 style="@style/tableLayoutResult">
 
-                <TableRow
-                    style="@style/tableRowResultFirst">
+                <TableRow style="@style/tableRowResultFirst">
 
                     <TextView
-                        android:id="@+id/textView198"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="4" />
+                        style="@style/textViewLongResultLeft" />
 
                     <TextView
-                        android:id="@+id/textView197"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
+                        style="@style/textViewLongResultMiddle"
                         android:text="@string/tvEtap1" />
 
                     <TextView
-                        android:id="@+id/textView196"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
+                        style="@style/textViewLongResultRight"
                         android:text="@string/tvEtap2" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView112"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewLongResultLeft"
                         android:text="@string/tvKolichestvoTrebuemyhVannSht" />
 
                     <TextView
                         android:id="@+id/tvTrebuemVann"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvTrebuemVann2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView114"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewLongResultLeft"
                         android:text="@string/tvKolichestvoDesimixKg" />
 
                     <TextView
                         android:id="@+id/tvTrebuemDesimix1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvTrebuemDesimix2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView116"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
+                        style="@style/textViewLongResultLeft"
                         android:text="@string/tvKolichestvoMednyKuporosKg" />
 
                     <TextView
                         android:id="@+id/tvTrebuemKuporos1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvTrebuemKuporos2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
-                    <TextView
-                        style="@style/textViewResultLeft"/>
+                    <TextView style="@style/textViewResultLeft" />
 
                     <TextView
                         android:id="@+id/textView105"
@@ -289,8 +218,7 @@
                         android:text="@string/tvItogo" />
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -302,8 +230,7 @@
 
                 </TableRow>
 
-                <TableRow
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -313,9 +240,11 @@
                         android:id="@+id/tvVsegoKuporos"
                         style="@style/textViewResultRight" />
                 </TableRow>
+
             </TableLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

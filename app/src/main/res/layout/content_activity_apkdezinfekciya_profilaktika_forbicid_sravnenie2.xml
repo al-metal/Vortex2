@@ -22,7 +22,8 @@
 
                     <EditText
                         android:id="@+id/etName"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputData"
+                        android:inputType="text" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
@@ -94,144 +95,61 @@
 
                 <TableRow style="@style/tableRowResultFirst">
 
-                    <TextView
-                        android:id="@+id/textView246"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                    <TextView style="@style/textViewLongResultLeft" />
 
                     <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="@string/tvForbicid"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle"
+                        android:text="@string/tvForbicid" />
 
                     <TextView
                         android:id="@+id/tvNameSredstvo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="Для"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimost1KGRUB"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimost1KGRUB" />
 
                     <TextView
                         android:id="@+id/tvStoimostKgVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimostKg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvKolichestvoL"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvKolichestvoL" />
 
                     <TextView
                         android:id="@+id/tvKolichestvoVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvKolichestvo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView31"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimostObrabotkiRUB"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimostObrabotkiRUB" />
 
                     <TextView
                         android:id="@+id/tvStoimostObrabotkiVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimostObrabotki"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 

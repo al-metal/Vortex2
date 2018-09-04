@@ -17,25 +17,16 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView68"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
-                        android:text="@string/tvObjemVanny"
-                        android:textSize="17sp" />
+                        style="@style/textViewLongInputDataWitchImageLeft"
+                        android:text="@string/tvObjemVanny" />
 
                     <TextView
-                        android:id="@+id/textView192"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="@string/tv200"
-                        android:textSize="17sp" />
+                        style="@style/textViewLongInputDataWitchImageMiddle"
+                        android:text="@string/tv200" />
 
                     <ImageButton
                         android:id="@+id/imageButton18"
-                        style="@style/buttonInfo"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
                         android:onClick="onClickVanna"
                         app:srcCompat="@mipmap/btninfo" />
 
@@ -49,31 +40,26 @@
 
                     <EditText
                         android:id="@+id/etStado"
+                        android:layout_marginRight="20dp"
                         style="@style/editTextInputData" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        android:id="@+id/textView75"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="5"
+                        style="@style/textViewLongInputDataWitchImageLeft"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etPeriod"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:ems="10"
-                        android:inputType="numberDecimal" />
+                        style="@style/textViewLongInputDataWitchImageMiddle"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="0dp"/>
 
                     <ImageButton
                         android:id="@+id/imageButton20"
-                        style="@style/buttonInfo"
+                        android:layout_marginTop="14dp"
+                        style="@style/imageButtonLongInputDataWitchImageRight"
                         android:onClick="onClickObrabotka"
                         app:srcCompat="@mipmap/btninfo" />
 
@@ -87,6 +73,7 @@
 
                     <EditText
                         android:id="@+id/etDesimix"
+                        android:layout_marginRight="20dp"
                         style="@style/editTextInputData" />
                 </TableRow>
 
@@ -113,7 +100,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -124,7 +111,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
