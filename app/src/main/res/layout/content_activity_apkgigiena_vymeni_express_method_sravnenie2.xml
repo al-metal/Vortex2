@@ -22,7 +22,8 @@
 
                     <EditText
                         android:id="@+id/etSredstvo"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputData"
+                        android:inputType="text" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
@@ -71,64 +72,32 @@
 
                 <TableRow style="@style/tableRowResultFirst">
 
-                    <TextView
-                        android:id="@+id/textView221"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:textSize="11sp" />
+                    <TextView style="@style/textViewLongResultLeft" />
 
                     <TextView
                         android:id="@+id/tvVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="@string/tvSomatest"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle"
+                        android:text="@string/tvSomatest" />
 
                     <TextView
                         android:id="@+id/tvSravnenie"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravPlotnost"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimost1KGRUB"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimost1KGRUB" />
 
                     <TextView
                         android:id="@+id/tvStoimKg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimKgVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 
@@ -136,99 +105,48 @@
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravSoimostKg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvNeobhodimoeKolichestvoKg"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvNeobhodimoeKolichestvoKg" />
 
                     <TextView
                         android:id="@+id/tvKolichSredstvaVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvKolichSredstva"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravSoimostL"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimostObrabotkiGolovyRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimostObrabotkiGolovyRub" />
 
                     <TextView
                         android:id="@+id/tvStoimostVsegoVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimostVsego"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravStoimostPromiv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimostObrabotkiObshayaRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimostObrabotkiObshayaRub" />
 
                     <TextView
                         android:id="@+id/tvStoimostGolovyVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimostGolovy"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
             </TableLayout>
