@@ -8,8 +8,7 @@
     tools:context="com.vortex.vortex.ActivityPisheProm2"
     tools:showIn="@layout/app_bar_activity_pishe_prom2">
 
-    <ScrollView
-        style="@style/scrollView">
+    <ScrollView style="@style/scrollView">
 
         <LinearLayout style="@style/linearLayoutInputData">
 

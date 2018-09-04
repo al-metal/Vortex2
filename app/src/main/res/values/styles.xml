@@ -83,8 +83,8 @@
 
     <style name="tableRowResultOther">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">17dp</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 
     <style name="tableRowResultFirst">
@@ -113,6 +113,7 @@
 
     <style name="tableViewInputData">
         <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:shrinkColumns">*</item>
         <item name="android:stretchColumns">*</item>
@@ -201,7 +202,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_span">2</item>
         <item name="android:ems">10</item>
-        <item name="android:layout_marginRight">17dp</item>
+        <item name="android:layout_marginRight">18dp</item>
         <item name="android:inputType">numberDecimal</item>
         <item name="android:textColor">@color/colorGray</item>
         <item name="android:textSize">14sp</item>
@@ -223,6 +224,7 @@
         <item name="android:layout_height">37dp</item>
         <item name="android:layout_marginLeft">9dp</item>
         <item name="android:layout_marginRight">7dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
         <item name="android:layout_span">7</item>
         <item name="android:background">@color/colorSpiner</item>
         <item name="android:spinnerMode">dialog</item>
