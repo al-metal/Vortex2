@@ -22,6 +22,7 @@
 
                     <EditText
                         android:id="@+id/etName"
+                        android:inputType="text"
                         style="@style/editTextInputData" />
 
                 </TableRow>
@@ -119,7 +120,7 @@
                 </TableRow>
 
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravPlotnost"
@@ -151,7 +152,7 @@
                         android:textSize="11sp" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravSoimostKg"
@@ -184,7 +185,7 @@
                         android:textSize="11sp" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravSoimostL"
@@ -216,7 +217,7 @@
                         android:textSize="11sp" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravStoimostPromiv"
@@ -250,7 +251,7 @@
 
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         android:id="@+id/tvApkMoySredstvaSravLitrSmesi"

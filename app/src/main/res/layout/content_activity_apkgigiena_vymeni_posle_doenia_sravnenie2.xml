@@ -22,7 +22,8 @@
 
                     <EditText
                         android:id="@+id/etSredstvo"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputData"
+                        android:inputType="text" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
@@ -105,169 +106,77 @@
 
                 <TableRow style="@style/tableRowResultFirst">
 
-                    <TextView
-                        android:id="@+id/textView213"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:fontFamily=""
-                        android:paddingRight="10dp"
-                        android:textSize="11sp" />
+                    <TextView style="@style/textViewLongResultLeft" />
 
                     <TextView
                         android:id="@+id/tvSredstvoVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:textAlignment="center"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvSredstvo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:textAlignment="center"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:fontFamily=""
-                        android:paddingRight="10dp"
-                        android:text="@string/tvStoimost1KGRUB"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimost1KGRUB" />
 
                     <TextView
                         android:id="@+id/tvStoimostKgVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimostKg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:fontFamily=""
-                        android:paddingRight="10dp"
-                        android:text="@string/tvKolichestvoGigieny"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvKolichestvoGigieny" />
 
                     <TextView
                         android:id="@+id/tvKolichGigienVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvKolichGigien"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView31"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:fontFamily=""
-                        android:paddingRight="10dp"
-                        android:text="@string/tvStoimostOdnoyObrabotki"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimostOdnoyObrabotki" />
 
                     <TextView
                         android:id="@+id/tvObrabotkiVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvObrabotki"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView317"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:fontFamily=""
-                        android:paddingRight="10dp"
-                        android:text="@string/tvStoimostObrabotkiPogolovyaRub"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimostObrabotkiPogolovyaRub" />
 
                     <TextView
                         android:id="@+id/tvObrabotkiVsegoVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvObrabotkiVsego"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 

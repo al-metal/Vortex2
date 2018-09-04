@@ -88,7 +88,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -99,7 +99,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -110,7 +110,7 @@
                         style="@style/textViewResultRight" />
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -122,7 +122,7 @@
 
                 </TableRow>
 
-                <TableRow style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
                     <TextView
                         style="@style/textViewResultLeft"
@@ -137,7 +137,7 @@
             </TableLayout>
 
             <Button
-                android:id="@+id/sravnenie"
+                android:id="@+id/btnSavnenie"
                 style="@style/buttonCompare"
                 android:onClick="onClickBtnSravnenie"
                 android:text="@string/btnSrav" />

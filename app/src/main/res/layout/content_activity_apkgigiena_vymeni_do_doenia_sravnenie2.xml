@@ -22,7 +22,8 @@
 
                     <EditText
                         android:id="@+id/etSredstvo"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputData"
+                        android:inputType="text" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
@@ -31,7 +32,7 @@
                         android:id="@+id/textView121"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_span="4"
                         android:text="@string/tvRazvedenie_procent"
                         android:textColor="@android:color/black"
@@ -53,7 +54,7 @@
                         android:id="@+id/textView34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_span="4"
                         android:text="@string/tvRashogNaGolovuKG"
                         android:textColor="@android:color/black"
@@ -139,136 +140,61 @@
 
                 <TableRow style="@style/tableRowResultFirst">
 
-                    <TextView
-                        android:id="@+id/textView200"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                    <TextView style="@style/textViewLongResultLeft" />
 
                     <TextView
                         android:id="@+id/tvSredstvoVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvSredstvo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimost1KGRUB"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimost1KGRUB" />
 
                     <TextView
                         android:id="@+id/tvStoimostKgVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvStoimostKg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvKolichestvoGigieny"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvKolichestvoGigieny" />
 
                     <TextView
                         android:id="@+id/tvKolichGigienVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvKolichGigien"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowResultOther">
 
                     <TextView
-                        android:id="@+id/textView31"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_span="4"
-                        android:text="@string/tvStoimostOdnoyObrabotkiRub"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultLeft"
+                        android:text="@string/tvStoimostOdnoyObrabotkiRub" />
 
                     <TextView
                         android:id="@+id/tvObrabotkiVortex"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultMiddle" />
 
                     <TextView
                         android:id="@+id/tvObrabotki"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
-                        android:text="0"
-                        android:textAlignment="textStart"
-                        android:textSize="11sp" />
+                        style="@style/textViewLongResultRight" />
 
                 </TableRow>
 

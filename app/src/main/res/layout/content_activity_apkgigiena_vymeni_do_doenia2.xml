@@ -21,14 +21,15 @@
                         style="@style/spinerInputData" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginRight="-9dp">
 
                     <TextView
                         android:id="@+id/textView24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_span="4"
                         android:text="@string/tvRazvedenie_procent"
                         android:textColor="@android:color/black"
@@ -44,7 +45,8 @@
                         android:spinnerMode="dialog" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputData"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/textViewInputData"

@@ -14,211 +14,138 @@
 
             <TableLayout style="@style/tableViewInputData">
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow
+                    style="@style/tableRow"
+                    android:layout_marginTop="17dp">
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_columnSpan="3"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_span="7"
                         android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/rbMgL"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/rbDh"
-                            android:layout_toRightOf="@+id/rbDh"
-                            android:layout_weight="1"
+                            style="@style/radioButtonAutoNonCheck"
                             android:onClick="onRadioButtonClicked"
-                            android:text="@string/rbMG_e_L"
-                            android:textSize="16sp" />
+                            android:text="@string/rbMG_e_L" />
 
                         <RadioButton
                             android:id="@+id/rbDh"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/rbDjeskost"
-                            android:layout_toRightOf="@+id/rbDjeskost"
-                            android:layout_weight="1"
+                            style="@style/radioButtonAutoNonCheck"
                             android:onClick="onRadioButtonClicked"
-                            android:text="@string/rbDH"
-                            android:textSize="16sp" />
+                            android:text="@string/rbDH" />
 
                         <RadioButton
                             android:id="@+id/rbDjeskost"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:checked="true"
+                            style="@style/radioButtonAutoNonCheck"
                             android:onClick="onRadioButtonClicked"
-                            android:text="@string/rbJ"
-                            android:textSize="16sp" />
+                            android:text="@string/rbJ" />
                     </RadioGroup>
 
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
-
                     <EditText
                         android:id="@+id/etVoda"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_span="3"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@android:color/black"
-                        android:textSize="33sp" />
+                        style="@style/editTextLeft" />
 
                     <TextView
                         android:id="@+id/tvVoda"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_span="4"
-                        android:width="80dp"
-                        android:text="выбранная жесткость воды 0 °Ж"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+                        style="@style/textViewRightOfEditText"
+                        android:text="выбранная жесткость воды 0 °Ж" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         android:id="@+id/textView78"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="3" />
+                        style="@style/editTextLeft"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/tvVodaStr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_span="4"
+                        style="@style/textViewRightOfEditText"
+                        android:layout_marginTop="0dp"
                         android:text="вода очень мягкая"
                         android:textColor="@color/colorGray" />
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp">
+            </TableLayout>
 
-                    <Button
-                        android:id="@+id/btnRaschet"
-                        style="@style/buttonResult"
-                        android:onClick="onClickRaschetRekomendSredstv"
-                        android:text="@string/btnPredlojitSredstva" />
+            <Button
+                android:id="@+id/btnRaschet"
+                style="@style/buttonResult"
+                android:onClick="onClickRaschetRekomendSredstv"
+                android:text="@string/btnPredlojitSredstva" />
 
+            <TableLayout
+                android:id="@+id/tableL"
+                style="@style/tableLayoutResult">
+
+                <TableRow style="@style/tableRowResultFirst">
+
+                    <TextView
+                        style="@style/textViewVortexWatherLeftTitle"
+                        android:text="@string/tvShelochnie" />
+
+                    <TextView
+                        style="@style/textViewVortexWatherRightTitle"
+                        android:text="@string/tvKislotnie" />
                 </TableRow>
 
-                <TableLayout
-                    style="@style/tableLayoutResult">
+                <TableRow style="@style/tableRowResultOther">
 
-                    <TableRow
-                        style="@style/tableRowResultFirst">
+                    <TextView
+                        android:id="@+id/tvSheloch1"
+                        style="@style/textViewVortexWatherLeft" />
 
-                        <TextView
-                            android:id="@+id/textView128"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:text="@string/tvShelochnie" />
+                    <TextView
+                        android:id="@+id/tvKislot1"
+                        style="@style/textViewVortexWatherRight" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/textView54"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:text="@string/tvKislotnie" />
-                    </TableRow>
+                <TableRow style="@style/tableRowResultOther">
 
-                    <TableRow
-                        style="@style/tableRowResultOther">
+                    <TextView
+                        android:id="@+id/tvSheloch2"
+                        style="@style/textViewVortexWatherLeft" />
 
-                        <TextView
-                            android:id="@+id/tvSheloch1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
+                    <TextView
+                        android:id="@+id/tvKislot2"
+                        style="@style/textViewVortexWatherRight" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/tvKislot1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
-                    </TableRow>
+                <TableRow style="@style/tableRowResultOther">
 
-                    <TableRow
-                        style="@style/tableRowResultOther">
+                    <TextView
+                        android:id="@+id/tvSheloch3"
+                        style="@style/textViewVortexWatherLeft" />
 
-                        <TextView
-                            android:id="@+id/tvSheloch2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
+                    <TextView
+                        android:id="@+id/tvKislot3"
+                        style="@style/textViewVortexWatherRight" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/tvKislot2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
-                    </TableRow>
+                <TableRow style="@style/tableRowResultOther">
 
-                    <TableRow
-                        style="@style/tableRowResultOther">
+                    <TextView
+                        android:id="@+id/tvSheloch4"
+                        style="@style/textViewVortexWatherLeft" />
 
-                        <TextView
-                            android:id="@+id/tvSheloch3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
-
-                        <TextView
-                            android:id="@+id/tvKislot3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
-                    </TableRow>
-
-                    <TableRow
-                        style="@style/tableRowResultOther">
-
-                        <TextView
-                            android:id="@+id/tvSheloch4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
-
-                        <TextView
-                            android:id="@+id/tvKislot4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:textColor="@android:color/black" />
-                    </TableRow>
-
-                </TableLayout>
-
+                    <TextView
+                        android:id="@+id/tvKislot4"
+                        style="@style/textViewVortexWatherRight" />
+                </TableRow>
 
             </TableLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

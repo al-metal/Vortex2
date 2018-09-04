@@ -53,6 +53,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
 
     TableLayout tableL;
     Button btnRaschet;
+    Button btnCompare;
 
     String strSredstvo;
     boolean spinner = false;
@@ -66,6 +67,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
 
         tableL = (TableLayout) findViewById(R.id.tableL);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        btnCompare = (Button) findViewById(R.id.btnCompare);
 
         spinner4 = (Spinner) findViewById(R.id.spinner4);
         etPrice = (EditText) findViewById(R.id.etPrice);
@@ -165,6 +167,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
         tvStoimObrabotkiVsego.setText(String.valueOf(roundUp(stoimObrabotkiVsego, 2)));
 
         tableL.setVisibility(View.VISIBLE);
+        btnCompare.setVisibility(View.VISIBLE);
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
     }

@@ -51,6 +51,7 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
 
     TableLayout tableL;
     Button btnRaschet;
+    Button btnSavnenie;
 
     String nameVortex;
 
@@ -63,6 +64,7 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
 
         tableL = (TableLayout) findViewById(R.id.tableL);
         btnRaschet = (Button) findViewById(R.id.btnRaschet);
+        btnSavnenie = (Button) findViewById(R.id.btnSavnenie);
 
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
@@ -177,6 +179,8 @@ public class ApkMoySredstvaActivity2 extends AppCompatActivity
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
         tableL.setVisibility(View.VISIBLE);
+        btnSavnenie.setVisibility(View.VISIBLE);
+
 
         double stoimost = 0;
         double ves = 0;
