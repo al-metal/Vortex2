@@ -176,14 +176,14 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingRight">7dp</item>
     </style>
 
     <style name="textViewInputData">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">6</item>
-        <item name="android:layout_span">4</item>
+        <item name="android:layout_span">5</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textColor">@color/colorGray</item>
     </style>
@@ -199,9 +199,9 @@
     <style name="editTextInputData">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_span">3</item>
+        <item name="android:layout_span">2</item>
         <item name="android:ems">10</item>
-        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginRight">17dp</item>
         <item name="android:inputType">numberDecimal</item>
         <item name="android:textColor">@color/colorGray</item>
         <item name="android:textSize">14sp</item>
@@ -223,7 +223,7 @@
         <item name="android:layout_height">37dp</item>
         <item name="android:layout_marginLeft">9dp</item>
         <item name="android:layout_marginRight">7dp</item>
-        <item name="android:layout_span">6</item>
+        <item name="android:layout_span">7</item>
         <item name="android:background">@color/colorSpiner</item>
         <item name="android:spinnerMode">dialog</item>
     </style>
@@ -251,8 +251,8 @@
     <style name="textViewResultRight">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">4dp</item>
-        <item name="android:layout_marginRight">14dp</item>;
+        <item name="android:layout_marginLeft">19dp</item>
+        <item name="android:layout_marginRight">7dp</item>;
         <item name="android:layout_span">2</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">11sp</item>
