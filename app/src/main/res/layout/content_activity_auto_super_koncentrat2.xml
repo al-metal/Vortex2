@@ -14,9 +14,7 @@
 
             <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    style="@style/tableRow"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRow">
 
                     <RadioGroup
                         android:id="@+id/RadioGroupUstroystvo"

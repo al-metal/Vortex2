@@ -14,9 +14,7 @@
 
             <TableLayout style="@style/tableViewInputData">
 
-                <TableRow
-                    style="@style/tableRow"
-                    android:layout_marginTop="17dp">
+                <TableRow style="@style/tableRow">
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -54,11 +52,12 @@
 
                     <TextView
                         android:id="@+id/tvVoda"
-                        android:text="@string/tvVybrannayaDjestkostVody"
-                        style="@style/textViewRightOfEditText" />
+                        style="@style/textViewRightOfEditText"
+                        android:text="@string/tvVybrannayaDjestkostVody" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData"
+                <TableRow
+                    style="@style/tableRowInputData"
                     android:layout_marginTop="0dp">
 
                     <TextView
@@ -82,31 +81,29 @@
 
                     <Spinner
                         android:id="@+id/spinner8"
-                        android:layout_marginTop="17dp"
+                        style="@style/spinerInputData"
                         android:layout_width="match_parent"
-                        android:layout_span="7"
-                        style="@style/spinerInputData" />
+                        android:layout_marginTop="17dp"
+                        android:layout_span="7" />
 
                 </TableRow>
 
             </TableLayout>
 
-                    <Button
-                        android:id="@+id/btnRaschet"
-                        style="@style/buttonGoResult"
-                        android:onClick="onClick"
-                        android:text="@string/btnPredlojitSredstva"
-                         />
-           <TableLayout
-               style="@style/tableViewInputData">
+            <Button
+                android:id="@+id/btnRaschet"
+                style="@style/buttonGoResult"
+                android:onClick="onClick"
+                android:text="@string/btnPredlojitSredstva" />
 
-                <TableRow
-                    style="@style/tableRowResultOther">
+            <TableLayout style="@style/tableViewInputData">
+
+                <TableRow style="@style/tableRowResultOther">
 
                     <TableLayout
                         android:id="@+id/table"
                         style="@style/tableLayoutResult"
-                        android:layout_marginTop="0dp"/>
+                        android:layout_marginTop="0dp" />
                 </TableRow>
 
             </TableLayout>
