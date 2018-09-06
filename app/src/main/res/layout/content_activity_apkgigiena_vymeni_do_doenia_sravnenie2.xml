@@ -42,8 +42,8 @@
                         android:id="@+id/spinner3"
                         android:layout_width="match_parent"
                         android:layout_height="37dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
+                        android:layout_marginRight="22dp"
+                        android:layout_span="3"
                         android:background="@color/colorSpiner"
                         android:spinnerMode="dialog" />
                 </TableRow>

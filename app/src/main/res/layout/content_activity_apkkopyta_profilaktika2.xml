@@ -40,26 +40,29 @@
 
                     <EditText
                         android:id="@+id/etStado"
-                        android:layout_marginRight="20dp"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputData"
+                        android:layout_marginRight="20dp" />
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
                         style="@style/textViewLongInputDataWitchImageLeft"
+                        android:layout_height="match_parent"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etPeriod"
                         style="@style/textViewLongInputDataWitchImageMiddle"
+                        android:layout_marginLeft="45dp"
                         android:inputType="numberDecimal"
-                        android:layout_marginLeft="0dp"/>
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp" />
 
                     <ImageButton
                         android:id="@+id/imageButton20"
-                        android:layout_marginTop="14dp"
                         style="@style/imageButtonLongInputDataWitchImageRight"
+                        android:layout_marginTop="14dp"
                         android:onClick="onClickObrabotka"
                         app:srcCompat="@mipmap/btninfo" />
 
@@ -73,8 +76,8 @@
 
                     <EditText
                         android:id="@+id/etDesimix"
-                        android:layout_marginRight="20dp"
-                        style="@style/editTextInputData" />
+                        style="@style/editTextInputData"
+                        android:layout_marginRight="20dp" />
                 </TableRow>
 
             </TableLayout>

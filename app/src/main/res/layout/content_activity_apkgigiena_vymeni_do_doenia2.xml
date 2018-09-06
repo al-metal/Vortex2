@@ -21,9 +21,10 @@
                         style="@style/spinerInputData" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginRight="-9dp">
+                <TableRow
+                    style="@style/tableRowInputData"
+                    android:layout_marginRight="-9dp"
+                    android:layout_marginTop="17dp">
 
                     <TextView
                         android:id="@+id/textView24"
@@ -39,13 +40,14 @@
                         android:id="@+id/spinner2"
                         android:layout_width="match_parent"
                         android:layout_height="37dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_span="2"
+                        android:layout_marginRight="22dp"
+                        android:layout_span="3"
                         android:background="@color/colorSpiner"
                         android:spinnerMode="dialog" />
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData"
+                <TableRow
+                    style="@style/tableRowInputData"
                     android:layout_marginTop="10dp">
 
                     <TextView

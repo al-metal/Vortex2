@@ -60,6 +60,7 @@
 
                     <TextView
                         style="@style/textViewInputData"
+                        android:layout_marginTop="10dp"
                         android:text="@string/tvStoimostSuperkoncentrataRub" />
 
                     <EditText
