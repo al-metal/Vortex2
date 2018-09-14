@@ -8,64 +8,79 @@
     tools:context="com.vortex.vortex.CallMeActivity"
     tools:showIn="@layout/app_bar_call_me">
 
-    <LinearLayout
-        style="@style/linearLayoutInputData">
+    <ScrollView style="@style/scrollView">
 
-        <Spinner
-            android:id="@+id/spinnerCallMe"
-            style="@style/spinerInputData"/>
+        <LinearLayout style="@style/linearLayoutInputData">
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="left"
-            android:id="@+id/radioGroupFilial">
+            <TableLayout style="@style/tableViewInputData">
 
-            <RadioButton
-                android:id="@+id/rButtonCentralOffice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Центральный офис"
-                android:checked="true"/>
+                <TableRow style="@style/tableRow">
 
-            <RadioButton
-                android:id="@+id/rButtonSouthOffice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Вортекс-Юг" />
+                    <Spinner
+                        android:id="@+id/spinnerCallMe"
+                        style="@style/spinerInputData" />
+                </TableRow>
 
-            <RadioButton
-                android:id="@+id/rButtonSiberianOffice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Вортекс-Сибирь" />
-        </RadioGroup>
+                <TableRow style="@style/tableRow">
 
-        <EditText
-            android:id="@+id/etPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="+7 (999) 555-33-22"
-            android:inputType="phone" />
+                    <RadioGroup
+                        android:id="@+id/radioGroupFilial"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_columnSpan="3"
+                        android:layout_marginLeft="17dp"
+                        android:layout_span="7"
+                        android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/etQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/your_question"
-            android:inputType="textMultiLine" />
+                        <RadioButton
+                            android:id="@+id/rButtonCentralOffice"
+                            style="@style/radioButtonAutoNonCheck"
+                            android:checked="true"
+                            android:text="Центральный офис" />
 
-        <Button
-            android:id="@+id/btnCallMe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClick"
-            android:text="@string/Submit_question" />
+                        <RadioButton
+                            android:id="@+id/rButtonSouthOffice"
+                            style="@style/radioButtonAutoNonCheck"
+                            android:text="Вортекс-Юг" />
 
-    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/rButtonSiberianOffice"
+                            style="@style/radioButtonAutoNonCheck"
+                            android:text="Вортекс-Сибирь" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow style="@style/tableRowInputData">
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        style="@style/editTextInputData"
+                        android:layout_span="7"
+                        android:layout_marginRight="30dp"
+                        android:hint="+7 (999) 555-33-22"
+                        android:inputType="phone" />
+                </TableRow>
+
+                <TableRow style="@style/tableRowInputData">
+
+                    <EditText
+                        android:id="@+id/etQuestion"
+                        style="@style/editTextInputData"
+                        android:layout_span="7"
+                        android:layout_marginRight="30dp"
+                        android:hint="@string/your_question"
+                        android:inputType="textMultiLine" />
+
+                </TableRow>
+
+            </TableLayout>
+            <Button
+                android:id="@+id/btnCallMe"
+                style="@style/buttonResult"
+                android:onClick="onClick"
+                android:text="@string/Submit_question" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
