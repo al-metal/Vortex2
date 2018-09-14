@@ -1,5 +1,6 @@
 package com.vortex.vortex.Fragments;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -96,6 +97,8 @@ public class KliningCalculation1Fragment extends Fragment {
 
                 TableLayout tb = view.findViewById(R.id.tableL);
                 tb.setVisibility(View.VISIBLE);
+                int gray = Color.parseColor("#7B7979");
+                button.setBackgroundColor(gray);
 
                 double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
                 double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());

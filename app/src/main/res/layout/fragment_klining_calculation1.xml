@@ -10,27 +10,27 @@
 
             <TableLayout style="@style/tableViewInputData">
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
-                        style="@style/textViewInputDataFrag"
+                        style="@style/textViewInputData"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextInputDataFrag" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
-                        style="@style/textViewInputDataFrag"
+                        style="@style/textViewInputData"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextInputDataFrag" />
+                        style="@style/editTextInputData" />
                 </TableRow>
 
             </TableLayout>

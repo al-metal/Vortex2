@@ -180,6 +180,13 @@
         <item name="android:paddingRight">7dp</item>
     </style>
 
+    <style name="tableRowInputDataFragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">7dp</item>
+    </style>
+
     <style name="textViewInputData">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
@@ -189,31 +196,12 @@
         <item name="android:textColor">@color/colorGray</item>
     </style>
 
-    <style name="textViewInputDataFrag">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:maxLines">6</item>
-        <item name="android:layout_span">4</item>
-        <item name="android:textColor">@color/colorGray</item>
-    </style>
-
     <style name="editTextInputData">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_span">2</item>
         <item name="android:ems">10</item>
         <item name="android:layout_marginRight">18dp</item>
-        <item name="android:inputType">numberDecimal</item>
-        <item name="android:textColor">@color/colorGray</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="editTextInputDataFrag">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_span">2</item>
-        <item name="android:ems">10</item>
-        <item name="android:layout_marginRight">40dp</item>
         <item name="android:inputType">numberDecimal</item>
         <item name="android:textColor">@color/colorGray</item>
         <item name="android:textSize">14sp</item>

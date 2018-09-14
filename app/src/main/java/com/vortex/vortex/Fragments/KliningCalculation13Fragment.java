@@ -1,6 +1,7 @@
 package com.vortex.vortex.Fragments;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -72,7 +73,7 @@ public class KliningCalculation13Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_klining_calculation13, container, false);
+        View view = inflater.inflate(R.layout.fragment_klining_calculation13, container, false);
 
         EditText etPricePerVolume = view.findViewById(R.id.etPricePerVolume);
         EditText etWeightOfProductInContainer = view.findViewById(R.id.etWeightOfProductInContainer);
@@ -97,6 +98,8 @@ public class KliningCalculation13Fragment extends Fragment {
 
                 TableLayout tb = view.findViewById(R.id.tableL);
                 tb.setVisibility(View.VISIBLE);
+                int gray = Color.parseColor("#7B7979");
+                button.setBackgroundColor(gray);
 
                 double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
                 double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());
@@ -141,6 +144,7 @@ public class KliningCalculation13Fragment extends Fragment {
         mListener = null;
     }
 */
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
