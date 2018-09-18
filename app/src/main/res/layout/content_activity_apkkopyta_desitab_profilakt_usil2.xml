@@ -61,7 +61,7 @@
                         android:id="@+id/imageButton25"
                         style="@style/imageButtonLongInputDataWitchImageRight"
                         android:layout_marginTop="14dp"
-                        android:onClick="onClickVanna"
+                        android:onClick="onClickDay"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>
 

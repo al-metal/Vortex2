@@ -163,4 +163,8 @@ public class ActivityAPKKopytaDesitabProfilaktUsil2 extends AppCompatActivity
     public void onClickVanna(View view) {
         Toast.makeText(getBaseContext(), "Проходимость составляет 500 голов через 200 литров", Toast.LENGTH_SHORT).show();
     }
+
+    public void onClickDay(View view) {
+        Toast.makeText(getBaseContext(), "1 раз, 2 раза в неделю", Toast.LENGTH_SHORT).show();
+    }
 }
