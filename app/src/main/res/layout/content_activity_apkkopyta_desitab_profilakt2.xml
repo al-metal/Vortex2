@@ -8,16 +8,25 @@
     tools:context="com.vortex.vortex.ActivityAPKKopytaDesitabProfilakt2"
     tools:showIn="@layout/app_bar_activity_apkkopyta_desitab_profilakt2">
 
-    <ScrollView style="@style/scrollView">
+    <ScrollView
+        style="@style/scrollView"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="3dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout style="@style/linearLayoutInputData">
 
             <TableLayout style="@style/tableViewInputData">
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow
+                    style="@style/tableRowInputData"
+                    android:orientation="vertical">
 
                     <TextView
                         style="@style/textViewLongInputDataWitchImageLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
                         android:text="@string/tvObjemVanny" />
 
                     <TextView
@@ -46,15 +55,18 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewLongInputDataWitchImageLeft"
+                        style="@style/textViewInputData"
                         android:layout_height="match_parent"
+                        android:layout_span="5"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etProdolDen"
                         style="@style/textViewLongInputDataWitchImageMiddle"
-                        android:layout_marginLeft="45dp"
+                        android:layout_marginLeft="0dp"
                         android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_span="1"
                         android:textColor="@color/colorGray"
                         android:textSize="14sp" />
 

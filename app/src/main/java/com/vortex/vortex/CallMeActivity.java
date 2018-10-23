@@ -178,7 +178,7 @@ public class CallMeActivity extends AppCompatActivity
 
         int phoneLength = phone.getText().length();
 
-        if (phoneLength == 18 && filial.equals("err")) {
+        if (phoneLength == 18 && !filial.equals("err")) {
             try {
                 new SendData().execute();
             } catch (Exception e) {
