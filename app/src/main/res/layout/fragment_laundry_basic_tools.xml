@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linearLayouteMain"
+    tools:context=".Fragments.KliningCalculation1Fragment">
+
+    <ScrollView style="@style/scrollView">
+
+        <LinearLayout style="@style/linearLayoutInputData">
+
+            <TableLayout style="@style/tableViewInputData">
+
+                <TableRow style="@style/tableRowInputDataFragment">
+
+                    <TextView
+                        style="@style/textViewInputData"
+                        android:text="Стоимость канистры, руб" />
+
+                    <EditText
+                        android:id="@+id/etCostOfTheCans"
+                        style="@style/editTextInputData" />
+
+                </TableRow>
+
+                <TableRow style="@style/tableRowInputDataFragment">
+
+                    <TextView
+                        style="@style/textViewInputData"
+                        android:text="Объем канистры" />
+
+                    <EditText
+                        android:id="@+id/etVolumeOfCans"
+                        style="@style/editTextInputData" />
+                </TableRow>
+
+                <TableRow style="@style/tableRowInputDataFragment">
+
+                    <TextView
+                        style="@style/textViewInputData"
+                        android:id="@+id/tvExpenseName"
+                        tools:text="Расход на 1кг. белья, мл.(Рекомендовано 8-30)" />
+
+                    <EditText
+                        android:id="@+id/etExpense"
+                        style="@style/editTextInputData" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnCalculation"
+                style="@style/buttonResultFrag"
+                android:text="@string/btnResult" />
+
+            <TableLayout
+                android:id="@+id/tableL"
+                style="@style/tableLayoutResult">
+
+                <TableRow style="@style/tableRowResultFirst">
+
+                    <TextView
+                        style="@style/textViewResultLeftFrag"
+                        android:text="Стоимость 1кг. средства, руб" />
+
+                    <TextView
+                        android:id="@+id/tvCostOfFunds"
+                        style="@style/textViewResultRightFrag" />
+
+                </TableRow>
+
+                <TableRow style="@style/tableRowResultOther">
+
+                    <TextView
+                        style="@style/textViewResultLeftFrag"
+                        android:text="Стоимость стирки 1кг. белья, руб" />
+
+                    <TextView
+                        android:id="@+id/tvCostOfWashing"
+                        style="@style/textViewResultRightFrag" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

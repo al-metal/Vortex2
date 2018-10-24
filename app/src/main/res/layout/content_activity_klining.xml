@@ -81,6 +81,15 @@
 
                 </TableRow>
 
+                <TableRow style="@style/tableRow">
+
+                    <ImageButton
+                        style="@style/imageButtonHorizontal"
+                        android:onClick="onClickLaundry"
+                        app:srcCompat="@drawable/nomer" />
+
+                </TableRow>
+
             </TableLayout>
 
         </LinearLayout>

@@ -52,6 +52,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
             {"Плесень, грибок", "Fumigel", "Fungus"},
             {"Устранение запахов", "Block", "Fog"}};
     String[] hotel = {"КОМНАТА", "САНУЗЕЛ"};
+    String[] laundry = {"Базовые средства/Предворительная и основная стирка", "Усилители", "Отбеливатели", "Кондиционеры", "Нейтрализаторы", "Пятновыводители", "Комплексная стирка"};
 
 
     @Override
@@ -98,6 +99,8 @@ public class activity_klining_poverhnost extends AppCompatActivity
             ShowSredstva(PromKlining);
         } else if (id == 7) {
             CreateViews(hotel);
+        }else if (id == 8) {
+            CreateViews(laundry);
         }
     }
 
