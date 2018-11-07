@@ -124,7 +124,8 @@ public class activity_klining extends AppCompatActivity
     }
 
     public void onClickLaundry(View view) {
-        id = 8;
-        SetIdKlining(id, "Профессиональная стирка");
+        Intent intent = new Intent(activity_klining.this, ActivityKliningNewCalculation.class);
+        intent.putExtra("nameProduct", "Профессиональная стирка");
+        startActivity(intent);
     }
 }

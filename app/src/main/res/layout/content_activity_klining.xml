@@ -86,7 +86,7 @@
                     <ImageButton
                         style="@style/imageButtonHorizontal"
                         android:onClick="onClickLaundry"
-                        app:srcCompat="@drawable/nomer" />
+                        app:srcCompat="@drawable/profwashing" />
 
                 </TableRow>
 
