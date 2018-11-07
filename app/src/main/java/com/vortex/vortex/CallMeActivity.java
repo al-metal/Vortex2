@@ -3,8 +3,6 @@ package com.vortex.vortex;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,7 +19,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -31,7 +28,6 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.ParseException;
 
 import ru.tinkoff.decoro.MaskImpl;
 import ru.tinkoff.decoro.slots.PredefinedSlots;
@@ -78,7 +74,7 @@ public class CallMeActivity extends AppCompatActivity
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner.setAdapter(adapter);
 

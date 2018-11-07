@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/col3"
         style="@style/textViewLongResultRight"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp" />
 
 </TableRow>

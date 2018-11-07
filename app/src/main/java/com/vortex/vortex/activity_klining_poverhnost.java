@@ -2,9 +2,7 @@ package com.vortex.vortex;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,14 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class activity_klining_poverhnost extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, TextView.OnClickListener {
@@ -108,7 +104,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
         array = kuhnya;
         length = kuhnya.length;
         for (int i = 0; length > i; i++) {
-            TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+            TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
             TextView tv = (TextView) tr.findViewById(R.id.col1);
             tv.setTextColor(Color.parseColor("#000000"));
             tv.setText(kuhnya[i].toString());
@@ -128,7 +124,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
             for (int n = 0; count2 > n; n++) {
 
                 if (n == 0) {
-                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
                     TextView tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText(array[i][n]);
                     n++;
@@ -140,7 +136,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
                     tv.setOnClickListener(this);
 
                 } else {
-                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
                     TextView tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText("");
                     tv = (TextView) tr.findViewById(R.id.col2);

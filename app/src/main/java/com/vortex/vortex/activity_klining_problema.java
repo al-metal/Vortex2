@@ -358,7 +358,7 @@ public class activity_klining_problema extends AppCompatActivity
             for (int n = 0; count2 > n; n++) {
 
                 if (n == 0) {
-                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
                     tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText(array[i][n]);
                     n++;
@@ -374,7 +374,7 @@ public class activity_klining_problema extends AppCompatActivity
                     }
 
                 } else {
-                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
                     tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText("");
                     tv = (TextView) tr.findViewById(R.id.col2);
