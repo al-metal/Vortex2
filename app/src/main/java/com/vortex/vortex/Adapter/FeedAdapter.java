@@ -66,7 +66,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
     @NonNull
     @Override
     public FeedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.item_news, parent, false);
+        View view = inflater.inflate(R.layout.item_news_card, parent, false);
         return new FeedViewHolder(view);
     }
 

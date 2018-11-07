@@ -40,7 +40,7 @@ public class news_item extends AppCompatActivity
         WebView webView = findViewById(R.id.wvNews);
         setTitle(headerNews);
 
-        TextView tvDate = null;
+        TextView tvDate;
         TextView tvNews;
         TextView tvHeader;
 
