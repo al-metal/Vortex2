@@ -18,15 +18,16 @@ import com.vortex.vortex.R;
 
 import static com.vortex.vortex.Calculations.RoundUp.roundUp;
 
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link KliningCalculation12Fragment.OnFragmentInteractionListener} interface
+ * {@link LaundryBasicToolsFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link KliningCalculation12Fragment#newInstance} factory method to
+ * Use the {@link LaundryBasicToolsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class KliningCalculation12Fragment extends Fragment {
+public class LaundryBasicToolsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,7 +39,7 @@ public class KliningCalculation12Fragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public KliningCalculation12Fragment() {
+    public LaundryBasicToolsFragment() {
         // Required empty public constructor
     }
 
@@ -48,11 +49,11 @@ public class KliningCalculation12Fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment KliningCalculation12Fragment.
+     * @return A new instance of fragment LaundryBasicToolsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static KliningCalculation12Fragment newInstance(String param1, String param2) {
-        KliningCalculation12Fragment fragment = new KliningCalculation12Fragment();
+    public static LaundryBasicToolsFragment newInstance(String param1, String param2) {
+        LaundryBasicToolsFragment fragment = new LaundryBasicToolsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,44 +74,54 @@ public class KliningCalculation12Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_klining_calculation12, container, false);
+        View view = inflater.inflate(R.layout.fragment_laundry_basic_tools, container, false);
 
-        EditText etPricePerVolume = view.findViewById(R.id.etPricePerVolume);
-        EditText etWeightOfProductInContainer = view.findViewById(R.id.etWeightOfProductInContainer);
-        EditText etWaterCapacity = view.findViewById(R.id.etWaterCapacity);
+        EditText etCostOfTheCans = view.findViewById(R.id.etCostOfTheCans);
+        EditText etVolumeOfCans = view.findViewById(R.id.etVolumeOfCans);
+        EditText etExpense = view.findViewById(R.id.etExpense);
 
-        TextView tvThePricePerKg = view.findViewById(R.id.tvThePricePerKg);
-        TextView tvTheCostOfWashingDishes = view.findViewById(R.id.tvTheCostOfWashingDishes);
+        TextView tvExpenceName = view.findViewById(R.id.tvExpenseName);
+        TextView tvCostOfFunds = view.findViewById(R.id.tvCostOfFunds);
+        TextView tvCostOfWashing = view.findViewById(R.id.tvCostOfWashing);
 
-        double expenceSoak = 50;
+        Button calculation = view.findViewById(R.id.btnCalculation);
+        TableLayout tb = view.findViewById(R.id.tableL);
 
+        Double expense = getArguments().getDouble("expense");
+        String expenseName = getArguments().getString("expence_name");
+        tvExpenceName.setText(String.valueOf(expenseName));
 
-        Button button = view.findViewById(R.id.btnCalculation);
-        button.setOnClickListener(new View.OnClickListener() {
+        if(expense != 0.0){
+            etExpense.setText(String.valueOf(expense), TextView.BufferType.EDITABLE);
+            etExpense.setEnabled(false);
+        }
+
+        calculation.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if (etPricePerVolume.getText().length() == 0 || etWeightOfProductInContainer.getText().length() == 0 || etWaterCapacity.getText().length() == 0) {
+            public void onClick(View view) {
+                if (etCostOfTheCans.getText().length() == 0 || etVolumeOfCans.getText().length() == 0 || etExpense.getText().length() == 0) {
                     Toast.makeText(getContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                TableLayout tb = view.findViewById(R.id.tableL);
                 tb.setVisibility(View.VISIBLE);
                 int gray = Color.parseColor("#7B7979");
-                button.setBackgroundColor(gray);
+                calculation.setBackgroundColor(gray);
 
-                double pricePerVolume = Double.valueOf(etPricePerVolume.getText().toString());
-                double weightOfProductInContainer = Double.valueOf(etWeightOfProductInContainer.getText().toString());
-                double waterCapacity = Double.valueOf(etWaterCapacity.getText().toString());
+                Double costOfTheCans = Double.valueOf(etCostOfTheCans.getText().toString());
+                Double volumeOfCans = Double.valueOf(etVolumeOfCans.getText().toString());
+                Double expense = Double.valueOf(etExpense.getText().toString());
 
-                double thePricePerKg = pricePerVolume / weightOfProductInContainer;
-                double theCostOfWashingDishes = (weightOfProductInContainer * expenceSoak / 1000) * waterCapacity;
+                Double costOfFunds, costOfWashing;
 
-                tvThePricePerKg.setText(String.valueOf(roundUp(thePricePerKg, 2)));
-                tvTheCostOfWashingDishes.setText(String.valueOf(roundUp(theCostOfWashingDishes, 2)));
+                costOfFunds = costOfTheCans / volumeOfCans;
+                costOfWashing = costOfFunds * expense / 1000;
+
+                tvCostOfFunds.setText(String.valueOf(roundUp(costOfFunds, 2)));
+                tvCostOfWashing.setText(String.valueOf(roundUp(costOfWashing, 2)));
             }
         });
-        // Inflate the layout for this fragment
+
         return view;
     }
 

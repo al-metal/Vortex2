@@ -10,53 +10,53 @@
 
             <TableLayout style="@style/tableViewInputData">
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
-                        style="@style/textViewInputDataFrag"
+                        style="@style/textViewInputData"
                         android:text="Цена за весь объем в таре,руб." />
 
                     <EditText
                         android:id="@+id/etPricePerVolume"
-                        style="@style/editTextInputDataFrag" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
-                        style="@style/textViewInputDataFrag"
+                        style="@style/textViewInputData"
                         android:text="Масса средства в таре" />
 
                     <EditText
                         android:id="@+id/etWeightOfProductInContainer"
-                        style="@style/editTextInputDataFrag" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
-                        style="@style/textViewInputDataFrag"
+                        style="@style/textViewInputData"
                         android:lines="4"
                         android:maxLines="4"
                         android:text="Расход (исходя из запаха,\nслабый - 2, средний - 3.5,\nсильный - 5), мл" />
 
                     <EditText
                         android:id="@+id/etExpense"
-                        style="@style/editTextInputDataFrag" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 
-                <TableRow style="@style/tableRowInputData">
+                <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
-                        style="@style/textViewInputDataFrag"
+                        style="@style/textViewInputData"
                         android:text="Помещение м3" />
 
                     <EditText
                         android:id="@+id/etRoom"
-                        style="@style/editTextInputDataFrag" />
+                        style="@style/editTextInputData" />
 
                 </TableRow>
 

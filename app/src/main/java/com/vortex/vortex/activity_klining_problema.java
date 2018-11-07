@@ -168,6 +168,32 @@ public class activity_klining_problema extends AppCompatActivity
             {"Зеркало", "Magic"},
             {"Нейтрализация запахов, освежитель воздуха", "Block"}};
 
+    String[][] laundryBase = {{"Описание", "Mix Energy"},
+            {"Описание", "Mix Basic"},
+            {"Описание", "Mix Activ"},
+            {"Описание", "Mix Ferment"},
+            {"Описание", "Mix Sensitiv"}};
+
+    String[][] laundryAmp = {{"Описание", "Mix Forte Plus"},
+            {"Описание", "Mix Power Plus"},
+            {"Описание", "Mix Intensiv Plus"},
+            {"Описание", "Mix Enzym Plus"},
+            {"Описание", "Mix Color Plus"}};
+
+    String[][] laundryBleach = {{"Описание", "Mix Hypo"},
+            {"Описание", "Mix Oxydez"},
+            {"Описание", "Mix Oxy"}};
+
+    String[][] laundryConditioners = {{"Описание", "Mix Soft"}};
+
+    String[][] laundryNeutralizers = {{"Описание", "Mix Zero"}};
+
+    String[][] laundryRemover = {{"Описание", "Mix Bond 01"},
+            {"Описание", "Mix Bond 02"},
+            {"Описание", "Mix Bond 03"},
+            {"Описание", "Mix Bond 04"}};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -301,6 +327,26 @@ public class activity_klining_problema extends AppCompatActivity
         }
 
         //hotel
+
+        //laundry
+
+        else if (id == 8) {
+            if (id2 == 0) {
+                ShowSredstva(laundryBase);
+            } else if (id2 == 1) {
+                ShowSredstva(laundryAmp);
+            } else if (id2 == 2) {
+                ShowSredstva(laundryBleach);
+            } else if (id2 == 3) {
+                ShowSredstva(laundryConditioners);
+            } else if (id2 == 4) {
+                ShowSredstva(laundryNeutralizers);
+            } else if (id2 == 5) {
+                ShowSredstva(laundryRemover);
+            }
+        }
+
+        //laundry
     }
 
     private void ShowSredstva(String[][] array) {
@@ -402,6 +448,7 @@ public class activity_klining_problema extends AppCompatActivity
 
         return true;
     }
+
     public void onClickIcon(View view) {
 
         Intent intent = new Intent(this, Main2Activity.class);

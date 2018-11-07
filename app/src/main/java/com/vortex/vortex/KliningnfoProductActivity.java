@@ -21,21 +21,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class KliningnfoProductActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Button btnCalculation;
+
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
 
-    private String LOG_TAG = "myLogs";
     private String DB_VERSION;
     private boolean err;
 
     private String product;
     private TextView tvAppointment;
     private TextView tvInstruction;
+    private TextView tvInstructionName;
 
     private String appointment;
     private String instruction;
@@ -58,6 +61,8 @@ public class KliningnfoProductActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        btnCalculation = findViewById(R.id.btnCalculation);
+
         product = getIntent().getStringExtra("nameProduct");
         title = getIntent().getStringExtra("title");
         setTitle(product);
@@ -66,10 +71,15 @@ public class KliningnfoProductActivity extends AppCompatActivity
 
         tvAppointment = findViewById(R.id.tvAppointment);
         tvInstruction = findViewById(R.id.tvInstruction);
+        tvInstructionName = findViewById(R.id.tvInstructionName);
 
         appointment = "";
         instruction = "";
         strNONE = "Данные не найдены";
+
+        if (product.contains("BOND")) {
+            btnCalculation.setVisibility(View.GONE);
+        }
 
         new Load_data(this).execute();
     }
@@ -92,7 +102,6 @@ public class KliningnfoProductActivity extends AppCompatActivity
     }
 
     public void onClickIcon(View view) {
-
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
@@ -133,8 +142,6 @@ public class KliningnfoProductActivity extends AppCompatActivity
                     DB_VERSION = Logo.mSettings.getString(Logo.APP_PREFERENCES_COUNTER, "");
                 }
 
-                Log.d(LOG_TAG, "--- Версия БД: " + DB_VERSION + " ----");
-
                 mDBHelper = new DatabaseHelper(mContext, DB_VERSION);
 
                 try {
@@ -144,7 +151,6 @@ public class KliningnfoProductActivity extends AppCompatActivity
                 }
 
                 try {
-                    Log.d(LOG_TAG, "--- Получение данных из БД cleanbox" + " ----");
                     Cursor c = mDb.query("cleanboxInfoProduct", null, null, null, null, null, null);
 
                     // ставим позицию курсора на первую строку выборки
@@ -166,11 +172,9 @@ public class KliningnfoProductActivity extends AppCompatActivity
                             }
                         } while (c.moveToNext());
                     } else
-                        Log.d(LOG_TAG, "0 rows");
-                    c.close();
+                        c.close();
                 } catch (Exception e) {
                     err = true;
-                    Log.d(LOG_TAG, "--- Ошибка " + e + " ----");
                 }
 
             } catch (Exception e) {
@@ -183,7 +187,6 @@ public class KliningnfoProductActivity extends AppCompatActivity
         protected void onPostExecute(Void result) {
 
             if (err) {
-                Log.d(LOG_TAG, "--- Ошибка есть ----");
                 AlertDialog.Builder builder = new AlertDialog.Builder(KliningnfoProductActivity.this);
                 builder.setTitle("Ошибка")
                         .setMessage(getString(R.string.noneDB))
@@ -200,12 +203,16 @@ public class KliningnfoProductActivity extends AppCompatActivity
                                 });
                 AlertDialog alert = builder.create();
                 alert.show();
-                Log.d(LOG_TAG, "--- Диалог показан ----");
             } else {
 
-                if (appointment != "" && instruction != "") {
+                if (appointment != "") {
                     tvAppointment.setText(appointment);
-                    tvInstruction.setText(instruction);
+                    if (instruction != null)
+                        tvInstruction.setText(instruction);
+                    else {
+                        tvInstructionName.setVisibility(View.GONE);
+                        tvInstruction.setVisibility(View.GONE);
+                    }
                 } else {
                     tvAppointment.setText(strNONE);
                     tvInstruction.setText(strNONE);

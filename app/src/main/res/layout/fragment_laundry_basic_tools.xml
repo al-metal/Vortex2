@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linearLayouteMain"
-    tools:context=".Fragments.KliningCalculation7Fragment">
+    tools:context=".Fragments.KliningCalculation1Fragment">
 
     <ScrollView style="@style/scrollView">
 
@@ -14,10 +14,10 @@
 
                     <TextView
                         style="@style/textViewInputData"
-                        android:text="Цена за весь объем в таре,руб." />
+                        android:text="Стоимость канистры, руб" />
 
                     <EditText
-                        android:id="@+id/etPricePerVolume"
+                        android:id="@+id/etCostOfTheCans"
                         style="@style/editTextInputData" />
 
                 </TableRow>
@@ -26,22 +26,22 @@
 
                     <TextView
                         style="@style/textViewInputData"
-                        android:text="Количество монодоз" />
+                        android:text="Объем канистры" />
 
                     <EditText
-                        android:id="@+id/etNumberOfMonodoses"
+                        android:id="@+id/etVolumeOfCans"
                         style="@style/editTextInputData" />
-
                 </TableRow>
 
                 <TableRow style="@style/tableRowInputDataFragment">
 
                     <TextView
                         style="@style/textViewInputData"
-                        android:text="Вместимость жироуловителя, м3" />
+                        android:id="@+id/tvExpenseName"
+                        tools:text="Расход на 1кг. белья, мл.(Рекомендовано 8-30)" />
 
                     <EditText
-                        android:id="@+id/etCapacityOfTheGreaseTrap"
+                        android:id="@+id/etExpense"
                         style="@style/editTextInputData" />
 
                 </TableRow>
@@ -61,23 +61,10 @@
 
                     <TextView
                         style="@style/textViewResultLeftFrag"
-                        android:text="Расход на 1 м3 жироуловителя, монодоза" />
+                        android:text="Стоимость 1кг. средства, руб" />
 
                     <TextView
-                        android:id="@+id/tvExpense"
-                        style="@style/textViewResultRightFrag"
-                        android:text="2" />
-
-                </TableRow>
-
-                <TableRow style="@style/tableRowResultOther">
-
-                    <TextView
-                        style="@style/textViewResultLeftFrag"
-                        android:text="Стоимость 1 монодозы, руб." />
-
-                    <TextView
-                        android:id="@+id/tvThePrice"
+                        android:id="@+id/tvCostOfFunds"
                         style="@style/textViewResultRightFrag" />
 
                 </TableRow>
@@ -86,10 +73,10 @@
 
                     <TextView
                         style="@style/textViewResultLeftFrag"
-                        android:text="Стоимость 1-го применения, руб" />
+                        android:text="Стоимость стирки 1кг. белья, руб" />
 
                     <TextView
-                        android:id="@+id/tvCostOfApplication"
+                        android:id="@+id/tvCostOfWashing"
                         style="@style/textViewResultRightFrag" />
 
                 </TableRow>

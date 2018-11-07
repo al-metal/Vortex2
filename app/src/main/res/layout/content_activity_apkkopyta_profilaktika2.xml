@@ -47,14 +47,16 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewLongInputDataWitchImageLeft"
+                        style="@style/textViewInputData"
                         android:layout_height="match_parent"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etPeriod"
                         style="@style/textViewLongInputDataWitchImageMiddle"
-                        android:layout_marginLeft="45dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_span="1"
+                        android:layout_width="match_parent"
                         android:inputType="numberDecimal"
                         android:textColor="@color/colorGray"
                         android:textSize="14sp" />

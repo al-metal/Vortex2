@@ -122,4 +122,9 @@ public class activity_klining extends AppCompatActivity
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
+
+    public void onClickLaundry(View view) {
+        id = 8;
+        SetIdKlining(id, "Профессиональная стирка");
+    }
 }

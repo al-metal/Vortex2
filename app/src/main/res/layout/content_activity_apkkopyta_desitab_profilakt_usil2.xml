@@ -45,22 +45,25 @@
                 <TableRow style="@style/tableRowInputData">
 
                     <TextView
-                        style="@style/textViewLongInputDataWitchImageLeft"
+                        style="@style/textViewInputData"
+                        android:layout_height="match_parent"
                         android:text="@string/tvProdoljitelnostDni" />
 
                     <EditText
                         android:id="@+id/etProdolDen"
                         style="@style/textViewLongInputDataWitchImageMiddle"
-                        android:textSize="14sp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_span="1"
+                        android:layout_width="match_parent"
+                        android:inputType="numberDecimal"
                         android:textColor="@color/colorGray"
-                        android:layout_marginLeft="45dp"
-                        android:inputType="numberDecimal" />
+                        android:textSize="14sp" />
 
                     <ImageButton
                         android:id="@+id/imageButton25"
                         style="@style/imageButtonLongInputDataWitchImageRight"
                         android:layout_marginTop="14dp"
-                        android:onClick="onClickVanna"
+                        android:onClick="onClickDay"
                         app:srcCompat="@mipmap/btninfo" />
                 </TableRow>
 

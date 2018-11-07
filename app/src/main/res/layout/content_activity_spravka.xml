@@ -15,18 +15,30 @@
 
         <LinearLayout style="@style/linearLayoutInputData">
 
-            <EditText
-                android:id="@+id/inputSearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Поиск по названию.."
-                android:inputType="text" />
+            <TableLayout style="@style/tableViewInputData">
 
-            <ListView
-                android:id="@+id/lvMain"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></ListView>
+                <TableRow style="@style/tableRowInputData">
 
+                    <EditText
+                        android:id="@+id/inputSearch"
+                        style="@style/editTextInputData"
+                        android:layout_marginRight="30dp"
+                        android:layout_span="7"
+                        android:hint="Поиск по названию.."
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow style="@style/tableRowInputData">
+
+                    <ListView
+                        android:id="@+id/lvMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+                        android:layout_span="7" />
+                </TableRow>
+
+            </TableLayout>
         </LinearLayout>
     </ScrollView>
 

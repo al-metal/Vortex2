@@ -28,6 +28,7 @@ import com.vortex.vortex.Fragments.KliningCalculation7Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation8Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation9Fragment;
 import com.vortex.vortex.Fragments.KliningCalculationDefaultFragment;
+import com.vortex.vortex.Fragments.LaundryBasicToolsFragment;
 
 public class ActivityKliningNewCalculation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -48,6 +49,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
     private KliningCalculation12Fragment kliningCalculation12Fragment;
     private KliningCalculation13Fragment kliningCalculation13Fragment;
     private KliningCalculationDefaultFragment kliningCalculationDefaultFragment;
+    private LaundryBasicToolsFragment laundryBasicToolsFragment;
     private String product;
     private String title;
 
@@ -86,6 +88,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         kliningCalculation12Fragment = new KliningCalculation12Fragment();
         kliningCalculation13Fragment = new KliningCalculation13Fragment();
         kliningCalculationDefaultFragment = new KliningCalculationDefaultFragment();
+        laundryBasicToolsFragment = new LaundryBasicToolsFragment();
 
         Bundle bundle = new Bundle();
 
@@ -240,6 +243,82 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
             case "BLOCK":
                 transaction.add(R.id.container, kliningCalculation13Fragment);
                 break;
+            case "MIX ENERGY":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX BASIC":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX ACTIV":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX FERMENT":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX SENSITIV":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
+                bundle.putDouble("expense" , 0);
+                break;
+
+            case "MIX FORTE PLUS":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 3-9)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX POWER PLUS":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 0,5-20)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX INTENSIV PLUS":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 0,5-25)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX ENZYM PLUS":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 5-20)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX COLOR PLUS":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 0,5-25)");
+                bundle.putDouble("expense" , 0);
+                break;
+            case "MIX HYPO":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
+                bundle.putDouble("expense" , 3.5);
+                break;
+            case "MIX OXYDEZ":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
+                bundle.putDouble("expense" , 4);
+                break;
+            case "MIX OXY":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
+                bundle.putDouble("expense" , 7);
+                break;
+            case "MIX SOFT":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
+                bundle.putDouble("expense" , 6);
+                break;
+            case "MIX ZERO":
+                transaction.add(R.id.container, laundryBasicToolsFragment);
+                bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
+                bundle.putDouble("expense" , 2);
+                break;
             default:
                 transaction.add(R.id.container, kliningCalculationDefaultFragment);
         }
@@ -247,6 +326,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         kliningCalculation2Fragment.setArguments(bundle);
         kliningCalculation8Fragment.setArguments(bundle);
         kliningCalculation10Fragment.setArguments(bundle);
+        laundryBasicToolsFragment.setArguments(bundle);
         transaction.commit();
     }
 

@@ -20,7 +20,7 @@
                         android:id="@+id/imageButton35"
                         style="@style/imageButtonHorizontal"
                         android:onClick="onClickKuhnya"
-                        app:srcCompat="@drawable/cleanbox_menu_kuhnya" />
+                        app:srcCompat="@drawable/kitchen" />
 
                 </TableRow>
 
@@ -30,7 +30,7 @@
                         android:id="@+id/imageButton36"
                         style="@style/imageButtonHorizontal"
                         android:onClick="onClickSanusel"
-                        app:srcCompat="@drawable/cleanbox_menu_sanuzel" />
+                        app:srcCompat="@drawable/sanitaryroom" />
                 </TableRow>
 
                 <TableRow style="@style/tableRow">
@@ -39,7 +39,7 @@
                         android:id="@+id/imageButton37"
                         style="@style/imageButtonHorizontal"
                         android:onClick="onClickOffice"
-                        app:srcCompat="@drawable/cleanbox_menu_office" />
+                        app:srcCompat="@drawable/office" />
                 </TableRow>
 
                 <TableRow style="@style/tableRow">
@@ -77,7 +77,16 @@
                         android:id="@+id/imageButton400"
                         style="@style/imageButtonHorizontal"
                         android:onClick="onClickHotel"
-                        app:srcCompat="@drawable/cleanbox_menu_prom" />
+                        app:srcCompat="@drawable/nomer" />
+
+                </TableRow>
+
+                <TableRow style="@style/tableRow">
+
+                    <ImageButton
+                        style="@style/imageButtonHorizontal"
+                        android:onClick="onClickLaundry"
+                        app:srcCompat="@drawable/nomer" />
 
                 </TableRow>
 

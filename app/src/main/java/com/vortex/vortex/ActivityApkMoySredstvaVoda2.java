@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 
@@ -51,6 +52,7 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
     TableLayout tableL;
     Button btnRaschet;
     String strJoskost = "0";
+    boolean cbCheked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,14 +94,16 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
                 if (etVoda.getText().length() != 0) {
                     voda = Double.parseDouble(etVoda.getText().toString());
                     if (rbDjeskost.isChecked() == true) {
-
+                        cbCheked = true;
                         strJoskost = etVoda.getText().toString();
                         ReturnVoda(strJoskost);
                     } else if (rbDh.isChecked() == true) {
+                        cbCheked = true;
                         voda = voda * 0.36;
                         strJoskost = String.valueOf(roundUp(voda, 2));
                         ReturnVoda(strJoskost);
                     } else if (rbMgL.isChecked() == true) {
+                        cbCheked = true;
                         strJoskost = etVoda.getText().toString();
                         ReturnVoda(strJoskost);
                     }
@@ -204,6 +208,11 @@ public class ActivityApkMoySredstvaVoda2 extends AppCompatActivity
         int gray = Color.parseColor("#7B7979");
         btnRaschet.setBackgroundColor(gray);
         double voda = Double.parseDouble(strJoskost);
+
+        if (!cbCheked || etVoda.getText().toString() == "") {
+            Toast.makeText(getBaseContext(), "Заполните пожалуйста все данные", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         //Скрытие клавиатуры по нажатию кнопки
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
