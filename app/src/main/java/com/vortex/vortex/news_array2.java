@@ -97,6 +97,14 @@ public class news_array2 extends AppCompatActivity
         @SuppressLint("StaticFieldLeak") AsyncTask<String, String, String> loadRSSAsync = new AsyncTask<String, String, String>() {
 
             @Override
+            protected String doInBackground(String... strings) {
+                String result;
+                HTTPDataHandler httpDataHandler = new HTTPDataHandler();
+                result = httpDataHandler.getHTTPData(strings[0]);
+                return result;
+            }
+
+            @Override
             protected void onPostExecute(String s) {
                 pgLoadNews.setVisibility(View.GONE);
                 tvProgressBerText.setVisibility(View.GONE);
@@ -120,14 +128,6 @@ public class news_array2 extends AppCompatActivity
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
-            }
-
-            @Override
-            protected String doInBackground(String... strings) {
-                String result;
-                HTTPDataHandler httpDataHandler = new HTTPDataHandler();
-                result = httpDataHandler.getHTTPData(strings[0]);
-                return result;
             }
         };
         StringBuilder url_get_data = new StringBuilder(RSSToJsonApi);
