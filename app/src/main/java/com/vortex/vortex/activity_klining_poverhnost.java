@@ -27,7 +27,6 @@ public class activity_klining_poverhnost extends AppCompatActivity
     LinearLayout llmain;
     int length;
     String title;
-    String titleProblem;
     String titleProblemNew;
     String[] array;
     String nameProduct;
@@ -48,30 +47,30 @@ public class activity_klining_poverhnost extends AppCompatActivity
             {"Плесень, грибок", "Fumigel", "Fungus"},
             {"Устранение запахов", "Block", "Fog"}};
     String[] hotel = {"КОМНАТА", "САНУЗЕЛ"};
-    String[] laundry = {"Базовые средства/Предворительная и основная стирка", "Усилители", "Отбеливатели", "Кондиционеры", "Нейтрализаторы", "Пятновыводители", "Комплексная стирка"};
+    String[] laundry = {"БАЗОВЫЕ СРЕДСТВА", "УСИЛИТЕЛИ", "ОТБЕЛИВАТЕЛИ", "КОНДИЦИОНЕРЫ", "НЕЙТРОЛИЗАТОРЫ", "ПЯТНОВЫВОДИТЕЛИ", "КОМПЛЕКСНАЯ СТИРКА"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_klining_poverhnost);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         id = getIntent().getExtras().getInt("id");
         title = getIntent().getStringExtra("title");
-        tl = (TableLayout) findViewById(R.id.tlMain);
-        llmain = (LinearLayout) findViewById(R.id.llmain);
+        tl = findViewById(R.id.tlMain);
+        llmain = findViewById(R.id.llmain);
 
         setTitle(title);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         TableLayout tl = new TableLayout(this);
@@ -95,19 +94,19 @@ public class activity_klining_poverhnost extends AppCompatActivity
             ShowSredstva(PromKlining);
         } else if (id == 7) {
             CreateViews(hotel);
-        }else if (id == 8) {
+        } else if (id == 8) {
             CreateViews(laundry);
         }
     }
 
-    private void CreateViews(String[] kuhnya) {
-        array = kuhnya;
-        length = kuhnya.length;
+    private void CreateViews(String[] array) {
+        this.array = array;
+        length = array.length;
         for (int i = 0; length > i; i++) {
             TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
-            TextView tv = (TextView) tr.findViewById(R.id.col1);
+            TextView tv = tr.findViewById(R.id.col1);
             tv.setTextColor(Color.parseColor("#000000"));
-            tv.setText(kuhnya[i].toString());
+            tv.setText(array[i]);
             tv.setId(i);
             tv.setOnClickListener(oclBtnCancel);
 
@@ -125,10 +124,10 @@ public class activity_klining_poverhnost extends AppCompatActivity
 
                 if (n == 0) {
                     TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
-                    TextView tv = (TextView) tr.findViewById(R.id.col1);
+                    TextView tv = tr.findViewById(R.id.col1);
                     tv.setText(array[i][n]);
                     n++;
-                    tv = (TextView) tr.findViewById(R.id.col2);
+                    tv = tr.findViewById(R.id.col2);
                     tv.setTextColor(Color.parseColor("#000000"));
                     tv.setText(array[i][n]);
                     tv.setClickable(true);
@@ -137,9 +136,9 @@ public class activity_klining_poverhnost extends AppCompatActivity
 
                 } else {
                     TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
-                    TextView tv = (TextView) tr.findViewById(R.id.col1);
+                    TextView tv = tr.findViewById(R.id.col1);
                     tv.setText("");
-                    tv = (TextView) tr.findViewById(R.id.col2);
+                    tv = tr.findViewById(R.id.col2);
                     tv.setTextColor(Color.parseColor("#000000"));
                     tv.setText(array[i][n]);
                     tv.setClickable(true);
@@ -153,11 +152,17 @@ public class activity_klining_poverhnost extends AppCompatActivity
     OnClickListener oclBtnCancel = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            titleProblemNew = GetTitleProble(array[v.getId()].toString());
+            titleProblemNew = GetTitleProble(array[v.getId()]);
             Intent intent = new Intent(activity_klining_poverhnost.this, activity_klining_problema.class);
-            intent.putExtra("id", id);
-            intent.putExtra("id2", v.getId());
-            intent.putExtra("title", titleProblemNew);
+
+            if (id == 8 && titleProblemNew.contains("Комплексная стирка")) {
+                intent = new Intent(activity_klining_poverhnost.this, ActivityKliningNewCalculation.class);
+                intent.putExtra("nameProduct", "Профессиональная стирка");
+            } else {
+                intent.putExtra("id", id);
+                intent.putExtra("id2", v.getId());
+                intent.putExtra("title", titleProblemNew);
+            }
             startActivity(intent);
         }
     };
@@ -174,7 +179,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -195,7 +200,7 @@ public class activity_klining_poverhnost extends AppCompatActivity
         Intent intent = ClickLeftMenu.getIntent(activity_klining_poverhnost.this, item);
         startActivity(intent);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -211,7 +216,6 @@ public class activity_klining_poverhnost extends AppCompatActivity
         intent.putExtra("title", title);
         startActivity(intent);
     }
-
 
     @Override
     public void onClick(View v) {
