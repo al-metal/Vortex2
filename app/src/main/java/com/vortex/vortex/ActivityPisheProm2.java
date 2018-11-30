@@ -84,7 +84,7 @@ public class ActivityPisheProm2 extends AppCompatActivity
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner7);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner, data);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner.setAdapter(adapter);
