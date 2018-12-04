@@ -1,7 +1,6 @@
 package com.vortex.vortex;
 
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,9 +29,9 @@ public class ActivityOrder extends AppCompatActivity {
         final Spinner spinner2 = (Spinner) findViewById(R.id.spin2);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner, data2);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner.setAdapter(adapter);
         spinner2.setAdapter(adapter2);

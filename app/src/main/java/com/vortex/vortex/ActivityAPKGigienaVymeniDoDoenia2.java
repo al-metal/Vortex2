@@ -3,7 +3,6 @@ package com.vortex.vortex;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,8 +22,6 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.math.BigDecimal;
 
 import static com.vortex.vortex.Calculations.RoundUp.roundUp;
 
@@ -85,7 +82,7 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
         tvStoimPromyvki = (TextView) findViewById(R.id.tvStoimPromyvki);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner.setAdapter(adapter);
 
@@ -114,7 +111,7 @@ public class ActivityAPKGigienaVymeniDoDoenia2 extends AppCompatActivity
         });
 
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner, data2);
-        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner2.setAdapter(adapter2);
 

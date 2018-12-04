@@ -34,8 +34,6 @@ public class GetNewNewsService extends Service {
     private String lastTitleNews;
 
     private SharedPreferences sharedPreferences;
-    private static final String PREFERENCE_NAME = "News_title";
-    private static final String PREFERENCE_TITLE = "News";
 
     public GetNewNewsService() {
     }
@@ -50,9 +48,8 @@ public class GetNewNewsService extends Service {
     public void onCreate() {
         super.onCreate();
         mythread = new MyThread();
-        sharedPreferences = getSharedPreferences(PREFERENCE_TITLE, MODE_PRIVATE);
-        ClearPreference();
-        lastTitleNews = sharedPreferences.getString(PREFERENCE_NAME, "");
+        sharedPreferences = getSharedPreferences(Main2Activity.APP_PREFERENCE, MODE_PRIVATE);
+        lastTitleNews = sharedPreferences.getString(Main2Activity.APP_PREFERENCE_NAME, "");
     }
 
     private void SendNotifi(String message) {
@@ -117,7 +114,7 @@ public class GetNewNewsService extends Service {
 
                 if (!title.equals(lastTitleNews)) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString(PREFERENCE_NAME, title);
+                    editor.putString(Main2Activity.APP_PREFERENCE_NAME, title);
                     editor.apply();
 
                     SendNotifi(title);
@@ -130,11 +127,5 @@ public class GetNewNewsService extends Service {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private void ClearPreference() {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(PREFERENCE_NAME, "");
-        editor.apply();
     }
 }

@@ -168,30 +168,30 @@ public class activity_klining_problema extends AppCompatActivity
             {"Зеркало", "Magic"},
             {"Нейтрализация запахов, освежитель воздуха", "Block"}};
 
-    String[][] laundryBase = {{"Описание", "Mix Energy"},
-            {"Описание", "Mix Basic"},
-            {"Описание", "Mix Activ"},
-            {"Описание", "Mix Ferment"},
-            {"Описание", "Mix Sensitiv"}};
+    String[][] laundryBase = {{"Базовое жидкое высокощелочное средство для стирки", "Mix Energy"},
+            {"Базовое жидкое щелочное средство для стирки", "Mix Basic"},
+            {"Базовое жидкое нейтральное средство для стирки с высоким содержанием пав", "Mix Activ"},
+            {"Базовое жидкое нейтральное средство для стирки с комплексом энзимов", "Mix Ferment"},
+            {"Базовое жидкое нейтральное средство для стирки деликатных тканей", "Mix Sensitiv"}};
 
-    String[][] laundryAmp = {{"Описание", "Mix Forte Plus"},
-            {"Описание", "Mix Power Plus"},
-            {"Описание", "Mix Intensiv Plus"},
-            {"Описание", "Mix Enzym Plus"},
-            {"Описание", "Mix Color Plus"}};
+    String[][] laundryAmp = {{"Щелочной усилитель стирки", "Mix Forte Plus"},
+            {"Усилитель стирки с высоким содержанием пав", "Mix Power Plus"},
+            {"Усилитель стирки с оптическим отбеливателем", "Mix Intensiv Plus"},
+            {"Усилитель стирки с энзимами", "Mix Enzym Plus"},
+            {"Усилитель стирки для цветного белья", "Mix Color Plus"}};
 
-    String[][] laundryBleach = {{"Описание", "Mix Hypo"},
-            {"Описание", "Mix Oxydez"},
-            {"Описание", "Mix Oxy"}};
+    String[][] laundryBleach = {{"Жидкое отбеливающее средство на основе активного хлора", "Mix Hypo"},
+            {"Жидкий концентрированный кислородный дезинфицирующий отбеливатель на основе надуксусной кислоты и перекиси водорода", "Mix Oxydez"},
+            {"Сухой кислородный отбеливатель на основе перекиси водорода\", \"mix oxy", "Mix Oxy"}};
 
-    String[][] laundryConditioners = {{"Описание", "Mix Soft"}};
+    String[][] laundryConditioners = {{"Высококонцентрированный кондиционер - ополаскиватель", "Mix Soft"}};
 
-    String[][] laundryNeutralizers = {{"Описание", "Mix Zero"}};
+    String[][] laundryNeutralizers = {{"нейтрализатор остаточной щелочности", "Mix Zero"}};
 
-    String[][] laundryRemover = {{"Описание", "Mix Bond 01"},
-            {"Описание", "Mix Bond 02"},
-            {"Описание", "Mix Bond 03"},
-            {"Описание", "Mix Bond 04"}};
+    String[][] laundryRemover = {{"Пятновыводитель для удаления нефтяных и масляных пятен", "Mix Bond 01"},
+            {"Пятновыводитель для удаления чернильных пятен", "Mix Bond 02"},
+            {"Пятновыводитель для удаления пятен ржавчины", "Mix Bond 03"},
+            {"Пятновыводитель для удаления растительных пятен", "Mix Bond 04"}};
 
 
     @Override
@@ -358,7 +358,7 @@ public class activity_klining_problema extends AppCompatActivity
             for (int n = 0; count2 > n; n++) {
 
                 if (n == 0) {
-                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
                     tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText(array[i][n]);
                     n++;
@@ -374,7 +374,7 @@ public class activity_klining_problema extends AppCompatActivity
                     }
 
                 } else {
-                    TableRow tr = (TableRow) View.inflate(this, R.layout.tablerow, null);
+                    TableRow tr = (TableRow) View.inflate(this, R.layout.item_cleanbox_problem_tools, null);
                     tv = (TextView) tr.findViewById(R.id.col1);
                     tv.setText("");
                     tv = (TextView) tr.findViewById(R.id.col2);

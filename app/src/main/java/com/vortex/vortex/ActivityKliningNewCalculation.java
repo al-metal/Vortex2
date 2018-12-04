@@ -28,6 +28,7 @@ import com.vortex.vortex.Fragments.KliningCalculation7Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation8Fragment;
 import com.vortex.vortex.Fragments.KliningCalculation9Fragment;
 import com.vortex.vortex.Fragments.KliningCalculationDefaultFragment;
+import com.vortex.vortex.Fragments.KliningCalculationProfWashingFragment;
 import com.vortex.vortex.Fragments.LaundryBasicToolsFragment;
 
 public class ActivityKliningNewCalculation extends AppCompatActivity
@@ -50,6 +51,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
     private KliningCalculation13Fragment kliningCalculation13Fragment;
     private KliningCalculationDefaultFragment kliningCalculationDefaultFragment;
     private LaundryBasicToolsFragment laundryBasicToolsFragment;
+    private KliningCalculationProfWashingFragment kliningCalculationProfWashingFragment;
     private String product;
     private String title;
 
@@ -89,6 +91,7 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
         kliningCalculation13Fragment = new KliningCalculation13Fragment();
         kliningCalculationDefaultFragment = new KliningCalculationDefaultFragment();
         laundryBasicToolsFragment = new LaundryBasicToolsFragment();
+        kliningCalculationProfWashingFragment = new KliningCalculationProfWashingFragment();
 
         Bundle bundle = new Bundle();
 
@@ -213,9 +216,9 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
                 transaction.add(R.id.container, kliningCalculation7Fragment);
                 break;
             case "TANK LBD 0107/1":
-                if(title.contains("МЕШОЧКОВ")){
+                if (title.contains("МЕШОЧКОВ")) {
                     transaction.add(R.id.container, kliningCalculation12Fragment);
-                }else {
+                } else {
                     transaction.add(R.id.container, kliningCalculation8Fragment);
                     bundle.putDouble("expenseWashing", 5);
                     bundle.putDouble("expenseSoak", 20);
@@ -246,78 +249,81 @@ public class ActivityKliningNewCalculation extends AppCompatActivity
             case "MIX ENERGY":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX BASIC":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX ACTIV":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX FERMENT":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX SENSITIV":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 8-30)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
 
             case "MIX FORTE PLUS":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 3-9)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX POWER PLUS":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 0,5-20)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX INTENSIV PLUS":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 0,5-25)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX ENZYM PLUS":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 5-20)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX COLOR PLUS":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.(Рекомендовано 0,5-25)");
-                bundle.putDouble("expense" , 0);
+                bundle.putDouble("expense", 0);
                 break;
             case "MIX HYPO":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
-                bundle.putDouble("expense" , 3.5);
+                bundle.putDouble("expense", 3.5);
                 break;
             case "MIX OXYDEZ":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
-                bundle.putDouble("expense" , 4);
+                bundle.putDouble("expense", 4);
                 break;
             case "MIX OXY":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
-                bundle.putDouble("expense" , 7);
+                bundle.putDouble("expense", 7);
                 break;
             case "MIX SOFT":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
-                bundle.putDouble("expense" , 6);
+                bundle.putDouble("expense", 6);
                 break;
             case "MIX ZERO":
                 transaction.add(R.id.container, laundryBasicToolsFragment);
                 bundle.putString("expence_name", "Расход на 1кг. белья, мл.");
-                bundle.putDouble("expense" , 2);
+                bundle.putDouble("expense", 2);
+                break;
+            case "Профессиональная стирка":
+                transaction.add(R.id.container, kliningCalculationProfWashingFragment);
                 break;
             default:
                 transaction.add(R.id.container, kliningCalculationDefaultFragment);

@@ -3,7 +3,6 @@ package com.vortex.vortex;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,8 +22,6 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.math.BigDecimal;
 
 import static com.vortex.vortex.Calculations.RoundUp.roundUp;
 
@@ -82,7 +79,7 @@ public class ActivityAPKGigienaVymeniPosleDoenia2 extends AppCompatActivity
         tvStoimObrabotkiVsego = (TextView) findViewById(R.id.tvStoimObrabotkiVsego);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner4.setAdapter(adapter);
 

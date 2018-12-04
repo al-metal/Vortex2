@@ -3,7 +3,6 @@ package com.vortex.vortex;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -29,8 +28,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.math.BigDecimal;
 
 import static com.vortex.vortex.Calculations.RoundUp.roundUp;
 
@@ -250,7 +247,7 @@ public class ActivityAuto2 extends AppCompatActivity
         final Spinner spinner = (Spinner) findViewById(R.id.spinner8);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner.setAdapter(adapter);
 
@@ -474,7 +471,7 @@ public class ActivityAuto2 extends AppCompatActivity
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
 
         LayoutInflater inflater = LayoutInflater.from(this);
-        TableRow tr = (TableRow) inflater.inflate(R.layout.table_row2222, null);
+        TableRow tr = (TableRow) inflater.inflate(R.layout.item_complex_means_three, null);
         TextView tv = (TextView) tr.findViewById(R.id.col1);
         tv.setText(a);
         tv = (TextView) tr.findViewById(R.id.col2);
@@ -489,7 +486,7 @@ public class ActivityAuto2 extends AppCompatActivity
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         LayoutInflater inflater = LayoutInflater.from(this);
-        TableRow tr = (TableRow) inflater.inflate(R.layout.table_row22, null);
+        TableRow tr = (TableRow) inflater.inflate(R.layout.item_complex_means_two, null);
         TextView tv = (TextView) tr.findViewById(R.id.col1);
         tv.setText(a);
         tv = (TextView) tr.findViewById(R.id.col2);

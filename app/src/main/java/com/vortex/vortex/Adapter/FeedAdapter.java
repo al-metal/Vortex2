@@ -17,7 +17,6 @@ import com.vortex.vortex.R;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
@@ -67,7 +66,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
     @NonNull
     @Override
     public FeedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.row_news, parent, false);
+        View view = inflater.inflate(R.layout.item_news_card, parent, false);
         return new FeedViewHolder(view);
     }
 
@@ -75,11 +74,11 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
     public void onBindViewHolder(@NonNull FeedViewHolder holder, int position) {
         holder.txtTitle.setText(rssObject.getItems().get(position).getTitle());
         holder.txtContent.setText(rssObject.getItems().get(position).getContent());
-        String date = rssObject.getItems().get(position).getPubDate().toString();
+        String date = rssObject.getItems().get(position).getPubDate();
 
         DateFormat originDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", new Locale("ru", "RU"));
-        String finalDate=null;
+        String finalDate = null;
         try {
             finalDate = dateFormat.format(originDateFormat.parse(date));
         } catch (ParseException e) {

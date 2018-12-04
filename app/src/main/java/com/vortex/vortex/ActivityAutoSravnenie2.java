@@ -3,7 +3,6 @@ package com.vortex.vortex;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -24,7 +23,6 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import static com.vortex.vortex.Calculations.RoundUp.roundUp;
@@ -416,7 +414,7 @@ public class ActivityAutoSravnenie2 extends AppCompatActivity
 
         spinner9 = (Spinner) findViewById(R.id.spinner9);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item_means);
 
         spinner9.setAdapter(adapter);
 

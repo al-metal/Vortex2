@@ -409,4 +409,19 @@
         <item name="android:layout_span">1</item>
     </style>
 
+    <style name="et_prof_washing">
+        <item name="android:layout_width">102dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:textColor">#7b7979</item>
+    </style>
+
+    <style name="tv_result_prof_washing">
+        <item name="android:layout_width">95dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:textColor">#231f20</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>
