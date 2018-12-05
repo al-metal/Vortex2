@@ -1,818 +1,832 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingStart="25dp"
-    android:paddingLeft="25dp"
-    android:paddingTop="23dp"
-    android:paddingEnd="18dp"
-    android:paddingRight="18dp"
-    tools:context=".Fragments.KliningCalculationProfWashingFragment">
+    android:layout_height="match_parent">
 
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lianer_result"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
 
-        <TableRow>
+        <LinearLayout
+            android:layout_marginLeft="33dp"
+            android:layout_marginBottom="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout android:orientation="horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv_base_means"
-                    android:layout_width="133dp"
-                    android:layout_height="wrap_content"
-                    android:text="БАЗОВЫЕ СРЕДСТВА"
-                    android:textColor="#231f20"
-                    android:textSize="13sp" />
+                <TableRow>
 
-                <Spinner
-                    android:id="@+id/spinner_base_means"
-                    style="@style/spinerInputData"
-                    android:layout_width="157dp"
-                    android:layout_height="37dp" />
-            </LinearLayout>
+                    <LinearLayout android:orientation="horizontal">
 
-        </TableRow>
+                        <TextView
+                            android:id="@+id/tv_base_means"
+                            android:layout_width="133dp"
+                            android:layout_height="wrap_content"
+                            android:text="БАЗОВЫЕ СРЕДСТВА"
+                            android:textColor="#231f20"
+                            android:textSize="13sp" />
 
-        <TableRow
-            android:id="@+id/tr_description_base_means"
-            android:visibility="gone">
+                        <Spinner
+                            android:id="@+id/spinner_base_means"
+                            style="@style/spinerInputData"
+                            android:layout_width="157dp"
+                            android:layout_height="37dp" />
+                    </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_description_base_means"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#231f20"
-                android:textSize="10sp"
-                tools:text="Отлично удаляет белковые" />
-        </TableRow>
+                </TableRow>
 
-        <TableRow>
+                <TableRow
+                    android:id="@+id/tr_description_base_means"
+                    android:visibility="gone">
 
-            <LinearLayout android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_description_base_means"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#231f20"
+                        android:textSize="10sp"
+                        tools:text="Отлично удаляет белковые" />
+                </TableRow>
 
-                <TextView
-                    android:id="@+id/tv_consumption_1kg_line"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="4dp"
-                    android:text="Расход на 1 кг белья, мл"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                <TableRow>
 
-                <EditText
-                    android:id="@+id/et_consumption"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                    <LinearLayout android:orientation="horizontal">
 
-        <TableRow>
+                        <TextView
+                            android:id="@+id/tv_consumption_1kg_line"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="4dp"
+                            android:text="Расход на 1 кг белья, мл"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
 
-            <LinearLayout android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/et_consumption"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
 
-                <TextView
-                    android:id="@+id/tv_volume_cans"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="4dp"
-                    android:text="Объем канистры, кг"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                <TableRow>
 
-                <EditText
-                    android:id="@+id/et_volume_cans"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                    <LinearLayout android:orientation="horizontal">
 
-        <TableRow>
+                        <TextView
+                            android:id="@+id/tv_volume_cans"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="4dp"
+                            android:text="Объем канистры, кг"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
 
-            <LinearLayout android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/et_volume_cans"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
 
-                <TextView
-                    android:id="@+id/tv_cost_cans"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость канистры, руб." />
+                <TableRow>
 
-                <EditText
-                    android:id="@+id/et_cost_cans"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                    <LinearLayout android:orientation="horizontal">
 
-        <TableRow
-            android:id="@+id/tr_cost_base_means"
-            android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_cost_cans"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость канистры, руб." />
 
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/et_cost_cans"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
 
-                <TextView
-                    android:id="@+id/tv_cost_1kg_means"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость за 1 кг cредства, руб."
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
+                <TableRow
+                    android:id="@+id/tr_cost_base_means"
+                    android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_means"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </TableRow>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
 
-        <TableRow
-            android:id="@+id/tr_cost_washing_base_means"
-            android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_means"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость за 1 кг cредства, руб."
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
 
-            <LinearLayout
-                android:layout_marginTop="13dp"
-                android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_means"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="150"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
 
-                <TextView
-                    android:id="@+id/tv_cost_1kg_washing"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость стирки за 1 кг белья"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
+                <TableRow
+                    android:id="@+id/tr_cost_washing_base_means"
+                    android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_washing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </TableRow>
-    </TableLayout>
+                    <LinearLayout
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp">
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_washing"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость стирки за 1 кг белья"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
 
-        <TableRow>
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_washing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="150"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
 
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_amplifiers"
-                    android:layout_width="133dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="УСЕЛИТЕЛИ"
-                    android:textColor="#231f20"
-                    android:textSize="13sp" />
-
-                <Spinner
-                    android:id="@+id/spinner_amplifiers"
-                    style="@style/spinerInputData"
-                    android:layout_width="157dp" />
-            </LinearLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tr_amplifiers_purpose_name"
-            android:visibility="gone">
-
-            <TextView
-                android:id="@+id/tv_purpose_combination"
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:text="НАЗНАЧЕНИЕ КОМБИНАЦИИ"
-                android:textColor="#7b7979"
-                android:textSize="13sp" />
+                android:layout_marginTop="28dp">
 
-        </TableRow>
+                <TableRow>
 
-        <TableRow
-            android:id="@+id/tr_amplifiers_purpose_desc"
-            android:visibility="gone">
+                    <LinearLayout android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_purpose_combination_description"
-                android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/tv_amplifiers"
+                            android:layout_width="133dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="УСЕЛИТЕЛИ"
+                            android:textColor="#231f20"
+                            android:textSize="13sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_amplifiers"
+                            style="@style/spinerInputData"
+                            android:layout_width="157dp" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_amplifiers_purpose_name"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_purpose_combination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="НАЗНАЧЕНИЕ КОМБИНАЦИИ"
+                        android:textColor="#7b7979"
+                        android:textSize="13sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_amplifiers_purpose_desc"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_purpose_combination_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#231f20"
+                        android:textSize="10sp"
+                        tools:text="Среднетемпературная стирка сильнозагрязненных белых изделий" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_amplifiers_color_fabric"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_color_fabric"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="ЦВЕТ ТКАНИ"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_color_fabric"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#231f20"
+                            android:textSize="10sp"
+                            tools:text="Белый" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_amplifiers_type_fabric"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_type_fabric"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="ТИП ТКАНИ"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_type_fabric"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#231f20"
+                            android:textSize="10sp"
+                            tools:text="Хлопок и смешаные ткани" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_amplifiers_washing_temerature"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_washing_temperature"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="ТЕМПЕРАТУРА СТИРКИ, °С"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_washing_temperature"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#231f20"
+                            android:textSize="10sp"
+                            tools:text="30-60" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_consumption_1kg_line_amplifiers"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Расход на 1 кг белья, мл"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/et_consumption_1kg_line_amplifiers"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_volume_cans_amplifiers"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Объем канистры, кг"
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/et_volume_cans_amplifiers"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_cans_amplifiers"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость канистры, руб."
+                            android:textColor="#7b7979"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/et_cost_cans_amplifiers"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_cost_means_amplifiers"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_means_amplifiers"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость за 1 кг cредства, руб."
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_means_amplifiers"
+                            style="@style/tv_result_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_cost_washing_amplifiers"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_washing_amplifiers"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость стирки за 1 кг белья"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_washing_amplifiers"
+                            style="@style/tv_result_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#231f20"
-                android:textSize="10sp"
-                tools:text="Среднетемпературная стирка сильнозагрязненных белых изделий" />
-        </TableRow>
+                android:layout_marginTop="28dp">
 
-        <TableRow
-            android:id="@+id/tr_amplifiers_color_fabric"
-            android:visibility="gone">
+                <TableRow>
 
-            <LinearLayout
-                android:layout_marginTop="14dp"
-                android:orientation="horizontal">
+                    <LinearLayout android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_color_fabric"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="ЦВЕТ ТКАНИ"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tv_bleaches"
+                            android:layout_width="133dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="ОТБЕЛИВАТЕЛИ"
+                            android:textColor="#231f20"
+                            android:textSize="13sp" />
 
-                <TextView
-                    android:id="@+id/tv_result_color_fabric"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:textColor="#231f20"
-                    android:textSize="10sp"
-                    tools:text="Белый" />
-            </LinearLayout>
-        </TableRow>
+                        <Spinner
+                            android:id="@+id/spinner_bleaches"
+                            style="@style/spinerInputData"
+                            android:layout_width="157dp" />
+                    </LinearLayout>
+                </TableRow>
 
-        <TableRow
-            android:id="@+id/tr_amplifiers_type_fabric"
-            android:visibility="gone">
+                <TableRow>
 
-            <LinearLayout
-                android:layout_marginTop="14dp"
-                android:orientation="horizontal">
+                    <LinearLayout android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_type_fabric"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="ТИП ТКАНИ"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tv_consumption_1kg_line_bleaches"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Расход на 1 кг белья, мл" />
 
-                <TextView
-                    android:id="@+id/tv_result_type_fabric"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:textColor="#231f20"
-                    android:textSize="10sp"
-                    tools:text="Хлопок и смешаные ткани" />
-            </LinearLayout>
-        </TableRow>
+                        <EditText
+                            android:id="@+id/ed_consumption_1kg_line_bleaches"
+                            style="@style/et_prof_washing"
+                            android:enabled="false" />
+                    </LinearLayout>
+                </TableRow>
 
-        <TableRow
-            android:id="@+id/tr_amplifiers_washing_temerature"
-            android:visibility="gone">
+                <TableRow>
 
-            <LinearLayout
-                android:layout_marginTop="14dp"
-                android:orientation="horizontal">
+                    <LinearLayout android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_washing_temperature"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="ТЕМПЕРАТУРА СТИРКИ, °С"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tv_volume_cans_bleaches"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Объем канистры, кг" />
 
-                <TextView
-                    android:id="@+id/tv_result_washing_temperature"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:textColor="#231f20"
-                    android:textSize="10sp"
-                    tools:text="30-60" />
-            </LinearLayout>
-        </TableRow>
+                        <EditText
+                            android:id="@+id/ed_volume_cans_bleaches"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
 
-        <TableRow>
+                <TableRow>
 
-            <LinearLayout android:orientation="horizontal">
+                    <LinearLayout android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_consumption_1kg_line_amplifiers"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Расход на 1 кг белья, мл"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tv_cost_cans_bleaches"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость канистры, руб." />
 
-                <EditText
-                    android:id="@+id/et_consumption_1kg_line_amplifiers"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                        <EditText
+                            android:id="@+id/et_cost_cans_bleaches"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
 
-        <TableRow>
+                <TableRow
+                    android:id="@+id/tr_cost_means_bleaches"
+                    android:visibility="gone">
 
-            <LinearLayout android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_volume_cans_amplifiers"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Объем канистры, кг"
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_means_bleaches"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость за 1 кг cредства, руб."
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
 
-                <EditText
-                    android:id="@+id/et_volume_cans_amplifiers"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_means_bleaches"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#231f20"
+                            android:textSize="10sp"
+                            tools:text="150" />
+                    </LinearLayout>
+                </TableRow>
 
-        <TableRow>
+                <TableRow
+                    android:id="@+id/tr_cost_washing_bleaches"
+                    android:visibility="gone">
 
-            <LinearLayout android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_cost_cans_amplifiers"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость канистры, руб."
-                    android:textColor="#7b7979"
-                    android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_washing_bleaches"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость стирки за 1 кг белья"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
 
-                <EditText
-                    android:id="@+id/et_cost_cans_amplifiers"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_washing_bleaches"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#231f20"
+                            android:textSize="10sp"
+                            tools:text="150" />
+                    </LinearLayout>
+                </TableRow>
 
-        <TableRow
-            android:id="@+id/tr_cost_means_amplifiers"
-            android:visibility="gone">
+            </TableLayout>
 
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp">
 
-                <TextView
-                    android:id="@+id/tv_cost_1kg_means_amplifiers"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость за 1 кг cредства, руб."
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
+                <TableRow>
 
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_means_amplifiers"
-                    style="@style/tv_result_prof_washing" />
-            </LinearLayout>
-        </TableRow>
+                    <LinearLayout android:orientation="horizontal">
 
-        <TableRow
-            android:id="@+id/tr_cost_washing_amplifiers"
-            android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_mix_soft"
+                            android:layout_width="207dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="КОНДИЦИОНЕР" />
 
-            <LinearLayout
-                android:layout_marginTop="13dp"
-                android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tv_mix_soft_chekbox"
+                            android:layout_width="67dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="MIX SOFT" />
 
-                <TextView
-                    android:id="@+id/tv_cost_1kg_washing_amplifiers"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость стирки за 1 кг белья"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
+                        <CheckBox
+                            android:id="@+id/cb_mix_soft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </TableRow>
 
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_washing_amplifiers"
-                    style="@style/tv_result_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-    </TableLayout>
+                <TableRow>
 
-    <TableLayout
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_consumption_1kg_line_mix_soft"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Расход на 1 кг белья, мл" />
+
+                        <EditText
+                            android:id="@+id/et_consumption_1kg_line_mix_soft"
+                            style="@style/et_prof_washing"
+                            android:enabled="false" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_volume_cans_mix_soft"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Объем канистры, кг" />
+
+                        <EditText
+                            android:id="@+id/et_volume_cans_mix_soft"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_cans_mix_soft"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость канистры, руб." />
+
+                        <EditText
+                            android:id="@+id/et_cost_cans_mix_soft"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_cost_means_mix_soft"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_means_mix_soft"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость за 1 кг cредства, руб."
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_means_mix_soft"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="150"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_cost_washing_mix_soft"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_washing_mix_soft"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость стирки за 1 кг белья"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_washing_mix_soft"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="150"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp">
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_mix_zero_header"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="НЕЙТРОЛИЗАТОР" />
+
+                        <TextView
+                            android:id="@+id/tv_mix_zero_name"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/colorBlack"
+                            android:text="MIX ZERO" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_consumption_1kg_line_mix_zero"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Расход на 1 кг белья, мл" />
+
+                        <EditText
+                            android:id="@+id/et_consumption_1kg_line_mix_zero"
+                            style="@style/et_prof_washing"
+                            android:enabled="false" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_volume_cans_mix_zero"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Объем канистры, кг" />
+
+                        <EditText
+                            android:id="@+id/et_volume_cans_mix_zero"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_cans_mix_zero"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость канистры, руб." />
+
+                        <EditText
+                            android:id="@+id/et_cost_cans_mix_zero"
+                            style="@style/et_prof_washing" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/tr_cost_means_mix_zero"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_means_mix_zero"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость за 1 кг cредства, руб."
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_means_mix_zero"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="150"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_cost_washing_mix_zero"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cost_1kg_washing_mix_zero"
+                            android:layout_width="202dp"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимость стирки за 1 кг белья"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_result_cost_1kg_washing_mix_zero"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="150"
+                            android:textColor="#231f20"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lianer_result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp">
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_bleaches"
-                    android:layout_width="133dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="ОТБЕЛИВАТЕЛИ"
-                    android:textColor="#231f20"
-                    android:textSize="13sp" />
-
-                <Spinner
-                    android:id="@+id/spinner_bleaches"
-                    style="@style/spinerInputData"
-                    android:layout_width="157dp" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_consumption_1kg_line_bleaches"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Расход на 1 кг белья, мл" />
-
-                <EditText
-                    android:id="@+id/ed_consumption_1kg_line_bleaches"
-                    style="@style/et_prof_washing"
-                    android:enabled="false" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_volume_cans_bleaches"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Объем канистры, кг" />
-
-                <EditText
-                    android:id="@+id/ed_volume_cans_bleaches"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_cans_bleaches"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость канистры, руб." />
-
-                <EditText
-                    android:id="@+id/et_cost_cans_bleaches"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tr_cost_means_bleaches"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_1kg_means_bleaches"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость за 1 кг cредства, руб."
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_means_bleaches"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:textColor="#231f20"
-                    android:textSize="10sp"
-                    tools:text="150" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tr_cost_washing_bleaches"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_marginTop="13dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_1kg_washing_bleaches"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость стирки за 1 кг белья"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_washing_bleaches"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:textColor="#231f20"
-                    android:textSize="10sp"
-                    tools:text="150" />
-            </LinearLayout>
-        </TableRow>
-
-    </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp">
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_mix_soft"
-                    android:layout_width="207dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text="КОНДИЦИОНЕР" />
-
-                <TextView
-                    android:layout_width="67dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text="MIX SOFT" />
-
-                <CheckBox
-                    android:id="@+id/cb_mix_soft"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_consumption_1kg_line_mix_soft"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Расход на 1 кг белья, мл" />
-
-                <EditText
-                    android:id="@+id/et_consumption_1kg_line_mix_soft"
-                    style="@style/et_prof_washing"
-                    android:enabled="false" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_volume_cans_mix_soft"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Объем канистры, кг" />
-
-                <EditText
-                    android:id="@+id/et_volume_cans_mix_soft"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_cans_mix_soft"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость канистры, руб." />
-
-                <EditText
-                    android:id="@+id/et_cost_cans_mix_soft"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tr_cost_means_mix_soft"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_1kg_means_mix_soft"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость за 1 кг cредства, руб."
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_means_mix_soft"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tr_cost_washing_mix_soft"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_marginTop="13dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_1kg_washing_mix_soft"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость стирки за 1 кг белья"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_washing_mix_soft"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </TableRow>
-
-    </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp">
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_mix_zero_header"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="НЕЙТРОЛИЗАТОР" />
-
-                <TextView
-                    android:id="@+id/tv_mix_zero_name"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="MIX ZERO" />
-            </LinearLayout>
-
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_consumption_1kg_line_mix_zero"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Расход на 1 кг белья, мл" />
-
-                <EditText
-                    android:id="@+id/et_consumption_1kg_line_mix_zero"
-                    android:enabled="false"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_volume_cans_mix_zero"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Объем канистры, кг" />
-
-                <EditText
-                    android:id="@+id/et_volume_cans_mix_zero"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_cans_mix_zero"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость канистры, руб." />
-
-                <EditText
-                    android:id="@+id/et_cost_cans_mix_zero"
-                    style="@style/et_prof_washing" />
-            </LinearLayout>
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/tr_cost_means_mix_zero"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_1kg_means_mix_zero"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость за 1 кг cредства, руб."
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_means_mix_zero"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tr_cost_washing_mix_zero"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_marginTop="13dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_1kg_washing_mix_zero"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="Стоимость стирки за 1 кг белья"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_cost_1kg_washing_mix_zero"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </TableRow>
-    </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-
-        <TableRow>
-
-            <LinearLayout android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_cost_all"
-                    android:layout_width="202dp"
-                    android:layout_height="wrap_content"
-                    android:text="ИТОГО ЗА 1 КГ БЕЛЬЯ"
-                    android:textColor="#ed1c24"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/tv_result_all"
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    tools:text="150"
-                    android:textColor="#231f20"
-                    android:textSize="13sp" />
-            </LinearLayout>
-        </TableRow>
-    </TableLayout>
-
-</LinearLayout>
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGraynew"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="33dp"
+        android:paddingTop="8dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:id="@+id/tv_cost_all"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:text="ИТОГО ЗА 1 КГ БЕЛЬЯ"
+            android:textColor="#ed1c24"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_result_all"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="#231f20"
+            android:textSize="15sp"
+            tools:text="150" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -8,13 +8,12 @@
     tools:context=".ActivityKliningNewCalculation"
     tools:showIn="@layout/app_bar_activity_klining_new_calculation">
 
-    <ScrollView style="@style/scrollView">
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/container"
-            style="@style/linearLayoutInputData">
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

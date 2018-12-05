@@ -1,5 +1,7 @@
 package com.vortex.vortex.Fragments;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -95,6 +97,7 @@ public class KliningCalculationProfWashingFragment extends Fragment {
     private TextView tv_result_cost_1kg_washing_mix_zero;
 
     private TextView tv_result_all;
+    private TextView tv_mix_soft_chekbox;
 
     private Boolean isBaseMeans;
     private Boolean isAmplifiers;
@@ -219,6 +222,7 @@ public class KliningCalculationProfWashingFragment extends Fragment {
         tv_result_cost_1kg_washing_mix_zero = view.findViewById(R.id.tv_result_cost_1kg_washing_mix_zero);
 
         tv_result_all = view.findViewById(R.id.tv_result_all);
+        tv_mix_soft_chekbox = view.findViewById(R.id.tv_mix_soft_chekbox);
 
         et_consumption_base_means = view.findViewById(R.id.et_consumption);
         et_volume_cans_base_means = view.findViewById(R.id.et_volume_cans);
@@ -386,13 +390,16 @@ public class KliningCalculationProfWashingFragment extends Fragment {
         });
 
         cb_mix_soft.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     et_consumption_1kg_line_mix_soft.setText("6");
                     isMixSoft = true;
+                    tv_mix_soft_chekbox.setTextColor(Color.BLACK);
                 } else {
                     et_consumption_1kg_line_mix_soft.getText().clear();
+                    tv_mix_soft_chekbox.setTextColor(R.color.colorGray);
                     isMixSoft = false;
                 }
                 MixSoftEnabled();
